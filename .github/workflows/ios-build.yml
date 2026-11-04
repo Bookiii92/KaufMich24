@@ -1,0 +1,27 @@
+name: iOS prototype compile
+on:
+  pull_request:
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios-build.yml"
+  workflow_dispatch:
+jobs:
+  simulator-build:
+    runs-on: macos-26
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up XcodeGen
+        run: brew install xcodegen
+      - name: Generate Xcode project
+        run: |
+          cd ios
+          xcodegen generate
+      - name: Compile for simulator without Apple signing
+        run: |
+          xcodebuild -project ios/KaufMich24.xcodeproj \
+            -scheme KaufMich24 \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO build

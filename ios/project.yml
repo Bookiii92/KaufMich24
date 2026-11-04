@@ -1,0 +1,19 @@
+name: KaufMich24
+options:
+  createIntermediateGroups: true
+targets:
+  KaufMich24:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ch.kaufmich24.app
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: KaufMich24
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        SUPPORTS_MACCATALYST: NO
