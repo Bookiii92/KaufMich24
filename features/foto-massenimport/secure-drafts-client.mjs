@@ -139,6 +139,24 @@ export class SecurePhotoDrafts {
       .eq("id",photo.id).eq("owner_id",uid));
     return true;
   }
+  async deleteItem(batchId,itemId) {
+    const uid=await this.owner(),batch=id(batchId),item=id(itemId);
+    // Delete the private Storage objects before removing their RLS-owning metadata.
+    // Any failure stops the operation so a retry can resume cleanup.
+    const photos=await this.listPhotos(batch,item);
+    for(const photo of photos)await this.deletePhoto(photo.id);
+    result(await this.db.from("km24_bulk_draft_items").delete()
+      .eq("id",item).eq("batch_id",batch).eq("owner_id",uid));
+    return true;
+  }
+  async deleteBatch(batchId) {
+    const uid=await this.owner(),batch=id(batchId);
+    const items=await this.listItems(batch);
+    for(const item of items)await this.deleteItem(batch,item.id);
+    result(await this.db.from("km24_bulk_draft_batches").delete()
+      .eq("id",batch).eq("owner_id",uid));
+    return true;
+  }
   async archiveBatch(batchId) {
     const uid=await this.owner();
     return result(await this.db.from("km24_bulk_draft_batches")
