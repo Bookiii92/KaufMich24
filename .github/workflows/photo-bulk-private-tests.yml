@@ -77,3 +77,31 @@ jobs:
       - name: Zugriffsrechte, Quoten und Bildlöschung als echte Rollen testen
         run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-rls-regression.sql
 
+
+  module-http-smoke:
+    name: Öffentliche statische Module – HTTP- und CORS-Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Module über HTTPS abrufen
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-photo-bulk-assets"
+          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs; do
+            curl --fail --silent --show-error --retry 3 --connect-timeout 10 --max-time 30 \
+              -H 'Origin: https://kaufmich24.ch' \
+              -D "$RUNNER_TEMP/hdr" \
+              -o "$RUNNER_TEMP/$name" "$BASE/$name"
+            grep -qi '^content-type: *text/javascript' "$RUNNER_TEMP/hdr"
+            grep -qi '^access-control-allow-origin: *\*' "$RUNNER_TEMP/hdr"
+            test "$(wc -c < "$RUNNER_TEMP/$name")" -gt 100
+            echo "PASS HTTP/CORS: $name"
+          done
+          if curl --silent --fail --max-time 15 "$BASE/unknown.mjs" -o /dev/null; then
+            echo "ERROR: asset whitelist accepted unknown.mjs"
+            exit 1
+          fi
+      - name: Gelieferte JavaScript-Module syntaktisch prüfen
+        run: |
+          for path in "$RUNNER_TEMP"/*.mjs; do node --check "$path"; done
