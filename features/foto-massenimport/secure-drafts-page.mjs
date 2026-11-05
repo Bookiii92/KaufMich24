@@ -89,7 +89,7 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   root.replaceChildren(style,shell);
   shell.appendChild(el("h1",{},"📸 Viele Artikel ganz einfach"));
   shell.appendChild(el("p",{},"Fotos auswählen, Titel und Preis ergänzen – fertig. Bis zu 100 Fotos ohne Excel."));
-  shell.appendChild(el("div",{className:"km24d-message"},"Beta-Test: Alle Artikel bleiben privat. Nichts wird veröffentlicht."));
+  shell.appendChild(el("div",{className:"km24d-message"},"Die Fotos bleiben zunächst privat. Erst wenn du die Veröffentlichung ausdrücklich bestätigst, werden fertige Inserate öffentlich."));
   const locationLabel=el("p",{},"📍 Standort für alle Artikel: "+([firmLocation.postal_code,firmLocation.city,firmLocation.canton].filter(Boolean).join(" ")||"aus Firmenprofil"));
   locationLabel.style.cssText="font-weight:700;font-size:14px;margin:8px 0";shell.appendChild(locationLabel);
   const imports=el("details",{className:"km24d-panel"});
