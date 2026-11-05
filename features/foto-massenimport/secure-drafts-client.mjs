@@ -123,6 +123,11 @@ export class SecurePhotoDrafts {
       .eq("owner_id",uid).eq("batch_id",id(batchId)).eq("item_id",id(itemId))
       .order("sort_order",{ascending:true}).limit(10))||[];
   }
+  async listBatchPhotos(batchId) {
+    const uid=await this.owner();
+    return result(await this.db.from("km24_bulk_draft_photos")
+      .select("id,item_id").eq("owner_id",uid).eq("batch_id",id(batchId)).limit(MAX_PHOTOS+1))||[];
+  }
   async upload(batchId,itemId,file,order=0) {
     const uid=await this.owner(),b=id(batchId),i=id(itemId);
     const ext=validateImage(file);
