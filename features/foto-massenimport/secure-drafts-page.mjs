@@ -4,6 +4,7 @@ import {SecurePhotoDrafts,validateImage,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-
 import {PhotoUploadQueue,groupPhotos} from "./photo-upload-queue.mjs";
 import {applySharedFields} from "./shared-draft-fields.mjs";
 import {inspectBusinessUploadReadiness} from "./upload-account-readiness.mjs";
+import {buildPublishPlan,publishPhotoBatch} from "./photo-bulk-publish.mjs";
 
 const el=(tag,props={},value=null)=>{
   const node=document.createElement(tag);
@@ -127,19 +128,35 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   sharedPanel.append(sharedFields,applyShared);shell.appendChild(sharedPanel);
   const itemsSection=el("div",{className:"km24d-panel"});itemsSection.appendChild(el("h2",{},"2. Artikel prüfen"));
   const itemsList=el("div");itemsSection.appendChild(itemsList);shell.appendChild(itemsSection);
+  const publishSection=el("div",{className:"km24d-panel"});
+  publishSection.appendChild(el("h2",{},"3. Fertige Artikel veröffentlichen"));
+  publishSection.appendChild(el("p",{},"Titel, Preis, Kategorie und mindestens ein Foto sind nötig. Die Veröffentlichung ist öffentlich und erfordert deine Bestätigung."));
+  const categoryRow=el("div",{className:"km24d-inputs"});
+  const publishCategory=labelField(categoryRow,"Kategorie für Artikel ohne Kategorie","publish_category","select","",[["","Jede Kategorie einzeln wählen"]]);
+  publishSection.appendChild(categoryRow);
+  const checkPublish=el("button",{type:"button"},"Veröffentlichung prüfen");
+  const confirmPublish=el("button",{type:"button"},"Jetzt fertige Artikel veröffentlichen");confirmPublish.hidden=true;
+  const publishInfo=el("p",{},"Zuerst alle Artikel prüfen. Maximal 12 neue Inserate pro Stunde; bestehende Händlerlimits gelten.");
+  const publishActions=el("div",{className:"km24d-flex"});
+  publishActions.append(checkPublish,confirmPublish);
+  publishSection.append(publishActions,publishInfo);
+  shell.appendChild(publishSection);
   const message=el("div",{className:"km24d-message","role":"status"},"Bereit.");
   shell.insertBefore(message,itemsSection);
   let currentBatch="",busy=false,categories=[],pendingQueue=null,previewObserver=null;
   function notice(text){message.textContent=text}
   async function work(fn){
     if(busy)return;
-    busy=true;[createButton,uploadButton,applyShared].forEach((b)=>b.disabled=true);
+    busy=true;[createButton,uploadButton,applyShared,checkPublish,confirmPublish].forEach((b)=>b.disabled=true);
     try{await fn()}catch(e){notice("Fehler: "+String(e?.message||e))}
-    finally{busy=false;[createButton,uploadButton,applyShared].forEach((b)=>b.disabled=false)}
+    finally{busy=false;[createButton,uploadButton,applyShared,checkPublish,confirmPublish].forEach((b)=>b.disabled=false)}
   }
   const c=await supabaseClient.from("categories").select("slug,name_de,parent_slug").eq("is_active",true).limit(250);
   if(!c.error)categories=(c.data||[]).filter((v)=>v.slug).map((v)=>[v.slug,v.name_de]);
-  categories.forEach(([slug,name])=>sharedCategory.appendChild(el("option",{value:slug},name)));
+  categories.forEach(([slug,name])=>{
+    sharedCategory.appendChild(el("option",{value:slug},name));
+    publishCategory.appendChild(el("option",{value:slug},name));
+  });
   applyShared.addEventListener("click",async()=>{
     if(!currentBatch){notice("Bitte zuerst einen Import anlegen.");return}
     if(!confirm("Gemeinsame Angaben wirklich auf alle Entwürfe dieses Imports übertragen?"))return;
@@ -171,6 +188,7 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
     // Signed image previews do not interrupt upload progress messages.
   }
   async function refreshItems(){
+    confirmPublish.hidden=true; // Item details may have changed since the last review.
     if(previewObserver){previewObserver.disconnect();previewObserver=null;}
     itemsList.replaceChildren();
     if(!currentBatch){itemsList.appendChild(el("p",{},"Noch keine Artikel. Oben Fotos auswählen – ein Import wird automatisch angelegt."));return}
@@ -205,6 +223,7 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
       const save=el("button",{type:"submit"},"Entwurf speichern");save.hidden=true;form.appendChild(save);
       for(const [key,field] of Object.entries(refs))field.addEventListener("change",()=>work(async()=>{
         await api.updateItem(item.id,{[key]:field.value});
+        confirmPublish.hidden=true;
         notice("✓ Gespeichert – Artikel bleiben privat.");
       }));
       form.addEventListener("submit",(ev)=>{ev.preventDefault();work(async()=>{
@@ -286,6 +305,46 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
     await processQueue();
   }));
   input.addEventListener("change",()=>{if(input.files?.length)uploadButton.click()});
+  checkPublish.addEventListener("click",()=>work(async()=>{
+    if(!currentBatch)throw Error("Bitte zuerst Fotos auswählen.");
+    if(pendingQueue)throw Error("Bitte den Foto-Upload zuerst abschliessen.");
+    if(publishCategory.value){
+      const drafts=await api.listItems(currentBatch);
+      for(const item of drafts){
+        if(!item.category_slug)
+          await api.updateItem(item.id,{category_slug:publishCategory.value});
+      }
+      await refreshItems();
+    }
+    const plan=await buildPublishPlan(api,currentBatch);
+    const summary=plan.ready.length+" bereit, "+plan.incomplete.length+" unvollständig, "+plan.previouslyPublished.length+" bereits veröffentlicht.";
+    const errors=plan.incomplete.slice(0,3).map(x=>x.item.title+": "+x.missing.join(", ")).join("; ");
+    publishInfo.textContent=summary+(errors?" Fehlende Angaben: "+errors:"")+
+      " Es gelten weiterhin 12 Inserate pro Stunde und die Händler-Tariflimits.";
+    confirmPublish.hidden=plan.ready.length===0;
+    notice(summary);
+  }));
+  confirmPublish.addEventListener("click",()=>{
+    void work(async()=>{
+      if(!currentBatch||pendingQueue)throw Error("Bitte zuerst alle Uploads abschliessen.");
+      const plan=await buildPublishPlan(api,currentBatch);
+      const count=Math.min(plan.ready.length,12);
+      if(count<1)throw Error("Keine fertigen Artikel vorhanden. Bitte erneut prüfen.");
+      const confirmText="Jetzt bis zu "+count+" Artikel ÖFFENTLICH auf KaufMich24 veröffentlichen? "+
+        "Bilder werden in den öffentlichen Inserate-Speicher kopiert. "+
+        "Bestehende Kontingente und Inserateregeln bleiben gültig.";
+      if(!confirm(confirmText))return;
+      confirmPublish.hidden=true;
+      const result=await publishPhotoBatch(api,currentBatch,p=>{
+        notice("Öffentlich veröffentlicht: "+p.published+" von "+p.total+" Artikeln.");
+      },12);
+      publishInfo.textContent=result.published+" öffentlich veröffentlicht. "+
+        result.skippedIncomplete+" unvollständig; "+result.remaining+
+        " weitere fertige Artikel für später bereit.";
+      await refreshItems();
+      notice(result.published+" Artikel öffentlich veröffentlicht.");
+    });
+  });
   resumeButton.addEventListener("click",()=>work(processQueue));
   pauseButton.addEventListener("click",()=>{
     if(pendingQueue)pendingQueue.requestPause();
