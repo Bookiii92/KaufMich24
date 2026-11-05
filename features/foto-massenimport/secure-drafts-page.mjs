@@ -5,6 +5,7 @@ import {PhotoUploadQueue,groupPhotos} from "./photo-upload-queue.mjs";
 import {applySharedFields} from "./shared-draft-fields.mjs";
 import {inspectBusinessUploadReadiness} from "./upload-account-readiness.mjs";
 import {buildPublishPlan,publishPhotoBatch} from "./photo-bulk-publish.mjs";
+import {planInactiveBulkCleanup,cleanupInactiveBulkBatch} from "./cleanup-inactive-bulk.mjs";
 
 const el=(tag,props={},value=null)=>{
   const node=document.createElement(tag);
@@ -141,15 +142,25 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   publishActions.append(checkPublish,confirmPublish);
   publishSection.append(publishActions,publishInfo);
   shell.appendChild(publishSection);
+  // Irreversible operation is opt-in, hidden under a collapsed detail panel.
+  const cleanupSection=el("details",{className:"km24d-panel"});
+  cleanupSection.appendChild(el("summary",{},"Testartikel und Bilder dauerhaft entfernen (optional)"));
+  cleanupSection.appendChild(el("p",{},
+    "Nur eigene, bereits inaktive Foto-Import-Inserate. Öffentliche Bilder, Bildverknüpfungen und private Entwürfe werden endgültig gelöscht. Andere Inserate bleiben unverändert."));
+  const inspectCleanup=el("button",{type:"button"},"Inaktive Testartikel prüfen");
+  const performCleanup=el("button",{type:"button"},"Unwiderruflich bereinigen");performCleanup.hidden=true;
+  const cleanupStatus=el("p",{},"Zuerst den betreffenden Foto-Import auswählen.");
+  cleanupSection.append(inspectCleanup,performCleanup,cleanupStatus);
+  shell.appendChild(cleanupSection);
   const message=el("div",{className:"km24d-message","role":"status"},"Bereit.");
   shell.insertBefore(message,itemsSection);
   let currentBatch="",busy=false,categories=[],pendingQueue=null,previewObserver=null;
   function notice(text){message.textContent=text}
   async function work(fn){
     if(busy)return;
-    busy=true;[createButton,uploadButton,applyShared,checkPublish,confirmPublish].forEach((b)=>b.disabled=true);
+    busy=true;[createButton,uploadButton,applyShared,checkPublish,confirmPublish,inspectCleanup,performCleanup].forEach((b)=>b.disabled=true);
     try{await fn()}catch(e){notice("Fehler: "+String(e?.message||e))}
-    finally{busy=false;[createButton,uploadButton,applyShared,checkPublish,confirmPublish].forEach((b)=>b.disabled=false)}
+    finally{busy=false;[createButton,uploadButton,applyShared,checkPublish,confirmPublish,inspectCleanup,performCleanup].forEach((b)=>b.disabled=false)}
   }
   const c=await supabaseClient.from("categories").select("slug,name_de,parent_slug").eq("is_active",true).limit(250);
   if(!c.error)categories=(c.data||[]).filter((v)=>v.slug).map((v)=>[v.slug,v.name_de]);
@@ -188,6 +199,7 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
     // Signed image previews do not interrupt upload progress messages.
   }
   async function refreshItems(){
+    performCleanup.hidden=true;
     confirmPublish.hidden=true; // Item details may have changed since the last review.
     if(previewObserver){previewObserver.disconnect();previewObserver=null;}
     itemsList.replaceChildren();
@@ -345,6 +357,30 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
       notice(result.published+" Artikel öffentlich veröffentlicht.");
     });
   });
+  inspectCleanup.addEventListener("click",()=>work(async()=>{
+    if(!currentBatch)throw Error("Bitte zuerst einen Foto-Import auswählen.");
+    if(pendingQueue)throw Error("Bitte zuerst laufende Uploads abschliessen.");
+    const plan=await planInactiveBulkCleanup(api,currentBatch);
+    cleanupStatus.textContent=plan.items.length+" eigene inaktive Foto-Import-Inserate gefunden. Nur diese sind für die vollständige Bereinigung freigegeben.";
+    performCleanup.hidden=plan.items.length===0;
+  }));
+  performCleanup.addEventListener("click",()=>work(async()=>{
+    if(!currentBatch || pendingQueue)throw Error("Bitte den Import auswählen und laufende Uploads abschliessen.");
+    const plan=await planInactiveBulkCleanup(api,currentBatch);
+    if(!plan.items.length)throw Error("Keine inaktiven Foto-Testartikel gefunden.");
+    const phrase=prompt(
+      plan.items.length+" inaktive Inserate und ALLE zugehörigen öffentlichen und privaten Fotos endgültig löschen? "+
+      "Zum Bestätigen bitte TESTBILDER LÖSCHEN eingeben."
+    );
+    if(phrase!=="TESTBILDER LÖSCHEN"){notice("Bereinigung abgebrochen.");return}
+    performCleanup.hidden=true;
+    const result=await cleanupInactiveBulkBatch(api,currentBatch,p=>{
+      notice("Testbilder bereinigen: "+p.cleaned+" von "+p.total);
+    });
+    await refreshItems();
+    cleanupStatus.textContent=result.cleaned+" inaktive Testartikel und Bilder wurden bereinigt.";
+    notice("Bereinigung abgeschlossen. Aktive Inserate wurden nicht verändert.");
+  }));
   resumeButton.addEventListener("click",()=>work(processQueue));
   pauseButton.addEventListener("click",()=>{
     if(pendingQueue)pendingQueue.requestPause();
