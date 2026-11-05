@@ -86,16 +86,17 @@ BEGIN
       WHERE batch_id = NEW.batch_id;
     IF n >= 100 THEN RAISE EXCEPTION 'Maximal 100 Artikel pro Import.'; END IF;
   ELSIF tg_table_name = 'km24_bulk_draft_photos' THEN
-    PERFORM 1 FROM public.km24_bulk_draft_items i
-      JOIN public.km24_bulk_draft_batches b ON b.id = i.batch_id AND b.owner_id = i.owner_id
-      WHERE i.id = NEW.item_id AND i.batch_id = NEW.batch_id
-        AND i.owner_id = NEW.owner_id AND b.state = 'draft'
-      FOR UPDATE OF i;
-    IF NOT FOUND THEN RAISE EXCEPTION 'Der Import ist nicht bearbeitbar.'; END IF;
-    -- A separate lock on the batch serializes concurrent uploads to different articles.
+    -- Always lock the batch BEFORE the item. All quota guards use the same
+    -- locking order to avoid concurrent upload deadlocks.
     PERFORM 1 FROM public.km24_bulk_draft_batches b
       WHERE b.id = NEW.batch_id AND b.owner_id = NEW.owner_id AND b.state = 'draft'
       FOR UPDATE;
+    IF NOT FOUND THEN RAISE EXCEPTION 'Der Import ist nicht bearbeitbar.'; END IF;
+    PERFORM 1 FROM public.km24_bulk_draft_items i
+      WHERE i.id = NEW.item_id AND i.batch_id = NEW.batch_id
+        AND i.owner_id = NEW.owner_id
+      FOR UPDATE;
+    IF NOT FOUND THEN RAISE EXCEPTION 'Der Artikel gehört nicht zum Import.'; END IF;
     SELECT count(*) INTO n FROM public.km24_bulk_draft_photos
       WHERE batch_id = NEW.batch_id;
     IF n >= 100 THEN RAISE EXCEPTION 'Maximal 100 Bilder pro Import.'; END IF;
@@ -113,6 +114,35 @@ CREATE TRIGGER km24_bulk_item_quota BEFORE INSERT ON public.km24_bulk_draft_item
  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_draft_quota_guard();
 CREATE TRIGGER km24_bulk_photo_quota BEFORE INSERT ON public.km24_bulk_draft_photos
  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_draft_quota_guard();
+
+-- Prevent owner/batch reassignment on UPDATE, which otherwise could circumvent
+-- the per-batch quota while retaining the same authenticated account.
+CREATE FUNCTION private.km24_bulk_immutable_keys()
+RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = ''
+AS $fn$
+BEGIN
+  IF NEW.id IS DISTINCT FROM OLD.id
+     OR NEW.owner_id IS DISTINCT FROM OLD.owner_id THEN
+    RAISE EXCEPTION 'Import-ID und Besitzer dürfen nicht geändert werden.';
+  END IF;
+  IF TG_TABLE_NAME = 'km24_bulk_draft_items'
+     AND NEW.batch_id IS DISTINCT FROM OLD.batch_id THEN
+    RAISE EXCEPTION 'Ein Artikel kann nicht in einen anderen Import verschoben werden.';
+  END IF;
+  IF TG_TABLE_NAME = 'km24_bulk_draft_batches'
+     AND OLD.state = 'archived' AND NEW.state <> 'archived' THEN
+    RAISE EXCEPTION 'Archivierte Importe können nicht reaktiviert werden.';
+  END IF;
+  RETURN NEW;
+END
+$fn$;
+
+CREATE TRIGGER km24_bulk_batches_immutable BEFORE UPDATE
+  ON public.km24_bulk_draft_batches
+  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_immutable_keys();
+CREATE TRIGGER km24_bulk_items_immutable BEFORE UPDATE
+  ON public.km24_bulk_draft_items
+  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_immutable_keys();
 
 ALTER TABLE public.km24_bulk_draft_batches ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.km24_bulk_draft_items ENABLE ROW LEVEL SECURITY;
@@ -183,9 +213,17 @@ GRANT SELECT,INSERT,UPDATE,DELETE ON public.km24_bulk_draft_batches,public.km24_
 GRANT SELECT,INSERT,DELETE ON public.km24_bulk_draft_photos TO authenticated;
 
 -- Private bucket; a public asset URL must never exist for unpublished photos.
+-- Fail closed: never silently reuse a pre-existing bucket whose visibility or
+-- upload restrictions may be different from our reviewed private configuration.
+DO $guard$
+BEGIN
+  IF EXISTS(SELECT 1 FROM storage.buckets WHERE id='km24-bulk-draft-photos') THEN
+    RAISE EXCEPTION 'Draft bucket already exists. Review permissions before applying migration.';
+  END IF;
+END
+$guard$;
 INSERT INTO storage.buckets(id,name,public,file_size_limit,allowed_mime_types)
-VALUES('km24-bulk-draft-photos','km24-bulk-draft-photos',false,10485760,ARRAY['image/jpeg','image/png','image/webp'])
-ON CONFLICT(id) DO NOTHING;
+VALUES('km24-bulk-draft-photos','km24-bulk-draft-photos',false,10485760,ARRAY['image/jpeg','image/png','image/webp']);
 
 -- Reserve metadata first, then upload to the same path with user JWT.
 CREATE POLICY km24_bulk_storage_read_own ON storage.objects
