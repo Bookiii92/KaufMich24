@@ -144,6 +144,47 @@ CREATE TRIGGER km24_bulk_items_immutable BEFORE UPDATE
   ON public.km24_bulk_draft_items
   FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_immutable_keys();
 
+-- Never orphan private Storage files by deleting metadata before the file.
+-- Clients must delete private Storage objects first, then photos, items, batch.
+CREATE FUNCTION private.km24_bulk_delete_cleanup_guard()
+RETURNS trigger LANGUAGE plpgsql SECURITY INVOKER SET search_path = ''
+AS $fn$
+BEGIN
+  IF TG_TABLE_NAME = 'km24_bulk_draft_photos' THEN
+    IF EXISTS (
+      SELECT 1 FROM storage.objects o
+      WHERE o.bucket_id = 'km24-bulk-draft-photos'
+        AND o.name = OLD.object_name
+    ) THEN
+      RAISE EXCEPTION 'Zuerst das private Bild aus Storage entfernen.';
+    END IF;
+  ELSIF TG_TABLE_NAME = 'km24_bulk_draft_items' THEN
+    IF EXISTS (
+      SELECT 1 FROM public.km24_bulk_draft_photos p WHERE p.item_id = OLD.id
+    ) THEN
+      RAISE EXCEPTION 'Zuerst alle privaten Fotos dieses Artikels entfernen.';
+    END IF;
+  ELSIF TG_TABLE_NAME = 'km24_bulk_draft_batches' THEN
+    IF EXISTS (
+      SELECT 1 FROM public.km24_bulk_draft_items i WHERE i.batch_id = OLD.id
+    ) THEN
+      RAISE EXCEPTION 'Zuerst alle Artikel dieses Imports entfernen.';
+    END IF;
+  END IF;
+  RETURN OLD;
+END
+$fn$;
+
+CREATE TRIGGER km24_bulk_photos_delete_cleanup BEFORE DELETE
+  ON public.km24_bulk_draft_photos
+  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_delete_cleanup_guard();
+CREATE TRIGGER km24_bulk_items_delete_cleanup BEFORE DELETE
+  ON public.km24_bulk_draft_items
+  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_delete_cleanup_guard();
+CREATE TRIGGER km24_bulk_batches_delete_cleanup BEFORE DELETE
+  ON public.km24_bulk_draft_batches
+  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_delete_cleanup_guard();
+
 ALTER TABLE public.km24_bulk_draft_batches ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.km24_bulk_draft_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.km24_bulk_draft_photos ENABLE ROW LEVEL SECURITY;
@@ -185,10 +226,12 @@ CREATE POLICY km24_bulk_items_update_own ON public.km24_bulk_draft_items
       SELECT 1 FROM public.km24_bulk_draft_batches b
       WHERE b.id = batch_id AND b.owner_id = (SELECT auth.uid()) AND b.state = 'draft')
   );
+-- Deletion is allowed for archived imports too, but the delete guard below
+-- prevents metadata removal while stored files still exist.
 CREATE POLICY km24_bulk_items_delete_own ON public.km24_bulk_draft_items
   FOR DELETE TO authenticated USING (owner_id = (SELECT auth.uid()) AND
     EXISTS (SELECT 1 FROM public.km24_bulk_draft_batches b
-      WHERE b.id = batch_id AND b.owner_id = (SELECT auth.uid()) AND b.state = 'draft'));
+      WHERE b.id = batch_id AND b.owner_id = (SELECT auth.uid())));
 
 CREATE POLICY km24_bulk_photos_select_own ON public.km24_bulk_draft_photos
   FOR SELECT TO authenticated USING (owner_id = (SELECT auth.uid()));
