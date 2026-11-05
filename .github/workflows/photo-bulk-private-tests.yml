@@ -1,0 +1,36 @@
+name: Foto-Massenimport – Sicherheitsprüfungen
+
+on:
+  pull_request:
+    paths:
+      - 'features/foto-massenimport/**'
+      - '.github/workflows/photo-bulk-private-tests.yml'
+  push:
+    branches:
+      - feature/foto-massenimport-beta-20261105
+    paths:
+      - 'features/foto-massenimport/**'
+      - '.github/workflows/photo-bulk-private-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  private-drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+      - name: Node.js 22 einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Modul-Syntax prüfen
+        run: |
+          node --check features/foto-massenimport/secure-drafts-client.mjs
+          node --check features/foto-massenimport/secure-drafts-page.mjs
+      - name: Unit-Tests ausführen
+        run: node --test features/foto-massenimport/secure-drafts-client.test.mjs
+      - name: SQL-Sicherheitsregeln statisch prüfen
+        run: node features/foto-massenimport/check-private-schema.mjs
