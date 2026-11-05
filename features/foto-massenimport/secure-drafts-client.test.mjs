@@ -29,8 +29,8 @@ function fixture(options={}){
     storage:{from(bucket){
       calls.push(["bucket",bucket]);
       return{
-        async upload(...args){calls.push(["upload",...args]);return{data:{},error:options.uploadFail?{message:"network"}:null}},
-        async remove(args){calls.push(["remove",args]);return{data:{},error:options.removeFail?{message:"network"}:null}},
+        async upload(...args){calls.push(["upload",...args]);if(options.uploadThrows)throw Error("socket reset");return{data:{},error:options.uploadFail?{message:"network"}:null}},
+        async remove(args){calls.push(["remove",args]);if(options.removeThrows)throw Error("connection aborted");return{data:{},error:options.removeFail?{message:"network"}:null}},
         async createSignedUrl(path,ttl){calls.push(["signed",path,ttl]);return{data:{signedUrl:"https://example.invalid/preview"},error:null}}
       }
     }}
@@ -92,4 +92,16 @@ test("spoofed JPEG is rejected before any DB reservation",async()=>{
   const bad=new Blob(["<script>not an image</script>"],{type:"image/jpeg"});
   await assert.rejects(api.upload(BATCH,ITEM,bad,0),/Format überein/);
   assert.equal(x.calls.filter(c=>c[0]==="insert").length,0);
+});
+
+test("thrown network failure triggers Storage cleanup before metadata removal",async()=>{
+  const f=fixture({uploadThrows:true}),api=new SecurePhotoDrafts(f.client,()=>IMAGE);
+  await assert.rejects(api.upload(BATCH,ITEM,jpeg(),0),/Foto-Upload fehlgeschlagen: socket reset/);
+  assert.ok(f.calls.findIndex(x=>x[0]==="remove")>=0);
+  assert.ok(f.calls.findIndex(x=>x[0]==="remove")<f.calls.findIndex(x=>x[0]==="delete"));
+});
+test("thrown Storage cleanup error blocks unsafe retry and retains reservation",async()=>{
+  const f=fixture({uploadThrows:true,removeThrows:true}),api=new SecurePhotoDrafts(f.client,()=>IMAGE);
+  await assert.rejects(api.upload(BATCH,ITEM,jpeg(),0),/Bitte nicht erneut hochladen/);
+  assert.equal(f.calls.filter(x=>x[0]==="delete").length,0);
 });
