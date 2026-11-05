@@ -39,3 +39,13 @@ Stand 05.11.2026 – **Review vor Freigabe**, nicht produktiv ausrollen.
 ## Bereits behobene Fehler aus den echten PostgreSQL-Tests
 
 Die Triggerfunktion \`private.km24_bulk_immutable_keys\` griff beim Archivieren auf das item-exklusive Feld \`batch_id\` zu und beim Bearbeiten eines Items auf das batch-exklusive Feld \`state\`. Die Fälle sind getrennt und mit automatischen PostgreSQL-Tests auf die tatsächlichen Tabellenspalten geprüft. Direkte Löschung von Metadaten, wenn die privaten Objekte noch vorhanden sind, wird verhindert.
+
+## Statische ESM-Bereitstellung (separat, keine Live-Aktivierung)
+
+- Auf dem bestehenden KaufMich24-Supabase-Projekt wurde die eigenständige, ausschliesslich lesende Edge Function `kaufmich-photo-bulk-assets` (Version 1) angelegt. Sie liefert nur vorher geprüfte JavaScript-Moduldateien per GET/HEAD/OPTIONS aus; kein Datenbankzugriff, keine Fotos, keine Verkäuferdaten und kein Zugriff auf den Service-Role-Schlüssel.
+- Modul-Basis-URL: `https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-photo-bulk-assets/`.
+- Bereitgestellt: `spa-photo-route-bridge.mjs`, `secure-drafts-page.mjs`, `secure-drafts-client.mjs`, `photo-upload-queue.mjs`, `image-signature.mjs`, `shared-draft-fields.mjs` und `ai-suggestion-contract.mjs`.
+- Quelle: GitHub-PR #2, Commit `3f1d2d9a3e5e4ffdef34daf01930c3c8dfed4449`. Kein automatisches GitHub-Deployment: bei Änderungen am Code sind eine neue Prüfung und ein separates Asset-Update nötig.
+- Die Edge Function konnte nach Deployment über die Supabase-Verwaltung als `ACTIVE` und mit unverändertem Quellcode eingesehen werden. Eine unabhängige Browser-/HTTP-End-to-End-Prüfung der Assets steht noch aus.
+- **Wichtig:** Die Modulbereitstellung aktiviert keine KaufMich24-Routerfunktion. In der produktiven Datenbank gibt es weiterhin keine `km24_bulk_draft_*`-Tabellen und keine private `km24-bulk-draft-photos`-Bucket. Deshalb ist kein echter Server-Foto-Upload möglich.
+- Beim Produktiv-Rollout nicht die bestehende Website durch ungeprüften dynamischen Code ersetzen. Erst Schema-, Rechte- und Mobilbrowser-Tests sowie funktionsfähiges Rücksetzen prüfen.
