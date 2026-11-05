@@ -71,7 +71,9 @@ BEGIN
   IF tg_table_name = 'km24_bulk_draft_batches' THEN
     IF NEW.state <> 'draft' THEN RETURN NEW; END IF;
     PERFORM pg_advisory_xact_lock(hashtextextended(NEW.owner_id::text, 20261105));
-    IF TG_OP = 'UPDATE' AND OLD.state = 'draft' AND OLD.owner_id = NEW.owner_id THEN RETURN NEW; END IF;
+    IF TG_OP = 'UPDATE' THEN
+      IF OLD.state = 'draft' AND OLD.owner_id = NEW.owner_id THEN RETURN NEW; END IF;
+    END IF;
     SELECT count(*) INTO n FROM public.km24_bulk_draft_batches
       WHERE owner_id = NEW.owner_id AND state = 'draft' AND id <> NEW.id;
     IF n >= 5 THEN RAISE EXCEPTION 'Maximal fünf offene Foto-Importe.'; END IF;
@@ -90,6 +92,13 @@ BEGIN
         AND i.owner_id = NEW.owner_id AND b.state = 'draft'
       FOR UPDATE OF i;
     IF NOT FOUND THEN RAISE EXCEPTION 'Der Import ist nicht bearbeitbar.'; END IF;
+    -- A separate lock on the batch serializes concurrent uploads to different articles.
+    PERFORM 1 FROM public.km24_bulk_draft_batches b
+      WHERE b.id = NEW.batch_id AND b.owner_id = NEW.owner_id AND b.state = 'draft'
+      FOR UPDATE;
+    SELECT count(*) INTO n FROM public.km24_bulk_draft_photos
+      WHERE batch_id = NEW.batch_id;
+    IF n >= 100 THEN RAISE EXCEPTION 'Maximal 100 Bilder pro Import.'; END IF;
     SELECT count(*) INTO n FROM public.km24_bulk_draft_photos
       WHERE item_id = NEW.item_id;
     IF n >= 10 THEN RAISE EXCEPTION 'Maximal zehn Bilder pro Artikel.'; END IF;
