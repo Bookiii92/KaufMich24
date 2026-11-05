@@ -43,6 +43,14 @@ VALUES('cccccccc-cccc-4ccc-8ccc-cccccccccccc',
 INSERT INTO storage.objects(bucket_id,name)
 VALUES('km24-bulk-draft-photos','11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/dddddddd-dddd-4ddd-8ddd-dddddddddddd.jpg');
 SELECT km24_test.assert_true((SELECT count(*)=1 FROM public.km24_bulk_draft_batches),'A reads own batch');
+UPDATE public.km24_bulk_draft_items
+  SET title='Lernspielzeug geprüft',price_chf=29.90
+  WHERE id='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+SELECT km24_test.assert_true(
+  (SELECT title='Lernspielzeug geprüft' AND price_chf=29.90
+   FROM public.km24_bulk_draft_items WHERE id='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb'),
+  'A can edit own draft item without trigger errors');
+
 SELECT km24_test.assert_true((SELECT count(*)=1 FROM storage.objects WHERE bucket_id='km24-bulk-draft-photos'),'A reads own private image metadata');
 RESET ROLE;
 SELECT km24_test.assert_true((SELECT public=false AND file_size_limit=10485760 FROM storage.buckets WHERE id='km24-bulk-draft-photos'),'bucket private and max 10MB');
@@ -169,8 +177,23 @@ SELECT km24_test.assert_true((SELECT count(*)=0 FROM public.km24_bulk_draft_phot
 UPDATE public.km24_bulk_draft_batches SET state='archived'
 WHERE id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
 SELECT km24_test.assert_true((SELECT state='archived' FROM public.km24_bulk_draft_batches WHERE id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'),'owner may archive batch');
-SELECT km24_test.expect_denied($q$
- UPDATE public.km24_bulk_draft_batches SET state='draft'
- WHERE id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'
-$q$,'archived import cannot be reactivated');
+WITH updated AS (
+  UPDATE public.km24_bulk_draft_batches SET state='draft'
+  WHERE id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'
+  RETURNING 1
+) SELECT km24_test.assert_true((SELECT count(*)=0 FROM updated),'archived import cannot be reactivated');
+SELECT km24_test.assert_true(
+  (SELECT count(*)=4 FROM public.km24_bulk_draft_batches WHERE state='draft'),
+  'archive releases one active-import slot');
+-- After archive, deletion of a photo-free item remains possible.
+WITH candidate AS (
+  SELECT i.id FROM public.km24_bulk_draft_items i
+  WHERE i.batch_id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'
+    AND NOT EXISTS(SELECT 1 FROM public.km24_bulk_draft_photos p WHERE p.item_id=i.id)
+  ORDER BY i.id LIMIT 1
+), removed AS (
+  DELETE FROM public.km24_bulk_draft_items WHERE id IN(SELECT id FROM candidate) RETURNING 1
+) SELECT km24_test.assert_true((SELECT count(*)=1 FROM removed),
+  'archived draft item with no photo may be cleaned up');
+
 \echo === All isolated PostgreSQL RLS assertions passed ===
