@@ -106,3 +106,20 @@ jobs:
       - name: Gelieferte JavaScript-Module syntaktisch prüfen
         run: |
           for path in "$RUNNER_TEMP"/*.mjs; do node --check "$path"; done
+
+  live-beta-smoke:
+    name: KaufMich24 versteckte Beta-Route – HTTP-Prüfung
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Homepage laden und Beta-Route verifizieren
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 --connect-timeout 10 --max-time 40 \
+            -H 'Cache-Control: no-cache' \
+            'https://kaufmich24.ch/?km24_beta_check=20261105' \
+            -o "$RUNNER_TEMP/km24-home.html"
+          grep -Fq '#/foto-massenimport' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'kaufmich-photo-bulk-assets/spa-photo-route-bridge.mjs' "$RUNNER_TEMP/km24-home.html"
+          echo 'PASS: Live-HTML enthält den geschützten Fotoimport-Beta-Router'
