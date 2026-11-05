@@ -128,8 +128,8 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   const itemsSection=el("div",{className:"km24d-panel"});itemsSection.appendChild(el("h2",{},"2. Artikel prüfen"));
   const itemsList=el("div");itemsSection.appendChild(itemsList);shell.appendChild(itemsSection);
   const message=el("div",{className:"km24d-message","role":"status"},"Bereit.");
-  shell.appendChild(message);
-  let currentBatch="",busy=false,categories=[],pendingQueue=null;
+  shell.insertBefore(message,itemsSection);
+  let currentBatch="",busy=false,categories=[],pendingQueue=null,previewObserver=null;
   function notice(text){message.textContent=text}
   async function work(fn){
     if(busy)return;
@@ -171,12 +171,25 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
     // Signed image previews do not interrupt upload progress messages.
   }
   async function refreshItems(){
+    if(previewObserver){previewObserver.disconnect();previewObserver=null;}
     itemsList.replaceChildren();
     if(!currentBatch){itemsList.appendChild(el("p",{},"Noch keine Artikel. Oben Fotos auswählen – ein Import wird automatisch angelegt."));return}
     const items=await api.listItems(currentBatch);
     if(!items.length){itemsList.appendChild(el("p",{},"Noch keine Artikel hochgeladen."));return}
+    const shownBatch=currentBatch;
+    if(typeof IntersectionObserver!=="undefined"){
+      previewObserver=new IntersectionObserver((entries,observer)=>{
+        for(const entry of entries){
+          if(!entry.isIntersecting)continue;
+          observer.unobserve(entry.target);
+          const target=entry.target.querySelector(".km24d-photos");
+          const itemId=entry.target.dataset.itemId;
+          if(currentBatch===shownBatch && target && itemId)void showImages(target,itemId).catch(()=>{});
+        }
+      },{rootMargin:"250px"});
+    }
     for(const item of items){
-      const row=el("article",{className:"km24d-row"});
+      const row=el("article",{className:"km24d-row"});row.dataset.itemId=item.id;
       row.appendChild(el("h3",{},item.title||"Neuer Artikel"));
       const form=el("form");
       const fields=el("div",{className:"km24d-inputs"});
@@ -223,9 +236,10 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
         });
       });
       const actions=el("div",{className:"km24d-flex"});actions.append(loadImages,morePhotos,remove);
-      row.append(form,actions,photosTarget);itemsList.appendChild(row);
-      // Preview automatically, no extra click. Always scoped to authenticated owner.
-      void showImages(photosTarget,item.id).catch(()=>{});
+      row.append(photosTarget,form,actions);itemsList.appendChild(row);
+      // Load only visible thumbnails on long (up to 100 item) mobile lists.
+      if(previewObserver)previewObserver.observe(row);
+      else void showImages(photosTarget,item.id).catch(()=>{});
     }
   }
   createButton.addEventListener("click",()=>work(async()=>{
