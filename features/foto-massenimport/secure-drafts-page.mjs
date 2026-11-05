@@ -146,7 +146,16 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
         morePhotos.value="";
         await showImages(photosTarget,item.id);
       }));
-      const actions=el("div",{className:"km24d-flex"});actions.append(loadImages,morePhotos);
+      const remove=el("button",{type:"button"},"Artikel entfernen");
+      remove.addEventListener("click",()=>{
+        if(!confirm("Diesen Entwurf und alle zugehörigen privaten Fotos löschen?"))return;
+        work(async()=>{
+          await api.deleteItem(currentBatch,item.id);
+          await refreshItems();
+          notice("Privater Entwurf und Fotos gelöscht.");
+        });
+      });
+      const actions=el("div",{className:"km24d-flex"});actions.append(loadImages,morePhotos,remove);
       row.append(form,actions,photosTarget);itemsList.appendChild(row);
     }
   }
