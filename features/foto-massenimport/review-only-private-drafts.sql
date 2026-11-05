@@ -125,9 +125,13 @@ BEGIN
      OR NEW.owner_id IS DISTINCT FROM OLD.owner_id THEN
     RAISE EXCEPTION 'Import-ID und Besitzer dürfen nicht geändert werden.';
   END IF;
-  IF TG_TABLE_NAME = 'km24_bulk_draft_items'
-     AND NEW.batch_id IS DISTINCT FROM OLD.batch_id THEN
-    RAISE EXCEPTION 'Ein Artikel kann nicht in einen anderen Import verschoben werden.';
+  -- NEW.batch_id does not exist on batch rows. Separate the table check
+  -- from field access: PL/pgSQL boolean expressions are not guaranteed to
+  -- protect access to non-existent RECORD fields.
+  IF TG_TABLE_NAME = 'km24_bulk_draft_items' THEN
+    IF NEW.batch_id IS DISTINCT FROM OLD.batch_id THEN
+      RAISE EXCEPTION 'Ein Artikel kann nicht in einen anderen Import verschoben werden.';
+    END IF;
   END IF;
   IF TG_TABLE_NAME = 'km24_bulk_draft_batches'
      AND OLD.state = 'archived' AND NEW.state <> 'archived' THEN
