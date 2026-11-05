@@ -1,6 +1,6 @@
 // Resumable, sequential, client-side orchestration. Never publishes listings.
 // Only used with a private, RLS-protected SecurePhotoDrafts instance.
-import {validateImage,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-drafts-client.mjs";
+import {validateImage,cleanDraft,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-drafts-client.mjs";
 
 function defaultUUID(){
   if(typeof globalThis.crypto?.randomUUID!=="function")throw new Error("Sichere Browser-ID fehlt.");
@@ -28,12 +28,14 @@ export function productName(file){
   return base.length>=3?base.slice(0,120):"Neuer Artikel";
 }
 export class PhotoUploadQueue {
-  constructor({api,batchId,files,sameProduct=false,newUUID=defaultUUID}) {
+  constructor({api,batchId,files,sameProduct=false,location={},newUUID=defaultUUID}) {
     if(!api || typeof api.ensureItem!=="function" || typeof api.upload!=="function")
       throw new Error("Private Upload-Funktionen fehlen.");
     if(typeof batchId!=="string" || !batchId)throw new Error("Import-ID fehlt.");
     const groups=groupPhotos(files,sameProduct);
     this.api=api;this.batchId=batchId;this.busy=false;this.pauseRequested=false;
+    // One account location for every new product; no repeated location fields.
+    this.location=cleanDraft({city:location.city||"",postal_code:location.postal_code||"",canton:location.canton||""},true);
     this.groups=groups.map((photos)=>({
       id:newUUID(),photos,done:0,created:false,title:productName(photos[0])
     }));
@@ -58,7 +60,7 @@ export class PhotoUploadQueue {
           // Stable UUID prevents duplicate products when a database response is lost.
           await this.api.ensureItem(this.batchId,g.id,{
             title:g.title,description:"",price_chf:null,category_slug:null,
-            condition:"new",city:"",postal_code:"",canton:""
+            condition:"new",...this.location
           });
           g.created=true;
         }
