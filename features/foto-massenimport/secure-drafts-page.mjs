@@ -1,6 +1,7 @@
 // UI integration for KaufMich24 authenticated sessions; never publishes listings.
 // Call mountPhotoDraftPanel({root, supabaseClient}) from a verified firm session.
 import {SecurePhotoDrafts,validateImage,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-drafts-client.mjs";
+import {applySharedFields} from "./shared-draft-fields.mjs";
 
 const el=(tag,props={},value=null)=>{
   const node=document.createElement(tag);
@@ -75,7 +76,20 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   const sameInput=el("input",{type:"checkbox"});sameLabel.prepend(sameInput);
   const uploadButton=el("button",{},"Fotos privat hochladen");
   uploadControls.append(input,sameLabel,uploadButton);uploads.appendChild(uploadControls);shell.appendChild(uploads);
-  const itemsSection=el("div",{className:"km24d-panel"});itemsSection.appendChild(el("h2",{},"3. Entwürfe bearbeiten"));
+  const sharedPanel=el("div",{className:"km24d-panel"});
+  sharedPanel.appendChild(el("h2",{},"3. Angaben für alle Artikel übernehmen"));
+  sharedPanel.appendChild(el("p",{},"Nur ausgefüllte Felder werden geändert. Titel, Beschreibung und Preise bleiben unverändert."));
+  const sharedFields=el("div",{className:"km24d-inputs"});
+  const sharedCategory=labelField(sharedFields,"Kategorie","category_slug","select","",[["","Nicht ändern"]]);
+  const sharedCondition=labelField(sharedFields,"Zustand","condition","select","",[["","Nicht ändern"],["new","Neu"],["like_new","Wie neu"],["used","Gebraucht"],["defective","Defekt"]]);
+  const sharedCity=labelField(sharedFields,"Ort","city","text","");
+  const sharedZip=labelField(sharedFields,"PLZ","postal_code","text","");
+  const sharedCanton=labelField(sharedFields,"Kanton","canton","select","",[
+    ["","Nicht ändern"],...["AG","AI","AR","BE","BL","BS","FR","GE","GL","GR","JU","LU","NE","NW","OW","SG","SH","SO","SZ","TG","TI","UR","VD","VS","ZG","ZH"].map((v)=>[v,v])
+  ]);
+  const applyShared=el("button",{type:"button"},"Angaben auf alle Entwürfe anwenden");
+  sharedPanel.append(sharedFields,applyShared);shell.appendChild(sharedPanel);
+  const itemsSection=el("div",{className:"km24d-panel"});itemsSection.appendChild(el("h2",{},"4. Entwürfe bearbeiten"));
   const itemsList=el("div");itemsSection.appendChild(itemsList);shell.appendChild(itemsSection);
   const message=el("div",{className:"km24d-message","role":"status"},"Bereit.");
   shell.appendChild(message);
@@ -83,12 +97,26 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   function notice(text){message.textContent=text}
   async function work(fn){
     if(busy)return;
-    busy=true;[createButton,uploadButton].forEach((b)=>b.disabled=true);
+    busy=true;[createButton,uploadButton,applyShared].forEach((b)=>b.disabled=true);
     try{await fn()}catch(e){notice("Fehler: "+String(e?.message||e))}
-    finally{busy=false;[createButton,uploadButton].forEach((b)=>b.disabled=false)}
+    finally{busy=false;[createButton,uploadButton,applyShared].forEach((b)=>b.disabled=false)}
   }
   const c=await supabaseClient.from("categories").select("slug,name_de,parent_slug").eq("is_active",true).limit(250);
   if(!c.error)categories=(c.data||[]).filter((v)=>v.slug).map((v)=>[v.slug,v.name_de]);
+  categories.forEach(([slug,name])=>sharedCategory.appendChild(el("option",{value:slug},name)));
+  applyShared.addEventListener("click",async()=>{
+    if(!currentBatch){notice("Bitte zuerst einen Import anlegen.");return}
+    if(!confirm("Gemeinsame Angaben wirklich auf alle Entwürfe dieses Imports übertragen?"))return;
+    await work(async()=>{
+      const values={category_slug:sharedCategory.value,condition:sharedCondition.value,
+        city:sharedCity.value,postal_code:sharedZip.value,canton:sharedCanton.value};
+      const outcome=await applySharedFields(api,currentBatch,values,(done,total)=>{
+        notice("Gemeinsame Angaben: "+done+" von "+total+" Artikeln gespeichert.");
+      });
+      await refreshItems();
+      notice("Gemeinsame Angaben bei "+outcome.updated+" Entwürfen gespeichert. Preise und Titel wurden nicht verändert.");
+    });
+  });
   async function refreshBatches(){
     const batches=(await api.listBatches()).filter((b)=>b.state==="draft");
     batchSelect.replaceChildren(el("option",{value:""},"Import wählen"));
