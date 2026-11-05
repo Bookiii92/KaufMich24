@@ -24,7 +24,7 @@ async function plan(api,batchId){
   for(const item of draftItems){
     const l=byId.get(item.id);
     if(!l)continue;
-    if(l.seller_id!==uid || l.status!=="inactive" || l.extra_fields?.km24_photo_import!==true)continue;
+    if(l.seller_id!==uid || !["inactive","deleted"].includes(l.status) || l.extra_fields?.km24_photo_import!==true)continue;
     targets.push({id:item.id,title:item.title||"Artikel"});
   }
   return {uid,batch,items:targets};
@@ -39,16 +39,20 @@ export async function cleanupInactiveBulkBatch(api,batchId,onProgress=()=>{}){
     const check=checked(await api.db.from("listings").select("id,seller_id,status,extra_fields")
       .eq("id",item.id).eq("seller_id",first.uid).single(),"Testinserat überprüfen");
     if(check?.id!==item.id || check?.seller_id!==first.uid ||
-       check?.status!=="inactive" || check?.extra_fields?.km24_photo_import!==true)
+       !["inactive","deleted"].includes(check?.status) || check?.extra_fields?.km24_photo_import!==true)
       throw Error("Inserat nicht mehr inaktiv oder nicht als Foto-Test markiert.");
     const linked=checked(await api.db.from("listing_images").select("id,storage_path")
       .eq("listing_id",item.id),"Öffentliche Bilder laden")||[];
     if(linked.length>10)throw Error("Zu viele Bilder; keine automatische Löschung.");
     const paths=linked.map(image=>ownedPath(first.uid,item.id,image.storage_path));
     // Prevent public reappearance before removing public Storage objects.
-    checked(await api.db.from("listings").update({status:"deleted"})
-      .eq("id",item.id).eq("seller_id",first.uid).eq("status","inactive")
-      .select("id,status").single(),"Inserat ausblenden");
+    // If a previous cleanup failed midway, status is already "deleted":
+    // resuming must be safe without restoring the listing.
+    if(check.status==="inactive"){
+      checked(await api.db.from("listings").update({status:"deleted"})
+        .eq("id",item.id).eq("seller_id",first.uid).eq("status","inactive")
+        .select("id,status").single(),"Inserat ausblenden");
+    }
     if(paths.length){
       checked(await api.db.storage.from("listing-images").remove(paths),"Öffentliche Bilder löschen");
       checked(await api.db.from("listing_images").delete()
