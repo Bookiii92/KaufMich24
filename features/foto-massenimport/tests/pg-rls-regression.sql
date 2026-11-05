@@ -44,7 +44,9 @@ INSERT INTO storage.objects(bucket_id,name)
 VALUES('km24-bulk-draft-photos','11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/dddddddd-dddd-4ddd-8ddd-dddddddddddd.jpg');
 SELECT km24_test.assert_true((SELECT count(*)=1 FROM public.km24_bulk_draft_batches),'A reads own batch');
 SELECT km24_test.assert_true((SELECT count(*)=1 FROM storage.objects WHERE bucket_id='km24-bulk-draft-photos'),'A reads own private image metadata');
+RESET ROLE;
 SELECT km24_test.assert_true((SELECT public=false AND file_size_limit=10485760 FROM storage.buckets WHERE id='km24-bulk-draft-photos'),'bucket private and max 10MB');
+SET ROLE authenticated;
 SELECT km24_test.expect_denied($q$
   DELETE FROM public.km24_bulk_draft_photos WHERE id='cccccccc-cccc-4ccc-8ccc-cccccccccccc'
 $q$,'metadata cannot delete before file is removed');
