@@ -34,8 +34,8 @@
 
 ## Update 05.11.2026 – geschützter Server-Entwurf im PR
 - `review-only-private-drafts.sql`: neue private `km24-bulk-draft-photos`-Bucket und drei Entwurfs-Tabellen, per RLS auf den Besitzer begrenzt, mit serverseitigen Limits (5 offene Batches, 100 Artikel, 100 Fotos, max. 10 je Artikel). **Noch nicht angewandt.**
-- `private-draft-client.js`: authentifizierte Supabase-Operationen für Upload und Metadaten; reserviert Bildpfad vor Upload, bereinigt Fehluploads, erlaubt nur zeitlich befristete Bildlinks.
-- `private-draft-client.test.cjs`: Node-Tests für Authentifizierung, Formatprüfung, private Fotopfade und Uploadfehler.
+- `secure-drafts-client.mjs`: authentifizierte Supabase-Operationen für Upload und Metadaten; reserviert Bildpfad vor Upload, bereinigt Fehluploads, erlaubt nur zeitlich befristete Bildlinks.
+- `secure-drafts-client.test.mjs`: Node-Tests für Authentifizierung, Formatprüfung, private Fotopfade und Uploadfehler.
 - Die öffentliche `listing-images`-Bucket, die `listings`-Tabelle und die bestehende Live-Webseite bleiben unverändert.
 - Die vorhandene Foto-Beta ist weiterhin **nur lokal**; Server-Foto-Uploads werden erst nach RLS-/Sicherheitstests und separater Aktivierungsfreigabe freigeschaltet.
 
@@ -45,7 +45,7 @@
 3. Foto-Entwürfe über die aktive Firmen-Session verbinden, fehlgeschlagene Uploads und Wiederaufnahme testen.
 4. KI-Analyse und Veröffentlichung separat vorbereiten. Bestehende Spam- und Händlerlimits nicht aufheben.
 
-Tests lokal: `node --test features/foto-massenimport/private-draft-client.test.cjs`.
+Tests lokal: `node --test features/foto-massenimport/*.test.mjs`.
 
 ## Neu: gemeinsame Angaben ohne Excel
 
@@ -57,3 +57,12 @@ Der Helfer ist als `shared-draft-fields.mjs` umgesetzt und durch `shared-draft-f
 
 Die Vorbereitungsarbeit läuft ausschliesslich auf dem vorhandenen GitHub-Entwicklungszweig. Es wird **kein zusätzlicher Supabase-Branch oder kostenpflichtiges Testprojekt** angelegt. Die laufenden automatisierten CI-Tests können von den allgemeinen GitHub-Nutzungsgrenzen abhängen; zusätzliche Supabase-Rechenstunden wurden nicht gestartet. Live-RLS- und echte Bild-Uploads sind **weiterhin ungetestet**, weil die private Upload-Bucket und Tabellen auf dem Produktivprojekt bewusst **nicht** angelegt wurden. Auch das Überprüfen mit mehreren echten Konten ist noch ausstehend. Für diese abschliessenden Prüfungen muss eine sichere, gesondert freigegebene Teststrategie vorliegen.
 
+
+## Update: Bildsignatur, Wiederaufnahme und KI-Schnittstelle (05.11.2026)
+- `image-signature.mjs`: tatsächliche JPEG-, PNG- und WebP-Dateikennung prüfen, nicht nur den Dateinamen. HEIC bleibt gesperrt, bis eine zuverlässige Umwandlung vorliegt.
+- `secure-drafts-client.mjs`: bei unsicherem Upload zuerst möglichen Storage-Inhalt löschen, erst danach Metadaten bereinigen. Wenn die Bereinigung fehlschlägt, nicht blind wiederholen.
+- `photo-upload-queue.mjs`: Foto-Importe nach Unterbruch im selben geöffneten Browser fortsetzen. Bereits erfolgreich hochgeladene Fotos werden nicht erneut gesendet. Der UUID-basierte Artikelentwurf hilft gegen Doppelanlage bei verlorener Datenbankantwort.
+- `secure-drafts-page.mjs`: Pausieren/Fortsetzen sowie Kapazitätsprüfung vor dem Start. Wiederaufnahme ist **nicht** über einen kompletten Browserneustart garantiert; in der separaten Demo gibt es dagegen lokale Entwurfsspeicherung.
+- `ai-suggestion-contract.mjs`: Vorbereitung für spätere KI-Vorschläge. Preise, Zustand und Lagerbestand werden **nicht** von der KI übernommen. Menschliche Prüfung ist zwingend.
+- Automatischer GitHub-Workflow: 28 Tests und 17 statische SQL-Prüfungen bestanden (Run `42087793868`). Diese Tests sind keine echten RLS-/Browser-Integrationstests und beweisen keine Produktionsbereitschaft.
+- Keine neue kostenpflichtige Supabase-Testumgebung, kein KI-API-Aufruf und keine Änderungen an KaufMich24.ch.
