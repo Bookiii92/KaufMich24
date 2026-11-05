@@ -85,6 +85,24 @@ export class SecurePhotoDrafts {
       .insert({...v,owner_id:uid,batch_id:id(batchId)})
       .select("id,batch_id,owner_id,title").single());
   }
+  async ensureItem(batchId,itemId,details) {
+    const uid=await this.owner(),batch=id(batchId),item=id(itemId);
+    const v=cleanDraft(details);
+    // The client-generated item UUID makes retry safe after a timed-out INSERT.
+    const created=await this.db.from("km24_bulk_draft_items")
+      .insert({...v,id:item,batch_id:batch,owner_id:uid})
+      .select("id,batch_id,owner_id,title").single();
+    if(!created?.error && created?.data)return created.data;
+    if(created?.error?.code!=="23505"){
+      throw new Error("Artikel konnte nicht angelegt werden: "+String(created?.error?.message||"Keine Antwort"));
+    }
+    // Only reuse the existing item if both owner and batch match.
+    const existing=result(await this.db.from("km24_bulk_draft_items")
+      .select("id,batch_id,owner_id,title").eq("id",item).eq("batch_id",batch).eq("owner_id",uid).single());
+    if(!existing || existing.id!==item || existing.batch_id!==batch || existing.owner_id!==uid)
+      throw new Error("Bereits vorhandener Artikel konnte nicht zugeordnet werden.");
+    return existing;
+  }
   async updateItem(itemId,details) {
     const uid=await this.owner(),v=cleanDraft(details,true);
     if(Object.keys(v).length===0) throw new Error("Keine Änderungen");
