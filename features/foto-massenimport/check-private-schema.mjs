@@ -19,7 +19,12 @@ const checks=[
   ["no bucket reuse", /Draft bucket already exists/],
   ["owner folder storage policy", /p\.object_name = name AND p\.owner_id = \(SELECT auth\.uid\(\)\)/],
   ["not granted to anon", /REVOKE ALL ON public\.km24_bulk_draft_batches,public\.km24_bulk_draft_items,public\.km24_bulk_draft_photos FROM PUBLIC,anon/],
-  ["serialized photo inserts", /-- Always lock the batch BEFORE the item/]
+  ["serialized photo inserts", /-- Always lock the batch BEFORE the item/],
+  ["metadata deletion checks stored object", /CREATE TRIGGER km24_bulk_photos_delete_cleanup BEFORE DELETE/],
+  ["item deletion checks photo reservations", /CREATE TRIGGER km24_bulk_items_delete_cleanup BEFORE DELETE/],
+  ["batch deletion checks remaining items", /CREATE TRIGGER km24_bulk_batches_delete_cleanup BEFORE DELETE/],
+  ["archive guard checks table first", /IF TG_TABLE_NAME = 'km24_bulk_draft_batches' THEN[\s\S]*?IF OLD\.state = 'archived'/],
+  ["item guard checks table first", /IF TG_TABLE_NAME = 'km24_bulk_draft_items' THEN[\s\S]*?IF NEW\.batch_id IS DISTINCT FROM OLD\.batch_id/]
 ];
 for(const [name,pattern] of checks){assert.match(sql,pattern,"Missing: "+name);console.log("PASS "+name)}
 console.log(checks.length+" statische SQL-Sicherheitsprüfungen bestanden.");
