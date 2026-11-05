@@ -140,18 +140,34 @@ export class SecurePhotoDrafts {
       .insert({owner_id:uid,batch_id:b,item_id:i,object_name:path,mime_type:file.type,
         size_bytes:file.size,sort_order:order})
       .select("id,object_name").single());
-    const uploaded=await this.db.storage.from(BUCKET).upload(path,file,{
-      upsert:false,contentType:file.type,cacheControl:"0"
-    });
+    let uploaded;
+    try{
+      uploaded=await this.db.storage.from(BUCKET).upload(path,file,{
+        upsert:false,contentType:file.type,cacheControl:"0"
+      });
+    }catch(e){
+      // Network exceptions can happen AFTER the server accepted the bytes.
+      uploaded={error:{message:String(e?.message||"Netzwerk unterbrochen")}};
+    }
     if(uploaded?.error || !uploaded?.data){
       // A timed-out upload MAY have reached Storage. Delete its object *before*
       // deleting RLS metadata, otherwise private Storage deletion can be blocked.
       // On cleanup failure, keep the reservation: retry must not create duplicates.
-      const cleanupObject=await this.db.storage.from(BUCKET).remove([path]);
+      let cleanupObject;
+      try{
+        cleanupObject=await this.db.storage.from(BUCKET).remove([path]);
+      }catch(e){
+        throw new Error("Upload unklar: Bildreservierung bleibt erhalten. Bitte nicht erneut hochladen. "+String(e?.message||e));
+      }
       if(cleanupObject?.error){
         throw new Error("Upload unklar: Bildreservierung bleibt erhalten. Bitte nicht erneut hochladen. "+cleanupObject.error.message);
       }
-      const cleanup=await this.db.from("km24_bulk_draft_photos").delete().eq("id",metadata.id).eq("owner_id",uid);
+      let cleanup;
+      try{
+        cleanup=await this.db.from("km24_bulk_draft_photos").delete().eq("id",metadata.id).eq("owner_id",uid);
+      }catch(e){
+        throw new Error("Bilddatei entfernt, aber Reservierung muss bereinigt werden: "+String(e?.message||e));
+      }
       if(cleanup?.error)throw new Error("Bilddatei entfernt, aber Reservierung muss bereinigt werden: "+cleanup.error.message);
       throw new Error("Foto-Upload fehlgeschlagen: "+String(uploaded?.error?.message||"Keine Antwort"));
     }
