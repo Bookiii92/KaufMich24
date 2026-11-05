@@ -1,3 +1,4 @@
+import {verifyImageSignature} from "./image-signature.mjs";
 // Private photo import drafts. Safe for use ONLY after review-only migration is applied.
 // No writes to public.listings; no publishing workflow.
 export const BUCKET = "km24-bulk-draft-photos";
@@ -108,6 +109,8 @@ export class SecurePhotoDrafts {
     const uid=await this.owner(),b=id(batchId),i=id(itemId);
     const ext=validateImage(file);
     if(!Number.isInteger(order)||order<0||order>=MAX_PER_ITEM)throw new Error("Maximal 10 Bilder pro Artikel");
+    // Inspect real file bytes; file.type and filename are not trustworthy.
+    await verifyImageSignature(file);
     const path=uid+"/"+b+"/"+i+"/"+id(this.uuid())+"."+ext;
     // The reservation is protected by ownership RLS and quota triggers.
     const metadata=result(await this.db.from("km24_bulk_draft_photos")
@@ -117,16 +120,24 @@ export class SecurePhotoDrafts {
     const uploaded=await this.db.storage.from(BUCKET).upload(path,file,{
       upsert:false,contentType:file.type,cacheControl:"0"
     });
-    if(uploaded.error){
+    if(uploaded?.error || !uploaded?.data){
+      // A timed-out upload MAY have reached Storage. Delete its object *before*
+      // deleting RLS metadata, otherwise private Storage deletion can be blocked.
+      // On cleanup failure, keep the reservation: retry must not create duplicates.
+      const cleanupObject=await this.db.storage.from(BUCKET).remove([path]);
+      if(cleanupObject?.error){
+        throw new Error("Upload unklar: Bildreservierung bleibt erhalten. Bitte nicht erneut hochladen. "+cleanupObject.error.message);
+      }
       const cleanup=await this.db.from("km24_bulk_draft_photos").delete().eq("id",metadata.id).eq("owner_id",uid);
-      if(cleanup.error)throw new Error("Upload fehlgeschlagen und Reservierung nicht bereinigt: "+cleanup.error.message);
-      throw new Error("Foto-Upload fehlgeschlagen: "+uploaded.error.message);
+      if(cleanup?.error)throw new Error("Bilddatei entfernt, aber Reservierung muss bereinigt werden: "+cleanup.error.message);
+      throw new Error("Foto-Upload fehlgeschlagen: "+String(uploaded?.error?.message||"Keine Antwort"));
     }
     return metadata;
   }
   async preview(objectName) {
     const uid=await this.owner();
-    if(typeof objectName!=="string" || !objectName.startsWith(uid+"/") || objectName.split("/").length!==4)
+    if(typeof objectName!=="string" ||
+       !new RegExp("^"+uid.replace(/-/g,"\\-")+"/[0-9a-f-]{36}/[0-9a-f-]{36}/[0-9a-f-]{36}\\.(jpg|png|webp)$","i").test(objectName))
       throw new Error("Foto gehört nicht zu diesem Konto");
     const signed=await this.db.storage.from(BUCKET).createSignedUrl(objectName,300);
     return result(signed).signedUrl;
