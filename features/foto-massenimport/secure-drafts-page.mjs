@@ -3,6 +3,7 @@
 import {SecurePhotoDrafts,validateImage,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-drafts-client.mjs";
 import {PhotoUploadQueue,groupPhotos} from "./photo-upload-queue.mjs";
 import {applySharedFields} from "./shared-draft-fields.mjs";
+import {inspectBusinessUploadReadiness} from "./upload-account-readiness.mjs";
 
 const el=(tag,props={},value=null)=>{
   const node=document.createElement(tag);
@@ -38,6 +39,29 @@ function labelField(parent,label,field,kind,value,options){
 export async function mountPhotoDraftPanel({root,supabaseClient}){
   if(!root || !supabaseClient)throw new Error("KaufMich24-Sitzung fehlt.");
   const api=new SecurePhotoDrafts(supabaseClient);
+  const auth=await supabaseClient.auth.getUser();
+  if(auth.error || !auth.data?.user?.id)throw new Error("Bitte erneut anmelden.");
+  const current=auth.data.user;
+  const profileResponse=await supabaseClient.from("profiles")
+    .select("id,account_type,phone,street_address,postal_code,city,address_confirmed_at")
+    .eq("id",current.id).single();
+  if(profileResponse.error || !profileResponse.data)
+    throw new Error("Profil konnte nicht geladen werden. Bitte die Anmeldung prüfen.");
+  const readiness=inspectBusinessUploadReadiness(current,profileResponse.data);
+  if(!readiness.ready){
+    const container=el("section",{className:"km24d-account-warning"});
+    container.style.cssText="max-width:700px;margin:36px auto;font-family:system-ui;padding:24px;border:1px solid #e1e6ee;border-radius:12px;color:#24334a";
+    container.appendChild(el("h1",{},"📸 Foto-Massenimport: Konto vervollständigen"));
+    container.appendChild(el("p",{},"Private Foto-Uploads sind erst nach der Bestätigung deiner Firmenangaben verfügbar."));
+    const list=el("ul");
+    for(const reason of readiness.missing)list.appendChild(el("li",{},reason));
+    container.appendChild(list);
+    const link=el("a",{href:"#/verification"},"Kontodaten ergänzen und bestätigen");
+    link.style.cssText="display:inline-block;padding:12px 18px;background:#1556d4;color:white;border-radius:7px;text-decoration:none";
+    container.appendChild(link);
+    root.replaceChildren(container);
+    return {blocked:true,reason:"account_contact_required"};
+  }
   await api.owner();
   const style=el("style");style.textContent=[
     ".km24d{max-width:1100px;margin:20px auto;font-family:system-ui,Arial;color:#18304d}",
