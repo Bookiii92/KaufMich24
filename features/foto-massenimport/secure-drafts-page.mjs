@@ -1,6 +1,7 @@
 // UI integration for KaufMich24 authenticated sessions; never publishes listings.
 // Call mountPhotoDraftPanel({root, supabaseClient}) from a verified firm session.
 import {SecurePhotoDrafts,validateImage,MAX_PHOTOS,MAX_PER_ITEM} from "./secure-drafts-client.mjs";
+import {PhotoUploadQueue,groupPhotos} from "./photo-upload-queue.mjs";
 import {applySharedFields} from "./shared-draft-fields.mjs";
 
 const el=(tag,props={},value=null)=>{
@@ -75,7 +76,10 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   const sameLabel=el("label",{},"Gleiches Produkt (max. 10 Fotos)");
   const sameInput=el("input",{type:"checkbox"});sameLabel.prepend(sameInput);
   const uploadButton=el("button",{},"Fotos privat hochladen");
-  uploadControls.append(input,sameLabel,uploadButton);uploads.appendChild(uploadControls);shell.appendChild(uploads);
+  const resumeButton=el("button",{},"Unterbrochenen Upload fortsetzen");resumeButton.hidden=true;
+  const pauseButton=el("button",{},"Nach aktuellem Foto pausieren");pauseButton.hidden=true;
+  uploadControls.append(input,sameLabel,uploadButton,resumeButton,pauseButton);
+  uploads.appendChild(uploadControls);shell.appendChild(uploads);
   const sharedPanel=el("div",{className:"km24d-panel"});
   sharedPanel.appendChild(el("h2",{},"3. Angaben für alle Artikel übernehmen"));
   sharedPanel.appendChild(el("p",{},"Nur ausgefüllte Felder werden geändert. Titel, Beschreibung und Preise bleiben unverändert."));
@@ -93,7 +97,7 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
   const itemsList=el("div");itemsSection.appendChild(itemsList);shell.appendChild(itemsSection);
   const message=el("div",{className:"km24d-message","role":"status"},"Bereit.");
   shell.appendChild(message);
-  let currentBatch="",busy=false,categories=[];
+  let currentBatch="",busy=false,categories=[],pendingQueue=null;
   function notice(text){message.textContent=text}
   async function work(fn){
     if(busy)return;
@@ -188,33 +192,49 @@ export async function mountPhotoDraftPanel({root,supabaseClient}){
     }
   }
   createButton.addEventListener("click",()=>work(async()=>{
+    if(pendingQueue)throw new Error("Bitte zuerst den laufenden Upload abschliessen.");
     const b=await api.createBatch(batchName.value.trim()||"Foto-Massenimport");
     currentBatch=b.id;await refreshBatches();await refreshItems();notice("Privater Import angelegt.");
   }));
   batchSelect.addEventListener("change",()=>work(async()=>{
+    if(pendingQueue)throw new Error("Bitte zuerst den laufenden Upload abschliessen.");
     currentBatch=batchSelect.value;await refreshItems();
   }));
+  function progress(p){notice("Privater Upload: "+p.done+" von "+p.total+" Fotos abgeschlossen. "+(p.state==="paused"?"Kann fortgesetzt werden.":""))}
+  async function processQueue(){
+    if(!pendingQueue)throw new Error("Kein unterbrochener Import vorhanden.");
+    pauseButton.hidden=false;resumeButton.hidden=true;
+    try{
+      await pendingQueue.run(progress);
+      if(pendingQueue.state==="completed"){
+        const done=pendingQueue.snapshot();
+        pendingQueue=null;
+        await refreshItems();
+        notice(done.done+" Fotos als private Entwürfe gespeichert. Nichts veröffentlicht.");
+      }else if(pendingQueue.state==="paused"){
+        resumeButton.hidden=false;await refreshItems();
+      }
+    }finally{
+      pauseButton.hidden=true;
+      if(pendingQueue?.state==="paused")resumeButton.hidden=false;
+    }
+  }
   uploadButton.addEventListener("click",()=>work(async()=>{
     if(!currentBatch)throw new Error("Zuerst einen Import anlegen.");
-    const files=Array.from(input.files||[]);if(!files.length)throw new Error("Bitte Fotos wählen.");
-    if(files.length>MAX_PHOTOS)throw new Error("Maximal 100 Fotos pro Auswahl.");
-    files.forEach(validateImage);
-    if(sameInput.checked && files.length>MAX_PER_ITEM)throw new Error("Maximal 10 Fotos desselben Produkts auf einmal.");
-    const groups=sameInput.checked?[files]:files.map((f)=>[f]);
-    let done=0;
-    for(const group of groups){
-      const item=await api.createItem(currentBatch,{
-        title:filenameTitle(group[0]),description:"",price_chf:null,category_slug:null,
-        condition:"new",city:"",postal_code:"",canton:""
-      });
-      for(let i=0;i<group.length;i++){
-        notice("Foto "+(done+1)+" von "+files.length+" wird privat gespeichert.");
-        await api.upload(currentBatch,item.id,group[i],i);done++;
-      }
-    }
-    input.value="";await refreshItems();
-    notice(groups.length+" Entwürfe mit "+done+" Bildern privat gespeichert. Nicht veröffentlicht.");
+    if(pendingQueue)throw new Error("Zuerst den vorherigen Upload abschliessen oder die Seite neu laden.");
+    const files=Array.from(input.files||[]);
+    const groups=groupPhotos(files,sameInput.checked);
+    const [items,photos]=await Promise.all([api.listItems(currentBatch),api.listBatchPhotos(currentBatch)]);
+    if(items.length+groups.length>100)throw new Error("Maximal 100 Artikel pro Import.");
+    if(photos.length+files.length>MAX_PHOTOS)throw new Error("Maximal 100 Fotos pro Import.");
+    pendingQueue=new PhotoUploadQueue({api,batchId:currentBatch,files,sameProduct:sameInput.checked});
+    input.value=""; // Keep files in pendingQueue during an interrupted upload.
+    await processQueue();
   }));
+  resumeButton.addEventListener("click",()=>work(processQueue));
+  pauseButton.addEventListener("click",()=>{
+    if(pendingQueue)pendingQueue.requestPause();
+  });
   await refreshBatches();await refreshItems();
   return {api,refresh:async()=>{await refreshBatches();await refreshItems()}};
 }
