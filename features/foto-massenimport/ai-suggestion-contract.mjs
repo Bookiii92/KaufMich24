@@ -33,6 +33,6 @@ export function isReviewedSuggestion(suggestion,sellerChanges={}) {
   const condition=String(sellerChanges.condition||"");
   const category=String(sellerChanges.category_slug||"");
   return title.length>=3&&title.length<=120&&description.length>=10&&
-    /^\\d{1,10}(\\.\\d{1,2})?$/.test(price)&&
+    /^\d{1,10}(\.\d{1,2})?$/.test(price)&&
     ["new","like_new","used","defective"].includes(condition)&&category.length>0;
 }
