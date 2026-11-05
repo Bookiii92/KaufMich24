@@ -31,6 +31,7 @@ jobs:
           node --check features/foto-massenimport/secure-drafts-client.mjs
           node --check features/foto-massenimport/secure-drafts-page.mjs
           node --check features/foto-massenimport/image-signature.mjs
+          node --check features/foto-massenimport/upload-account-readiness.mjs
       - name: Unit-Tests ausführen
         run: node --test features/foto-massenimport/*.test.mjs
       - name: SQL-Sicherheitsregeln statisch prüfen
@@ -88,7 +89,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE="https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-photo-bulk-assets"
-          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs; do
+          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs upload-account-readiness.mjs; do
             curl --fail --silent --show-error --retry 3 --connect-timeout 10 --max-time 30 \
               -H 'Origin: https://kaufmich24.ch' \
               -D "$RUNNER_TEMP/hdr" \
