@@ -79,6 +79,51 @@ jobs:
         run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-rls-regression.sql
 
 
+  postgres-publish:
+    name: Isolierte Massenveröffentlichung – Transaktion und Limits
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+      - name: PostgreSQL Client prüfen
+        run: |
+          if ! command -v psql >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+          psql --version
+      - name: Eigene Listing-Fixtures und Auth-Testkonten erstellen
+        run: |
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-bootstrap.sql
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-publish-setup.sql
+      - name: Private Draft- und neue Publish-Migration isoliert laden
+        run: |
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/review-only-private-drafts.sql
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/review-only-bulk-publish.sql
+      - name: Rollen, Dubletten, Limits und atomare Bilderübergabe prüfen
+        run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-bulk-publish-regression.sql
+
   module-http-smoke:
     name: Öffentliche statische Module – HTTP- und CORS-Test
     runs-on: ubuntu-latest
