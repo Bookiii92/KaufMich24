@@ -90,6 +90,7 @@ SELECT km24_test.expect_rejected(
 
 -- Two images; simulated second image row failure rolls back entire listing
 -- insert and any first image link, so no half-published article appears.
+RESET ROLE;
 CREATE FUNCTION private.test_fail_second_image() RETURNS trigger
 LANGUAGE plpgsql SECURITY INVOKER SET search_path='' AS $$
 BEGIN
@@ -98,6 +99,8 @@ BEGIN
 END;$$;
 CREATE TRIGGER fail_second_image BEFORE INSERT ON public.listing_images
  FOR EACH ROW EXECUTE FUNCTION private.test_fail_second_image();
+SET ROLE authenticated;
+SELECT set_config('request.jwt.claim.sub','11111111-1111-4111-8111-111111111111',false);
 INSERT INTO public.km24_bulk_draft_items(id,batch_id,title,price_chf,category_slug)
 VALUES('ffffffff-ffff-4fff-8fff-ffffffffffff',
        'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','Artikel mit zwei Bildern',24,'spielzeug');
@@ -123,7 +126,10 @@ SELECT km24_test.check_truth(
   (SELECT count(*)=0 FROM public.listings WHERE id='ffffffff-ffff-4fff-8fff-ffffffffffff')
   AND (SELECT count(*)=0 FROM public.listing_images WHERE listing_id='ffffffff-ffff-4fff-8fff-ffffffffffff'),
   'No half-published listing after SQL error');
+RESET ROLE;
 DROP TRIGGER fail_second_image ON public.listing_images;
+SET ROLE authenticated;
+SELECT set_config('request.jwt.claim.sub','11111111-1111-4111-8111-111111111111',false);
 
 -- Existing insert quota remains effective when publishing drafts through RPC.
 INSERT INTO public.listings(seller_id,category_slug,title,price_chf)
