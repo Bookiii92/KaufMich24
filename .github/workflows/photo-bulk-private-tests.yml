@@ -134,7 +134,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE="https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-photo-bulk-assets"
-          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs upload-account-readiness.mjs; do
+          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs photo-bulk-publish.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs upload-account-readiness.mjs; do
             curl --fail --silent --show-error --retry 3 --connect-timeout 10 --max-time 30 \
               -H 'Origin: https://kaufmich24.ch' \
               -D "$RUNNER_TEMP/hdr" \
@@ -162,6 +162,14 @@ jobs:
             exit 1
           fi
           echo 'PASS: Fotoauswahl zuerst; Standort automatisch pro Import'
+      - name: Echte, explizite Massenveröffentlichung in der Beta prüfen
+        run: |
+          grep -Fq 'Jetzt fertige Artikel veröffentlichen' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'km24_publish_photo_draft' "$RUNNER_TEMP/photo-bulk-publish.mjs"
+          grep -Fq 'destinationBucket:PUBLIC_BUCKET' "$RUNNER_TEMP/photo-bulk-publish.mjs"
+          grep -Fq 'Maximal 12' "$RUNNER_TEMP/secure-drafts-page.mjs" || grep -Fq 'maximal 12' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          echo 'PASS: Publishing needs explicit user confirmation and uses the normal quota-controlled RPC'
+
 
 
   live-beta-smoke:
