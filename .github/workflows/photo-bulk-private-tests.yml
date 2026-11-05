@@ -77,20 +77,3 @@ jobs:
       - name: Zugriffsrechte, Quoten und Bildlöschung als echte Rollen testen
         run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-rls-regression.sql
 
-  pglite-rls:
-    name: PostgreSQL-RLS-Isolationstest
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Quellcode laden
-        uses: actions/checkout@v4
-      - name: Node.js 22 einrichten
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Temporäre PostgreSQL-WASM-Testumgebung installieren
-        run: |
-          cd features/foto-massenimport
-          npm install --no-save --no-package-lock --ignore-scripts --no-audit --no-fund @electric-sql/pglite@0.5.15
-      - name: Private RLS-Rechte mit PostgreSQL prüfen
-        run: node --test features/foto-massenimport/pglite-private-rls.test.mjs
