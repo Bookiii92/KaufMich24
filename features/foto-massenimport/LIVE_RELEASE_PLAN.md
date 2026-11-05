@@ -49,3 +49,22 @@ Die Triggerfunktion \`private.km24_bulk_immutable_keys\` griff beim Archivieren 
 - Die Edge Function konnte nach Deployment über die Supabase-Verwaltung als `ACTIVE` und mit unverändertem Quellcode eingesehen werden. Eine unabhängige Browser-/HTTP-End-to-End-Prüfung der Assets steht noch aus.
 - **Wichtig:** Die Modulbereitstellung aktiviert keine KaufMich24-Routerfunktion. In der produktiven Datenbank gibt es weiterhin keine `km24_bulk_draft_*`-Tabellen und keine private `km24-bulk-draft-photos`-Bucket. Deshalb ist kein echter Server-Foto-Upload möglich.
 - Beim Produktiv-Rollout nicht die bestehende Website durch ungeprüften dynamischen Code ersetzen. Erst Schema-, Rechte- und Mobilbrowser-Tests sowie funktionsfähiges Rücksetzen prüfen.
+
+## Produktive Backend-Freigabe und Sperren (05.11.2026)
+
+Die ausschliesslich **additive** private SQL-Migration wurde nach erfolgreicher PostgreSQL-17-RLS-Testserie bewusst auf das vorhandene KaufMich24-Supabase-Projekt angewandt (Migrationsname: `km24_private_photo_bulk_drafts_20261105`).
+
+Nachkontrolle:
+- 3 neue private Draft-Tabellen mit aktiviertem RLS, bestehenden Import- und Eigentümer-Policies; keine anonymen SELECT-Tabellenrechte.
+- 1 neuer `km24-bulk-draft-photos`-Bucket mit `public=false`, 10 MiB Dateigrenze, JPG/PNG/WebP.
+- 0 Importvorgänge, 0 Entwurfsartikel, 0 Bildmetadaten, 0 hochgeladene Dateien zum Prüfzeitpunkt.
+- Supabase-Security-Advisor zeigt keine Warnungen für diese drei neuen Tabellen.
+- Produktiver HTML-Snapshot unverändert, 2'215'262 Zeichen. Es gibt **keine** öffentliche Firmen-CTA oder Router-Einbindung.
+- Auf dem separaten statischen JavaScript-Asset-Host läuft Version 2 mit `upload-account-readiness.mjs`. Aktueller HTTP-Test (GitHub Run `42096338947`, zweiter Versuch) erfolgreich.
+- Auf vorhandenen Firmen-/Händlerkonten ist derzeit **kein** Konto vollständig kontaktverifiziert; das vorhandene Firmenkonto ist aktiv, aber hat weder international formatierte Telefonnummer noch vollständig bestätigte Strasse/PLZ/Ort/Adresse. Diese Daten nicht übergehen und nicht selbst mit erfundenen Angaben befüllen. Die Importoberfläche verweist auf `#/verification`.
+
+**Noch nicht freigegeben:** echter angemeldeter Auth-/Storage-Upload mit zwei Konten, mobile Browsereingabe, Sicherheitstest zu realen Signed URLs sowie der produktive CTA/Routen-Einbau. Die SQL-Freigabe ist **nicht** die Freigabe zum öffentlichen Import oder zur Veröffentlichung von Inseraten.
+
+**Kosten:** kein zusätzlicher Supabase-Branch oder separates Testprojekt; tatsächliche Speicher- und Transfer-Nutzung des bestehenden Projekts kann dennoch abrechnungsrelevant sein.
+
+**Migration-Drift:** Die Produktionsmigration ist bereits angewandt und darf nicht nochmals ausgeführt werden. Beim späteren Merge die lokale SQL-Datei mit der Supabase-Migrationshistorie synchronisieren, statt erneut `CREATE TABLE` aufzurufen.
