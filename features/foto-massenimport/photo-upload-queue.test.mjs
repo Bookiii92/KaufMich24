@@ -8,7 +8,7 @@ const uuids=["22222222-2222-4222-8222-222222222222","33333333-3333-4333-8333-333
 function mock({failAt=0,blocked=false}={}){
  const events=[],counts={attempts:0};
  const api={
-   async ensureItem(batch,id){events.push(["item",batch,id])},
+   async ensureItem(batch,id,fields){events.push(["item",batch,id,fields])},
    async upload(batch,id,file,order){
       counts.attempts++;events.push(["photo",batch,id,file.name,order]);
       if(counts.attempts===failAt)throw Error(blocked?"Bitte nicht erneut hochladen":"Netzwerkfehler");
@@ -63,4 +63,29 @@ test("a finished queue is idempotent in memory",async()=>{
  const m=mock(),q=queue(m.api);await q.run();
  const old=m.events.length;await q.run();
  assert.equal(m.events.length,old);
+});
+
+test("company city postal code and canton are saved once for every new photo article",async()=>{
+ const m=mock();let n=0;
+ const q=new PhotoUploadQueue({
+   api:m.api,batchId:BID,files:files(),
+   location:{city:"Triengen",postal_code:"6234",canton:"LU",owner_id:"forbidden"},
+   newUUID:()=>uuids[n++]
+ });
+ await q.run();
+ const created=m.events.filter(e=>e[0]==="item");
+ assert.equal(created.length,4);
+ for(const entry of created){
+   assert.equal(entry[3].city,"Triengen");
+   assert.equal(entry[3].postal_code,"6234");
+   assert.equal(entry[3].canton,"LU");
+   assert.equal(Object.hasOwn(entry[3],"owner_id"),false);
+ }
+});
+test("invalid account location is rejected before uploading",()=>{
+ const m=mock();
+ assert.throws(()=>new PhotoUploadQueue({
+   api:m.api,batchId:BID,files:files(),location:{canton:"LU-CANTON"}
+ }),/Feld zu lang/);
+ assert.equal(m.events.length,0);
 });
