@@ -131,8 +131,9 @@ CREATE POLICY km24_bulk_batches_insert_eligible ON public.km24_bulk_draft_batche
   );
 CREATE POLICY km24_bulk_batches_update_own ON public.km24_bulk_draft_batches
   FOR UPDATE TO authenticated
-  USING (owner_id = (SELECT auth.uid()))
-  WITH CHECK (owner_id = (SELECT auth.uid()));
+  -- Archived imports cannot be restored to draft to bypass the five-open-import quota.
+  USING (owner_id = (SELECT auth.uid()) AND state = 'draft')
+  WITH CHECK (owner_id = (SELECT auth.uid()) AND state IN ('draft','archived'));
 CREATE POLICY km24_bulk_batches_delete_own ON public.km24_bulk_draft_batches
   FOR DELETE TO authenticated USING (owner_id = (SELECT auth.uid()));
 
@@ -166,13 +167,16 @@ CREATE POLICY km24_bulk_photos_insert_own ON public.km24_bulk_draft_photos
     owner_id = (SELECT auth.uid()) AND EXISTS (
       SELECT 1 FROM public.km24_bulk_draft_items i
       JOIN public.km24_bulk_draft_batches b ON b.id = i.batch_id AND b.owner_id = i.owner_id
-      WHERE i.id = item_id AND i.batch_id = batch_id AND
-        i.owner_id = (SELECT auth.uid()) AND b.state = 'draft')
+      WHERE i.id = public.km24_bulk_draft_photos.item_id
+        AND i.batch_id = public.km24_bulk_draft_photos.batch_id
+        AND i.owner_id = (SELECT auth.uid()) AND b.state = 'draft')
   );
 CREATE POLICY km24_bulk_photos_delete_own ON public.km24_bulk_draft_photos
   FOR DELETE TO authenticated USING (owner_id = (SELECT auth.uid()) AND
     EXISTS (SELECT 1 FROM public.km24_bulk_draft_items i
-      WHERE i.id = item_id AND i.batch_id = batch_id AND i.owner_id = (SELECT auth.uid())));
+      WHERE i.id = public.km24_bulk_draft_photos.item_id
+      AND i.batch_id = public.km24_bulk_draft_photos.batch_id
+      AND i.owner_id = (SELECT auth.uid())));
 
 REVOKE ALL ON public.km24_bulk_draft_batches,public.km24_bulk_draft_items,public.km24_bulk_draft_photos FROM PUBLIC,anon;
 GRANT SELECT,INSERT,UPDATE,DELETE ON public.km24_bulk_draft_batches,public.km24_bulk_draft_items TO authenticated;
