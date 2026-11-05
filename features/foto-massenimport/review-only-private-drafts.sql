@@ -133,9 +133,10 @@ BEGIN
       RAISE EXCEPTION 'Ein Artikel kann nicht in einen anderen Import verschoben werden.';
     END IF;
   END IF;
-  IF TG_TABLE_NAME = 'km24_bulk_draft_batches'
-     AND OLD.state = 'archived' AND NEW.state <> 'archived' THEN
-    RAISE EXCEPTION 'Archivierte Importe können nicht reaktiviert werden.';
+  IF TG_TABLE_NAME = 'km24_bulk_draft_batches' THEN
+    IF OLD.state = 'archived' AND NEW.state <> 'archived' THEN
+      RAISE EXCEPTION 'Archivierte Importe können nicht reaktiviert werden.';
+    END IF;
   END IF;
   RETURN NEW;
 END
