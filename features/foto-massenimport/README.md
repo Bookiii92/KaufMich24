@@ -46,3 +46,14 @@
 4. KI-Analyse und Veröffentlichung separat vorbereiten. Bestehende Spam- und Händlerlimits nicht aufheben.
 
 Tests lokal: `node --test features/foto-massenimport/private-draft-client.test.cjs`.
+
+## Neu: gemeinsame Angaben ohne Excel
+
+Die authentifizierte Firmenoberfläche bietet einen optionalen Schritt „Angaben für alle Artikel übernehmen“. Firmen können Kategorie, Zustand, Ort, PLZ und Kanton einmal eingeben und explizit auf alle Entwürfe eines Imports anwenden. Nur ausgefüllte Felder werden aktualisiert; vorhandene Produkttitel, Beschreibungen, Mengen und Preise bleiben unverändert. Die UI verlangt vor dem Speichern eine Bestätigung. Bei teilweisem Netzwerkausfall wird die Anzahl bereits aktualisierter Artikel zurückgemeldet.
+
+Der Helfer ist als `shared-draft-fields.mjs` umgesetzt und durch `shared-draft-fields.test.mjs` abgedeckt.
+
+## Kosten- und Veröffentlichungsgrenze
+
+Die Vorbereitungsarbeit läuft ausschliesslich auf dem vorhandenen GitHub-Entwicklungszweig. Es wird **kein zusätzlicher Supabase-Branch oder kostenpflichtiges Testprojekt** angelegt. Die laufenden automatisierten CI-Tests können von den allgemeinen GitHub-Nutzungsgrenzen abhängen; zusätzliche Supabase-Rechenstunden wurden nicht gestartet. Live-RLS- und echte Bild-Uploads sind **weiterhin ungetestet**, weil die private Upload-Bucket und Tabellen auf dem Produktivprojekt bewusst **nicht** angelegt wurden. Auch das Überprüfen mit mehreren echten Konten ist noch ausstehend. Für diese abschliessenden Prüfungen muss eine sichere, gesondert freigegebene Teststrategie vorliegen.
+
