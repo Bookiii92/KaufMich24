@@ -71,8 +71,9 @@ BEGIN
   IF tg_table_name = 'km24_bulk_draft_batches' THEN
     IF NEW.state <> 'draft' THEN RETURN NEW; END IF;
     PERFORM pg_advisory_xact_lock(hashtextextended(NEW.owner_id::text, 20261105));
+    IF TG_OP = 'UPDATE' AND OLD.state = 'draft' AND OLD.owner_id = NEW.owner_id THEN RETURN NEW; END IF;
     SELECT count(*) INTO n FROM public.km24_bulk_draft_batches
-      WHERE owner_id = NEW.owner_id AND state = 'draft';
+      WHERE owner_id = NEW.owner_id AND state = 'draft' AND id <> NEW.id;
     IF n >= 5 THEN RAISE EXCEPTION 'Maximal fünf offene Foto-Importe.'; END IF;
   ELSIF tg_table_name = 'km24_bulk_draft_items' THEN
     PERFORM 1 FROM public.km24_bulk_draft_batches b
@@ -97,7 +98,7 @@ BEGIN
 END
 $fn$;
 
-CREATE TRIGGER km24_bulk_batch_quota BEFORE INSERT ON public.km24_bulk_draft_batches
+CREATE TRIGGER km24_bulk_batch_quota BEFORE INSERT OR UPDATE OF state ON public.km24_bulk_draft_batches
  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_draft_quota_guard();
 CREATE TRIGGER km24_bulk_item_quota BEFORE INSERT ON public.km24_bulk_draft_items
  FOR EACH ROW EXECUTE FUNCTION private.km24_bulk_draft_quota_guard();
@@ -162,9 +163,7 @@ CREATE POLICY km24_bulk_photos_insert_own ON public.km24_bulk_draft_photos
 CREATE POLICY km24_bulk_photos_delete_own ON public.km24_bulk_draft_photos
   FOR DELETE TO authenticated USING (owner_id = (SELECT auth.uid()) AND
     EXISTS (SELECT 1 FROM public.km24_bulk_draft_items i
-      JOIN public.km24_bulk_draft_batches b ON b.id = i.batch_id AND b.owner_id = i.owner_id
-      WHERE i.id = item_id AND i.batch_id = batch_id AND
-        i.owner_id = (SELECT auth.uid()) AND b.state = 'draft'));
+      WHERE i.id = item_id AND i.batch_id = batch_id AND i.owner_id = (SELECT auth.uid())));
 
 REVOKE ALL ON public.km24_bulk_draft_batches,public.km24_bulk_draft_items,public.km24_bulk_draft_photos FROM PUBLIC,anon;
 GRANT SELECT,INSERT,UPDATE,DELETE ON public.km24_bulk_draft_batches,public.km24_bulk_draft_items TO authenticated;
@@ -193,8 +192,7 @@ CREATE POLICY km24_bulk_storage_delete_own ON storage.objects
   FOR DELETE TO authenticated USING (
     bucket_id = 'km24-bulk-draft-photos'
     AND EXISTS (SELECT 1 FROM public.km24_bulk_draft_photos p
-      JOIN public.km24_bulk_draft_batches b ON b.id = p.batch_id AND b.owner_id = p.owner_id
-      WHERE p.object_name = name AND p.owner_id = (SELECT auth.uid()) AND b.state = 'draft')
+      WHERE p.object_name = name AND p.owner_id = (SELECT auth.uid()))
   );
 
 COMMIT;
