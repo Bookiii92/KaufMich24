@@ -30,3 +30,19 @@
 
 ## Veröffentlichungsstatus
 **Nicht live auf kaufmich24.ch.** Dieser Branch ist eine isolierte Implementierungsvorbereitung, keine automatische Deployment-Quelle für die aktuelle öffentliche KaufMich24-Weboberfläche.
+
+
+## Update 05.11.2026 – geschützter Server-Entwurf im PR
+- `review-only-private-drafts.sql`: neue private `km24-bulk-draft-photos`-Bucket und drei Entwurfs-Tabellen, per RLS auf den Besitzer begrenzt, mit serverseitigen Limits (5 offene Batches, 100 Artikel, 100 Fotos, max. 10 je Artikel). **Noch nicht angewandt.**
+- `private-draft-client.js`: authentifizierte Supabase-Operationen für Upload und Metadaten; reserviert Bildpfad vor Upload, bereinigt Fehluploads, erlaubt nur zeitlich befristete Bildlinks.
+- `private-draft-client.test.cjs`: Node-Tests für Authentifizierung, Formatprüfung, private Fotopfade und Uploadfehler.
+- Die öffentliche `listing-images`-Bucket, die `listings`-Tabelle und die bestehende Live-Webseite bleiben unverändert.
+- Die vorhandene Foto-Beta ist weiterhin **nur lokal**; Server-Foto-Uploads werden erst nach RLS-/Sicherheitstests und separater Aktivierungsfreigabe freigeschaltet.
+
+### Nachgelagerte Prüfpunkte
+1. SQL-Migration zuerst in separater Testdatenbank anwenden, Nutzer-RLS mit zwei Konten prüfen, anschliessend Sicherheits-Advisor kontrollieren.
+2. MIME-Dateiinhalte, Kompression von HEIC und Speicherbudgets verbindlich prüfen.
+3. Foto-Entwürfe über die aktive Firmen-Session verbinden, fehlgeschlagene Uploads und Wiederaufnahme testen.
+4. KI-Analyse und Veröffentlichung separat vorbereiten. Bestehende Spam- und Händlerlimits nicht aufheben.
+
+Tests lokal: `node --test features/foto-massenimport/private-draft-client.test.cjs`.
