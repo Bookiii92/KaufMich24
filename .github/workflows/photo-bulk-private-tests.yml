@@ -195,4 +195,10 @@ jobs:
             -o "$RUNNER_TEMP/km24-home.html"
           grep -Fq '#/foto-massenimport' "$RUNNER_TEMP/km24-home.html"
           grep -Fq 'kaufmich-photo-bulk-assets/spa-photo-route-bridge.mjs' "$RUNNER_TEMP/km24-home.html"
-          echo 'PASS: Live-HTML enthält den geschützten Fotoimport-Beta-Router'
+          grep -Fq 'km24PhotoBulkAccountLink' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'Mehrere Artikel mit Fotos' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'data-km24-photo-bulk' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "if(!user||!profile||!['business','dealer'].includes(profile.account_type))" "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "companyProfile?" "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "isBusiness?'<a class=" "$RUNNER_TEMP/km24-home.html"
+          echo 'PASS: Live-HTML zeigt Photo-Bulk-CTA im Firmenkonto, im Inserierbereich und auf der Firmenseite; Privatkonten ausgeschlossen'
