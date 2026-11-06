@@ -201,4 +201,23 @@ jobs:
           grep -Fq "if(!user||!profile||!['business','dealer'].includes(profile.account_type))" "$RUNNER_TEMP/km24-home.html"
           grep -Fq "companyProfile?" "$RUNNER_TEMP/km24-home.html"
           grep -Fq "isBusiness?'<a class=" "$RUNNER_TEMP/km24-home.html"
-          echo 'PASS: Live-HTML zeigt Photo-Bulk-CTA im Firmenkonto, im Inserierbereich und auf der Firmenseite; Privatkonten ausgeschlossen'
+          grep -Fq 'km24BulkSellSwitch' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'Wie möchtest du inserieren?' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'grid.prepend(link)' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "profile?.account_type==='dealer'" "$RUNNER_TEMP/km24-home.html"
+          echo 'PASS: Firmen sehen die Auswahl sofort im Einzelinserat-Formular; Fotoimport steht in der vorherigen Auswahl an erster Stelle'
+      - name: Alle Live-JavaScript-Blöcke auf Syntax prüfen
+        shell: bash
+        run: |
+          node - "$RUNNER_TEMP/km24-home.html" <<'NODE'
+          const fs=require('node:fs');
+          const html=fs.readFileSync(process.argv[2],'utf8');
+          let passed=0;
+          for(const [,attr,code] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
+            if(!code.trim() || /type=["']application\/ld\+json/.test(attr) || /src\s*=/.test(attr))continue;
+            try { new Function(code); passed++; }
+            catch(error){ console.error('Malformed live JavaScript block',passed,error.message); process.exit(1); }
+          }
+          if(passed<100)throw Error('Too few scripts parsed');
+          console.log('PASS: '+passed+' Live-JavaScript-Blöcke syntaktisch gültig');
+          NODE
