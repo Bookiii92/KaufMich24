@@ -1,0 +1,223 @@
+name: Foto-Massenimport – Sicherheitsprüfungen
+
+on:
+  pull_request:
+    paths:
+      - 'features/foto-massenimport/**'
+      - '.github/workflows/photo-bulk-private-tests.yml'
+  push:
+    branches:
+      - feature/foto-massenimport-beta-20261105
+    paths:
+      - 'features/foto-massenimport/**'
+      - '.github/workflows/photo-bulk-private-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  private-drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+      - name: Node.js 22 einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Modul-Syntax prüfen
+        run: |
+          node --check features/foto-massenimport/secure-drafts-client.mjs
+          node --check features/foto-massenimport/secure-drafts-page.mjs
+          node --check features/foto-massenimport/image-signature.mjs
+          node --check features/foto-massenimport/upload-account-readiness.mjs
+      - name: Unit-Tests ausführen
+        run: node --test features/foto-massenimport/*.test.mjs
+      - name: SQL-Sicherheitsregeln statisch prüfen
+        run: node features/foto-massenimport/check-private-schema.mjs
+
+  postgres-rls:
+    name: Isolierte PostgreSQL-RLS-Sicherheitstests
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+      - name: PostgreSQL Client prüfen
+        run: |
+          if ! command -v psql >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+          psql --version
+      - name: Isolierte Supabase Auth und Storage Tabellen erstellen
+        run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-bootstrap.sql
+      - name: Exakte Foto-Import-Migration in temporärer Testdatenbank anwenden
+        run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/review-only-private-drafts.sql
+      - name: Zugriffsrechte, Quoten und Bildlöschung als echte Rollen testen
+        run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-rls-regression.sql
+
+
+  postgres-publish:
+    name: Isolierte Massenveröffentlichung – Transaktion und Limits
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d postgres"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@v4
+      - name: PostgreSQL Client prüfen
+        run: |
+          if ! command -v psql >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq postgresql-client
+          fi
+          psql --version
+      - name: Eigene Listing-Fixtures und Auth-Testkonten erstellen
+        run: |
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-bootstrap.sql
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-publish-setup.sql
+      - name: Private Draft- und neue Publish-Migration isoliert laden
+        run: |
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/review-only-private-drafts.sql
+          psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/review-only-bulk-publish.sql
+      - name: Rollen, Dubletten, Limits und atomare Bilderübergabe prüfen
+        run: psql -v ON_ERROR_STOP=1 -f features/foto-massenimport/tests/pg-bulk-publish-regression.sql
+
+  module-http-smoke:
+    name: Öffentliche statische Module – HTTP- und CORS-Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Module über HTTPS abrufen
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-photo-bulk-assets"
+          for name in spa-photo-route-bridge.mjs secure-drafts-page.mjs secure-drafts-client.mjs photo-upload-queue.mjs photo-bulk-publish.mjs cleanup-inactive-bulk.mjs image-signature.mjs shared-draft-fields.mjs ai-suggestion-contract.mjs upload-account-readiness.mjs; do
+            curl --fail --silent --show-error --retry 3 --connect-timeout 10 --max-time 30 \
+              -H 'Origin: https://kaufmich24.ch' \
+              -D "$RUNNER_TEMP/hdr" \
+              -o "$RUNNER_TEMP/$name" "$BASE/$name"
+            grep -qi '^content-type: *text/javascript' "$RUNNER_TEMP/hdr"
+            grep -qi '^access-control-allow-origin: *\*' "$RUNNER_TEMP/hdr"
+            test "$(wc -c < "$RUNNER_TEMP/$name")" -gt 100
+            echo "PASS HTTP/CORS: $name"
+          done
+          if curl --silent --fail --max-time 15 "$BASE/unknown.mjs" -o /dev/null; then
+            echo "ERROR: asset whitelist accepted unknown.mjs"
+            exit 1
+          fi
+      - name: Gelieferte JavaScript-Module syntaktisch prüfen
+        run: |
+          for path in "$RUNNER_TEMP"/*.mjs; do node --check "$path"; done
+      - name: Vereinfachte Handy-Oberfläche über HTTPS prüfen
+        run: |
+          grep -Fq 'Fotos vom Handy auswählen' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'location:firmLocation' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'this.location=cleanDraft' "$RUNNER_TEMP/photo-upload-queue.mjs"
+          grep -Fq 'Mehr Angaben (optional)' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          if grep -Eq 'refs\.(city|postal_code|canton)=labelField\(fields' "$RUNNER_TEMP/secure-drafts-page.mjs"; then
+            echo 'Fehler: Standortfelder dürfen nicht pro Artikel erscheinen'
+            exit 1
+          fi
+          echo 'PASS: Fotoauswahl zuerst; Standort automatisch pro Import'
+      - name: Echte, explizite Massenveröffentlichung in der Beta prüfen
+        run: |
+          grep -Fq 'Jetzt fertige Artikel veröffentlichen' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'km24_publish_photo_draft' "$RUNNER_TEMP/photo-bulk-publish.mjs"
+          grep -Fq 'destinationBucket:PUBLIC_BUCKET' "$RUNNER_TEMP/photo-bulk-publish.mjs"
+          grep -Fq 'Maximal 12' "$RUNNER_TEMP/secure-drafts-page.mjs" || grep -Fq 'maximal 12' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          echo 'PASS: Publishing needs explicit user confirmation and uses the normal quota-controlled RPC'
+      - name: Optionaler Testdaten-Löschdialog und Eigentümerrechte prüfen
+        run: |
+          grep -Fq 'TESTBILDER LÖSCHEN' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'planInactiveBulkCleanup' "$RUNNER_TEMP/secure-drafts-page.mjs"
+          grep -Fq 'status!=="inactive"' "$RUNNER_TEMP/cleanup-inactive-bulk.mjs" || grep -Fq '"inactive","deleted"' "$RUNNER_TEMP/cleanup-inactive-bulk.mjs"
+          grep -Fq 'public' "$RUNNER_TEMP/cleanup-inactive-bulk.mjs"
+          echo 'PASS: no automatic public image deletion; explicit manual confirmation only'
+
+
+
+
+  live-beta-smoke:
+    name: KaufMich24 versteckte Beta-Route – HTTP-Prüfung
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Homepage laden und Beta-Route verifizieren
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 --connect-timeout 10 --max-time 40 \
+            -H 'Cache-Control: no-cache' \
+            'https://kaufmich24.ch/?km24_beta_check=20261105' \
+            -o "$RUNNER_TEMP/km24-home.html"
+          grep -Fq '#/foto-massenimport' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'kaufmich-photo-bulk-assets/spa-photo-route-bridge.mjs' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'km24PhotoBulkAccountLink' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'Mehrere Artikel mit Fotos' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'data-km24-photo-bulk' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "if(!user||!profile||!['business','dealer'].includes(profile.account_type))" "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "companyProfile?" "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "isBusiness?'<a class=" "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'km24BulkSellSwitch' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'Wie möchtest du inserieren?' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq 'grid.prepend(link)' "$RUNNER_TEMP/km24-home.html"
+          grep -Fq "profile?.account_type==='dealer'" "$RUNNER_TEMP/km24-home.html"
+          echo 'PASS: Firmen sehen die Auswahl sofort im Einzelinserat-Formular; Fotoimport steht in der vorherigen Auswahl an erster Stelle'
+      - name: Alle Live-JavaScript-Blöcke auf Syntax prüfen
+        shell: bash
+        run: |
+          node - "$RUNNER_TEMP/km24-home.html" <<'NODE'
+          const fs=require('node:fs');
+          const html=fs.readFileSync(process.argv[2],'utf8');
+          let passed=0;
+          for(const [,attr,code] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
+            if(!code.trim() || /type=["']application\/ld\+json/.test(attr) || /src\s*=/.test(attr))continue;
+            try { new Function(code); passed++; }
+            catch(error){ console.error('Malformed live JavaScript block',passed,error.message); process.exit(1); }
+          }
+          if(passed<100)throw Error('Too few scripts parsed');
+          console.log('PASS: '+passed+' Live-JavaScript-Blöcke syntaktisch gültig');
+          NODE

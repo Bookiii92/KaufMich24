@@ -1,0 +1,151 @@
+<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>KaufMich24 – Foto-Massenimport Beta</title><style>
+:root{--k:#174cef;--line:#d9e3f3;--ink:#17253b;--mut:#61718b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#f4f7fc}
+button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:not-allowed}
+header{background:white;border-bottom:1px solid var(--line);padding:19px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+header strong{color:#062b85;font-size:22px}header strong span{color:#06a2e4}
+mark{background:#eaf0ff;padding:6px 9px;border-radius:14px;color:#1950a0;font-size:11px;font-weight:800}
+main{max-width:1160px;margin:auto;padding:22px 14px 45px}
+h1{font-size:clamp(25px,4vw,40px);margin:6px 0 8px;letter-spacing:-1px}
+p{line-height:1.5}.mut{color:var(--mut);font-size:13px}
+.panel{background:white;border:1px solid var(--line);padding:18px;border-radius:15px;margin:16px 0}
+.drop{border:2px dashed #a9c3ef;text-align:center;padding:25px 12px;border-radius:12px;background:#f6f9ff}
+.btn{padding:10px 14px;border-radius:9px;border:1px solid #cbd7e8;background:white;color:var(--ink);font-weight:700;min-height:41px}
+.btn.pri{background:var(--k);color:white;border-color:var(--k)}.btn.small{padding:6px 9px;font-size:12px;min-height:32px}
+.buttons{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.buttons>*{flex:0 0 auto}
+label{font-size:12px;font-weight:700;color:#475b79;display:flex;flex-direction:column;gap:5px}
+input:not([type=file]):not([type=checkbox]):not([type=radio]),select,textarea{border:1px solid #cad6e6;padding:9px;border-radius:8px;background:white;min-width:0;width:100%}
+textarea{min-height:65px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid .wide{grid-column:1/-1}
+.cards{display:grid;gap:13px}.card{border:1px solid var(--line);background:white;border-radius:13px;overflow:hidden}
+.head{background:#f8faff;padding:11px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.content{padding:13px;display:grid;grid-template-columns:155px 1fr;gap:13px}
+.thumb{aspect-ratio:1;background:#e6edf8;position:relative;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.thumb img{width:100%;height:100%;object-fit:cover}.photoStrip{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0}.photoStrip img{height:41px;width:41px;border-radius:5px;object-fit:cover}
+.note{border-left:4px solid #8badf0;background:#edf3fe;padding:10px 12px;border-radius:7px;font-size:13px;margin:10px 0}
+.warn{border-left-color:#e2a23a;background:#fff6df}
+.stat{display:inline-block;border-radius:6px;padding:5px 9px;font-size:12px;font-weight:700;background:#eaf3fe}
+footer{font-size:12px;color:#63738b;padding-top:22px}
+.hidden{display:none}.file{position:absolute;width:1px;height:1px;opacity:0}.photoBtn{display:inline-block;cursor:pointer;padding:11px 13px;border-radius:9px;background:#174cef;color:white;font-weight:750}
+@media(max-width:680px){.content{grid-template-columns:1fr}.thumb{max-height:245px}.grid{grid-template-columns:1fr 1fr}.grid .title,.grid .desc{grid-column:1/-1}main{padding:15px 11px 35px}.panel{padding:13px}header strong{font-size:19px}}
+</style></head><body>
+<header><strong>KaufMich<span>24</span></strong><mark>GESCHÜTZTE TESTVERSION</mark></header>
+<main>
+<div class="mut">KaufMich24 · Firmen & Händler</div>
+<h1>100 Artikel. Einfach mit Fotos.</h1>
+<p class="mut">Wähle Fotos aus deiner Galerie, fasse mehrere Bilder eines Artikels zusammen und ergänze die Preise. Keine Excel-Tabelle notwendig.</p>
+<div class="note warn"><b>Testversion:</b> Kein KI-Bildabgleich und kein Upload zum Marktplatz. Fotos und Entwürfe werden nur auf deinem Gerät gespeichert, wenn du „Lokal speichern“ drückst. Auf gemeinsam genutzten Geräten sind sie anderen Browserbenutzern zugänglich.</div>
+<section class="panel">
+<h2>1. Produktfotos auswählen</h2>
+<div class="drop"><div style="font-size:36px">📸</div><p>Bis zu 100 Fotos · höchstens 10 MB je Foto · JPG, PNG, WebP, HEIC je nach Gerät</p><label class="photoBtn">＋ Fotos aus der Galerie wählen<input class="file" type="file" accept="image/*,.heic,.heif" id="picker" multiple></label><p class="mut">Oder Bilder hierher ziehen</p></div>
+<label style="display:flex;flex-direction:row;gap:8px;align-items:center;margin-top:11px"><input type="checkbox" id="groupMode"> Ausgewählte Bilder als Fotos desselben Artikels hinzufügen (maximal 10 pro Artikel)</label>
+</section>
+<section class="panel"><h2>2. Inserate kontrollieren</h2><p class="mut"><strong id="totalProducts">0</strong> Artikel · <strong id="totalPhotos">0</strong> Fotos · <strong id="ready">0</strong> vollständig</p>
+<div class="buttons" style="margin:15px 0"><button id="merge" class="btn" disabled>Markierte Artikel zusammenführen (<span id="selectionCount">0</span>)</button><button class="btn" id="check">Angaben prüfen</button></div>
+<div id="list" class="cards"></div>
+</section>
+<div id="info" class="note hidden" role="status"></div>
+<section class="panel"><h2>3. Entwürfe sichern</h2><p class="mut">Die Fotos verlassen dein Gerät nicht. Speichere sie auf diesem Gerät oder exportiere nur die Artikeldaten als JSON.</p>
+<div class="buttons"><button class="btn pri" id="save">💾 Lokal speichern</button><button class="btn" id="load">Lokal laden</button><button class="btn" id="export">Artikeldaten exportieren</button><button class="btn" id="clear">Lokalen Speicher löschen</button></div></section>
+<footer>KaufMich24 Foto-Massenimport Beta · Keine Live-Datenbankzugriffe · Keine Veröffentlichung</footer>
+</main><script>
+(function(){
+"use strict";
+var data={products:[],selected:new Set(),id:0,pid:0};
+var $=function(id){return document.getElementById(id)};
+var MAX_FILES=100,MAX_PRODUCTS=100,MAX_PER_PRODUCT=10,SIZE=10*1024*1024;
+var cats=[["spielzeug","Spielzeug"],["babyartikel","Babyartikel"],["moebel","Möbel"],["handys","Handys"],["gaming","Gaming"],["haushalt","Haushalt"],["elektronik","Elektronik"],["autoteile","Autoteile"],["mode","Mode"]];
+var cantons=["","AG","AI","AR","BE","BL","BS","FR","GE","GL","GR","JU","LU","NE","NW","OW","SG","SH","SO","SZ","TG","TI","UR","VD","VS","ZG","ZH"];
+function esc(x){return String(x==null?"":x).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function count(){return data.products.reduce(function(n,p){return n+p.photos.length},0)}
+function show(s){$("info").textContent=s;$("info").classList.remove("hidden")}
+function title(f){return f.name.replace(/\.[^.]+$/,"").replace(/^IMG[_-]?\d*[_-]?/i,"").replace(/[_-]+/g," ").trim().slice(0,120)||"Neues Produkt"}
+function newProduct(photos){return{id:++data.id,photos:photos,title:title(photos[0].file),description:"",price:"",category:"spielzeug",condition:"new",city:"",postal_code:"",canton:""}}
+function valid(p){var issues=[];if(!p.photos.length)issues.push("Fotos fehlen");if(p.photos.length>MAX_PER_PRODUCT)issues.push("Zu viele Fotos");if(p.title.trim().length<3||p.title.trim().length>120)issues.push("Titel");if(p.description.trim().length<10)issues.push("Beschreibung");if(!/^\d+([.,]\d{1,2})?$/.test(p.price.trim()))issues.push("Preis");if(!/^\d{4}$/.test(p.postal_code))issues.push("PLZ");if(!p.city.trim()||!p.canton)issues.push("Ort/Kanton");return issues}
+function add(files,target){
+ var list=Array.from(files||[]),accepted=0,ignored=0;
+ list.forEach(function(file){
+  if(!file||file.size<=0||file.size>SIZE||!(/^image\/(jpeg|png|webp|heic|heif)$/.test(file.type)||/\.(heic|heif)$/i.test(file.name))){ignored++;return}
+  if(count()>=MAX_FILES){ignored++;return}
+  if(data.products.some(function(p){return p.photos.some(function(x){return x.file.name===file.name&&x.file.size===file.size&&x.file.lastModified===file.lastModified})})){ignored++;return}
+  var photo={id:++data.pid,file:file,url:URL.createObjectURL(file)};
+  if(target){var existing=data.products.find(function(p){return p.id===target});if(!existing||existing.photos.length>=MAX_PER_PRODUCT){URL.revokeObjectURL(photo.url);ignored++;return}existing.photos.push(photo)}
+  else if($("groupMode").checked){var last=data.products[data.products.length-1];if(!last||last.photos.length>=MAX_PER_PRODUCT){if(data.products.length>=MAX_PRODUCTS){URL.revokeObjectURL(photo.url);ignored++;return}last=newProduct([photo]);data.products.push(last)}else last.photos.push(photo)}
+  else{if(data.products.length>=MAX_PRODUCTS){URL.revokeObjectURL(photo.url);ignored++;return}data.products.push(newProduct([photo]))}
+  accepted++;
+ });
+ render();show(accepted+" Foto(s) hinzugefügt. "+ignored+" ignoriert.");
+}
+function render(){
+ $("totalProducts").textContent=data.products.length;$("totalPhotos").textContent=count();$("ready").textContent=data.products.filter(function(p){return !valid(p).length}).length;
+ $("selectionCount").textContent=data.selected.size;
+ $("merge").disabled=data.selected.size<2;
+ if(!data.products.length){$("list").innerHTML="<div class='note'>Noch keine Bilder ausgewählt. Fotos bleiben bis zur lokalen Speicherung nur auf deinem Gerät.</div>";return}
+ $("list").innerHTML=data.products.map(function(p,index){
+ var errs=valid(p),cover=p.photos[0];
+ return "<article class='card' data-prod='"+p.id+"'><div class='head'><label style='display:flex;flex-direction:row;align-items:center;gap:7px'><input type='checkbox' data-select='"+p.id+"' "+(data.selected.has(p.id)?"checked":"")+"> <strong>Artikel "+(index+1)+"</strong> <span class='stat'>"+p.photos.length+" Foto(s)</span></label><button class='btn small' data-remove='"+p.id+"'>Entfernen</button></div>"+
+ "<div class='content'><div><div class='thumb'>"+(cover?"<img src='"+esc(cover.url)+"' alt='Artikelbild'>":"📸")+"</div><div class='photoStrip'>"+p.photos.map(function(im){return "<img alt='' src='"+esc(im.url)+"'>"}).join("")+"</div><label class='btn small' style='cursor:pointer'>＋ Weitere Fotos<input data-add='"+p.id+"' type='file' accept='image/*' multiple class='file'></label></div>"+
+ "<div class='grid'><label class='wide title'>Titel *<input maxlength='120' data-p='"+p.id+"' data-k='title' value='"+esc(p.title)+"'></label>"+
+ "<label>Preis CHF *<input inputmode='decimal' data-p='"+p.id+"' data-k='price' value='"+esc(p.price)+"' placeholder='49.90'></label>"+
+ "<label>Kategorie<select data-p='"+p.id+"' data-k='category'>"+cats.map(function(c){return "<option value='"+c[0]+"' "+(p.category===c[0]?"selected":"")+">"+c[1]+"</option>"}).join("")+"</select></label>"+
+ "<label class='wide desc'>Beschreibung *<textarea data-p='"+p.id+"' data-k='description'>"+esc(p.description)+"</textarea></label>"+
+ "<label>Zustand<select data-p='"+p.id+"' data-k='condition'>"+[["new","Neu"],["like_new","Wie neu"],["used","Gebraucht"],["defective","Defekt"]].map(function(c){return "<option value='"+c[0]+"' "+(p.condition===c[0]?"selected":"")+">"+c[1]+"</option>"}).join("")+"</select></label>"+
+ "<label>Ort *<input data-p='"+p.id+"' data-k='city' value='"+esc(p.city)+"'></label>"+
+ "<label>PLZ *<input inputmode='numeric' maxlength='4' data-p='"+p.id+"' data-k='postal_code' value='"+esc(p.postal_code)+"'></label>"+
+ "<label>Kanton *<select data-p='"+p.id+"' data-k='canton'>"+cantons.map(function(c){return "<option value='"+c+"' "+(p.canton===c?"selected":"")+">"+(c||"Bitte wählen")+"</option>"}).join("")+"</select></label>"+
+ "</div></div><div class='head'><span class='mut'>"+(errs.length?"Offen: "+esc(errs.join(", ")):"✓ Angaben vollständig")+"</span></div></article>";
+ }).join("");
+}
+function merge(){
+ var chosen=data.products.filter(function(p){return data.selected.has(p.id)});if(chosen.length<2)return;
+ var total=chosen.reduce(function(n,p){return n+p.photos.length},0);if(total>MAX_PER_PRODUCT){show("Maximal zehn Bilder je Produkt. Bitte weniger Artikel auswählen.");return}
+ var dest=chosen[0];chosen.slice(1).forEach(function(p){dest.photos.push.apply(dest.photos,p.photos);data.products.splice(data.products.indexOf(p),1)});
+ data.selected.clear();render();show("Fotos zu einem Artikel zusammengeführt.");
+}
+function dispose(){data.products.forEach(function(p){p.photos.forEach(function(x){URL.revokeObjectURL(x.url)})})}
+function openDb(){return new Promise(function(resolve,reject){if(!indexedDB){reject(Error("IndexedDB nicht verfügbar"));return}var req=indexedDB.open("km24-photo-bulk-beta-v2",1);req.onupgradeneeded=function(){if(!req.result.objectStoreNames.contains("drafts"))req.result.createObjectStore("drafts")};req.onsuccess=function(){resolve(req.result)};req.onerror=function(){reject(req.error)}})}
+function localAction(mode){
+ openDb().then(function(db){
+  return new Promise(function(resolve,reject){
+   var tx=db.transaction("drafts",mode==="load"?"readonly":"readwrite"),st=tx.objectStore("drafts");
+   var req;
+   if(mode==="save")req=st.put(data.products.map(function(p){return {id:p.id,title:p.title,description:p.description,price:p.price,category:p.category,condition:p.condition,city:p.city,postal_code:p.postal_code,canton:p.canton,photos:p.photos.map(function(x){return x.file})}}),"draft");
+   if(mode==="load")req=st.get("draft");
+   if(mode==="clear")req=st.delete("draft");
+   req.onsuccess=function(){resolve(req.result)};req.onerror=function(){reject(req.error)};tx.oncomplete=function(){db.close()};
+  });
+ }).then(function(result){
+  if(mode==="save"){show("Entwürfe und Fotos wurden nur auf diesem Gerät gespeichert.")}
+  if(mode==="clear"){show("Lokal gespeicherte Entwürfe gelöscht.")}
+  if(mode==="load"){
+   if(!Array.isArray(result)){show("Keine lokal gespeicherten Entwürfe gefunden.");return}
+   dispose();data.products=[];data.id=0;data.pid=0;data.selected.clear();
+   result.slice(0,MAX_PRODUCTS).forEach(function(o){
+    var photos=(o.photos||[]).slice(0,MAX_PER_PRODUCT).map(function(file){return {id:++data.pid,file:file,url:URL.createObjectURL(file)}});
+    if(!photos.length)return;
+    data.products.push({id:++data.id,photos:photos,title:String(o.title||""),description:String(o.description||""),price:String(o.price||""),category:o.category||"spielzeug",condition:o.condition||"new",city:o.city||"",postal_code:o.postal_code||"",canton:o.canton||""});
+   });render();show(data.products.length+" Artikel inklusive Fotos lokal geladen.");
+  }
+ }).catch(function(e){show("Lokaler Speicherfehler: "+String(e.message||e)+". Prüfe freien Speicherplatz und Browser-Einstellungen.")});
+}
+function exportData(){
+ if(!data.products.length){show("Zuerst Fotos auswählen.");return}
+ var obj={format:"KM24-photo-bulk-draft",version:2,note:"Export ohne Bilddateien und ohne Veröffentlichung.",products:data.products.map(function(p){return{title:p.title,description:p.description,price_chf:Number(p.price.replace(",",".")),category_slug:p.category,condition:p.condition,city:p.city,postal_code:p.postal_code,canton:p.canton,image_file_names:p.photos.map(function(x){return x.file.name}),issues:valid(p)}})};
+ var u=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:"application/json"})),a=document.createElement("a");a.href=u;a.download="kaufmich24-foto-entwuerfe.json";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},1000);show("Entwurfsdaten exportiert. Bilder bleiben nur im lokalen Speicher.");
+}
+$("picker").addEventListener("change",function(e){add(e.target.files);e.target.value=""});
+$("list").addEventListener("change",function(e){
+ var t=e.target,id=Number(t.dataset.p||t.dataset.select||t.dataset.add);
+ if(t.dataset.select){if(t.checked)data.selected.add(id);else data.selected.delete(id);$("selectionCount").textContent=data.selected.size;$("merge").disabled=data.selected.size<2}
+ if(t.dataset.add){add(t.files,id);t.value=""}
+ if(t.dataset.k){var p=data.products.find(function(x){return x.id===id});if(p)p[t.dataset.k]=t.value}
+});
+$("list").addEventListener("input",function(e){var t=e.target;if(!t.dataset.k)return;var p=data.products.find(function(x){return x.id===Number(t.dataset.p)});if(p)p[t.dataset.k]=t.value});
+$("list").addEventListener("click",function(e){var t=e.target.closest("[data-remove]");if(!t)return;var id=Number(t.dataset.remove),p=data.products.find(function(x){return x.id===id});if(!p)return;p.photos.forEach(function(x){URL.revokeObjectURL(x.url)});data.products.splice(data.products.indexOf(p),1);data.selected.delete(id);render()});
+$("merge").onclick=merge;$("save").onclick=function(){localAction("save")};$("load").onclick=function(){localAction("load")};$("clear").onclick=function(){if(confirm("Gespeicherte lokale Entwürfe löschen?"))localAction("clear")};$("export").onclick=exportData;
+$("check").onclick=function(){var bad=data.products.map(function(p,i){return{n:i+1,errors:valid(p)}}).filter(function(o){return o.errors.length});show(bad.length?bad.length+" Artikel haben fehlende oder ungültige Angaben.":"✓ Alle "+data.products.length+" Entwürfe vollständig. Es wurde nichts veröffentlicht.")};
+document.addEventListener("dragover",function(e){e.preventDefault()});document.addEventListener("drop",function(e){e.preventDefault();if(e.dataTransfer&&e.dataTransfer.files.length)add(e.dataTransfer.files)});
+window.addEventListener("beforeunload",dispose);
+render();
+})();
+</script></body></html>
