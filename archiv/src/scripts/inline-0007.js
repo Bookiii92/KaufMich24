@@ -1,0 +1,1 @@
+{"@context":"https://schema.org","@type":"Organization","name":"KaufMich24","url":"https://www.kaufmich24.ch/"}
