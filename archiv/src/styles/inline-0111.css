@@ -1,0 +1,16 @@
+
+@media(max-width:700px){
+  #km24AutumnMotion,.km24AmbientLeaf{display:none!important;animation:none!important}
+  main::before{display:none!important;content:none!important;animation:none!important;filter:none!important}
+  .km24AutumnFX .km24Leaf{filter:none!important;-webkit-filter:none!important}
+  .km24BottomNav{
+    bottom:max(10px,env(safe-area-inset-bottom))!important;
+    -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+    transform:none!important;-webkit-transform:none!important;
+  }
+  .km24BottomSell{transform:translateY(-15px)!important;-webkit-transform:translateY(-15px)!important}
+  body{padding-bottom:calc(132px + env(safe-area-inset-bottom))!important}
+  .km24HomeHero,.km24HomeHero *,#app,.wrap,.panel,.marketSearchPanel,details{
+    -webkit-backface-visibility:visible;backface-visibility:visible;
+  }
+}

@@ -1,0 +1,61 @@
+
+#km24CookieJoeGuide{
+  position:fixed;left:18px;bottom:22px;z-index:10025;
+  display:grid;grid-template-columns:64px minmax(0,280px);align-items:end;gap:9px;
+  max-width:calc(100vw - 36px);opacity:1;visibility:visible;pointer-events:none;
+}
+#km24CookieJoeGuide .km24JoeGuideMascot{
+  width:64px;height:72px;min-width:64px;border:0;background:transparent;padding:0;margin:0;
+  display:grid;place-items:center;cursor:pointer;pointer-events:auto;
+  filter:drop-shadow(0 10px 15px rgba(0,0,0,.34));animation:km24JoeGuideFloat 3.3s ease-in-out infinite;
+}
+#km24CookieJoeGuide .km24JoeGuideMascot svg{display:block;width:64px;height:72px;overflow:visible}
+#km24CookieJoeGuide .km24JoeGuideBubble{
+  position:relative;min-width:0;padding:11px 34px 11px 13px;
+  border:1px solid rgba(235,157,79,.28);border-radius:16px;
+  background:radial-gradient(circle at 100% 0,rgba(220,123,45,.10),transparent 32%),linear-gradient(145deg,rgba(56,37,25,.97),rgba(15,24,18,.97));
+  box-shadow:0 16px 38px rgba(0,0,0,.32);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);pointer-events:auto;
+}
+#km24CookieJoeGuide .km24JoeGuideBubble:before{
+  content:"";position:absolute;left:-7px;bottom:18px;width:12px;height:12px;transform:rotate(45deg);
+  background:#30251d;border-left:1px solid rgba(235,157,79,.28);border-bottom:1px solid rgba(235,157,79,.28);
+}
+#km24CookieJoeGuide .km24JoeGuideKicker{display:block;margin:0 0 3px;color:#e6964f;font-size:8px;line-height:1.1;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+#km24CookieJoeGuide .km24JoeGuideTitle{display:block;color:#fff4e8;font-size:13px;line-height:1.28;font-weight:900}
+#km24CookieJoeGuide .km24JoeGuideText{margin:4px 0 0;color:#c7bbb1;font-size:10.5px;line-height:1.42}
+#km24CookieJoeGuide .km24JoeGuideToggle{
+  position:absolute;right:7px;top:7px;width:24px;height:24px;min-width:24px;min-height:24px;padding:0;border-radius:50%;
+  border:1px solid rgba(255,255,255,.10);background:rgba(10,14,11,.72);color:#b9c2bc;display:grid;place-items:center;font-size:14px;line-height:1;cursor:pointer;
+}
+#km24CookieJoeGuide.km24JoeCollapsed{grid-template-columns:58px}
+#km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideBubble{display:none}
+#km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideMascot{
+  width:58px;height:64px;min-width:58px;border-radius:20px;background:rgba(15,22,17,.82);border:1px solid rgba(235,157,79,.18)
+}
+#km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideMascot svg{width:52px;height:58px}
+#km24CookieJoeGuide.km24JoeRoutePulse .km24JoeGuideBubble{animation:km24JoeGuidePulse .42s ease both}
+@keyframes km24JoeGuideFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
+@keyframes km24JoeGuidePulse{0%{transform:translateY(6px);opacity:.3}100%{transform:none;opacity:1}}
+@media(max-width:700px){
+  #km24CookieJoeGuide{left:10px;bottom:calc(90px + env(safe-area-inset-bottom));grid-template-columns:50px minmax(0,220px);gap:7px;max-width:calc(100vw - 20px)}
+  #km24CookieJoeGuide .km24JoeGuideMascot{width:50px;height:58px;min-width:50px}
+  #km24CookieJoeGuide .km24JoeGuideMascot svg{width:50px;height:58px}
+  #km24CookieJoeGuide .km24JoeGuideBubble{padding:9px 31px 9px 10px;border-radius:14px}
+  #km24CookieJoeGuide .km24JoeGuideBubble:before{left:-6px;bottom:17px;width:10px;height:10px}
+  #km24CookieJoeGuide .km24JoeGuideKicker{font-size:7px}
+  #km24CookieJoeGuide .km24JoeGuideTitle{font-size:11.5px}
+  #km24CookieJoeGuide .km24JoeGuideText{font-size:9.5px;line-height:1.38}
+  #km24CookieJoeGuide.km24JoeCollapsed{grid-template-columns:48px}
+  #km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideMascot{width:48px;height:54px;min-width:48px;border-radius:17px}
+  #km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideMascot svg{width:44px;height:50px}
+}
+#km24JoePrefBackdrop{position:fixed;inset:0;z-index:2147483000;background:rgba(0,0,0,.62);display:grid;place-items:center;padding:18px;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent;isolation:isolate;transform:translateZ(0);-webkit-transform:translateZ(0)}
+#km24JoePrefDialog{width:min(430px,100%);border:1px solid rgba(235,157,79,.28);border-radius:20px;padding:18px;background:linear-gradient(145deg,#30251d,#101812);box-shadow:0 24px 70px rgba(0,0,0,.48);color:#fff4e8}
+#km24JoePrefDialog small{display:block;color:#e6964f;font-size:10px;font-weight:950;letter-spacing:.12em;margin-bottom:7px}
+#km24JoePrefDialog b{display:block;font-size:19px;line-height:1.2;margin-bottom:7px}
+#km24JoePrefDialog p{margin:0 0 15px;color:#cfc4bb;font-size:14px;line-height:1.45}
+#km24JoePrefDialog .km24JoePrefActions{display:grid;gap:8px}
+#km24JoePrefDialog .km24JoePrefActions button{position:relative;z-index:3;width:100%;min-height:54px;border-radius:12px;font-weight:900;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important;-webkit-user-select:none!important;user-select:none!important}
+#km24JoePrefDialog .km24JoePrefAuto{border:0;background:#138a5b;color:#fff}
+#km24JoePrefDialog .km24JoePrefManual{border:1px solid rgba(255,255,255,.14);background:#1b211d;color:#fff}
+@media(prefers-reduced-motion:reduce){#km24CookieJoeGuide .km24JoeGuideMascot,#km24CookieJoeGuide.km24JoeRoutePulse .km24JoeGuideBubble{animation:none!important}}

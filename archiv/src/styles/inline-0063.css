@@ -1,0 +1,41 @@
+
+@media (min-width:901px) {
+/* Startseite: dunkler Hero mit deutlich lesbarer Typografie */
+.hero.km24WowHero h1{color:#f9fbff!important;-webkit-text-fill-color:#f9fbff!important;text-shadow:0 2px 14px rgba(0,0,0,.4)!important}
+.hero.km24WowHero h1 span{background:none!important;color:#79b9ff!important;-webkit-text-fill-color:#79b9ff!important;text-shadow:none!important}
+.hero.km24WowHero .km24HeroText,.hero.km24WowHero .season-note{color:#f1f5fb!important;-webkit-text-fill-color:#f1f5fb!important;font-size:18px!important;line-height:1.6!important}
+.hero.km24WowHero .km24HeroEyebrow{font-size:12px!important;color:#e5fff1!important}
+.section .head p.mut,.section .head .mut{color:#475569!important;-webkit-text-fill-color:#475569!important;font-size:14px!important}
+.cats .cat{font-size:14px!important}
+/* Chat: helle Schrift auf dunklen Karten; deutlichere Platzhalter */
+.km24ConversationHead b,.km24ConvTop b,.km24ChatHeaderInfo b{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24ConversationHead small,.km24ConvTop small{color:#dce7e0!important;-webkit-text-fill-color:#dce7e0!important;font-size:12px!important}
+.km24ConvListing,.km24ChatHeaderInfo span,.km24ConvPreview{color:#dce7e0!important;-webkit-text-fill-color:#dce7e0!important;font-size:13px!important}
+.km24ConvPreview.isUnread{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24ChatSearch{background:#26372f!important;border-color:#536d5e!important}
+.km24ChatSearch input{background:transparent!important;color:#f5fff8!important;-webkit-text-fill-color:#f5fff8!important;font-size:14px!important}
+.km24ChatSearch input::placeholder{color:#d6e3db!important;-webkit-text-fill-color:#d6e3db!important;opacity:1!important}
+.km24ChatTabs .km24ChatTab{color:#e9f4ee!important;-webkit-text-fill-color:#e9f4ee!important;font-size:14px!important}
+.km24ChatTabs .km24ChatTab.on{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24ChatPane .km24ChatPolicy{color:#f4fff7!important;-webkit-text-fill-color:#f4fff7!important;font-size:14px!important;line-height:1.55!important}
+.km24ChatPane .km24ChatPolicy h4,.km24ChatPane .km24ChatPolicy b{color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24ChatPane .km24ChatPolicy p,.km24ChatPane .km24PolicyExplain,.km24ChatPane .km24PolicyExplain span{color:#f2f7f3!important;-webkit-text-fill-color:#f2f7f3!important;font-size:14px!important;line-height:1.55!important}
+.km24ChatPane .km24PolicyExplain{background:#1c2b23!important;border:1px solid #41594a!important}
+.km24ChatPane .km24ContactLockedHint{color:#ffe4a4!important;-webkit-text-fill-color:#ffe4a4!important;font-size:13px!important}
+.km24ChatPane .km24BubbleText{color:#fff!important;-webkit-text-fill-color:#fff!important;font-size:15px!important;line-height:1.5!important}
+.km24ChatPane .km24BubbleTime{color:#d0dfd5!important;-webkit-text-fill-color:#d0dfd5!important;font-size:12px!important}
+.km24ChatPane .km24ChatComposer textarea{background:#fff!important;color:#182b24!important;-webkit-text-fill-color:#182b24!important;font-size:15px!important}
+.km24ChatPane .km24ChatComposer textarea::placeholder{color:#526273!important;-webkit-text-fill-color:#526273!important;opacity:1!important}
+/* Tarife: Dunkelgrau auf Weiss und besser lesbare Details */
+html[data-km24-theme="light"] .km24FeeAudienceSection .mut{color:#475569!important;-webkit-text-fill-color:#475569!important;font-size:15px!important;line-height:1.55!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .plan{background:#fff!important;color:#172b3c!important;-webkit-text-fill-color:#172b3c!important;border-color:#d7dee6!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .plan h3,html[data-km24-theme="light"] .km24FeeAudienceSection .planPrice{color:#142b41!important;-webkit-text-fill-color:#142b41!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .plan h3{font-size:19px!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .plan p{color:#475569!important;-webkit-text-fill-color:#475569!important;font-size:14px!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .km24PlanFacts span{color:#384b5d!important;-webkit-text-fill-color:#384b5d!important;font-size:14px!important}
+html[data-km24-theme="light"] .km24FeeAudienceSection .badge{color:#23533d!important;-webkit-text-fill-color:#23533d!important;background:#e9f5ef!important;font-size:12px!important}
+html[data-km24-theme="light"] .km24FounderFeeCard,html[data-km24-theme="light"] .km24PointsCard{background:#f4f8fe!important;border-color:#ccd9e8!important;color:#24384b!important;-webkit-text-fill-color:#24384b!important}
+html[data-km24-theme="light"] .km24FounderFeeCard h2,html[data-km24-theme="light"] .km24FounderFeeCard p,html[data-km24-theme="light"] .km24FounderCounts b,html[data-km24-theme="light"] .km24FounderCounts span,html[data-km24-theme="light"] .km24PointsRules span,html[data-km24-theme="light"] .km24PointsBalance strong{color:#24384b!important;-webkit-text-fill-color:#24384b!important}
+html[data-km24-theme="light"] .km24FounderFeeCard p{font-size:14px!important;line-height:1.5!important}
+html[data-km24-theme="light"] .km24FounderBadge{background:#fff1de!important;color:#633e23!important;-webkit-text-fill-color:#633e23!important;border:1px solid #e5c9a5!important;font-size:12px!important}
+}

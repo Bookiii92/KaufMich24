@@ -1,0 +1,14 @@
+
+.km24WizardHeroBadge{
+  position:relative!important;
+  z-index:30!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:rgba(25,169,99,.22)!important;
+}
+button.km24WizardHeroBadge{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  font:inherit!important;
+  line-height:1!important;
+}

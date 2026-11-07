@@ -1,0 +1,7 @@
+
+.imageLightbox.km24SwipeLightbox{touch-action:pan-y;overscroll-behavior:contain;user-select:none;-webkit-user-select:none;outline:none}
+.imageLightbox.km24SwipeLightbox>img{max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.km24LightboxNav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(20,20,20,.72);color:#fff;font-size:30px;font-weight:900;display:grid;place-items:center;cursor:pointer}
+.km24LightboxPrev{left:14px}.km24LightboxNext{right:14px}
+.km24LightboxCount{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:3;background:rgba(20,20,20,.72);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:900}
+@media(max-width:600px){.km24LightboxNav{width:44px;height:44px;font-size:28px}.km24LightboxPrev{left:8px}.km24LightboxNext{right:8px}}

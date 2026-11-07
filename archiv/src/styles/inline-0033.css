@@ -1,0 +1,84 @@
+
+/* KaufMich24 business page: explicit contrast for both themes */
+.km24BizHeroMain h1,
+.km24BizHeroCard strong,
+.km24BizCard b,
+.km24BizStep b,
+.km24BizFinal h2{
+  color:#f4f8f5!important;
+  -webkit-text-fill-color:#f4f8f5!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24BizLead,
+.km24BizHeroCard p,
+.km24BizCard p,
+.km24BizStep p,
+.km24BizFinal p{
+  color:#d5dfd8!important;
+  -webkit-text-fill-color:#d5dfd8!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24BizPills span{
+  color:#e5ece8!important;
+  -webkit-text-fill-color:#e5ece8!important;
+  opacity:1!important;
+}
+.km24BizHeroCard small,
+.km24BizEyebrow,
+.km24BizHead small{
+  opacity:1!important;
+}
+
+html[data-km24-theme="light"] .km24BizPage{
+  background:#f6f8f7!important;
+  color:#111827!important;
+  -webkit-text-fill-color:initial!important;
+}
+html[data-km24-theme="light"] .km24BizHead h2{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24BizHead p{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] .km24BizHead small{
+  color:#177245!important;
+  -webkit-text-fill-color:#177245!important;
+}
+html[data-km24-theme="light"] .km24BizHeroMain,
+html[data-km24-theme="light"] .km24BizHeroCard,
+html[data-km24-theme="light"] .km24BizCard,
+html[data-km24-theme="light"] .km24BizStep,
+html[data-km24-theme="light"] .km24BizFinal{
+  color:#f4f8f5!important;
+  -webkit-text-fill-color:initial!important;
+  border-color:rgba(255,255,255,.12)!important;
+}
+html[data-km24-theme="light"] .km24BizFuture{
+  background:#edf7f0!important;
+  border-color:#a8d6b5!important;
+  color:#40554a!important;
+  -webkit-text-fill-color:#40554a!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] .km24BizFuture b{
+  color:#245e38!important;
+  -webkit-text-fill-color:#245e38!important;
+}
+
+html[data-km24-theme="dark"] .km24BizHead p,
+html[data-km24-theme="dark"] .km24BizFuture{
+  color:#cbd6cf!important;
+  -webkit-text-fill-color:#cbd6cf!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .km24BizFuture b{
+  color:#d9f6e1!important;
+  -webkit-text-fill-color:#d9f6e1!important;
+}

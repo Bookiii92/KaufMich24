@@ -1,0 +1,62 @@
+
+@supports (-webkit-touch-callout:none){
+  @media(max-width:700px){
+    .km24IosAuctionDaysNative{
+      position:absolute!important;
+      opacity:0!important;
+      width:1px!important;
+      min-width:1px!important;
+      height:1px!important;
+      min-height:1px!important;
+      padding:0!important;
+      margin:0!important;
+      pointer-events:none!important;
+    }
+    .km24IosAuctionDaysWrap{
+      display:grid!important;
+      grid-template-columns:58px minmax(0,1fr) 58px!important;
+      align-items:center!important;
+      gap:10px!important;
+      width:100%!important;
+      min-height:58px!important;
+      margin-top:8px!important;
+      padding:6px!important;
+      border:1px solid rgba(255,255,255,.10)!important;
+      border-radius:16px!important;
+      background:#0d130f!important;
+      box-sizing:border-box!important;
+    }
+    .km24IosAuctionDayBtn{
+      appearance:none!important;
+      -webkit-appearance:none!important;
+      width:58px!important;
+      min-width:58px!important;
+      height:48px!important;
+      min-height:48px!important;
+      padding:0!important;
+      border:1px solid rgba(255,255,255,.12)!important;
+      border-radius:13px!important;
+      background:#17211b!important;
+      color:#f4fff8!important;
+      font-size:30px!important;
+      font-weight:900!important;
+      line-height:1!important;
+      touch-action:manipulation!important;
+      -webkit-tap-highlight-color:transparent!important;
+    }
+    .km24IosAuctionDayBtn:disabled{
+      opacity:.35!important;
+    }
+    .km24IosAuctionDayValue{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:center!important;
+      min-height:48px!important;
+      color:#f4fff8!important;
+      font-size:20px!important;
+      font-weight:900!important;
+      text-align:center!important;
+      white-space:nowrap!important;
+    }
+  }
+}

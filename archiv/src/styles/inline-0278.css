@@ -1,0 +1,55 @@
+
+/* Keep auction content readable on mobile in both light and dark site themes. */
+html body #app .detail .auctionbox{
+  background:#fff9ed!important;
+  background-image:none!important;
+  border-color:#dec9a6!important;
+  color:#243140!important;
+  color-scheme:light!important;
+  opacity:1!important;
+}
+html body #app .detail .auctionbox .big,
+html body #app .detail .auctionbox .big *{
+  color:#172b3f!important;
+  -webkit-text-fill-color:#172b3f!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox small,
+html body #app .detail .auctionbox small *,
+html body #app .detail .auctionbox .mut,
+html body #app .detail .auctionbox .mut *{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox .countdown,
+html body #app .detail .auctionbox .countdown *{
+  color:#895100!important;
+  -webkit-text-fill-color:#895100!important;
+  font-weight:800!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox .badge.auction,
+html body #app .detail .auctionbox .badge.auction *{
+  color:#824400!important;
+  -webkit-text-fill-color:#824400!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox input,
+html body #app .detail .auctionbox textarea{
+  background:#ffffff!important;
+  border-color:#aeb8bc!important;
+  color:#172b3f!important;
+  -webkit-text-fill-color:#172b3f!important;
+  opacity:1!important;
+}
+html body #app .detail .auctionbox .btn.primary,
+html body #app .detail .auctionbox .btn.primary *{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+}

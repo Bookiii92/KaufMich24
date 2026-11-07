@@ -1,0 +1,5 @@
+
+#km24AvatarPreview .km24Avatar img{object-fit:cover!important;pointer-events:none!important}
+#km24AvatarCentering input[type="range"]{-webkit-appearance:auto!important;appearance:auto!important;display:block!important;width:100%!important;min-height:40px!important;opacity:1!important;pointer-events:auto!important;touch-action:pan-x!important;position:relative!important;z-index:3!important}
+#km24AvatarCentering label{pointer-events:auto!important;touch-action:auto!important}
+#km24AvatarCenterReset,#km24AvatarSave{pointer-events:auto!important;touch-action:manipulation!important}

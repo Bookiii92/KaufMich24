@@ -1,0 +1,33 @@
+
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminSection,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminSection{background:#ffffff!important;border-color:#dfe6e1!important;color:#18211c!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .km24AdminSectionHead h2,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminCard,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminCard b,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminSub,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminSub b,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .km24AdminSectionHead h2,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminCard,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminCard b,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminSub,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminSub b{color:#18211c!important;-webkit-text-fill-color:#18211c!important;opacity:1!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminCard{background:#ffffff!important;border-color:#d8e0db!important;box-shadow:0 8px 24px rgba(24,33,28,.06)!important}
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminCard{background:#ffffff!important;border-color:#d8e0db!important;box-shadow:0 8px 24px rgba(24,33,28,.06)!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .adminSub,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .adminSub{background:#f6f8f7!important;border-color:#e0e6e2!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .mut,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] small.mut,
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .km24AdminCount,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .mut,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] small.mut,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .km24AdminCount{color:#5b6861!important;-webkit-text-fill-color:#5b6861!important;opacity:1!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .km24AdminCount,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .km24AdminCount{background:#f5f7f6!important;border-color:#dce3df!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .badge,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .badge{color:#314039!important;-webkit-text-fill-color:#314039!important;opacity:1!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .actions .btn:not(.primary),
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .actions .btn:not(.primary){background:#ffffff!important;border-color:#cfd8d2!important;color:#26322c!important;-webkit-text-fill-color:#26322c!important;opacity:1!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .actions .btn.primary,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .actions .btn.primary{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important}
+html[data-km24-theme="light"] .km24AdminPanel[data-admin-panel="security"] .km24AdminSectionHead>div>span,
+html.km24SamsungLight .km24AdminPanel[data-admin-panel="security"] .km24AdminSectionHead>div>span{color:#9a531d!important;-webkit-text-fill-color:#9a531d!important;opacity:1!important}

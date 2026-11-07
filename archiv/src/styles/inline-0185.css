@@ -1,0 +1,71 @@
+
+html[data-km24-theme] .km24FeesPage{max-width:1040px!important;padding-top:18px!important;padding-bottom:42px!important}
+html[data-km24-theme] .km24FeesPage>.panel.km24FeesHero{padding:18px 20px!important;border-radius:16px!important}
+html[data-km24-theme] .km24FeesHero h1{font-size:28px!important;line-height:1.08!important;margin:0 0 8px!important}
+html[data-km24-theme] .km24FeesHero>.notice{display:flex!important;align-items:center!important;gap:7px!important;flex-wrap:wrap!important;margin-top:10px!important;padding:9px 11px!important;border-radius:10px!important;font-size:12px!important}
+html[data-km24-theme] .km24FeesHero>p.mut{margin:10px 0 0!important;font-size:13px!important;line-height:1.45!important;max-width:760px!important}
+html[data-km24-theme] .km24FeesPage>.section{padding:16px 0 8px!important;background:transparent!important}
+html[data-km24-theme] .km24FeesPlanGrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+html[data-km24-theme] .km24FeesGroupHead{grid-column:1/-1;display:flex;align-items:end;justify-content:space-between;gap:12px;padding:6px 2px 3px;margin-top:3px;border-bottom:1px solid var(--km-line)}
+html[data-km24-theme] .km24FeesGroupHead strong{font-size:18px!important;letter-spacing:-.01em}
+html[data-km24-theme] .km24FeesGroupHead span{font-size:11px;color:var(--km-muted)}
+html[data-km24-theme] .km24FeesPage .plan{background:var(--km-surface)!important;color:var(--km-text)!important;border:1px solid var(--km-line)!important;border-radius:15px!important;padding:16px!important;box-shadow:none!important;min-width:0}
+html[data-km24-theme] .km24FeesPage .plan>p{display:none!important}
+html[data-km24-theme] .km24FeesPage .plan h3{font-size:20px!important;margin:7px 0 2px!important;line-height:1.15!important}
+html[data-km24-theme] .km24FeesPage .planPrice{font-size:27px!important;line-height:1.1!important;margin:10px 0 4px!important;font-variant-numeric:tabular-nums}
+html[data-km24-theme] .km24FeesPage .km24PlanFacts{display:flex!important;flex-wrap:wrap!important;gap:6px!important;margin:10px 0 3px!important}
+html[data-km24-theme] .km24FeesPage .km24PlanFacts span{display:inline-flex!important;align-items:center!important;min-height:31px;padding:6px 9px;border-radius:9px;background:var(--km-surface2)!important;border:1px solid var(--km-line)!important;color:var(--km-muted)!important;font-size:11px!important}
+html[data-km24-theme] .km24FeesPage .km24RecommendedPlan{border-color:color-mix(in srgb,var(--km-accent) 42%,var(--km-line))!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--km-accent) 10%,transparent)!important}
+html[data-km24-theme] .km24FeesPage .km24RecommendedTag{background:var(--km-accent)!important;color:#fff!important;right:12px!important;top:12px!important}
+html[data-km24-theme] .km24FeesPage .badge{font-size:10px!important;padding:4px 7px!important;margin-bottom:2px!important}
+html[data-km24-theme] .km24FeesPage .km24PlanPrivate{grid-column:1/-1!important;display:grid!important;grid-template-columns:auto minmax(130px,1fr) auto!important;grid-template-areas:"badge name price" "facts facts price"!important;gap:2px 14px!important;align-items:center!important}
+html[data-km24-theme] .km24PlanPrivate>.badge{grid-area:badge;align-self:center!important;margin:0!important}
+html[data-km24-theme] .km24PlanPrivate>h3{grid-area:name;margin:0!important}
+html[data-km24-theme] .km24PlanPrivate>.planPrice{grid-area:price;margin:0!important;text-align:right;white-space:nowrap}
+html[data-km24-theme] .km24PlanPrivate>.km24PlanFacts{grid-area:facts;margin-top:8px!important}
+html[data-km24-theme] .km24FeesPage .km24FounderFeeCard,
+html[data-km24-theme] .km24FeesPage .km24PointsCard{margin-top:12px!important;padding:15px 16px!important;border-radius:15px!important;background:var(--km-surface)!important;border:1px solid var(--km-line)!important;color:var(--km-text)!important;box-shadow:none!important}
+html[data-km24-theme] .km24FeesPage .km24FounderFeeCard h2{font-size:20px!important;margin:3px 0 5px!important}
+html[data-km24-theme] .km24FeesPage .km24FounderFeeCard p{font-size:12px!important;line-height:1.45!important;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesPage .km24PointsBalance b{font-size:24px!important}
+html[data-km24-theme] .km24FeesPage .km24PointsRules{gap:4px!important}
+html[data-km24-theme] .km24FeesPage .km24PointsRules span{font-size:11px!important;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPanel{margin-top:12px!important;padding:16px!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPanel h2{font-size:20px!important;margin:0 0 8px!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPrices{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important;margin:10px 0!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPrices>div{padding:11px!important;border-radius:11px!important;background:var(--km-surface2)!important;border:1px solid var(--km-line)!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPrices b{font-size:11px!important;line-height:1.25!important}
+html[data-km24-theme] .km24FeesPage .km24PromoPrices strong{font-size:18px!important;font-variant-numeric:tabular-nums}
+html[data-km24-theme] .km24FeesPage .km24PromoPrices span{font-size:9px!important;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesDetail{margin-top:10px;border:1px solid var(--km-line);border-radius:13px;background:var(--km-surface);overflow:hidden}
+html[data-km24-theme] .km24FeesDetail>summary{list-style:none;display:grid;grid-template-columns:1fr auto;grid-template-areas:"title arrow" "sub arrow";gap:2px 12px;align-items:center;cursor:pointer;padding:13px 15px;user-select:none}
+html[data-km24-theme] .km24FeesDetail>summary::-webkit-details-marker{display:none}
+html[data-km24-theme] .km24FeesDetail>summary span{grid-area:title;font-size:14px;font-weight:850;color:var(--km-text)}
+html[data-km24-theme] .km24FeesDetail>summary small{grid-area:sub;font-size:10px;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesDetail>summary b{grid-area:arrow;font-size:18px;transition:transform .16s ease;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesDetail[open]>summary b{transform:rotate(180deg)}
+html[data-km24-theme] .km24FeesDetail .km24FeesInnerPanel{margin:0!important;border:0!important;border-top:1px solid var(--km-line)!important;border-radius:0!important;padding:14px 15px!important;background:var(--km-surface2)!important;box-shadow:none!important}
+html[data-km24-theme] .km24FeesDetail .km24FeesInnerPanel h2{display:none!important}
+html[data-km24-theme] .km24FeesDetail .km24FeesInnerPanel p{font-size:12px!important;line-height:1.5!important;margin:0!important;color:var(--km-muted)!important}
+html[data-km24-theme] .km24FeesPage .km24RewardGrid{margin-top:10px!important;gap:6px!important}
+html[data-km24-theme] .km24FeesPage .km24RewardGrid>div{background:var(--km-surface)!important;border-color:var(--km-line)!important}
+html[data-km24-theme] .km24FeesPage .km24OpenFees{margin-top:12px!important;padding:16px!important}
+@media(max-width:700px){
+ html[data-km24-theme] .km24FeesPage{padding:12px 12px 132px!important}
+ html[data-km24-theme] .km24FeesPage>.panel.km24FeesHero{padding:15px!important}
+ html[data-km24-theme] .km24FeesHero h1{font-size:24px!important}
+ html[data-km24-theme] .km24FeesPlanGrid{grid-template-columns:1fr!important;gap:9px!important}
+ html[data-km24-theme] .km24FeesGroupHead{padding:7px 2px 2px!important;align-items:flex-start!important;flex-direction:column!important;gap:1px!important}
+ html[data-km24-theme] .km24FeesGroupHead strong{font-size:16px!important}
+ html[data-km24-theme] .km24FeesPage .plan{padding:14px!important}
+ html[data-km24-theme] .km24FeesPage .plan h3{font-size:19px!important}
+ html[data-km24-theme] .km24FeesPage .planPrice{font-size:25px!important}
+ html[data-km24-theme] .km24FeesPage .km24PlanPrivate{display:block!important;grid-column:auto!important}
+ html[data-km24-theme] .km24PlanPrivate>.planPrice{text-align:left!important;margin:10px 0 4px!important}
+ html[data-km24-theme] .km24FeesPage .km24FounderFeeCard,
+ html[data-km24-theme] .km24FeesPage .km24PointsCard{grid-template-columns:1fr!important;gap:10px!important;padding:14px!important}
+ html[data-km24-theme] .km24FeesPage .km24PromoPrices{grid-template-columns:1fr 1fr!important;gap:7px!important}
+ html[data-km24-theme] .km24FeesPage .km24PromoPrices>div{padding:10px!important}
+ html[data-km24-theme] .km24FeesDetail>summary{padding:12px 13px!important}
+}
+@media(max-width:390px){html[data-km24-theme] .km24FeesPage .km24PromoPrices{grid-template-columns:1fr!important}}

@@ -1,0 +1,6 @@
+
+@supports (-webkit-touch-callout:none){
+html.km24IOS body.km24CategoryRoute,html.km24IOS body.km24CategoryRoute #app,html.km24IOS body.km24CategoryRoute main,html.km24IOS body.km24CategoryRoute section.section{background:#171612!important;color:#e7eee9!important}
+html.km24IOS body.km24CategoryRoute .km24UnifiedCategoryIntro{background:linear-gradient(145deg,#211f1b,#171915)!important;color:#e7eee9!important;border-color:#514b43!important}
+html.km24IOS body.km24CategoryRoute .cat,html.km24IOS body.km24CategoryRoute .card,html.km24IOS body.km24CategoryRoute .empty,html.km24IOS body.km24CategoryRoute .km24SvcCard{background:#1f1e1a!important;color:#e7eee9!important;border-color:#514b43!important}
+}

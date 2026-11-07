@@ -1,0 +1,18 @@
+
+.km24JobsCreateSection{grid-column:1/-1!important;padding:16px!important;border-radius:18px!important;margin:0!important}
+.km24JobsCreateHead{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.km24JobsCreateHead h2{margin:2px 0 5px;font-size:clamp(23px,4vw,32px)}
+.km24JobsCreateHead p{margin:0}
+.km24JobsCreateIcon{font-size:34px;line-height:1}
+.km24JobsCreateGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.km24JobsCreateGrid .plan{margin:0!important;min-width:0!important;height:100%}
+.km24JobsCreateGrid .plan h3{font-size:20px;margin:9px 0 7px}
+.km24JobsCreateGrid .plan p{margin:0 0 14px;line-height:1.5}
+.km24JobsBrowse{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-weight:850;text-decoration:none;color:var(--g,#138a5b)}
+.km24JobFormHint{margin:0 0 14px;padding:12px 14px;border-radius:13px;border:1px solid rgba(19,138,91,.25);background:rgba(19,138,91,.08);line-height:1.45}
+@media(max-width:700px){
+ .km24JobsCreateSection{padding:14px!important}
+ .km24JobsCreateHead{gap:10px}
+ .km24JobsCreateGrid{grid-template-columns:1fr}
+ .km24JobsCreateGrid .plan{padding:18px!important}
+}

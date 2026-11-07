@@ -1,0 +1,139 @@
+
+
+/* KM24 desktop deep audit: targeted color fixes, no changes to data or app logic */
+@media (min-width: 901px) {
+html[data-km24-theme="light"] body #app .km24StartHeroCopy h1,
+html[data-km24-theme="light"] body #app .km24StartHeroCopy h1 > span,
+html[data-km24-theme="light"] body #app .km24StartAdBenefits span,
+html[data-km24-theme="light"] body #app .km24StartAdBenefits b {
+color:#f8fbff!important;-webkit-text-fill-color:#f8fbff!important;opacity:1!important;
+}
+html[data-km24-theme="light"] body #app .km24StartBonus,
+html[data-km24-theme="light"] body #app .km24StartBonus :is(h2,b,strong,span,p,small) {
+color:#fff5e5!important;-webkit-text-fill-color:#fff5e5!important;
+}
+html[data-km24-theme="light"] body #app .km24StartSafe,
+html[data-km24-theme="light"] body #app .km24StartSafe :is(h2,h3,b,strong,span,p) {
+color:#f4fbf6!important;-webkit-text-fill-color:#f4fbf6!important;
+}
+html[data-km24-theme="light"] body #app .km24StartFinal,
+html[data-km24-theme="light"] body #app .km24StartFinal :is(h2,h3,b,strong,span,p) {
+color:#fff8ed!important;-webkit-text-fill-color:#fff8ed!important;
+}
+html[data-km24-theme="light"] body #app .km24StartTrustRow span,
+html[data-km24-theme="light"] body #app .km24StartTrustRow {color:#e0eee6!important;-webkit-text-fill-color:#e0eee6!important}
+html[data-km24-theme="light"] body #app .km24SellerFounderCard,
+html[data-km24-theme="light"] body #app .km24SellerFounderCard :is(b,strong,span,h2,h3,p,small) {
+color:#fff3e6!important;-webkit-text-fill-color:#fff3e6!important;
+}
+html[data-km24-theme="light"] body #app .km24SellerFounderExplain,
+html[data-km24-theme="light"] body #app .km24SellerFounderExplain :is(h2,h3,b,strong,span,p,small) {
+color:#f3f9f4!important;-webkit-text-fill-color:#f3f9f4!important;
+}
+html[data-km24-theme="light"] body #app .km24SellerFacts article {
+background:#ffffff!important;color:#213449!important;
+border:1px solid #d8e1ed!important;
+}
+html[data-km24-theme="light"] body #app .km24SellerFacts article :is(b,strong,span,p){
+color:#25374b!important;-webkit-text-fill-color:#25374b!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderStatus{
+background:#172b25!important;border:1px solid #356050!important;color:#f6fff8!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderStatus :is(b,strong,span,p,small){
+color:#f6fff8!important;-webkit-text-fill-color:#f6fff8!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderSteps > *,
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderBenefits > * {
+background:#1b3029!important;border:1px solid #385a4b!important;color:#f7fdf9!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderSteps :is(b,strong,span,p,small),
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderBenefits :is(b,strong,span,p,small) {
+color:#f7fdf9!important;-webkit-text-fill-color:#f7fdf9!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderRules,
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderFinal{
+background:#182d26!important;border:1px solid #3f6151!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderRules :is(h2,h3,b,strong,span,p,small),
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderFinal :is(h2,h3,b,strong,span,p,small){
+color:#f7fff8!important;-webkit-text-fill-color:#f7fff8!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderHeroActions .btn:not(.primary),
+html[data-km24-theme="light"] body #app .km24FounderHeroActions a:not(.primary){
+background:#ffffff!important;border-color:#ffffff!important;
+color:#20384b!important;-webkit-text-fill-color:#20384b!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderFinal .btn:not(.primary){
+color:#1b394b!important;-webkit-text-fill-color:#1b394b!important;background:#ffffff!important;
+}
+html[data-km24-theme="light"] body #app .km24SellerFinal h2,
+html[data-km24-theme="light"] body #app .km24SellerFinal p {
+color:#f8fcff!important;-webkit-text-fill-color:#f8fcff!important;
+}
+html[data-km24-theme="light"] body #app .km24FounderPage .km24FounderFinal a:not(.primary){
+color:#25425a!important;-webkit-text-fill-color:#25425a!important;background:#fff!important;
+}
+html[data-km24-theme="light"] body #app .km24StartPage .km24StartHeroCopy .btn:not(.primary) {
+background:#ffffff!important;color:#20394c!important;-webkit-text-fill-color:#20394c!important;
+}
+html[data-km24-theme="light"] body #app .km24StartPage .km24StartPointNote :is(b,strong,p,span){
+color:#fff2d8!important;-webkit-text-fill-color:#fff2d8!important;
+}
+}
+
+
+@media(min-width:901px){
+html[data-km24-theme="light"] body #app .km24StartDark .km24StartSectionHead h2,
+html[data-km24-theme="light"] body #app .km24StartDark .km24StartSectionHead p{
+color:#f6faf7!important;-webkit-text-fill-color:#f6faf7!important;
+}
+html[data-km24-theme="light"] body #app .km24StartPage > .km24StartSection .km24StartSectionHead p,
+html[data-km24-theme="light"] body #app .km24StartPage .km24StartSafe + p{
+color:#36495b!important;-webkit-text-fill-color:#36495b!important;
+}
+html[data-km24-theme="light"] body #app .km24StartPage .km24StartSectionHead span:not([class]),
+html[data-km24-theme="light"] body #app .km24ProSafetyHero .km24SectionKicker{
+color:#0e61ad!important;-webkit-text-fill-color:#0e61ad!important;font-size:12.5px!important;
+}
+html[data-km24-theme="light"] body #app .km24SellerSafety p{
+color:#42556b!important;-webkit-text-fill-color:#42556b!important;
+}
+html[data-km24-theme="dark"] body #app .km24ProSafetyPage .km24ProSafetyHero p,
+html[data-km24-theme="dark"] body #app .km24ProSafetyPage .km24ProSafetyCard p{
+color:#cfdbec!important;-webkit-text-fill-color:#cfdbec!important;
+}
+html[data-km24-theme] body #app .km24SellerFounderSteps article>span,
+html[data-km24-theme] body #app .km24FounderSteps > * > span:first-child{
+color:#162c23!important;-webkit-text-fill-color:#162c23!important;
+}
+html[data-km24-theme] body #app .km24SellerFounderSteps article > span,
+html[data-km24-theme] body #app .km24FounderSteps > * > span:first-child{
+font-weight:850!important;
+}
+}
+
+
+@media(min-width:901px){
+html[data-km24-theme] body #app .km24StartHeroCopy h1>span{
+background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;
+color:#ffd17e!important;-webkit-text-fill-color:#ffd17e!important;opacity:1!important;
+}
+html[data-km24-theme="light"] body #app .km24StartDark .km24StartSectionHead>span{
+color:#a8d8ff!important;-webkit-text-fill-color:#a8d8ff!important;
+}
+html[data-km24-theme="dark"] body #app .km24ProSafetyPage .km24ProSafetyCard li{
+color:#dce7f5!important;-webkit-text-fill-color:#dce7f5!important;
+}
+html[data-km24-theme] body #app .km24StartPage small,
+html[data-km24-theme] body #app .km24SellerLanding small,
+html[data-km24-theme] body #app .km24FounderPage small,
+html[data-km24-theme] body #app .km24ProSafetyPage small{
+font-size:13px!important;line-height:1.5!important;
+}
+html[data-km24-theme] body #app .km24StartTrustRow{
+font-size:13px!important;
+}
+}
+
+

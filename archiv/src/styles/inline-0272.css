@@ -1,0 +1,51 @@
+
+/* Homepage contrast patch: ensure headline stays legible on both themes. */
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1,
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>.km24HeroFirstLine {
+  color:#193451!important;-webkit-text-fill-color:#193451!important;
+  background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>span:last-child {
+  color:#095acb!important;-webkit-text-fill-color:#095acb!important;
+  background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .km24HeroText {
+  color:#35465d!important;-webkit-text-fill-color:#35465d!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .search input,
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .search input::placeholder {
+  color:#35465d!important;-webkit-text-fill-color:#35465d!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero {
+  background:#12253c!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>.km24HeroFirstLine {
+  color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;
+  background:none!important;background-image:none!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>span:last-child {
+  color:#80cfff!important;-webkit-text-fill-color:#80cfff!important;
+  background:none!important;background-image:none!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .km24HeroText {
+  color:#e0eaf6!important;-webkit-text-fill-color:#e0eaf6!important;opacity:1!important;
+}
+@media(max-width:700px){
+  html body #app .hero.km24WowHero h1{
+    line-height:1.13!important;letter-spacing:-.025em!important;
+    margin-top:9px!important;margin-bottom:14px!important;
+  }
+  html body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+    display:inline!important;opacity:1!important;visibility:visible!important;
+  }
+  html body #app .hero.km24WowHero .km24HeroText{
+    font-size:16px!important;line-height:1.48!important;
+  }
+  html body #app{padding-bottom:max(115px,calc(105px + env(safe-area-inset-bottom)))!important;}
+}

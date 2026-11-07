@@ -1,0 +1,54 @@
+
+@media(max-width:700px){
+  .detail{padding-bottom:calc(150px + env(safe-area-inset-bottom))!important}
+  .detail .km24DetailMainPanel h1{
+    -webkit-hyphens:none!important;
+    hyphens:none!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    text-wrap:pretty;
+    line-height:1.12!important;
+  }
+  .detail .km24DetailQuick{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    gap:8px 14px!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:14px 0 18px!important;
+    overflow:visible!important;
+  }
+  .detail .km24DetailQuickChip{
+    display:inline-flex!important;
+    align-items:center!important;
+    gap:5px!important;
+    flex:0 0 auto!important;
+    min-width:0!important;
+    max-width:none!important;
+    margin:0!important;
+    white-space:nowrap!important;
+    line-height:1.25!important;
+  }
+  .detail .km24DetailQuickChip i{
+    display:inline-block!important;
+    flex:0 0 auto!important;
+    margin:0!important;
+    font-style:normal!important;
+    line-height:1!important;
+  }
+  body:has(#app .detail .km24DetailMainPanel) #km24CookieJoeGuide{
+    left:6px!important;
+    bottom:calc(96px + env(safe-area-inset-bottom))!important;
+    transform:scale(.78)!important;
+    transform-origin:left bottom!important;
+  }
+  body:has(#app .detail .km24DetailMainPanel) #km24CookieJoeGuide.km24JoeCollapsed{
+    opacity:.88!important;
+  }
+}
+@media(max-width:390px){
+  .detail .km24DetailMainPanel h1{font-size:30px!important}
+  .detail .km24DetailQuick{gap:7px 11px!important}
+  body:has(#app .detail .km24DetailMainPanel) #km24CookieJoeGuide{transform:scale(.72)!important}
+}

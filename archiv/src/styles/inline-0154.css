@@ -1,0 +1,7 @@
+
+.km24MessagesNavLink .km24MessageIconWrap,.km24DesktopMessagesBtn .km24DesktopMessageIcon{position:relative!important;display:inline-grid!important;place-items:center!important;overflow:visible!important}
+.km24MessageNavBadge{display:none;position:absolute;z-index:5;top:-7px;right:-11px;min-width:18px;height:18px;padding:0 5px;border:2px solid #0b0f0c;border-radius:999px;background:#e23f3f;color:#fff;font:900 10px/14px Arial,sans-serif;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.35);font-style:normal;pointer-events:none}
+.km24MessageNavBadge.show{display:block!important}
+.km24MessagesNavLink.hasUnread>b{color:#fff!important;font-weight:950!important}
+.km24MessagesNavLink.hasUnread .km24MessageIconWrap{filter:drop-shadow(0 0 8px rgba(226,63,63,.42))}
+@media(max-width:700px){.km24MessagesNavLink .km24MessageIconWrap{width:31px!important;height:31px!important;margin:0 auto!important}.km24MessageNavBadge{top:-6px;right:-9px}}

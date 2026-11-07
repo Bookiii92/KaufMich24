@@ -1,0 +1,13 @@
+
+#km24PushPrompt{position:fixed;z-index:16040;top:86px;right:14px;width:min(390px,calc(100vw - 28px));padding:14px;border:1px solid rgba(106,223,145,.22);border-radius:18px;background:linear-gradient(145deg,#152019,#0e1410);box-shadow:0 18px 48px rgba(0,0,0,.46);color:#f5fff8;display:none}
+#km24PushPrompt.show{display:block}
+#km24PushPrompt .km24PushPromptRow{display:flex;gap:11px;align-items:flex-start}
+#km24PushPrompt .km24PushPromptIcon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;background:rgba(22,157,88,.15);font-size:20px}
+#km24PushPrompt .km24PushPromptCopy{min-width:0;flex:1}
+#km24PushPrompt .km24PushPromptCopy b{display:block;font-size:14px;margin-bottom:3px}
+#km24PushPrompt .km24PushPromptCopy span{display:block;color:#aebbb3;font-size:11.5px;line-height:1.42}
+#km24PushPrompt .km24PushPromptClose{border:0;background:transparent;color:#aebbb3;font-size:20px;line-height:1;cursor:pointer;padding:0 0 6px 8px}
+#km24PushPrompt .km24PushPromptActions{display:flex;gap:8px;margin-top:11px}
+#km24PushPrompt .km24PushPromptEnable{flex:1;min-height:39px;border:0;border-radius:11px;background:#0d8f52;color:#fff;font-weight:900;cursor:pointer}
+#km24PushPrompt .km24PushPromptLater{min-height:39px;border:1px solid rgba(255,255,255,.10);border-radius:11px;background:rgba(255,255,255,.035);color:#c5d0c9;font-weight:800;cursor:pointer;padding:0 12px}
+@media(max-width:700px){#km24PushPrompt{top:78px;left:10px;right:10px;width:auto;padding:12px;border-radius:16px}}

@@ -1,0 +1,22 @@
+
+.km24SaleIntro{margin:14px 0 4px;padding:12px 14px;border:1px solid rgba(47,182,112,.34);border-radius:14px;background:rgba(18,91,57,.16);line-height:1.45}
+.km24SaleIntro b{color:#d8f7e6}
+.km24SaleCard{align-items:start!important}
+.km24SaleMain{min-width:0}
+.km24SaleBadge{display:inline-flex;align-items:center;gap:6px;margin:0 0 5px;padding:4px 8px;border-radius:999px;background:#153b2a;border:1px solid #2e7250;color:#c9f5da;font-size:10px;font-weight:900;letter-spacing:.02em}
+.km24SaleTitle{display:block;font-size:16px;line-height:1.25;margin-bottom:3px}
+.km24SaleAmount{font-size:14px;font-weight:900;color:#52ce8c;margin-bottom:8px}
+.km24SaleState{display:grid;gap:3px;margin:8px 0 7px;padding:10px 11px;border-radius:12px;border:1px solid #3d4a43;background:#171a17}
+.km24SaleState b{font-size:13px}.km24SaleState span{font-size:11px;line-height:1.35;color:var(--mut)}
+.km24SaleState.next{border-color:#2e7250;background:#132c20}.km24SaleState.wait{border-color:#766637;background:#2a2515}.km24SaleState.done{border-color:#2e7250;background:#153b2a}
+.km24SaleNext{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.km24SaleNext>.btn.primary{min-height:42px;font-weight:900}
+.km24SaleMore{margin-top:7px;font-size:11px}.km24SaleMore summary{cursor:pointer;color:var(--mut);font-weight:800}.km24SaleMore .btn{margin-top:6px}
+.km24SaleSide{align-self:stretch;display:flex!important;flex-direction:column;gap:7px!important;justify-content:flex-end}.km24SaleSide .btn{white-space:nowrap}
+@media(max-width:600px){
+ .km24SaleCard{grid-template-columns:82px minmax(0,1fr)!important;gap:10px!important;padding:12px!important}
+ .km24SaleCard>.activityPic{width:82px!important;height:72px!important}
+ .km24SaleSide{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:7px!important;margin-top:2px!important}
+ .km24SaleSide .btn{width:100%!important;min-height:38px!important;padding:8px 9px!important;font-size:12px!important}
+ .km24SaleState{padding:9px 10px!important;margin:7px 0 6px!important}
+ .km24SaleNext{display:grid!important;grid-template-columns:1fr!important}.km24SaleNext>.btn{width:100%!important}
+}

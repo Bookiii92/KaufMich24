@@ -1,0 +1,25 @@
+
+.km24CodeBox,.km24FeedbackBox{border:1px solid rgba(226,144,72,.28);background:linear-gradient(145deg,rgba(255,244,226,.07),rgba(255,255,255,.025));box-shadow:0 14px 34px rgba(0,0,0,.10)}
+.km24CodeRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:12px}
+.km24CodeRow input{text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.km24ActiveCode{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(19,138,91,.11);border:1px solid rgba(19,138,91,.24)}
+.km24StarRow{display:flex;gap:6px;margin:8px 0 14px}
+.km24StarBtn{border:1px solid var(--line);background:transparent;color:#8e847a;border-radius:10px;width:44px;height:42px;font-size:24px;line-height:1}
+.km24StarBtn.on{color:#f0aa42;border-color:#d68b3f;background:rgba(240,170,66,.10)}
+.km24FeedbackList{display:grid;gap:10px;margin-top:16px}
+.km24FeedbackItem{border:1px solid var(--line);border-radius:14px;padding:13px;background:rgba(255,255,255,.025)}
+.km24FeedbackHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.km24FeedbackStatus{font-size:12px;font-weight:850;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line)}
+.km24FeedbackReply{margin-top:9px;padding:9px 11px;border-left:3px solid var(--g);background:rgba(19,138,91,.08);border-radius:8px}
+.km24AdminFeatureGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.km24AdminCodeForm{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.km24AdminCodeForm label{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:750}
+.km24AdminCodeForm .wide{grid-column:1/-1}
+.km24AdminCodeList,.km24AdminFeedbackList{display:grid;gap:10px;margin-top:14px}
+.km24AdminMini{border:1px solid var(--line);border-radius:13px;padding:12px;background:rgba(255,255,255,.025)}
+.km24AdminFeedbackControls{display:grid;grid-template-columns:160px 1fr 1fr auto;gap:8px;margin-top:10px}
+.km24AccountExtras{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(max-width:760px){
+ .km24CodeRow,.km24AdminFeatureGrid,.km24AdminCodeForm,.km24AdminFeedbackControls,.km24AccountExtras{grid-template-columns:1fr}
+ .km24AdminCodeForm .wide{grid-column:auto}
+}

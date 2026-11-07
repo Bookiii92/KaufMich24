@@ -1,0 +1,28 @@
+
+@media (min-width:701px){
+  html[data-km24-theme="light"] body.km24AreaJobs .compactFilterGroups .filterGroup,
+  html[data-km24-theme="light"] body.km24AreaJobs .marketSearchPanel .filterGroup{
+    background:#ffffff!important;
+    background-image:none!important;
+    border:1px solid #d1d5db!important;
+    color:#111827!important;
+    box-shadow:none!important;
+  }
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup>summary,
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup>summary *,
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup label{
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup label{color:#374151!important;-webkit-text-fill-color:#374151!important;}
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup input,
+  html[data-km24-theme="light"] body.km24AreaJobs .filterGroup select{
+    background:#ffffff!important;
+    background-image:none!important;
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    border-color:#cfd6dd!important;
+  }
+}

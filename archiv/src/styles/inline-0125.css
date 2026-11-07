@@ -1,0 +1,65 @@
+
+/* Final mobile containment fix: prevent the detail grid's intrinsic content from widening the page */
+@media(max-width:980px){
+  .detail,
+  .detail>.wrap,
+  .detail .detailgrid,
+  .detail .detailgrid>*,
+  .detail .detailgrid>div,
+  .detail .main,
+  .detail .side,
+  .detail .panel,
+  .detail .gallery,
+  .detail .km24DetailMainPanel{
+    box-sizing:border-box!important;
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  .detail>.wrap{
+    width:100%!important;
+    overflow-x:hidden!important;
+  }
+  .detail .detailgrid{
+    width:100%!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    overflow-x:hidden!important;
+  }
+  .detail .detailgrid>*,
+  .detail .detailgrid>div{
+    width:100%!important;
+    overflow-x:hidden!important;
+  }
+  .detail .km24DetailMainPanel,
+  .detail .panel{
+    width:100%!important;
+    overflow-x:hidden!important;
+  }
+  .detail .km24DetailQuick{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    flex-wrap:wrap!important;
+    overflow:hidden!important;
+  }
+  .detail .km24DetailQuickChip{
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  .detail .km24DetailSpecs,
+  .detail .panel .specs{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  .detail .km24DetailSpecs>*,
+  .detail .panel .specs>*{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+}
+@media(max-width:600px){
+  .detail .detailgrid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}

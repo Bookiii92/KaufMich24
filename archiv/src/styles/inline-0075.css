@@ -1,0 +1,10 @@
+
+#app .km24SafetyBanner{box-sizing:border-box;flex-shrink:0;margin:10px 14px 0;padding:11px 13px;border-radius:12px;border:1px solid #d6ac4a;background:#fff5d8;color:#402e09!important;font-size:13px;line-height:1.45;box-shadow:0 2px 8px rgba(0,0,0,.08);overflow-wrap:anywhere}
+#app .km24SafetyBanner[data-km24-safety="keywords"]{border-color:#dc9b82;background:#ffede7;color:#5d271c!important}
+#app .km24SafetyBanner strong{display:block;font-weight:800;color:inherit!important;font-size:13px;margin-bottom:3px}
+#app .km24SafetyBanner p{margin:0;color:inherit!important;font-size:12.5px;line-height:1.5}
+#app .km24SafetyBanner .km24SafetyActions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:7px}
+#app .km24SafetyBanner .km24SafetyActions button{appearance:none!important;min-height:30px!important;padding:5px 12px!important;border:0!important;border-radius:8px!important;background:#644a10!important;color:#fff!important;font-size:12px!important;font-weight:750!important;cursor:pointer}
+#app .km24SafetyBanner .km24SafetyActions a{color:#563804!important;font-size:12px!important;font-weight:750!important;text-decoration:underline!important;text-underline-offset:2px}
+#app .km24SafetyBanner[data-km24-safety="keywords"] .km24SafetyActions a{color:#762e24!important}
+@media(max-width:600px){#app .km24SafetyBanner{margin:8px 9px 0;padding:9px 10px;font-size:12px}#app .km24SafetyBanner p{font-size:12px}}

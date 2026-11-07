@@ -1,0 +1,35 @@
+
+/* Startseite: Fokus auf Suche, Kategorien und Verkaufsinserate. */
+body.km24AreaMarket .km24HomeBoostSection,
+body.km24AreaMarket #km24PersonalizedHome,
+body.km24AreaMarket #km24PersonalV5,
+body.km24AreaMarket .km24WhySection,
+body.km24AreaMarket .km24CompactNav,
+body.km24AreaMarket .km24TrustSection{display:none!important}
+
+/* Doppelte Schnellzugriffe im Hero entfernen – Suche bleibt im Mittelpunkt. */
+body.km24AreaMarket .km24HeroShortcuts,
+body.km24AreaMarket .quickDiscover,
+body.km24AreaMarket .km24TrustPills{display:none!important}
+
+body.km24AreaMarket .km24CategorySection{padding-top:16px!important;padding-bottom:8px!important}
+body.km24AreaMarket .km24LatestSection,
+body.km24AreaMarket #latestSection{display:block!important;padding-top:14px!important}
+body.km24AreaMarket #latestSection .km24HomeFilter,
+body.km24AreaMarket .km24LatestSection .km24HomeFilter{display:none!important}
+body.km24AreaMarket .km24ExploreV5{padding-top:20px!important}
+body.km24AreaMarket .km24HomePerks{padding-top:18px!important;padding-bottom:8px!important}
+
+@media(max-width:700px){
+  body.km24AreaMarket .km24HomeHero{padding-top:18px!important;padding-bottom:14px!important}
+  body.km24AreaMarket .km24CategorySection .cats{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
+  body.km24AreaMarket .km24CategorySection .cat{min-height:70px!important;padding:7px 4px!important;border-radius:13px!important}
+  body.km24AreaMarket .km24CategorySection .cat i{font-size:21px!important;margin-bottom:3px!important}
+  body.km24AreaMarket .km24CategorySection .cat b{font-size:11px!important;line-height:1.15!important}
+  body.km24AreaMarket #km24CatsToggle{margin-top:8px!important;min-height:38px!important}
+  body.km24AreaMarket .km24LatestSection .km24HomeSectionHead,
+  body.km24AreaMarket #latestSection .km24HomeSectionHead{margin-bottom:10px!important}
+  body.km24AreaMarket .km24LatestSection .km24HomeSectionHead h2,
+  body.km24AreaMarket #latestSection .km24HomeSectionHead h2{font-size:25px!important}
+  body.km24AreaMarket .km24ExploreV5{padding-top:16px!important}
+}

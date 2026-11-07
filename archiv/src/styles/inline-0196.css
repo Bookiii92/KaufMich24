@@ -1,0 +1,6 @@
+
+#km24PublishFixMsg{position:fixed;z-index:16020;left:12px;right:12px;bottom:158px;max-width:680px;margin:auto;padding:11px 13px;border-radius:13px;background:#161b18;border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 36px rgba(0,0,0,.34);color:#f4fff8;font-size:12px;font-weight:800;line-height:1.35;display:none}
+#km24PublishFixMsg.show{display:block}
+#km24PublishFixMsg.warn{border-color:rgba(222,164,78,.35);background:#2b2116;color:#ffe4b8}
+#km24PublishFixMsg.good{border-color:rgba(70,201,108,.32);background:#14231a;color:#c9f7d6}
+@media(min-width:701px){#km24PublishFixMsg{bottom:28px}}

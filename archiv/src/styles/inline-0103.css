@@ -1,0 +1,11 @@
+
+@media(max-width:700px){
+ html.km24SamsungSafe body.km24AccountNoGhost #km24AutumnMotion,
+ html.km24SamsungSafe body.km24AccountNoGhost .km24Leaf{display:none!important;animation:none!important}
+ html.km24SamsungSafe body.km24AccountNoGhost header,
+ html.km24SamsungSafe body.km24AccountNoGhost .km24BottomNav,
+ html.km24SamsungSafe body.km24AccountNoGhost .km24AccountPage,
+ html.km24SamsungSafe body.km24AccountNoGhost .km24AccountPage *{
+   -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+ }
+}

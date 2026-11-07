@@ -1,0 +1,20 @@
+
+@media(min-width:901px){
+html[data-km24-theme="light"] body #app .detail .km24SellerTrustActivity,
+html[data-km24-theme="light"] body #app .detail .km24SellerTrustActivity span,
+html[data-km24-theme="light"] body #app .detail .km24SellerTrustActivity b,
+html[data-km24-theme="light"] body #app .detail .km24SellerTrustActivity small{
+ color:#334b61!important;-webkit-text-fill-color:#334b61!important;
+ font-size:13px!important;line-height:1.5!important;opacity:1!important;
+}
+html[data-km24-theme="light"] body #app .detail .km24SellerTrustPanel .mut{
+ color:#475569!important;-webkit-text-fill-color:#475569!important;
+}
+html[data-km24-theme="light"] body #app .detail .km24SectionKicker,
+html[data-km24-theme="light"] body #app .km24ProSafetyPage .km24SectionKicker{
+ color:#0a5a9f!important;-webkit-text-fill-color:#0a5a9f!important;font-size:12px!important;
+}
+html[data-km24-theme="light"] body #app .km24PromoPrices span{
+ color:#42546c!important;-webkit-text-fill-color:#42546c!important;
+}
+}

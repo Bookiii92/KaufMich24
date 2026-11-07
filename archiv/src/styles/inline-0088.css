@@ -1,0 +1,91 @@
+
+.giveawayBand{padding-top:22px!important;padding-bottom:12px}
+.giveawayMini{
+ position:relative;overflow:hidden;
+ border:2px solid #f0c75a!important;
+ background:
+   radial-gradient(circle at 12% 25%,rgba(255,214,90,.18),transparent 28%),
+   radial-gradient(circle at 88% 70%,rgba(27,201,117,.18),transparent 32%),
+   linear-gradient(115deg,#5a3e0b 0%,#2d2616 34%,#123c28 72%,#086039 100%)!important;
+ box-shadow:
+   0 0 0 1px rgba(255,221,120,.20),
+   0 0 0 5px rgba(240,199,90,.06),
+   0 16px 42px rgba(0,0,0,.40),
+   0 0 34px rgba(240,199,90,.22)!important;
+ padding:20px 20px!important;
+ min-height:104px;
+ transform:translateZ(0);
+ animation:km24GiveawayPulse 3.6s ease-in-out infinite;
+}
+.giveawayMini:hover{transform:translateY(-2px);border-color:#ffe28a!important}
+.giveawayMini:before{
+ content:"🔥 JETZT MITMACHEN";
+ position:absolute;right:44px;top:10px;z-index:3;
+ font-size:10px;font-weight:950;letter-spacing:.09em;
+ color:#1b1608;background:linear-gradient(135deg,#ffe58e,#e5b63d);
+ border-radius:999px;padding:5px 9px;
+ box-shadow:0 3px 10px rgba(0,0,0,.28);
+}
+.giveawayMini:after{
+ content:"";position:absolute;top:-90%;left:-32%;width:24%;height:280%;
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);
+ transform:rotate(18deg);animation:km24GiveawayShine 4.8s ease-in-out infinite;pointer-events:none
+}
+@keyframes km24GiveawayShine{0%,68%{left:-35%}100%{left:125%}}
+@keyframes km24GiveawayPulse{
+ 0%,100%{box-shadow:0 0 0 1px rgba(255,221,120,.20),0 0 0 5px rgba(240,199,90,.06),0 16px 42px rgba(0,0,0,.40),0 0 26px rgba(240,199,90,.16)}
+ 50%{box-shadow:0 0 0 1px rgba(255,221,120,.34),0 0 0 7px rgba(240,199,90,.09),0 18px 48px rgba(0,0,0,.45),0 0 46px rgba(240,199,90,.34)}
+}
+.giveawayGift{
+ width:64px!important;height:64px!important;font-size:36px!important;
+ background:linear-gradient(145deg,#6c4b12,#2c2a19)!important;
+ border:2px solid #e7bd51!important;
+ box-shadow:0 8px 22px rgba(0,0,0,.34),0 0 24px rgba(240,199,90,.22);
+ animation:km24GiftBounce 2.9s ease-in-out infinite;
+}
+@keyframes km24GiftBounce{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-2deg)}}
+.giveawayMiniText .eyebrow{color:#ffda75!important;font-size:12px!important;font-weight:950!important;text-shadow:0 1px 8px rgba(255,211,99,.18)}
+.giveawayMiniText strong{
+ font-size:29px!important;line-height:1.05!important;
+ color:#fff!important;text-shadow:0 2px 16px rgba(255,255,255,.10),0 0 14px rgba(240,199,90,.12)
+}
+.giveawayMiniText small{color:#f0f3ef!important;font-size:14px!important;font-weight:700}
+.giveawayArrow{color:#ffd86d!important;font-weight:950;font-size:34px!important;filter:drop-shadow(0 0 8px rgba(255,216,109,.35))}
+.km24GiveawaySpotlight{
+ position:relative;overflow:hidden;
+ border:2px solid #f0c75a!important;
+ background:
+   radial-gradient(circle at 10% 20%,rgba(255,214,90,.16),transparent 28%),
+   radial-gradient(circle at 90% 82%,rgba(29,206,121,.16),transparent 30%),
+   linear-gradient(145deg,#44300d,#25271b 48%,#0d4a30)!important;
+ box-shadow:0 20px 60px rgba(0,0,0,.38),0 0 38px rgba(240,199,90,.18)!important
+}
+.km24GiveawaySpotlight:before{
+ content:"🎉 CHF 500";
+ display:inline-flex;align-items:center;
+ margin-bottom:10px;padding:7px 11px;border-radius:999px;
+ background:linear-gradient(135deg,#ffe691,#d8a92f);
+ color:#1e1808;font-weight:950;font-size:13px;
+ box-shadow:0 5px 16px rgba(0,0,0,.25)
+}
+.km24GiveawaySpotlight h2{font-size:clamp(24px,4.6vw,38px);margin:8px 0 10px;line-height:1.05}
+.giveawayPrize{filter:drop-shadow(0 0 14px rgba(240,199,90,.24))}
+@media(max-width:600px){
+ .giveawayBand{padding-top:18px!important;padding-bottom:10px!important}
+ .giveawayMini{padding:18px 14px!important;min-height:98px;border-radius:17px!important}
+ .giveawayMini:before{right:36px;top:8px;font-size:8px;padding:4px 7px}
+ .giveawayGift{width:54px!important;height:54px!important;font-size:31px!important}
+ .giveawayMiniText strong{font-size:24px!important}
+ .giveawayMiniText small{font-size:12px!important;white-space:normal!important;line-height:1.25}
+ .giveawayArrow{font-size:29px!important}
+}
+@media(max-width:390px){
+ .giveawayMini{grid-template-columns:auto 1fr auto!important;gap:9px!important;padding:16px 11px!important}
+ .giveawayGift{width:48px!important;height:48px!important;font-size:28px!important}
+ .giveawayMiniText strong{font-size:21px!important}
+ .giveawayMiniText .eyebrow{font-size:9px!important}
+ .giveawayMini:before{font-size:7px;right:31px;top:6px}
+}
+@media(prefers-reduced-motion:reduce){
+ .giveawayMini,.giveawayMini:after,.giveawayGift{animation:none!important}
+}

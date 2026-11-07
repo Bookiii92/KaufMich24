@@ -1,0 +1,74 @@
+
+/* Fees page: final high-specificity contrast fix for iPhone/Safari light mode. */
+html[data-km24-theme="light"] .km24FeesPage .notice,
+html[data-km24-theme="light"] .km24FeesPage .notice *,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees *{
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24FeesPage .notice,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees{
+  background:#e9f6ee!important;
+  border-color:#a8d4b9!important;
+  color:#334155!important;
+  -webkit-text-fill-color:#334155!important;
+}
+html[data-km24-theme="light"] .km24FeesPage .notice b,
+html[data-km24-theme="light"] .km24FeesPage .notice strong,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees b,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees strong{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] .km24FeesPage .notice p,
+html[data-km24-theme="light"] .km24FeesPage .notice span,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees p,
+html[data-km24-theme="light"] .km24FeesPage #km24LaunchDeadlineFees span{
+  color:#475569!important;
+  -webkit-text-fill-color:#475569!important;
+}
+
+/* Founder status box on fees page — orange candidate/wait state. */
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait,
+html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait{
+  background:#f7e6d7!important;
+  border-color:#dfa978!important;
+  color:#5b3d27!important;
+  -webkit-text-fill-color:#5b3d27!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait b,
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait strong,
+html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait b,
+html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.wait strong{
+  color:#24170f!important;
+  -webkit-text-fill-color:#24170f!important;
+  opacity:1!important;
+}
+
+/* Qualified founder state stays green but readable. */
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.good,
+html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.good{
+  background:#e7f5eb!important;
+  border-color:#9dcfb0!important;
+  color:#22543d!important;
+  -webkit-text-fill-color:#22543d!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.good b,
+html[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState.good strong{
+  color:#163626!important;
+  -webkit-text-fill-color:#163626!important;
+}
+
+/* Safari can preserve inherited text-fill after theme changes. */
+@supports (-webkit-touch-callout:none){
+  html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState,
+  html.km24IOS[data-km24-theme="light"] .km24FeesPage #km24FounderSellerFeeCard .km24FounderSellerState *{
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+}

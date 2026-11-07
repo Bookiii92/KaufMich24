@@ -1,0 +1,197 @@
+
+/* Final readability audit: explicit contrast for always-dark feature surfaces plus theme controls. */
+
+/* Desktop/mobile language picker: never allow white-on-white or dark-on-dark. */
+html[data-km24-theme="light"] .km24LangPicker{
+  background:#fff!important;border-color:#cfd6dd!important;color:#111827!important;
+}
+html[data-km24-theme="light"] .km24LangPicker:before,
+html[data-km24-theme="light"] .km24LangPicker select{
+  color:#111827!important;-webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] .km24LangPicker:after{color:#4b5563!important}
+html[data-km24-theme="dark"] .km24LangPicker{
+  background:#18201c!important;border-color:#435048!important;color:#f8fafc!important;
+}
+html[data-km24-theme="dark"] .km24LangPicker:before,
+html[data-km24-theme="dark"] .km24LangPicker select{
+  color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important;
+}
+html[data-km24-theme="dark"] .km24LangPicker:after{color:#c4d0c9!important}
+
+/* Always-dark auction cards. */
+.km24AuctionCard{color:#eef4f0!important}
+.km24AuctionCard h3,.km24AuctionCard .km24AuctionPrice{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+.km24AuctionCard .km24AuctionMeta small,
+.km24AuctionCard .km24AuctionFoot,
+.km24AuctionEmpty{
+  color:#c2cdc6!important;-webkit-text-fill-color:#c2cdc6!important;opacity:1!important;
+}
+.km24AuctionEmpty b{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+
+/* Always-dark chat/messages UI. */
+.km24ConversationPane,.km24ChatPane,.km24ChatMessages,.km24ChatComposer{color:#edf4ef!important}
+.km24ConversationHead small,
+.km24ConvTop small,
+.km24ConvPreview,
+.km24ChatHeaderInfo span,
+.km24ChatEmptyInline,
+.km24ChatPlaceholder,
+.km24ChatEmpty p,
+.km24ChatListEmpty,
+.km24ChatSearch span,
+.km24ConversationList .mut{
+  color:#bcc8c1!important;-webkit-text-fill-color:#bcc8c1!important;opacity:1!important;
+}
+.km24ChatPlaceholder h2,.km24ConversationHead b,.km24ConvTop b,.km24ChatHeaderInfo b{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+.km24ConvListing{color:#ced7d1!important;-webkit-text-fill-color:#ced7d1!important}
+.km24ChatSearch input::placeholder{color:#aebbb3!important;-webkit-text-fill-color:#aebbb3!important;opacity:1!important}
+
+/* Always-dark start / campaign landing. */
+.km24StartPage{color:#eef4f0!important}
+.km24StartHeroCopy>p,
+.km24StartTrustRow,
+.km24StartBonus>p,
+.km24StartPointNote span,
+.km24StartSectionHead p,
+.km24StartFeatureGrid p,
+.km24StartCategory small,
+.km24StartSafe p,
+.km24StartSafeGrid small,
+.km24StartAdBenefits small{
+  color:#c3cec7!important;-webkit-text-fill-color:#c3cec7!important;opacity:1!important;
+}
+.km24StartFeatureGrid b,.km24StartCategory b,.km24StartSafe b{color:#f3f7f4!important;-webkit-text-fill-color:#f3f7f4!important}
+
+/* Always-dark seller landing. */
+.km24SellerLanding{color:#eef4f0!important}
+.km24SellerHeroCopy>p,
+.km24SellerTrust span,
+.km24SellerFounderCard>p,
+.km24SellerFounderProgress small,
+.km24SellerFacts p,
+.km24SellerFounderExplain>div>p,
+.km24SellerFounderSteps p,
+.km24SellerCompare>div>p,
+.km24SellerCompareGrid p,
+.km24SellerSafety p,
+.km24SellerFinal p,
+.km24SellerTrustStats small,
+.km24SellerTrustStats span,
+.km24SellerTrustActivity{
+  color:#c3cec7!important;-webkit-text-fill-color:#c3cec7!important;opacity:1!important;
+}
+.km24SellerCompareGrid b{color:#d8e1dc!important;-webkit-text-fill-color:#d8e1dc!important}
+.km24SellerLanding h1,.km24SellerLanding h2,.km24SellerLanding h3,.km24SellerLanding strong{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+
+/* Analytics is rendered with dark cards in every theme: make all text explicit. */
+.km24AnalyticsPage{color:#eef4f0!important}
+.km24AnalyticsMetric,
+.km24AnalyticsListing,
+.km24AnalyticsPeriod>div,
+.km24AnalyticsChart,
+.km24AnalyticsHint{
+  background:#151b18!important;border-color:#39463f!important;color:#eef4f0!important;
+}
+.km24AnalyticsHero h1,.km24AnalyticsMetric b,.km24AnalyticsListing h3,.km24AnalyticsPeriod b{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+.km24AnalyticsHero p,
+.km24AnalyticsMetric small,
+.km24AnalyticsMetric span,
+.km24AnalyticsMini small,
+.km24AnalyticsPeriod small,
+.km24AnalyticsHint small,
+.km24AnalyticsListing .mut{
+  color:#bdc9c2!important;-webkit-text-fill-color:#bdc9c2!important;opacity:1!important;
+}
+
+/* Remaining low-contrast secondary text on ordinary light surfaces. */
+html[data-km24-theme="light"] .km24AccountNavHead p,
+html[data-km24-theme="light"] .km24AccountQuickGrid a small,
+html[data-km24-theme="light"] .km24AccountEmpty,
+html[data-km24-theme="light"] .km24AccountSectionHead p,
+html[data-km24-theme="light"] .km24AccountPoints em,
+html[data-km24-theme="light"] .km24MyListingMeta,
+html[data-km24-theme="light"] .km24FollowingMeta,
+html[data-km24-theme="light"] .km24FollowingHero p,
+html[data-km24-theme="light"] .km24FollowingEmpty,
+html[data-km24-theme="light"] .km24HomeSectionHead p,
+html[data-km24-theme="light"] .km24HomeFilter summary span,
+html[data-km24-theme="light"] .km24HomeBoostHead p,
+html[data-km24-theme="light"] .km24PersonalHead p,
+html[data-km24-theme="light"] .km24MiniRow span,
+html[data-km24-theme="light"] .km24MiniRow small,
+html[data-km24-theme="light"] .km24WhyCard p,
+html[data-km24-theme="light"] .km24QuickCard small,
+html[data-km24-theme="light"] .km24QualityTips,
+html[data-km24-theme="light"] .km24RecentHero p,
+html[data-km24-theme="light"] .km24MarketingKpis small,
+html[data-km24-theme="light"] .km24MarketingTable th,
+html[data-km24-theme="light"] .km24TwintSoon span,
+html[data-km24-theme="light"] .km24SecurityBar span,
+html[data-km24-theme="light"] .km24SecureFoot,
+html[data-km24-theme="light"] .km24DeletionAdminItem small,
+html[data-km24-theme="light"] .km24AdminAiReview small,
+html[data-km24-theme="light"] .km24FooterBottom,
+html[data-km24-theme="light"] .km24FooterBrand p,
+html[data-km24-theme="light"] .km24SvcMeta,
+html[data-km24-theme="light"] .km24SvcMsg small,
+html[data-km24-theme="light"] .km24PromoBalance,
+html[data-km24-theme="light"] .km24PostCreatePromoNote{
+  color:#4b5563!important;-webkit-text-fill-color:#4b5563!important;opacity:1!important;text-shadow:none!important;
+}
+
+/* Equivalent secondary text in dark mode. */
+html[data-km24-theme="dark"] .km24AccountNavHead p,
+html[data-km24-theme="dark"] .km24AccountQuickGrid a small,
+html[data-km24-theme="dark"] .km24AccountEmpty,
+html[data-km24-theme="dark"] .km24AccountSectionHead p,
+html[data-km24-theme="dark"] .km24AccountPoints em,
+html[data-km24-theme="dark"] .km24MyListingMeta,
+html[data-km24-theme="dark"] .km24FollowingMeta,
+html[data-km24-theme="dark"] .km24FollowingHero p,
+html[data-km24-theme="dark"] .km24FollowingEmpty,
+html[data-km24-theme="dark"] .km24HomeSectionHead p,
+html[data-km24-theme="dark"] .km24HomeFilter summary span,
+html[data-km24-theme="dark"] .km24HomeBoostHead p,
+html[data-km24-theme="dark"] .km24PersonalHead p,
+html[data-km24-theme="dark"] .km24MiniRow span,
+html[data-km24-theme="dark"] .km24MiniRow small,
+html[data-km24-theme="dark"] .km24WhyCard p,
+html[data-km24-theme="dark"] .km24QuickCard small,
+html[data-km24-theme="dark"] .km24QualityTips,
+html[data-km24-theme="dark"] .km24RecentHero p,
+html[data-km24-theme="dark"] .km24MarketingKpis small,
+html[data-km24-theme="dark"] .km24MarketingTable th,
+html[data-km24-theme="dark"] .km24TwintSoon span,
+html[data-km24-theme="dark"] .km24SecurityBar span,
+html[data-km24-theme="dark"] .km24SecureFoot,
+html[data-km24-theme="dark"] .km24DeletionAdminItem small,
+html[data-km24-theme="dark"] .km24AdminAiReview small,
+html[data-km24-theme="dark"] .km24FooterBottom,
+html[data-km24-theme="dark"] .km24FooterBrand p,
+html[data-km24-theme="dark"] .km24SvcMeta,
+html[data-km24-theme="dark"] .km24SvcMsg small,
+html[data-km24-theme="dark"] .km24PromoBalance,
+html[data-km24-theme="dark"] .km24PostCreatePromoNote{
+  color:#b9c5be!important;-webkit-text-fill-color:#b9c5be!important;opacity:1!important;text-shadow:none!important;
+}
+
+/* Form and disabled-state guard on every device. */
+html[data-km24-theme="light"] button:disabled,
+html[data-km24-theme="light"] input:disabled,
+html[data-km24-theme="light"] select:disabled,
+html[data-km24-theme="light"] textarea:disabled{
+  color:#6b7280!important;-webkit-text-fill-color:#6b7280!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] button:disabled,
+html[data-km24-theme="dark"] input:disabled,
+html[data-km24-theme="dark"] select:disabled,
+html[data-km24-theme="dark"] textarea:disabled{
+  color:#aab6af!important;-webkit-text-fill-color:#aab6af!important;opacity:1!important;
+}
+
+/* Samsung-specific final guard. */
+html.km24SamsungSafe[data-km24-theme="light"] .km24LangPicker select,
+html.km24SamsungSafe[data-km24-theme="light"] .km24LangPicker:before{color:#111827!important;-webkit-text-fill-color:#111827!important}
+html.km24SamsungSafe[data-km24-theme="dark"] .km24LangPicker select,
+html.km24SamsungSafe[data-km24-theme="dark"] .km24LangPicker:before{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}

@@ -1,0 +1,33 @@
+
+.gallery{position:relative}
+.gallery.km24MultiGallery .mainpic{position:relative;touch-action:pan-y}
+.km24GalleryNav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:6;
+  width:44px;height:44px;border-radius:999px;border:1px solid rgba(0,0,0,.12);
+  background:rgba(255,255,255,.92);color:#17352b;font-size:26px;font-weight:900;
+  display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.14)
+}
+.km24GalleryPrev{left:12px}
+.km24GalleryNext{right:12px}
+.km24GalleryCount{
+  position:absolute;right:12px;top:12px;z-index:6;
+  background:rgba(23,53,43,.82);color:#fff;border-radius:999px;
+  padding:6px 10px;font-size:13px;font-weight:900
+}
+.gallery.km24MultiGallery .thumbs{display:flex!important;visibility:visible!important;opacity:1!important}
+.gallery.km24MultiGallery .thumb{
+  flex:0 0 75px;cursor:pointer;border:2px solid transparent;opacity:.72;
+  transition:.15s ease
+}
+.gallery.km24MultiGallery .thumb.km24ActiveThumb{
+  border-color:#138a5b;opacity:1;box-shadow:0 0 0 1px rgba(19,138,91,.18)
+}
+.km24GalleryHint{
+  padding:0 10px 8px;color:var(--mut);font-size:12px;font-weight:800
+}
+@media(max-width:600px){
+  .km24GalleryNav{width:42px;height:42px;font-size:24px}
+  .km24GalleryPrev{left:8px}.km24GalleryNext{right:8px}
+  .km24GalleryCount{right:8px;top:8px}
+  .gallery.km24MultiGallery .thumb{flex-basis:68px;width:68px;height:54px!important}
+}

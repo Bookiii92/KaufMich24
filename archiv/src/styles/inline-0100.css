@@ -1,0 +1,8 @@
+
+.km24LaunchPanel{border-color:rgba(211,132,60,.15)!important;background:linear-gradient(145deg,rgba(31,27,22,.82),rgba(16,22,18,.84))!important}
+.km24LaunchStatus{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;border:1px solid rgba(92,211,126,.18);background:rgba(43,131,71,.10);color:#8be8a7;font-size:11px;font-weight:850}
+.km24SvcMiniNav{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.km24SvcMiniNav .btn{min-height:42px}
+.km24SvcStatus{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:900;border:1px solid rgba(255,255,255,.08)}
+.km24SvcStatus.pending{background:rgba(216,147,66,.11);color:#e8bd83}.km24SvcStatus.accepted,.km24SvcStatus.matched,.km24SvcStatus.completed{background:rgba(50,176,98,.12);color:#94e8ad}.km24SvcStatus.declined,.km24SvcStatus.withdrawn{background:rgba(186,73,65,.10);color:#eaa19b}
+.km24PremiumSurface,.legal,.adminCard,.activityCard,.notificationCard,.km24SvcCard{box-shadow:0 13px 34px rgba(0,0,0,.13)}
+@media(max-width:700px){.km24SvcMiniNav{display:grid;grid-template-columns:1fr 1fr}.km24SvcMiniNav .btn{width:100%}}

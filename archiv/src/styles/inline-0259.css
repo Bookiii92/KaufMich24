@@ -1,0 +1,5 @@
+
+@media(max-width:700px){
+  html.km24IOS[data-km24-theme="light"] .km24AccountKicker{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important;opacity:1!important}
+  html.km24IOS[data-km24-theme="light"] .km24AccountBadges .verified{background:#eef6ff!important;border-color:#bfdcff!important;color:#0b4fc7!important;-webkit-text-fill-color:#0b4fc7!important}
+}

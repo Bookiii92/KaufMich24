@@ -1,0 +1,65 @@
+
+@media(min-width:701px){
+  .km24LangPicker>span{display:none!important}
+  .km24LangPicker{gap:0!important;min-width:58px!important;justify-content:center!important;padding:0 6px!important}
+  .km24LangPicker select{width:46px!important;min-width:46px!important;text-align:center!important;text-align-last:center!important}
+}
+html[data-km24-theme="light"] body.km24AreaJobs .marketSearchPanel,
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroup{
+  background:#ffffff!important;
+  color:#111827!important;
+  border-color:#d1d5db!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroup summary{
+  background:#ffffff!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupTitle{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupHint,
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroup summary:after{
+  color:#5b6470!important;
+  -webkit-text-fill-color:#5b6470!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupBody{
+  background:#ffffff!important;
+  border-top-color:#e5e7eb!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupBody label{
+  color:#374151!important;
+  -webkit-text-fill-color:#374151!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupBody input,
+html[data-km24-theme="light"] body.km24AreaJobs .filterGroupBody select,
+html[data-km24-theme="light"] body.km24AreaJobs .marketSearchPanel input,
+html[data-km24-theme="light"] body.km24AreaJobs .marketSearchPanel select{
+  background:#ffffff!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  border-color:#cfd6dd!important;
+  color-scheme:light!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] body.km24AreaJobs input::placeholder{
+  color:#6b7280!important;
+  -webkit-text-fill-color:#6b7280!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] .km24DetailBadges .badge{
+  background:#eef4f0!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  border:1px solid #c9d5d0!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24DetailBadges .km24JobTypeBadge{
+  background:#e7f6ed!important;
+  color:#0b6845!important;
+  -webkit-text-fill-color:#0b6845!important;
+  border-color:#9fd5bd!important;
+}

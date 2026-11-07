@@ -1,0 +1,11 @@
+
+.km24AiIdentityState{margin-top:10px!important;border-color:rgba(103,176,255,.22)!important;background:rgba(24,74,120,.12)!important}
+.km24AiIdentityState.passed{border-color:rgba(69,218,110,.24)!important;background:rgba(27,121,57,.14)!important}
+.km24AiIdentityState.review{border-color:rgba(255,185,73,.25)!important;background:rgba(107,71,17,.14)!important}
+.km24AiIdentityInfo{font-size:12px;line-height:1.45}
+.km24AdminAiReview{margin-top:10px;padding:10px 11px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035)}
+.km24AdminAiReview b{display:block;margin-bottom:4px}
+.km24AdminAiReview small{display:block;margin-top:4px;color:#8d9790}
+.km24AdminAiReview.passed{border-color:rgba(69,218,110,.24);background:rgba(27,121,57,.12)}
+.km24AdminAiReview.review{border-color:rgba(255,185,73,.24);background:rgba(107,71,17,.12)}
+.km24AdminAiReview.failed{border-color:rgba(255,102,102,.25);background:rgba(120,32,32,.12)}

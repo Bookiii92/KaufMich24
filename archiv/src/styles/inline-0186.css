@@ -1,0 +1,40 @@
+
+.km24InboxTabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 16px;padding:5px;border:1px solid var(--km-line,#30353a);border-radius:15px;background:var(--km-surface,#191c1f)}
+.km24InboxTabs a{min-height:46px;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;border-radius:11px;text-decoration:none!important;font-weight:900;color:var(--km-muted,#9ca3af);border:1px solid transparent}
+.km24InboxTabs a.on{background:var(--km-surface2,#202428);color:var(--km-text,#f3f4f6);border-color:var(--km-line,#30353a);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.km24InboxTabs .km24InboxCount{min-width:21px;height:21px;padding:0 6px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;background:var(--km-accent,#e34a4a);color:#fff}
+.km24NotificationsPage{max-width:920px!important}
+.km24NotificationHero{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}
+.km24NotificationHero h1{margin:0;font-size:clamp(26px,5vw,36px)}
+.km24NotificationHero p{margin:5px 0 0}
+.km24NotificationTools{display:flex;gap:7px;flex-wrap:wrap}
+.km24NotificationFilters{display:flex;gap:7px;overflow:auto;padding:1px 0 12px;scrollbar-width:none}
+.km24NotificationFilters::-webkit-scrollbar{display:none}
+.km24NotificationFilters .btn{white-space:nowrap;min-height:38px;padding:8px 11px;border-radius:999px!important;font-size:12px!important}
+.km24NotificationFilters .btn.on{background:var(--km-accent,#e34a4a)!important;border-color:var(--km-accent,#e34a4a)!important;color:#fff!important}
+.km24NotificationList{display:grid;gap:9px}
+.km24NotificationCard{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:12px;align-items:center;padding:13px 14px;border:1px solid var(--km-line,#30353a);border-radius:16px;background:var(--km-surface,#191c1f);color:var(--km-text,#f3f4f6)}
+.km24NotificationCard.unread{border-color:color-mix(in srgb,var(--km-accent,#e34a4a) 44%,var(--km-line,#30353a));box-shadow:inset 3px 0 0 var(--km-accent,#e34a4a)}
+.km24NotificationIcon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:var(--km-surface2,#202428);font-size:22px}
+.km24NotificationBody{min-width:0}
+.km24NotificationBody h3{margin:0 0 4px;font-size:15px;line-height:1.25}
+.km24NotificationBody p{margin:0;color:var(--km-muted,#9ca3af);font-size:13px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.km24NotificationMeta{margin-top:6px;font-size:10.5px;color:var(--km-muted,#9ca3af)}
+.km24NotificationActions{display:flex;gap:6px;align-items:center}
+.km24NotificationActions .btn{min-height:38px;padding:8px 11px;font-size:12px!important;border-radius:10px!important}
+.km24NotificationActions .km24IconBtn{width:38px;min-width:38px;padding:0!important}
+.km24NotificationHint{margin:0 0 12px;padding:10px 12px;border-radius:12px;background:var(--km-surface2,#202428);border:1px solid var(--km-line,#30353a);color:var(--km-muted,#9ca3af);font-size:12px}
+.km24MessagesPage>.km24InboxTabs{margin-bottom:14px}
+@media(max-width:700px){
+ .km24NotificationsPage{padding-top:16px!important}
+ .km24NotificationHero{align-items:flex-start;display:grid;grid-template-columns:1fr auto}
+ .km24NotificationHero h1{font-size:28px}
+ .km24NotificationHero .km24NotificationTools .btn:not(#markAllNotes){display:none}
+ .km24NotificationCard{grid-template-columns:42px minmax(0,1fr);gap:10px;padding:12px}
+ .km24NotificationIcon{width:40px;height:40px}
+ .km24NotificationActions{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;margin-top:2px}
+ .km24NotificationActions .btn{min-height:42px}
+ .km24NotificationActions [data-read-note]{display:none}
+ .km24NotificationBody h3{font-size:14px}
+ .km24NotificationBody p{font-size:12.5px}
+}

@@ -1,0 +1,9 @@
+
+.km24SalesSheet.km24JobSheet .km24SalesStatus{background:linear-gradient(135deg,#0b63f6,#18cfd0)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24SalesSheet.km24JobSheet .km24SalesPrice{display:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesTitle{letter-spacing:-.4px}
+.km24SalesSheet.km24JobSheet .km24SalesHero:after{display:none!important;content:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesCta{background:linear-gradient(135deg,#0b63f6,#18bfe8)!important}
+.km24SalesSheet.km24JobSheet .km24SalesThumbs{display:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesHero{height:488px!important}
+.km24SalesSheet.km24JobSheet .km24SalesHero img{object-fit:cover!important;object-position:center center!important}

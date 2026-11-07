@@ -1,0 +1,42 @@
+
+html.km24SamsungSafe[data-km24-theme="light"] .km24AreaSwitch button.active{
+  background:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;
+  background-image:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 28px rgba(11,99,246,.24)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24AreaSwitch button.active *{
+  background:transparent!important;background-image:none!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .btn.primary,
+html.km24SamsungSafe[data-km24-theme="light"] .search button,
+html.km24SamsungSafe[data-km24-theme="light"] .km24WowHero .search button,
+html.km24SamsungSafe[data-km24-theme="light"] .marketSearchActions .btn:first-child{
+  background:linear-gradient(135deg,#0b52e5,#0b73f6)!important;background-image:linear-gradient(135deg,#0b52e5,#0b73f6)!important;
+  border-color:transparent!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 9px 22px rgba(11,99,246,.18)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomSell>span,
+html[data-km24-theme="light"] .km24BottomSell>span:first-child,
+html[data-km24-theme="light"] .km24BottomSell .km24BottomIcon{
+  background:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  background-image:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 26px rgba(11,99,246,.28)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav>a,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav>button,
+html[data-km24-theme="light"] .km24BottomNav>a,
+html[data-km24-theme="light"] .km24BottomNav>button{color:#53657a!important;-webkit-text-fill-color:#53657a!important}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active b,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on b,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"],
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"] b,
+html[data-km24-theme="light"] .km24BottomSell>b{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active span,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on span,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"] span{color:#168be8!important;-webkit-text-fill-color:#168be8!important}
+html[data-km24-theme="light"] .km24AreaSwitch{border-color:#d9e3f0!important;background:#fff!important;box-shadow:0 10px 28px rgba(11,67,135,.07)!important}
+html[data-km24-theme="light"] .km24HeroEyebrow{color:#145ea8!important;background:#eef6ff!important;border-color:#bfdcff!important}
+html[data-km24-theme="light"] .km24WowHero .search{border-color:#d9e4f2!important;background:#fff!important;box-shadow:0 14px 38px rgba(14,62,126,.08)!important}

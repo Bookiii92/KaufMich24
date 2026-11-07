@@ -1,0 +1,37 @@
+
+/* KM24_MOBILE_POLISH_V2 */
+@media(max-width:700px){
+html,body{max-width:100%;overflow-x:hidden}
+body{padding-bottom:calc(122px + env(safe-area-inset-bottom))!important}
+.wrap{padding-left:12px!important;padding-right:12px!important}
+.formPage,.detail{padding-bottom:34px!important}
+.panel,.legal,.adminCard,.plan,.kpi,.empty{border-radius:18px!important}
+.panel,.legal{padding:16px!important}
+.btn,button,a.btn,input,select,textarea{min-height:48px}
+input,select,textarea{font-size:16px!important}
+.actions{gap:8px!important}.actions .btn{min-height:46px;padding:10px 12px!important}
+.km24Topbar{height:62px!important}.km24Topbar .accountNav{max-width:112px!important;min-height:44px!important;padding:0 12px!important}.km24BrandText{font-size:18px!important}
+.km24BottomNav{left:10px!important;right:10px!important;bottom:10px!important;padding:8px 5px calc(8px + env(safe-area-inset-bottom))!important;border-radius:22px!important}
+.km24BottomNav a,.km24BottomNav button{min-height:52px!important}.km24BottomNav a>span,.km24BottomNav button>span{font-size:21px!important}.km24BottomNav b{font-size:10.5px!important;line-height:1.15!important}.km24BottomSell{transform:translateY(-15px)!important}.km24BottomSell>span{width:52px!important;height:52px!important;border-radius:17px!important}
+#kmAiFab{right:12px!important;bottom:calc(126px + env(safe-area-inset-bottom))!important;min-height:46px!important;padding:10px 14px!important;font-size:14px!important;max-width:150px}
+#kmAiPanel{left:8px!important;right:8px!important;top:72px!important;bottom:calc(122px + env(safe-area-inset-bottom))!important;width:auto!important;height:auto!important;max-height:none!important;border-radius:18px!important}
+.kmAiHead{padding:13px 14px!important}.kmAiTitle{font-size:16px!important}#kmAiMsgs{padding:12px!important}.kmAiMsg{font-size:15px!important;max-width:91%!important}.kmAiQuick{padding:0 10px 9px!important}.kmAiQuick button{min-height:38px!important;font-size:12px!important}.kmAiInputRow{padding:9px!important}#kmAiInput{min-height:48px!important}#kmAiSend{min-width:92px!important;min-height:48px!important}
+.hero.km24WowHero{padding:38px 0 30px!important}.km24WowHero h1{font-size:clamp(38px,11.5vw,52px)!important;line-height:1!important}.km24WowHero .km24HeroText{font-size:16px!important;line-height:1.5!important;margin-top:15px!important}.km24WowHero .search{margin-top:20px!important;padding:6px!important}.km24HeroActions{display:grid!important;grid-template-columns:1fr 1fr!important}.km24HeroActions .btn{width:100%!important}.km24TrustPills{gap:6px!important}.km24TrustPills span{font-size:12px!important}
+.section{padding-top:28px!important}.km24SectionIntro{align-items:flex-start!important}.km24SectionIntro h2{font-size:26px!important}.km24QuickGrid,.km24WhyGrid{grid-template-columns:1fr 1fr!important}.km24QuickCard{min-height:78px!important}.cats{grid-template-columns:1fr 1fr!important;gap:9px!important}.cat{min-height:102px!important;padding:13px!important}.grid{grid-template-columns:1fr 1fr!important;gap:9px!important}.pic{height:148px!important}.cb{padding:11px!important}.title{height:auto!important;min-height:44px;font-size:16px!important;line-height:1.3!important}.price{font-size:19px!important}.meta,.km24CardMeta{font-size:12px!important;line-height:1.35!important}
+.filterbar{grid-template-columns:1fr!important;padding:10px!important}.marketSearchGrid{grid-template-columns:1fr!important}.marketSearchActions{display:grid!important;grid-template-columns:1fr 1fr!important}.marketSearchActions .btn{width:100%!important}
+.formgrid,.detailgrid{grid-template-columns:1fr!important}.mainpic{height:min(72vw,360px)!important}.detail h1{font-size:28px!important;line-height:1.12!important}.detailprice{font-size:27px!important}.specs{grid-template-columns:1fr 1fr!important}.rowform{display:grid!important;grid-template-columns:1fr!important}.rowform .btn{width:100%!important}
+.planGrid{grid-template-columns:1fr!important}.plan{padding:17px!important}.planPrice{font-size:28px!important}.km24SandboxSubActions{grid-template-columns:1fr!important}
+.notificationCard{grid-template-columns:42px minmax(0,1fr)!important;padding:13px!important}.notificationActions{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr 1fr!important}.notificationActions .btn{width:100%!important}.notificationFilters{overflow-x:auto!important;flex-wrap:nowrap!important;padding-bottom:4px!important}.notificationFilters .btn{white-space:nowrap!important;flex:0 0 auto!important}
+.km24MessagesPage{padding-left:8px!important;padding-right:8px!important}.km24MessagesPage.km24HasActive .km24ChatPane{height:calc(100dvh - 164px)!important;min-height:420px!important;border-radius:17px!important}.km24ChatHeader{padding:9px!important;gap:8px!important}.km24ChatBack{width:42px!important;height:42px!important}.km24ChatMessages{padding:14px 10px 12px!important}.km24Bubble{max-width:88%!important}.km24BubbleText{font-size:15px!important}.km24ChatComposer{padding:9px!important;padding-bottom:max(9px,env(safe-area-inset-bottom))!important}.km24SendBtn{width:48px!important;height:48px!important}.km24ListingBtn{min-height:42px!important;padding:8px 10px!important}
+.km24AccountQuickGrid{grid-template-columns:1fr 1fr!important}.km24AccountQuickGrid a{min-height:86px!important}.km24ListingMoreMenu{bottom:calc(118px + env(safe-area-inset-bottom))!important}.km24MyListingActions{grid-template-columns:1fr 1fr!important}.km24ListingMore{grid-column:1/-1!important}.km24ListingMore>summary{width:100%!important}
+.adminQuickNav{grid-template-columns:1fr 1fr!important}.adminQuickNav button{min-height:58px!important}.adminToolbar{grid-template-columns:1fr!important}.adminCard .actions{grid-template-columns:1fr 1fr!important}.adminCard .actions .btn{min-width:0!important}
+.km24SupportChoiceGrid{grid-template-columns:1fr!important}.km24SupportFaqGrid{grid-template-columns:1fr!important}.km24SupportFormSection{padding:14px!important}
+.legal{margin:16px auto!important;line-height:1.55!important}.legal h1{font-size:30px!important;line-height:1.15!important}.legal h2{font-size:22px!important;line-height:1.25!important}
+.km24Footer{padding-bottom:12px!important}.km24FooterGrid{gap:18px!important}
+}
+@media(max-width:520px){
+.km24WowHero .search{display:grid!important;grid-template-columns:1fr!important}.km24WowHero .search button{min-height:48px!important;width:100%!important}.km24HeroActions{grid-template-columns:1fr!important}.notificationActions{grid-template-columns:1fr!important}.adminCard .actions{grid-template-columns:1fr!important}
+}
+@media(max-width:390px){
+.wrap{padding-left:10px!important;padding-right:10px!important}.km24BrandText{font-size:17px!important}.km24Topbar .accountNav{max-width:92px!important}.km24BottomNav{left:6px!important;right:6px!important}.km24BottomNav b{font-size:9.5px!important}.km24QuickGrid,.km24WhyGrid{grid-template-columns:1fr!important}.cats{grid-template-columns:1fr 1fr!important}.grid{grid-template-columns:1fr 1fr!important}.pic{height:132px!important}.title{font-size:15px!important}.km24AccountQuickGrid{grid-template-columns:1fr 1fr!important}.specs{grid-template-columns:1fr!important}#kmAiFab{max-width:132px!important;font-size:13px!important}
+}

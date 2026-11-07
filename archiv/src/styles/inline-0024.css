@@ -1,0 +1,5 @@
+
+body.km24AreaMarket #latestSection,body.km24AreaMarket .km24LatestSection{display:block!important}
+body.km24AreaMarket #latestSection .marketSearchPanel,body.km24AreaMarket #latestSection .km24HomeFilter{display:none!important}
+body.km24AreaMarket #latestSection .searchResultHead{display:block!important;margin:0 0 10px!important}
+body.km24AreaMarket #latestSection #grid{display:grid!important}

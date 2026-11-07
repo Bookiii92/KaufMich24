@@ -1,0 +1,54 @@
+
+/* Keep the intentionally light auction card readable while the surrounding listing uses dark mode. */
+html[data-km24-theme="dark"] .auctionbox{
+  background:#fff9eb!important;
+  background-image:none!important;
+  border-color:#eed49a!important;
+  color:#26362f!important;
+  color-scheme:only light!important;
+  forced-color-adjust:none!important;
+}
+html[data-km24-theme="dark"] .auctionbox .big{
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox small,
+html[data-km24-theme="dark"] .auctionbox .mut{
+  color:#5b6962!important;
+  -webkit-text-fill-color:#5b6962!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox .countdown{
+  color:#9a6200!important;
+  -webkit-text-fill-color:#9a6200!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox .notice{
+  background:#e7f5ec!important;
+  border:1px solid #b8d9c7!important;
+  color:#255f46!important;
+  -webkit-text-fill-color:#255f46!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox .notice *{
+  color:#255f46!important;
+  -webkit-text-fill-color:#255f46!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox input{
+  background:#fff!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  border-color:#cdbb91!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox .btn.primary{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .auctionbox .badge.auction{
+  color:#805b00!important;
+  -webkit-text-fill-color:#805b00!important;
+}

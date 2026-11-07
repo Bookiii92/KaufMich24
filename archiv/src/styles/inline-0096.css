@@ -1,0 +1,9 @@
+
+#qs.km24Searching{opacity:.78;pointer-events:none}
+#resultStatus.km24SearchResultFlash{
+  display:inline-flex;align-items:center;
+  padding:7px 10px;border-radius:999px;
+  background:rgba(31,153,70,.12);
+  border:1px solid rgba(72,211,111,.18);
+  color:#9ee8b1
+}

@@ -1,0 +1,7 @@
+
+#acc,#lnr{display:none!important}
+#legalr{display:none!important}
+#km24SignupFast{display:none!important}
+#km24SignupLegal{padding:12px;border:1px solid var(--line);border-radius:12px}
+#km24SignupLegal label{display:flex;gap:9px;align-items:flex-start;margin:0}
+#km24SignupLegal input{width:auto;margin-top:4px}

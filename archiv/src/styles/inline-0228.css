@@ -1,0 +1,56 @@
+
+@media (min-width:701px){
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup,
+  html[data-km24-theme="light"] .marketSearchPanel details.filterGroup,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup,
+  html[data-km24-theme="light"] .compactFilterGroup{
+    background:#ffffff!important;
+    background-image:none!important;
+    border:1px solid #d1d5db!important;
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    box-shadow:none!important;
+  }
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup summary,
+  html[data-km24-theme="light"] .marketSearchPanel details.filterGroup summary,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup summary,
+  html[data-km24-theme="light"] .compactFilterGroup summary{
+    background:#f8fafc!important;
+    background-image:none!important;
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    border-color:#e5e7eb!important;
+    text-shadow:none!important;
+    opacity:1!important;
+  }
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup summary *,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup label,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup b,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup strong,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup summary *,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup label{
+    color:#374151!important;
+    -webkit-text-fill-color:#374151!important;
+    text-shadow:none!important;
+    opacity:1!important;
+  }
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup input,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup select,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup textarea,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup input,
+  html[data-km24-theme="light"] .compactFilterGroups .filterGroup select{
+    background:#ffffff!important;
+    background-image:none!important;
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    border-color:#cbd5e1!important;
+    box-shadow:none!important;
+    opacity:1!important;
+  }
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup input::placeholder,
+  html[data-km24-theme="light"] .marketSearchPanel .filterGroup textarea::placeholder{
+    color:#6b7280!important;
+    -webkit-text-fill-color:#6b7280!important;
+    opacity:1!important;
+  }
+}

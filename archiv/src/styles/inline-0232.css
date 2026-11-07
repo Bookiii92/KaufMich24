@@ -1,0 +1,8 @@
+
+.km24UxEmptyState{grid-column:1/-1!important;text-align:center!important;padding:26px 18px!important;border-radius:18px!important}
+.km24UxEmptyIcon{width:48px;height:48px;margin:0 auto 10px;border-radius:15px;display:grid;place-items:center;font-size:24px;background:rgba(19,138,91,.10);border:1px solid rgba(19,138,91,.18)}
+.km24UxEmptyState>b{display:block;font-size:17px;margin-bottom:5px}.km24UxEmptyState>p{max-width:520px;margin:0 auto 14px;color:var(--mut);font-size:12px;line-height:1.5}.km24UxEmptyState>.btn{min-height:43px}
+.km24UxPayNote{margin:12px 0 0;padding:10px 12px;border-radius:12px;background:rgba(19,138,91,.08);border:1px solid rgba(19,138,91,.15);font-size:11px;line-height:1.45;color:var(--mut)}
+.km24UxPromoExplain{display:flex;align-items:center;gap:8px;margin:11px 0 2px;padding:9px 11px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
+.km24UxPromoExplain span{font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}.km24UxPromoExplain b{font-size:11px}
+@media(max-width:600px){.km24UxEmptyState{padding:20px 14px!important}.km24UxEmptyState>.btn{width:100%}.km24UxPromoExplain{align-items:flex-start;flex-direction:column;gap:3px}}

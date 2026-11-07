@@ -1,0 +1,8 @@
+
+.km24SvcFeeBanner{margin-top:16px;padding:13px 14px;border-radius:15px;border:1px solid rgba(64,180,116,.25);background:rgba(24,70,50,.34);color:#d8efe2}
+.km24SvcFeeBanner b{color:#8fe0b3}.km24SvcFeeBanner small{display:block;color:#aabbb1;margin-top:5px;line-height:1.45}
+.km24SvcFeeTable{width:100%;border-collapse:collapse;margin-top:12px}.km24SvcFeeTable td,.km24SvcFeeTable th{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+.km24SvcFeeTable th{color:#c9d4cd;font-size:12px}.km24SvcFeeTable td:last-child,.km24SvcFeeTable th:last-child{text-align:right}
+.km24SvcFeeOld{text-decoration:line-through;color:#8e9891;margin-right:6px}.km24SvcFeeNow{color:#79dda6;font-weight:950}
+.km24SvcFeePreview{padding:11px 12px;border-radius:13px;border:1px solid rgba(229,153,79,.20);background:rgba(73,47,28,.22);font-size:12px;line-height:1.45}
+.km24SvcFeePreview strong{display:block;color:#f0c18a;font-size:14px;margin-bottom:3px}

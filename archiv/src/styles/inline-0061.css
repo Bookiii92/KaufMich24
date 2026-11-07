@@ -1,0 +1,15 @@
+
+html[data-km24-theme="light"] .auctionbox .notice{
+  background:#e4f4e9!important;
+  border:1px solid #b7dbbf!important;
+  color:#1f6b46!important;
+  -webkit-text-fill-color:#1f6b46!important;
+  opacity:1!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] .auctionbox .notice *,
+html[data-km24-theme="light"] .auctionbox .notice b{
+  color:#1f6b46!important;
+  -webkit-text-fill-color:#1f6b46!important;
+  opacity:1!important;
+}

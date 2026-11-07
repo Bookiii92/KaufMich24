@@ -1,0 +1,43 @@
+
+.km24CardPic,.km24AuctionPic{position:relative}
+.km24CardMainImg{width:100%;height:100%;display:block}
+.km24ThumbStrip{
+  position:static;
+  width:100%;
+  max-width:none;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  padding:8px 10px;
+  margin:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  background:linear-gradient(180deg,rgba(25,24,20,.98),rgba(17,17,14,.98));
+  border:0;
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.05);
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none;
+}
+.km24ThumbStrip::-webkit-scrollbar{display:none}
+.km24ThumbBtn{
+  position:relative;
+  width:44px;
+  height:34px;
+  flex:0 0 44px;
+  padding:0;
+  border:2px solid rgba(255,255,255,.18);
+  border-radius:8px;
+  overflow:hidden;
+  background:#171612;
+  cursor:pointer;
+}
+.km24ThumbBtn img{width:100%;height:100%;display:block;object-fit:cover}
+.km24ThumbBtn.active{border-color:#e79a50;box-shadow:0 0 0 2px rgba(231,154,80,.18)}
+.km24ThumbMore{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.58);color:#fff;font-size:11px;font-weight:900;text-shadow:0 1px 3px #000}
+@media(max-width:600px){
+  .km24ThumbStrip{gap:5px;padding:7px 8px}
+  .km24ThumbBtn{width:38px;height:30px;flex-basis:38px;border-radius:7px}
+  .km24ThumbMore{font-size:10px}
+}

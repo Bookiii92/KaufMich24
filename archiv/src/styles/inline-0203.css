@@ -1,0 +1,14 @@
+
+.km24TxStepTime{display:block;margin-top:3px;font-size:9px;line-height:1.2;opacity:.72;font-weight:600}
+.km24TxFlowExtras{margin-top:10px;display:grid;gap:9px}
+.km24TxSummary{border:1px solid rgba(35,183,116,.28);background:rgba(21,116,75,.10);border-radius:14px;padding:11px 12px}
+.km24TxSummaryTitle{font-weight:900;color:#69d7a3;margin-bottom:8px}
+.km24TxSummaryGrid{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;font-size:12px}
+.km24TxSummaryGrid small{display:block;color:var(--mut);font-size:10px;margin-bottom:2px}.km24TxSummaryGrid b{display:block}
+.km24TxTimeline{border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:9px 11px;background:rgba(255,255,255,.025)}
+.km24TxTimeline summary{cursor:pointer;font-weight:800;font-size:12px;list-style:none}.km24TxTimeline summary::-webkit-details-marker{display:none}
+.km24TxTimelineRows{display:grid;gap:6px;margin-top:8px}.km24TxTimelineRow{display:flex;gap:8px;justify-content:space-between;font-size:11px}.km24TxTimelineRow span:first-child{font-weight:700}.km24TxTimelineRow time{color:var(--mut);white-space:nowrap}
+.km24TxActions{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.km24TxActions .btn{font-size:11px;padding:8px 10px}
+.km24CancelState{font-size:11px;padding:8px 10px;border-radius:11px;border:1px dashed rgba(238,151,71,.35);background:rgba(238,151,71,.08);color:#e7b179}
+.km24ProblemBtn{opacity:.86}
+@media(max-width:600px){.km24TxSummaryGrid{grid-template-columns:1fr 1fr}.km24TxTimelineRow{font-size:10.5px}.km24TxActions .btn{min-height:38px}}

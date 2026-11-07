@@ -1,0 +1,12 @@
+
+.km24LegalNav{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 16px}
+.km24LegalNav a{display:inline-flex;align-items:center;min-height:36px;padding:0 11px;border:1px solid rgba(255,255,255,.09);border-radius:999px;text-decoration:none!important;color:#bac7bf!important;background:rgba(255,255,255,.035);font-size:11px;font-weight:820}
+.km24LegalNav a.active{border-color:rgba(55,203,101,.28);background:rgba(34,148,68,.13);color:#baf0ca!important}
+.km24ReportOverlay{position:fixed;inset:0;z-index:13050;display:grid;place-items:center;padding:16px;background:rgba(0,0,0,.72)}
+.km24ReportModal{width:min(560px,100%);max-height:calc(100dvh - 24px);overflow:auto;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:#121713;padding:20px;box-shadow:0 28px 90px rgba(0,0,0,.55)}
+.km24ReportModal h2{margin:0 0 6px}.km24ReportModal p{margin:0 0 14px;color:#94a198}
+.km24ReportModal label{display:grid;gap:6px;margin-top:11px;font-size:13px;font-weight:800}
+.km24ReportModal select,.km24ReportModal textarea{width:100%;border:1px solid rgba(255,255,255,.10);border-radius:12px;background:#0b100c;color:#e8efea;padding:11px}
+.km24ReportModal textarea{min-height:110px;resize:vertical}
+.km24ReportActions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:14px}
+@media(max-width:700px){.km24ReportOverlay{align-items:end;padding:8px}.km24ReportModal{border-radius:19px;padding:17px}}

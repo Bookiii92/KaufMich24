@@ -1,0 +1,25 @@
+
+html[data-km24-theme="light"] .km24QuickFilter{
+  color:#374151!important;-webkit-text-fill-color:#374151!important;
+  background:#fff!important;background-image:none!important;
+  border-color:#d1d5db!important;opacity:1!important;text-shadow:none!important
+}
+html[data-km24-theme="light"] .km24QuickFilter.active{
+  color:#0b6845!important;-webkit-text-fill-color:#0b6845!important;
+  background:#e7f4ed!important;background-image:none!important;
+  border-color:#8fc9ad!important;box-shadow:none!important
+}
+html[data-km24-theme="light"] #km24PersonalizedHome .km24MiniBtn,
+html[data-km24-theme="light"] .km24MiniBtn{
+  background:#fff!important;background-image:none!important;
+  border-color:#d1d5db!important;color:#111827!important;
+  -webkit-text-fill-color:#111827!important;box-shadow:0 2px 8px rgba(15,23,42,.06)!important;
+  opacity:1!important;text-shadow:none!important
+}
+html[data-km24-theme="light"] #km24PersonalizedHome .km24MiniBtn *,
+html[data-km24-theme="light"] .km24MiniBtn *{
+  color:#111827!important;-webkit-text-fill-color:#111827!important;opacity:1!important;text-shadow:none!important
+}
+html[data-km24-theme="light"] .km24MiniArrow{
+  color:#64748b!important;-webkit-text-fill-color:#64748b!important
+}

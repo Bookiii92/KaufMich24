@@ -1,0 +1,24 @@
+
+@media(min-width:701px){
+  body.km24HomeV5 .km24HomeHero{padding:44px 0 34px!important}
+  body.km24HomeV5 .km24CategorySection{padding-top:30px!important}
+  body.km24HomeV5 .km24HomePerks{padding-top:18px!important}
+  body.km24HomeV5 .km24HomeBoostSection,
+  body.km24HomeV5 .km24LatestSection,
+  body.km24HomeV5 .km24ExploreV5,
+  body.km24HomeV5 .km24PersonalV5,
+  body.km24HomeV5 .km24WhySection{padding-top:30px!important}
+  body.km24HomeV5 .km24HomeSectionHead{margin-bottom:13px!important}
+  body.km24HomeV5 .km24ExploreShell,
+  body.km24HomeV5 .km24PersonalShell{border-radius:18px!important}
+  .km24Topbar .sellNav{white-space:nowrap}
+}
+@media(min-width:701px) and (max-width:980px){
+  .km24Topbar{gap:8px!important}
+  .km24Topbar .nav{gap:5px!important}
+  .km24BrandText>small{display:none!important}
+  .km24Topbar .btn{padding-left:10px!important;padding-right:10px!important}
+  .km24Topbar .accountNav{max-width:120px!important}
+  .km24Topbar .sellNav .sellFull{font-size:12px!important}
+  .km24LangPicker{min-width:60px!important}
+}

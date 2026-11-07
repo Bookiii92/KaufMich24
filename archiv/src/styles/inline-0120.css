@@ -1,0 +1,4 @@
+
+.km24ListingContactHint{display:block;margin-top:7px;padding:8px 10px;border-radius:10px;background:rgba(19,138,91,.07);border:1px solid rgba(19,138,91,.16);font-size:12px;line-height:1.35;color:var(--mut)}
+.km24ListingContactHint.bad{background:rgba(190,48,40,.08);border-color:rgba(190,48,40,.28);color:#b3261e;font-weight:800}
+textarea.km24ContactBlocked{border-color:#c9473e!important;box-shadow:0 0 0 3px rgba(201,71,62,.10)!important}

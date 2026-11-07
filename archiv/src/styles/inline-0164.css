@@ -1,0 +1,8 @@
+
+@supports (-webkit-touch-callout:none){
+ html.km24IOS [hidden],html.km24IOS [hidden] *,
+ html.km24IOS [aria-hidden="true"],html.km24IOS [aria-hidden="true"] *{pointer-events:none!important}
+ html.km24IOS #kmAiFab{pointer-events:auto!important;touch-action:manipulation!important}
+ html.km24IOS #kmAiPanel{pointer-events:none!important}
+ html.km24IOS #kmAiPanel.open{pointer-events:auto!important}
+}

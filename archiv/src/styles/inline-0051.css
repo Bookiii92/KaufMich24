@@ -1,0 +1,62 @@
+
+@media(max-width:700px){
+  html.km24IOS[data-km24-theme="light"] .km24AccountKicker{
+    color:#147a57!important;
+    -webkit-text-fill-color:#147a57!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24AccountBadges span{
+    background:#f3f4f6!important;
+    border-color:#d7dde3!important;
+    color:#4b5563!important;
+    -webkit-text-fill-color:#4b5563!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24AccountBadges .verified{
+    background:#e8f6ee!important;
+    border-color:#a7d8bd!important;
+    color:#166534!important;
+    -webkit-text-fill-color:#166534!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24AccountStats>div,
+  html.km24IOS[data-km24-theme="light"] .km24InventoryCard{
+    background:#fff!important;
+    border-color:#d7dde3!important;
+    color:#111827!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24AccountStats b,
+  html.km24IOS[data-km24-theme="light"] .km24InventoryCard b{
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24AccountStats span,
+  html.km24IOS[data-km24-theme="light"] .km24InventoryCard small,
+  html.km24IOS[data-km24-theme="light"] .km24InventoryTitle small{
+    color:#5b6470!important;
+    -webkit-text-fill-color:#5b6470!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24LogoutTop{
+    background:#fff!important;
+    color:#1f2937!important;
+    -webkit-text-fill-color:#1f2937!important;
+    border-color:#cfd6dd!important;
+  }
+
+  html.km24IOS[data-km24-theme="dark"] .km24AccountKicker{
+    color:#83e1a4!important;
+    -webkit-text-fill-color:#83e1a4!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .km24AccountBadges span{
+    color:#c4d0c9!important;
+    -webkit-text-fill-color:#c4d0c9!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .km24AccountStats span,
+  html.km24IOS[data-km24-theme="dark"] .km24InventoryCard small,
+  html.km24IOS[data-km24-theme="dark"] .km24InventoryTitle small{
+    color:#b7c3bc!important;
+    -webkit-text-fill-color:#b7c3bc!important;
+    opacity:1!important;
+  }
+}

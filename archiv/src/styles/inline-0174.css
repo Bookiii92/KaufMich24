@@ -1,0 +1,15 @@
+
+@supports (-webkit-touch-callout:none){
+  html.km24IOS a,html.km24IOS button,html.km24IOS [role="button"],html.km24IOS label,html.km24IOS input,html.km24IOS select,html.km24IOS textarea{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+  html.km24IOS [hidden],html.km24IOS .hide,
+  html.km24IOS [aria-hidden="true"].buyOverlay,html.km24IOS [aria-hidden="true"].imageLightbox,
+  html.km24IOS [aria-hidden="true"].km24PromoChoiceOverlay,html.km24IOS [aria-hidden="true"].km24PostCreatePromoOverlay,
+  html.km24IOS [aria-hidden="true"].km24WatcherModalOverlay,html.km24IOS [aria-hidden="true"].km24AddressPromptOverlay,
+  html.km24IOS [aria-hidden="true"].km24ReportOverlay,html.km24IOS [aria-hidden="true"].km24PurposeOverlay,
+  html.km24IOS [aria-hidden="true"].km24ContactOverlay,html.km24IOS [aria-hidden="true"].km24OfferOverlay{pointer-events:none!important;}
+  html.km24IOS #kmAiPanel:not(.open){pointer-events:none!important;}
+  html.km24IOS .km24AutumnFX,html.km24IOS #km24AutumnMotion,html.km24IOS .km24AmbientLeaf,html.km24IOS .km24Leaf,
+  html.km24IOS .season-decor,html.km24IOS .km24HalloweenCorner,html.km24IOS .km24AutumnDecor,html.km24IOS .km24CardOverlay,
+  html.km24IOS #km24HalloweenBoostV2{pointer-events:none!important;}
+  html.km24IOS a.cat,html.km24IOS a.km24StartCategory,html.km24IOS .km24BottomNav a,html.km24IOS .km24BottomNav button{position:relative;z-index:2;}
+}

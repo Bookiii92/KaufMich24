@@ -1,0 +1,104 @@
+
+.notifyModern{display:grid!important;gap:18px!important}
+.notifyModern>.head.notifyPageHeader{display:grid!important;grid-template-columns:1fr!important;gap:14px!important;align-items:start!important;margin-bottom:0!important}
+.notifyPageHeader>div:first-child{min-width:0}
+.notifyPageHeader h1{margin:0!important;font-size:clamp(32px,7vw,46px)!important;line-height:1.05!important;letter-spacing:-1px!important;overflow-wrap:anywhere}
+.notifyPageHeader p{margin:7px 0 0!important;font-size:15px!important;line-height:1.4!important}
+.notifyPageHeader>.actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;width:100%!important}
+.notifyPageHeader>.actions .btn{width:100%!important;min-width:0!important;min-height:48px!important;border-radius:15px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:10px 12px!important;font-weight:850!important}
+.notifyPageHeader>.actions .btn:first-child{background:#20211f!important}
+.notifyPageHeader>.actions .btn:last-child{background:#0d0e0d!important}
+#pushMountV47{width:100%;min-width:0}
+#pushSettingsV45{width:100%!important;max-width:none!important;margin:0!important;padding:17px!important;border-radius:22px!important;box-sizing:border-box!important;overflow:hidden!important;background:linear-gradient(145deg,#101310,#070907)!important;border:1px solid rgba(255,255,255,.13)!important;box-shadow:0 14px 34px rgba(0,0,0,.22)!important}
+#pushSettingsV45 .pushTop{display:grid!important;grid-template-columns:48px minmax(0,1fr) auto!important;gap:12px!important;align-items:center!important}
+#pushSettingsV45 .pushIcon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:25px;background:rgba(19,138,91,.13);border:1px solid rgba(19,138,91,.22)}
+#pushSettingsV45 .pushCopy{min-width:0}
+#pushSettingsV45 .pushCopy b{display:block;font-size:18px;line-height:1.2;margin-bottom:4px}
+#pushSettingsV45 .pushCopy .mut{font-size:14px;line-height:1.35;color:#949b96!important}
+#pushSettingsV45 .pushPill{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:900;white-space:nowrap;background:#242624;border:1px solid rgba(255,255,255,.1);color:#c8ccc9}
+#pushSettingsV45 .pushPill.active{background:rgba(19,138,91,.17);border-color:rgba(35,185,121,.35);color:#8ee1b5}
+#pushSettingsV45 .pushPill.blocked{background:rgba(194,75,67,.14);border-color:rgba(194,75,67,.28);color:#efaaa5}
+#pushSettingsV45 .pushActions{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;margin-top:14px!important}
+#pushSettingsV45 .pushActions .btn{width:100%!important;min-width:0!important;min-height:49px!important;border-radius:15px!important;font-weight:900!important}
+#pushSettingsV45 [hidden]{display:none!important}
+.notifyModern>.notificationFilters{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin:0!important}
+.notifyModern>.notificationFilters .btn{width:100%!important;min-width:0!important;min-height:54px!important;border-radius:16px!important;padding:9px 10px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;line-height:1.15!important;font-weight:850!important;background:#222320!important;border:1px solid rgba(255,255,255,.11)!important;color:#f2f2f2!important}
+.notifyModern>.notificationFilters .btn.on{background:linear-gradient(180deg,#118958,#0b7047)!important;border-color:#14895a!important;color:white!important;box-shadow:0 8px 22px rgba(19,138,91,.18)!important}
+.notifyModern>.notificationList{display:grid!important;gap:12px!important}
+.notifyModern .notificationCard{display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;gap:12px!important;align-items:start!important;padding:16px!important;border-radius:20px!important;background:linear-gradient(180deg,#0d0f0d,#080a08)!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 10px 26px rgba(0,0,0,.16)!important}
+.notifyModern .notificationCard.unread{border-color:rgba(19,138,91,.38)!important;box-shadow:inset 3px 0 0 #138a5b,0 10px 26px rgba(0,0,0,.16)!important}
+.notifyModern .notificationIcon{width:48px!important;height:48px!important;border-radius:15px!important;display:grid!important;place-items:center!important;font-size:25px!important;background:#171917!important;border:1px solid rgba(255,255,255,.07)!important}
+.notifyModern .notificationCard h3{margin:1px 0 5px!important;font-size:17px!important;line-height:1.25!important}
+.notifyModern .notificationCard p{margin:0 0 8px!important;color:#a1a7a3!important;line-height:1.4!important}
+.notifyModern .notificationMeta{font-size:12.5px!important;color:#7f8781!important}
+.notifyModern .notificationActions{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr!important;gap:8px!important;margin-top:2px!important;width:100%!important}
+.notifyModern .notificationActions .btn{width:100%!important;min-width:0!important;min-height:46px!important;border-radius:14px!important;font-weight:850!important}
+
+/* Compact marketplace search */
+.marketSearchCompactHead{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;margin-bottom:10px!important}
+.marketSearchCompactHead h2{margin:0!important;font-size:27px!important;line-height:1.08!important;letter-spacing:-.4px!important}
+.marketSearchCompactHead p{margin:4px 0 0!important;font-size:13px!important;line-height:1.3!important;max-width:520px!important}
+.marketSearchCompactHead>a.btn{width:auto!important;min-width:0!important;min-height:38px!important;padding:8px 11px!important;border-radius:12px!important;font-size:13px!important;line-height:1.15!important;white-space:nowrap!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+.marketFilterToggle{display:none}
+@media(max-width:700px){
+ .marketSearchCompactHead{grid-template-columns:1fr!important;gap:7px!important;margin-bottom:9px!important}
+ .marketSearchCompactHead h2{font-size:24px!important}
+ .marketSearchCompactHead p{display:none!important}
+ .marketSearchCompactHead>a.btn{justify-self:start!important;min-height:36px!important;padding:7px 10px!important;font-size:12.5px!important}
+ .marketFilterToggle{
+   display:flex!important;align-items:center!important;justify-content:space-between!important;
+   gap:10px!important;width:100%!important;margin:0 0 12px!important;padding:11px 13px!important;
+   border:1px solid rgba(255,255,255,.13)!important;border-radius:14px!important;
+   background:#171917!important;color:#fff!important;font-weight:850!important
+ }
+ .marketFilterToggle .marketFilterHint{font-size:12px!important;color:#8f9691!important;font-weight:650!important}
+ .marketSearchPanel.marketMobileCollapsed{display:none!important}
+ .marketSearchPanel.marketMobileOpen{display:block!important;padding:13px!important;border-radius:17px!important}
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid{
+   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important
+ }
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid label{font-size:12px!important;min-width:0!important}
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid label:nth-child(1),
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid label:nth-child(2),
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid label:nth-child(9){grid-column:1/-1!important}
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid input,
+ .marketSearchPanel.marketMobileOpen .marketSearchGrid select{
+   min-height:48px!important;height:48px!important;padding:8px 10px!important;border-radius:12px!important;
+   font-size:13px!important;min-width:0!important
+ }
+ .marketSearchPanel.marketMobileOpen .marketSearchActions{
+   display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-top:12px!important
+ }
+ .marketSearchPanel.marketMobileOpen .marketSearchActions .btn{
+   width:100%!important;min-width:0!important;min-height:45px!important;padding:8px!important;
+   border-radius:13px!important;font-size:13px!important
+ }
+ .marketSearchPanel.marketMobileOpen #saveSearch{grid-column:1/-1!important}
+ .searchResultHead{margin-top:10px!important}
+}
+@media(min-width:701px){
+ .marketFilterToggle{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;max-width:260px!important;margin:0 0 12px!important;padding:11px 13px!important;border:1px solid rgba(255,255,255,.13)!important;border-radius:14px!important;background:#171917!important;color:#fff!important;font-weight:850!important}
+ .marketSearchPanel.marketMobileCollapsed{display:none!important}
+ .marketSearchPanel.marketMobileOpen{display:block!important}
+}
+@media(min-width:760px){
+ .notifyModern>.head.notifyPageHeader{grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important}
+ .notifyPageHeader>.actions{display:flex!important;width:auto!important}
+ .notifyPageHeader>.actions .btn{width:auto!important;min-width:132px!important}
+ .notifyModern>.notificationFilters{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ .notifyModern .notificationCard{grid-template-columns:54px minmax(0,1fr) auto!important;align-items:center!important}
+ .notifyModern .notificationActions{grid-column:auto!important;display:flex!important;width:auto!important;margin:0!important}
+ .notifyModern .notificationActions .btn{width:auto!important;min-width:120px!important}
+ #pushSettingsV45 .pushActions{grid-template-columns:auto!important;justify-content:start!important}
+ #pushSettingsV45 .pushActions .btn{width:auto!important;min-width:180px!important}
+}
+@media(max-width:420px){
+ .notifyPageHeader h1{font-size:31px!important}
+ .notifyPageHeader>.actions .btn{font-size:14px!important;padding:8px!important}
+ #pushSettingsV45{padding:15px!important}
+ #pushSettingsV45 .pushTop{grid-template-columns:44px minmax(0,1fr) auto!important;gap:10px!important}
+ #pushSettingsV45 .pushIcon{width:44px;height:44px;font-size:23px}
+ #pushSettingsV45 .pushCopy b{font-size:16px}
+ #pushSettingsV45 .pushPill{padding:4px 8px;font-size:11px}
+ .notifyModern>.notificationFilters .btn{font-size:14px!important;min-height:52px!important}
+}

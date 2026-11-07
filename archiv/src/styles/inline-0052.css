@@ -1,0 +1,141 @@
+
+/* Global readability guard for Samsung + desktop, both themes. */
+html[data-km24-theme="light"] .panel .mut,
+html[data-km24-theme="light"] .panel small,
+html[data-km24-theme="light"] .card .mut,
+html[data-km24-theme="light"] .card small,
+html[data-km24-theme="light"] .manageRow .mut,
+html[data-km24-theme="light"] .manageRow small,
+html[data-km24-theme="light"] .notificationCard .mut,
+html[data-km24-theme="light"] .notificationCard small,
+html[data-km24-theme="light"] .km24AccountStats span,
+html[data-km24-theme="light"] .km24InventoryCard small,
+html[data-km24-theme="light"] .km24AccountQuickGrid small,
+html[data-km24-theme="light"] .km24MyListingCard small,
+html[data-km24-theme="light"] .km24PromoPerf>p,
+html[data-km24-theme="light"] .km24PromoPerfRow small,
+html[data-km24-theme="light"] .km24QualityTips,
+html[data-km24-theme="light"] .km24SignupFast p{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .panel h1,
+html[data-km24-theme="light"] .panel h2,
+html[data-km24-theme="light"] .panel h3,
+html[data-km24-theme="light"] .card h1,
+html[data-km24-theme="light"] .card h2,
+html[data-km24-theme="light"] .card h3,
+html[data-km24-theme="light"] .km24AccountStats b,
+html[data-km24-theme="light"] .km24InventoryCard b{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] input::placeholder,
+html[data-km24-theme="light"] textarea::placeholder{
+  color:#6b7280!important;
+  -webkit-text-fill-color:#6b7280!important;
+  opacity:1!important;
+}
+
+html[data-km24-theme="dark"] body,
+html[data-km24-theme="dark"] #app,
+html[data-km24-theme="dark"] main{
+  color:#edf5f0!important;
+}
+html[data-km24-theme="dark"] .panel,
+html[data-km24-theme="dark"] .card,
+html[data-km24-theme="dark"] .cat,
+html[data-km24-theme="dark"] .legal,
+html[data-km24-theme="dark"] .adminCard,
+html[data-km24-theme="dark"] .manageRow,
+html[data-km24-theme="dark"] .msgList,
+html[data-km24-theme="dark"] .chatBox,
+html[data-km24-theme="dark"] .filterbar,
+html[data-km24-theme="dark"] .gallery,
+html[data-km24-theme="dark"] .choice,
+html[data-km24-theme="dark"] .marketSearchPanel,
+html[data-km24-theme="dark"] .notificationCard,
+html[data-km24-theme="dark"] .km24MyListingCard,
+html[data-km24-theme="dark"] .km24AccountQuickGrid>a,
+html[data-km24-theme="dark"] .km24AccountAccordion>details{
+  color:#edf5f0!important;
+  border-color:#39463f!important;
+}
+html[data-km24-theme="dark"] .mut,
+html[data-km24-theme="dark"] .meta,
+html[data-km24-theme="dark"] .panel small,
+html[data-km24-theme="dark"] .card small,
+html[data-km24-theme="dark"] .manageRow small,
+html[data-km24-theme="dark"] .notificationCard small,
+html[data-km24-theme="dark"] .km24AccountStats span,
+html[data-km24-theme="dark"] .km24InventoryCard small,
+html[data-km24-theme="dark"] .km24AccountQuickGrid small,
+html[data-km24-theme="dark"] .km24MyListingCard small,
+html[data-km24-theme="dark"] .km24PromoPerf>p,
+html[data-km24-theme="dark"] .km24PromoPerfRow small,
+html[data-km24-theme="dark"] .km24QualityTips,
+html[data-km24-theme="dark"] .km24SignupFast p{
+  color:#b7c3bc!important;
+  -webkit-text-fill-color:#b7c3bc!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="dark"] h1,
+html[data-km24-theme="dark"] h2,
+html[data-km24-theme="dark"] h3,
+html[data-km24-theme="dark"] .title,
+html[data-km24-theme="dark"] .price,
+html[data-km24-theme="dark"] .panel b,
+html[data-km24-theme="dark"] .panel strong,
+html[data-km24-theme="dark"] .card b,
+html[data-km24-theme="dark"] .card strong{
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="dark"] input:not([type="checkbox"]):not([type="radio"]),
+html[data-km24-theme="dark"] textarea,
+html[data-km24-theme="dark"] select,
+html[data-km24-theme="dark"] .field{
+  background:#0f1512!important;
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  border-color:#46534c!important;
+}
+html[data-km24-theme="dark"] input::placeholder,
+html[data-km24-theme="dark"] textarea::placeholder{
+  color:#9fa9a3!important;
+  -webkit-text-fill-color:#9fa9a3!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] button:disabled,
+html[data-km24-theme="dark"] input:disabled,
+html[data-km24-theme="dark"] select:disabled,
+html[data-km24-theme="dark"] textarea:disabled{
+  color:#a8b3ad!important;
+  -webkit-text-fill-color:#a8b3ad!important;
+  opacity:1!important;
+}
+
+/* Samsung browser: keep forced-light text readable even if compositor rules win. */
+html.km24SamsungSafe[data-km24-theme="light"] .mut,
+html.km24SamsungSafe[data-km24-theme="light"] .meta,
+html.km24SamsungSafe[data-km24-theme="light"] small{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] h1,
+html.km24SamsungSafe[data-km24-theme="light"] h2,
+html.km24SamsungSafe[data-km24-theme="light"] h3,
+html.km24SamsungSafe[data-km24-theme="light"] .title,
+html.km24SamsungSafe[data-km24-theme="light"] .price{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  opacity:1!important;
+}

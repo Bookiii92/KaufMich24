@@ -1,0 +1,35 @@
+
+/* Lesbarkeit der hellen Verkaufsbild-/Preisschild-Dialoge bei hellem und dunklem Seitenthema. */
+html body .km24SalesOverlay .km24SalesModal .km24SalesModalHead h2{
+  color:#102b4c!important;-webkit-text-fill-color:#102b4c!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24SalesModalHead p{
+  color:#425a75!important;-webkit-text-fill-color:#425a75!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSHead h3{
+  color:#123a5b!important;-webkit-text-fill-color:#123a5b!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSHead p{
+  color:#46657d!important;-webkit-text-fill-color:#46657d!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewHead strong{
+  color:#153958!important;-webkit-text-fill-color:#153958!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewHead span{
+  color:#486980!important;-webkit-text-fill-color:#486980!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings label{
+  color:#153958!important;-webkit-text-fill-color:#153958!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings label small,
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewWrap p{
+  color:#526b80!important;-webkit-text-fill-color:#526b80!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings input:not([type=checkbox]):not([type=file]),
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings select{
+  color:#123752!important;-webkit-text-fill-color:#123752!important;
+  background:#fff!important;
+}

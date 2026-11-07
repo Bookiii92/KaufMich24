@@ -1,0 +1,41 @@
+
+html body .photoTile button.km24CropBtn,
+html.km24SamsungLight body .photoTile button.km24CropBtn,
+html[data-km24-theme="light"] body .photoTile button.km24CropBtn,
+html[data-km24-theme="dark"] body .photoTile button.km24CropBtn{
+ position:absolute!important;
+ left:50%!important;
+ right:auto!important;
+ bottom:43px!important;
+ z-index:8!important;
+ transform:translateX(-50%)!important;
+ width:auto!important;
+ min-width:122px!important;
+ max-width:calc(100% - 18px)!important;
+ height:32px!important;
+ min-height:32px!important;
+ max-height:32px!important;
+ margin:0!important;
+ padding:0 12px!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ white-space:nowrap!important;
+ overflow:hidden!important;
+ border:1px solid rgba(255,255,255,.28)!important;
+ border-radius:999px!important;
+ background:rgba(8,14,10,.88)!important;
+ background-image:none!important;
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+ font-size:12px!important;
+ line-height:1!important;
+ font-weight:900!important;
+ letter-spacing:0!important;
+ text-indent:0!important;
+ opacity:1!important;
+ box-shadow:0 3px 12px rgba(0,0,0,.28)!important;
+ appearance:none!important;
+ -webkit-appearance:none!important;
+}
+html body .photoTile button.km24CropBtn:active{transform:translateX(-50%) scale(.98)!important}

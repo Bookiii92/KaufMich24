@@ -1,0 +1,36 @@
+
+#km24AreaBarSection .km24AreaSwitch button{
+  font-size:29px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+}
+#km24AreaBarSection .km24AreaSwitch button>span{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  text-align:left!important;
+  font-size:20px!important;
+  font-weight:950!important;
+  line-height:1.05!important;
+  letter-spacing:-.02em!important;
+}
+#km24AreaBarSection .km24AreaSwitch button>span::after{
+  display:block!important;
+  margin-top:6px!important;
+  font-size:10.5px!important;
+  font-weight:800!important;
+  line-height:1.15!important;
+  letter-spacing:0!important;
+  opacity:.72!important;
+  white-space:nowrap!important;
+}
+#km24AreaBarSection .km24AreaSwitch button[data-km24-area="market"]>span::after{content:"Kaufen · Verkaufen"}
+#km24AreaBarSection .km24AreaSwitch button[data-km24-area="jobs"]>span::after{content:"Stellen · Gesuche"}
+#km24AreaBarSection .km24AreaSwitch button.active>span::after{opacity:.95!important}
+@media(max-width:650px){
+ #km24AreaBarSection .km24AreaSwitch button{font-size:27px!important;min-height:78px!important;gap:8px!important}
+ #km24AreaBarSection .km24AreaSwitch button>span{font-size:18px!important}
+ #km24AreaBarSection .km24AreaSwitch button>span::after{font-size:9.5px!important;margin-top:5px!important}
+}

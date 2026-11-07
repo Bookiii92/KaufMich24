@@ -1,0 +1,21 @@
+
+.km24FollowSellerBtn{width:100%;margin-top:8px!important;border-color:rgba(80,214,119,.25)!important}
+.km24FollowSellerBtn.isFollowing{background:rgba(37,151,69,.13)!important;border-color:rgba(79,218,119,.32)!important;color:#a9efbd!important}
+.km24FollowProfileAction{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.km24FollowProfileAction .btn{min-width:150px}
+.km24FollowCount{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.025);font-size:11px;color:#96a39b;font-weight:800}
+.km24FollowingPage{padding-top:26px;padding-bottom:50px}
+.km24FollowingHero{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:16px}
+.km24FollowingHero h1{margin:4px 0 3px}.km24FollowingHero p{margin:0;color:#829087}
+.km24FollowingList{display:grid;gap:10px}
+.km24FollowingCard{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:13px;align-items:center;padding:14px;border:1px solid rgba(255,255,255,.075);border-radius:18px;background:linear-gradient(145deg,rgba(27,31,28,.96),rgba(14,18,15,.96))}
+.km24FollowingAvatar{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:rgba(58,208,100,.08);font-size:25px}
+.km24FollowingCard h3{margin:0;font-size:16px}.km24FollowingMeta{margin-top:4px;color:#7f8c84;font-size:11px}.km24FollowingActions{display:flex;gap:7px}
+.km24FollowingActions .btn{min-height:40px!important}
+.km24FollowingEmpty{text-align:center;padding:38px 18px;border:1px dashed rgba(255,255,255,.10);border-radius:18px;color:#849188}
+@media(max-width:650px){
+ .km24FollowProfileAction{width:100%}.km24FollowProfileAction .btn{flex:1}
+ .km24FollowingHero{display:block}.km24FollowingHero .btn{margin-top:12px;width:100%}
+ .km24FollowingCard{grid-template-columns:48px minmax(0,1fr)}.km24FollowingAvatar{width:48px;height:48px;border-radius:14px}
+ .km24FollowingActions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.km24FollowingActions .btn{width:100%}
+}

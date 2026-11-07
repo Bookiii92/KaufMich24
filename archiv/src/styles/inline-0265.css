@@ -1,0 +1,164 @@
+
+
+/* KaufMich24 Services: gut lesbare, konsistente Light- und Dark-Palette. */
+html[data-km24-theme="light"] .km24SvcHero{
+ background:radial-gradient(circle at 90% 0,rgba(75,147,255,.14),transparent 45%),linear-gradient(150deg,#f1f7ff 0%,#ffffff 70%)!important;
+ border-bottom:1px solid #d9e6f7!important;
+ color:#142d52!important;
+}
+html[data-km24-theme="dark"] .km24SvcHero{
+ background:radial-gradient(circle at 90% 0,rgba(35,108,217,.15),transparent 45%),linear-gradient(150deg,#101b2c 0%,#0c1525 75%)!important;
+ border-bottom:1px solid #30425d!important;
+ color:#f2f7ff!important;
+}
+html[data-km24-theme="light"] .km24SvcHero h1,
+html[data-km24-theme="light"] .km24SvcHero h1 *,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcActions b{
+ color:#142b4b!important;-webkit-text-fill-color:#142b4b!important;
+ background-image:none!important;text-shadow:none!important;opacity:1!important
+}
+html[data-km24-theme="dark"] .km24SvcHero h1,
+html[data-km24-theme="dark"] .km24SvcHero h1 *,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcActions b{
+ color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;
+ background-image:none!important;text-shadow:none!important;opacity:1!important
+}
+html[data-km24-theme="light"] .km24SvcHero p,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction small{
+ color:#4a6080!important;-webkit-text-fill-color:#4a6080!important;opacity:1!important
+}
+html[data-km24-theme="dark"] .km24SvcHero p,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction small{
+ color:#b9cbe4!important;-webkit-text-fill-color:#b9cbe4!important;opacity:1!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SectionKicker{
+ background:#e6f0ff!important;border:1px solid #cadfff!important;
+ color:#1258af!important;-webkit-text-fill-color:#1258af!important
+}
+html[data-km24-theme="dark"] .km24SvcHero .km24SectionKicker{
+ background:#172d4b!important;border:1px solid #305681!important;
+ color:#b5d6ff!important;-webkit-text-fill-color:#b5d6ff!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction{
+ background:#fff!important;border:1px solid #cbdcf4!important;
+ color:#142b4b!important;box-shadow:0 5px 16px rgba(30,74,142,.07)!important
+}
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction{
+ background:#1a2b42!important;border:1px solid #3b5373!important;
+ color:#f4f8ff!important;box-shadow:0 5px 18px rgba(0,0,0,.16)!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction:hover,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction:focus-visible{background:#eaf3ff!important;border-color:#4286eb!important}
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction:hover,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction:focus-visible{background:#234163!important;border-color:#79b1f6!important}
+
+/* Listen, Suchfelder und Kategorien passend zum jeweils aktiven Farbschema. */
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section{
+ background:#f8fbff!important;color:#152d4e!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section{
+ background:#101a2b!important;color:#eaf2ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .head h2,
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .head h3{
+ color:#172f51!important;-webkit-text-fill-color:#172f51!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .head h2,
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .head h3{
+ color:#edf4ff!important;-webkit-text-fill-color:#edf4ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .mut,
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section #svcStatus{
+ color:#536986!important;-webkit-text-fill-color:#536986!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .mut,
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section #svcStatus{
+ color:#bdcce1!important;-webkit-text-fill-color:#bdcce1!important
+}
+html[data-km24-theme="light"] #app .km24SvcToolbar input,
+html[data-km24-theme="light"] #app .km24SvcToolbar select{
+ background:#fff!important;color:#142b4b!important;-webkit-text-fill-color:#142b4b!important;
+ border:1px solid #c8d8ee!important;color-scheme:light!important
+}
+html[data-km24-theme="dark"] #app .km24SvcToolbar input,
+html[data-km24-theme="dark"] #app .km24SvcToolbar select{
+ background:#1a2b42!important;color:#eef5ff!important;-webkit-text-fill-color:#eef5ff!important;
+ border:1px solid #405a7d!important;color-scheme:dark!important
+}
+html[data-km24-theme="light"] #app .km24SvcToolbar input::placeholder{color:#60728b!important;-webkit-text-fill-color:#60728b!important;opacity:1!important}
+html[data-km24-theme="dark"] #app .km24SvcToolbar input::placeholder{color:#b7c7de!important;-webkit-text-fill-color:#b7c7de!important;opacity:1!important}
+
+html[data-km24-theme="light"] #app .km24SvcCard,
+html[data-km24-theme="light"] #app .km24SvcHomeCard{
+ background:#ffffff!important;color:#152d4f!important;border-color:#d4e1f2!important
+}
+html[data-km24-theme="dark"] #app .km24SvcCard,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard{
+ background:#1a2a40!important;color:#edf4ff!important;border-color:#3b506d!important
+}
+html[data-km24-theme="light"] #app .km24SvcCard h3,
+html[data-km24-theme="light"] #app .km24SvcHomeCard b,
+html[data-km24-theme="light"] #app .km24SvcPrice{
+ color:#122f56!important;-webkit-text-fill-color:#122f56!important
+}
+html[data-km24-theme="dark"] #app .km24SvcCard h3,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard b,
+html[data-km24-theme="dark"] #app .km24SvcPrice{
+ color:#f2f7ff!important;-webkit-text-fill-color:#f2f7ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcMeta,
+html[data-km24-theme="light"] #app .km24SvcHomeCard small,
+html[data-km24-theme="light"] #app .km24SvcBody .mut{
+ color:#526985!important;-webkit-text-fill-color:#526985!important
+}
+html[data-km24-theme="dark"] #app .km24SvcMeta,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard small,
+html[data-km24-theme="dark"] #app .km24SvcBody .mut{
+ color:#b8c9df!important;-webkit-text-fill-color:#b8c9df!important
+}
+html[data-km24-theme="light"] #app .km24SvcPic{background:#e9f1fb!important}
+html[data-km24-theme="dark"] #app .km24SvcPic{background:#223751!important}
+html[data-km24-theme="light"] #app .km24SvcTrust span{
+ background:#eef5ff!important;color:#345577!important;border-color:#d5e3f5!important
+}
+html[data-km24-theme="dark"] #app .km24SvcTrust span{
+ background:#233b57!important;color:#dcecff!important;border-color:#40638b!important
+}
+html[data-km24-theme="light"] #app .km24SvcPill{
+ background:#dfedff!important;color:#174a9a!important;-webkit-text-fill-color:#174a9a!important
+}
+html[data-km24-theme="dark"] #app .km24SvcPill{
+ background:#214b7d!important;color:#eff6ff!important;-webkit-text-fill-color:#eff6ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcPill.request{background:#fff2d7!important;color:#76500b!important;-webkit-text-fill-color:#76500b!important}
+html[data-km24-theme="dark"] #app .km24SvcPill.request{background:#60471e!important;color:#ffebb9!important;-webkit-text-fill-color:#ffebb9!important}
+html[data-km24-theme="light"] #app .km24SvcQuickCatsV2 button{
+ background:#fff!important;border-color:#c3d7ee!important;color:#20518d!important;-webkit-text-fill-color:#20518d!important
+}
+html[data-km24-theme="dark"] #app .km24SvcQuickCatsV2 button{
+ background:#233853!important;border-color:#4c6c95!important;color:#edf4ff!important;-webkit-text-fill-color:#edf4ff!important
+}
+
+/* Ergänzend: Detailseiten, Angebote, Chat – keine dunklen Textfarben auf dunklen Flächen. */
+html[data-km24-theme="light"] #app .km24SvcQuote,
+html[data-km24-theme="light"] #app .km24SvcMsg{
+ background:#f1f6ff!important;color:#183453!important;border-color:#d5e2f4!important
+}
+html[data-km24-theme="dark"] #app .km24SvcQuote,
+html[data-km24-theme="dark"] #app .km24SvcMsg{
+ background:#1d3048!important;color:#eaf3ff!important;border-color:#3b577a!important
+}
+html[data-km24-theme="light"] #app .km24SvcQuote.accepted,
+html[data-km24-theme="light"] #app .km24SvcMsg.mine{background:#e7f6ee!important;color:#145331!important}
+html[data-km24-theme="dark"] #app .km24SvcQuote.accepted,
+html[data-km24-theme="dark"] #app .km24SvcMsg.mine{background:#1b493b!important;color:#e2fff0!important}
+html[data-km24-theme="light"] #app .km24SvcContact{background:#e8f5ed!important;color:#194b34!important;border-color:#b6dcc7!important}
+html[data-km24-theme="dark"] #app .km24SvcContact{background:#1c4638!important;color:#e2f9ec!important;border-color:#397762!important}
+
+@media(max-width:650px){
+ .km24SvcHero h1{font-size:clamp(28px,7.1vw,40px)!important;line-height:1.12!important;overflow-wrap:normal!important}
+ .km24SvcHero .km24SvcAction{padding:16px 17px!important}
+ .km24SvcHero .km24SvcAction b{font-size:18px!important;line-height:1.25!important}
+ .km24SvcHero .km24SvcAction small{font-size:13px!important;line-height:1.42!important}
+}
+

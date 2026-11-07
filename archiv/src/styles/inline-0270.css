@@ -1,0 +1,37 @@
+
+.km24SalesModal .km24PriceSignBox{display:none!important}
+.km24PriceStudio{margin:15px 24px 24px;padding:18px 20px;border:1px solid #d5e3ee;background:#f5f9fd;border-radius:16px;color:#092d4d!important;-webkit-text-fill-color:initial!important}
+.km24PriceStudio,.km24PriceStudio *{box-sizing:border-box}
+.km24PSHead h3{font-size:21px!important;line-height:1.25;margin:0 0 5px;font-weight:850;color:#0d3151!important;-webkit-text-fill-color:#0d3151!important}
+.km24PSHead p{margin:0 0 16px;color:#4d6c85!important;font-size:13px}
+.km24PSGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,1fr);gap:19px;align-items:start}
+.km24PSSettings{display:grid;gap:12px;min-width:0}
+.km24PSSettings label{display:grid;gap:5px;font-weight:750;color:#173c60!important;font-size:13px;line-height:1.35}
+.km24PSSettings label small{font-weight:500;color:#647c94!important}
+.km24PSSettings input:not([type=checkbox]):not([type=file]),.km24PSSettings select{width:100%;min-width:0;border:1px solid #c0d4e6;border-radius:10px;padding:10px 11px;background:#ffffff!important;color:#092f56!important;-webkit-text-fill-color:#092f56!important;font:600 13px Arial,sans-serif;min-height:42px;appearance:auto}
+.km24PSSettings input[type=file]{width:100%;min-width:0;color:#123956!important;font-size:12px;max-width:100%}
+.km24PSSettings input:focus-visible,.km24PSSettings select:focus-visible,.km24PSSettings button:focus-visible{outline:3px solid #52c6ec;outline-offset:2px}
+.km24PSPair{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.km24PSSeller{border:1px solid #cddfeb;border-radius:12px;padding:12px;background:#ffffff}
+.km24PSSettings label.km24PSCheck{display:flex;align-items:center;gap:9px;font-weight:750;font-size:13px;cursor:pointer}
+.km24PSCheck input{height:17px;width:17px;accent-color:#0c6f9c}
+.km24PSSellerFields{display:grid;gap:10px;padding-top:12px}
+.km24PSSellerFields[hidden]{display:none!important}
+.km24PSClear{justify-self:start;background:#e9f2fa!important;color:#1a597b!important;border:1px solid #c2d8e5!important;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer}
+.km24PSButtons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:4px}
+.km24PSButtons button{border:0;border-radius:10px;min-height:43px;font-size:12px;font-weight:800;padding:10px 7px;cursor:pointer;background:#0e5288!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24PSButtons button:nth-child(2){background:#087d9c!important}
+.km24PSButtons button:nth-child(3){grid-column:span 2;background:#173c60!important}
+.km24PSButtons button:disabled{opacity:.55;cursor:wait}
+.km24PSState{font-size:12px;font-weight:650;color:#1a5477!important;min-height:15px}
+.km24PSState.km24PSError{color:#a33432!important}
+.km24PSPreviewWrap{min-width:0;position:sticky;top:10px;border:1px solid #d4e3ef;border-radius:12px;background:#fff;padding:12px}
+.km24PSPreviewHead{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px;font-size:13px;color:#0d3a5f!important}
+.km24PSPreviewHead span{font-size:12px;color:#587a91!important}
+.km24PSPreviewArea{min-height:220px;display:flex;justify-content:center;align-items:center;background:#e8f0f6;border-radius:8px;padding:12px;overflow:hidden}
+.km24PSPreviewArea canvas{display:block;width:auto;height:auto;max-width:100%;max-height:390px;aspect-ratio:700 / 990;border-radius:3px;box-shadow:0 8px 24px rgba(8,44,76,.2)}
+.km24PSPreviewArea.isLandscape canvas{aspect-ratio:990 / 700}
+.km24PSPreviewWrap p{font-size:11px;line-height:1.4;color:#59758b!important;margin:10px 0 0}
+html[data-km24-theme="dark"] .km24PriceStudio{background:#eef6fb!important;color:#092d4d!important}
+@media(max-width:760px){.km24PriceStudio{margin:12px;padding:14px}.km24PSGrid{grid-template-columns:1fr;gap:12px}.km24PSPreviewWrap{position:static;order:-1}.km24PSPreviewArea{min-height:160px}.km24PSPreviewArea canvas{max-height:290px}}
+@media(max-width:390px){.km24PSPair{grid-template-columns:1fr}.km24PSButtons{grid-template-columns:1fr}.km24PSButtons button:nth-child(3){grid-column:auto}}

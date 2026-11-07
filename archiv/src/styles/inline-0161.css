@@ -1,0 +1,8 @@
+
+html.km24MacDesktop{scroll-behavior:auto!important}
+html.km24MacDesktop body{background-attachment:scroll!important}
+html.km24MacDesktop #km24AutumnMotion,html.km24MacDesktop .km24AutumnFX,html.km24MacDesktop .km24AmbientLeaf,html.km24MacDesktop .km24Leaf,html.km24MacDesktop .season-decor,html.km24MacDesktop .km24HalloweenCorner,html.km24MacDesktop .km24AutumnDecor,html.km24MacDesktop .km24CardOverlay,html.km24MacDesktop .km24PromoFlag{pointer-events:none!important}
+html.km24MacDesktop [aria-hidden="true"].buyOverlay,html.km24MacDesktop [aria-hidden="true"].imageLightbox,html.km24MacDesktop [aria-hidden="true"].km24PromoChoiceOverlay,html.km24MacDesktop [aria-hidden="true"].km24PostCreatePromoOverlay,html.km24MacDesktop [aria-hidden="true"].km24WatcherModalOverlay,html.km24MacDesktop [aria-hidden="true"].km24AddressPromptOverlay,html.km24MacDesktop [aria-hidden="true"].km24ReportOverlay,html.km24MacDesktop [aria-hidden="true"].km24PurposeOverlay,html.km24MacDesktop [aria-hidden="true"].km24ContactOverlay,html.km24MacDesktop [aria-hidden="true"].km24OfferOverlay{pointer-events:none!important}
+html.km24MacDesktop header .km24Topbar .nav button,html.km24MacDesktop header .km24LangPicker select,html.km24MacDesktop #km24PublishBtn,html.km24MacDesktop #km24SellWizardPublish,html.km24MacDesktop .km24SellWizardNav{pointer-events:auto!important;touch-action:manipulation!important}
+html.km24MacDesktop #kmAiPanel{height:min(620px,calc(100vh - 90px))!important;max-height:calc(100vh - 90px)!important}
+html.km24MacSafari header,html.km24MacSafari #kmAiPanel,html.km24MacSafari .panel,html.km24MacSafari .card,html.km24MacSafari .marketSearchPanel{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}

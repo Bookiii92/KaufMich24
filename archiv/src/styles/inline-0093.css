@@ -1,0 +1,18 @@
+
+.km24PromoChoiceOverlay{position:fixed;inset:0;z-index:12050;display:grid;place-items:center;padding:16px;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+.km24PromoChoiceModal{width:min(620px,100%);border:1px solid rgba(255,255,255,.12);border-radius:22px;background:linear-gradient(150deg,#20231e,#111511);box-shadow:0 28px 90px rgba(0,0,0,.58);padding:22px;position:relative}
+.km24PromoChoiceModal h2{margin:4px 44px 6px 0;font-size:28px}
+.km24PromoChoiceModal>p{margin:0 0 16px;color:#9ba69f}
+.km24PromoClose{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.06);color:#fff;font-size:22px;cursor:pointer}
+.km24PromoChoiceGrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.km24PromoPlanCard{padding:16px;border:1px solid rgba(255,255,255,.09);border-radius:17px;background:rgba(255,255,255,.025)}
+.km24PromoPlanCard.recommended{border-color:rgba(88,222,126,.28);background:linear-gradient(145deg,rgba(37,116,58,.15),rgba(255,255,255,.02))}
+.km24PromoPlanCard small{display:block;color:#7f8c84;font-size:10px;font-weight:850;letter-spacing:.08em}
+.km24PromoPlanCard b{display:block;margin-top:5px;font-size:20px}
+.km24PromoPlanPrice{display:flex;align-items:baseline;gap:7px;margin:10px 0}
+.km24PromoPlanPrice strong{font-size:28px}
+.km24PromoPlanPrice span{font-size:11px;color:#d5be73}
+.km24PromoPlanActions{display:grid;gap:7px}
+.km24PromoPlanActions .btn{width:100%;justify-content:center}
+.km24PromoBalance{margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06);font-size:11px;color:#8e9a92}
+@media(max-width:620px){.km24PromoChoiceGrid{grid-template-columns:1fr}.km24PromoChoiceModal{padding:18px}.km24PromoChoiceModal h2{font-size:24px}}

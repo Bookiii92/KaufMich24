@@ -1,0 +1,68 @@
+
+/* Drei eigenständige, verständliche Bereiche – ohne die bestehende Navigation zu ersetzen. */
+.km24ServicesSpotlightV2{display:none!important}
+#km24AreaBarSection .km24AreaSwitch,
+#km24ThreeWorldsServices .km24ThreeWorldsNav{
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:7px!important;padding:6px!important;border:1px solid var(--line,#d8e3f3)!important;
+ border-radius:17px!important;background:var(--card,#fff)!important;
+ box-shadow:0 6px 19px rgba(0,0,0,.06)!important
+}
+#km24AreaBarSection .km24AreaSwitch button,
+#km24AreaBarSection .km24AreaSwitch a,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a{
+ min-width:0!important;min-height:70px!important;padding:10px 5px!important;
+ box-sizing:border-box!important;border:1px solid transparent!important;border-radius:12px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ flex-direction:column!important;gap:4px!important;text-align:center!important;
+ background:transparent!important;color:var(--text,#193150)!important;
+ text-decoration:none!important;font:inherit!important;font-size:22px!important;
+ font-weight:800!important;box-shadow:none!important;cursor:pointer!important
+}
+#km24AreaBarSection .km24AreaSwitch button>span,
+#km24AreaBarSection .km24AreaSwitch a .km24WorldLabel,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a .km24WorldLabel{
+ display:block!important;font-size:13.5px!important;font-weight:850!important;
+ line-height:1.22!important;text-align:center!important;letter-spacing:0!important;
+ color:inherit!important;overflow-wrap:break-word!important
+}
+#km24AreaBarSection .km24AreaSwitch button>span::after{display:none!important}
+#km24AreaBarSection .km24AreaSwitch button.active,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a[aria-current="page"]{
+ background:#1264ed!important;color:#fff!important;border-color:#1264ed!important;
+ box-shadow:0 4px 12px rgba(18,100,237,.22)!important
+}
+#km24AreaBarSection .km24AreaSwitch a:focus-visible,
+#km24AreaBarSection .km24AreaSwitch button:focus-visible,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a:focus-visible{
+ outline:3px solid #42b0ff!important;outline-offset:2px!important
+}
+#km24ThreeWorldsServices{padding:12px 0 5px}
+#km24ThreeWorldsServices .km24ThreeWorldsNav{max-width:960px;margin:0 auto}
+#km24ThreeWorldsServices .km24WorldEmoji,
+#km24AreaBarSection .km24WorldEmoji{display:block;font-size:23px;line-height:1.05}
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch,
+html[data-km24-theme="dark"] #km24ThreeWorldsServices .km24ThreeWorldsNav{
+ background:#142136!important;border-color:#34465e!important
+}
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch button:not(.active),
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch a,
+html[data-km24-theme="dark"] #km24ThreeWorldsServices .km24ThreeWorldsNav a:not([aria-current="page"]){
+ color:#e9f1ff!important
+}
+@media(max-width:650px){
+ #km24AreaBarSection .km24AreaSwitch,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav{gap:4px!important;padding:5px!important}
+ #km24AreaBarSection .km24AreaSwitch button,
+ #km24AreaBarSection .km24AreaSwitch a,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav a{
+  min-height:72px!important;padding:8px 2px!important;font-size:20px!important;gap:5px!important
+ }
+ #km24AreaBarSection .km24AreaSwitch button>span,
+ #km24AreaBarSection .km24AreaSwitch a .km24WorldLabel,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav a .km24WorldLabel{
+  font-size:clamp(10.5px,3.1vw,13px)!important;white-space:normal!important
+ }
+ #km24ThreeWorldsServices{padding:9px 10px 0}
+ #km24ThreeWorldsServices>.wrap{padding:0!important}
+}

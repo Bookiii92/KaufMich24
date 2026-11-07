@@ -1,0 +1,29 @@
+
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard{align-items:start!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxFlowExtras{grid-column:1/-1!important;width:100%!important;margin-top:4px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions{align-self:start!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimeline{background:rgba(255,255,255,.02)!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions{margin-top:0!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24ProblemBtn{background:transparent!important;border-style:dashed!important;opacity:.78!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24ReviewAction{margin-top:8px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24ReviewDone{display:inline-flex!important;align-items:center!important;max-width:100%!important;font-size:11px!important;padding:7px 10px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard>[class="actions"] [data-purchase-chat]{font-weight:900!important}
+@media(max-width:700px){
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard{display:grid!important;grid-template-columns:82px minmax(0,1fr)!important;gap:10px 12px!important;padding:13px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic{grid-column:1!important;grid-row:1!important;width:82px!important;height:82px!important;min-width:82px!important;margin:0!important;border-radius:12px!important;overflow:hidden!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic img{width:100%!important;height:100%!important;object-fit:cover!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic+div{grid-column:2!important;grid-row:1!important;min-width:0!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxFlowExtras{grid-column:1/-1!important;grid-row:auto!important;margin:1px 0 0!important;gap:7px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr!important;gap:7px!important;margin:0!important;width:100%!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions .btn{width:100%!important;min-height:43px!important;justify-content:center!important;margin:0!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions [data-purchase-chat]{order:1!important;background:#147a51!important;border-color:#238c61!important;color:#f5fff9!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions a.btn{order:2!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .txSteps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important;margin:9px 0 6px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .txSteps>span{min-width:0!important;padding:6px 2px!important;font-size:8.2px!important;line-height:1.12!important;border-radius:7px!important;word-break:normal!important;overflow-wrap:normal!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxStepTime{font-size:7px!important;line-height:1.05!important;margin-top:2px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimeline{padding:9px 10px!important;border-radius:11px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimeline summary{font-size:11px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions{display:grid!important;grid-template-columns:1fr!important;gap:7px!important}
+  body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions .btn{width:100%!important;min-height:40px!important;margin:0!important}
+  body.km24BuyerCompactRoute #km24CookieJoeGuide{bottom:calc(102px + env(safe-area-inset-bottom))!important;transform:scale(.62)!important;transform-origin:left bottom!important;opacity:.82!important}
+}

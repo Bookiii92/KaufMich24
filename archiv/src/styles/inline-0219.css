@@ -1,0 +1,6 @@
+
+.km24JobHide{display:none!important}
+body.km24JobEmployerMode .km24SellSalePanel,body.km24JobEmployerMode .km24SellPricePanel,body.km24JobEmployerMode .km24ProOptions{display:none!important}
+body.km24JobEmployerMode #km24SimplePreview{margin-top:10px}
+body.km24JobEmployerMode .km24SellArticlePanel{padding-top:16px!important}
+@media(max-width:700px){body.km24JobEmployerMode .formPage:has(#sf){padding-bottom:142px!important}.km24JobEmployerMode .km24SellIntro{margin-bottom:10px!important}}

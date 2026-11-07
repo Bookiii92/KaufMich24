@@ -1,0 +1,14 @@
+
+.km24LangPicker{height:40px;display:flex;align-items:center;gap:4px;padding:0 7px;border:1px solid var(--line,#e4ddd2);border-radius:12px;background:rgba(255,255,255,.88);box-shadow:0 4px 14px rgba(23,53,43,.06)}
+.km24LangPicker span{font-size:15px;line-height:1}
+.km24LangPicker select{width:44px;min-width:44px;border:0!important;outline:0;background:transparent!important;color:var(--ink,#17352b)!important;font-size:12px;font-weight:900;padding:0!important;height:38px;box-shadow:none!important;appearance:auto}
+@media(max-width:700px){
+ .km24LangPicker{height:38px;padding:0 4px;border-radius:11px}
+ .km24LangPicker span{display:none}
+ .km24LangPicker select{width:39px;min-width:39px;font-size:11px;height:36px}
+}
+@media(max-width:390px){
+ .km24LangPicker{padding:0 2px}
+ .km24LangPicker select{width:36px;min-width:36px}
+}
+.km24LegalTranslationNote{margin:10px auto 14px;max-width:1180px;padding:10px 12px;border:1px solid #dfc49e;border-radius:12px;background:#fff7ea;color:#5c432c;font-size:12px;line-height:1.4}

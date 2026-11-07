@@ -1,0 +1,22 @@
+
+html.km24IOS body .km24AvatarQuickEdit input.km24AvatarQuickInput[type="file"],
+html body .km24AvatarQuickEdit input.km24AvatarQuickInput[type="file"]{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  position:absolute!important;
+  left:-9999px!important;
+  top:0!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:1px!important;
+  height:1px!important;
+  min-width:0!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  pointer-events:none!important;
+  -webkit-appearance:none!important;
+  appearance:none!important;
+}

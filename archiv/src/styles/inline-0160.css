@@ -1,0 +1,6 @@
+
+/* Hide public usernames only on listing cards; keep dealer badge and detail seller info. */
+.km24ListingCard .km24CardSeller>span:not(.km24DealerTag),
+.km24AuctionCard .km24CardSeller>span:not(.km24DealerTag){display:none!important}
+.km24ListingCard .km24CardSeller:not(:has(.km24DealerTag)),
+.km24AuctionCard .km24CardSeller:not(:has(.km24DealerTag)){display:none!important}

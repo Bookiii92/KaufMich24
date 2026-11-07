@@ -1,0 +1,26 @@
+
+/* KM24_MOBILE_HOME_FINETUNE_V1 */
+@media(max-width:700px){
+  .km24HomeHero{padding:32px 0 24px!important}
+  .km24HomeHeroInner{gap:15px!important}
+  .km24HomeHeroCopy h1{font-size:clamp(38px,10.8vw,46px)!important;line-height:1.02!important}
+  .km24HomeHeroCopy h1 span{
+    background:linear-gradient(90deg,#ffd6a5,#ff9c53)!important;
+    -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+  }
+  .km24HomeHeroCopy>p{font-size:15px!important;line-height:1.5!important;margin-top:14px!important}
+  .km24HomeSearch{margin-top:18px!important;display:grid!important;grid-template-columns:minmax(0,1fr) 108px!important;gap:8px!important}
+  .km24HomeSearch input{min-width:0!important;width:100%!important}
+  .km24HomeSearch button{width:100%!important;padding:0 10px!important}
+  .km24HomeActions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .km24HomeActions .btn{width:100%!important;min-height:50px!important;font-size:15px!important;line-height:1.25!important}
+  .km24HeroStatCard{padding:14px!important;gap:10px!important}
+  .km24HeroStatCard b{font-size:19px!important}
+  .km24HeroStatCard div>span{font-size:13px!important}
+  #kmAiFab{max-width:128px!important;padding:9px 12px!important;font-size:13px!important;bottom:calc(118px + env(safe-area-inset-bottom))!important}
+}
+@media(max-width:520px){
+  .km24HomeSearch{grid-template-columns:1fr!important}
+  .km24HomeSearch button{min-height:48px!important}
+  .km24HomeActions{grid-template-columns:1fr!important}
+}

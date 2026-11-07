@@ -1,0 +1,48 @@
+
+@media(max-width:900px){
+  .km24MessagesPage.km24HasActive .km24ChatPane{
+    min-height:0!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatPolicy{
+    flex:0 0 auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+    margin:6px 8px 0!important;
+    padding:9px 10px!important;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatPolicy h4{margin:0!important;font-size:15px!important}
+  .km24MessagesPage.km24HasActive .km24ChatPolicy:not(.km24PolicyExpanded) .km24PolicyExplain,
+  .km24MessagesPage.km24HasActive .km24ChatPolicy:not(.km24PolicyExpanded) .km24ContactLockedHint{display:none!important}
+  .km24MessagesPage.km24HasActive .km24PolicyToggle{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    margin-top:7px!important;min-height:32px!important;padding:5px 9px!important;
+    border:1px solid #5b4d38!important;border-radius:9px!important;
+    background:#211d16!important;color:#e6d8c2!important;font-size:11px!important;font-weight:800!important;
+  }
+  .km24MessagesPage.km24HasActive .km24VisitActions{margin-top:7px!important}
+  .km24MessagesPage.km24HasActive .km24VisitActions .btn{min-height:46px!important}
+  .km24MessagesPage.km24HasActive .km24ChatMessages{
+    flex:1 1 auto!important;
+    min-height:260px!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding-top:12px!important;
+    padding-bottom:14px!important;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatComposer{
+    position:sticky!important;
+    bottom:0!important;
+    z-index:25!important;
+    flex:0 0 auto!important;
+  }
+}
+@media(max-width:600px){
+  .km24MessagesPage.km24HasActive{padding-left:6px!important;padding-right:6px!important}
+  .km24MessagesPage.km24HasActive .km24ChatMessages{min-height:290px!important}
+  .km24MessagesPage.km24HasActive .km24BubbleText{color:#f4fff8!important;-webkit-text-fill-color:#f4fff8!important}
+  .km24MessagesPage.km24HasActive .km24MessageRow.theirs .km24BubbleText{color:#edf4ef!important;-webkit-text-fill-color:#edf4ef!important}
+}

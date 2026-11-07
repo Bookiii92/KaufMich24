@@ -1,0 +1,68 @@
+
+@media(max-width:700px){
+  .km24MyListingActions{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    align-items:start!important;
+  }
+  .km24MyListingActions>details.km24ListingMore{
+    grid-column:1/-1!important;
+    position:relative!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin:0!important;
+  }
+  .km24MyListingActions>details.km24ListingMore>summary,
+  .km24MyListingActions>details.km24ListingMore[open]>summary{
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    min-height:38px!important;
+    margin:0!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border-radius:11px!important;
+  }
+  .km24MyListingActions>details.km24ListingMore .km24ListingMoreMenu{
+    position:static!important;
+    inset:auto!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    z-index:auto!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin:8px 0 2px!important;
+    padding:8px!important;
+    box-sizing:border-box!important;
+    border-radius:14px!important;
+    box-shadow:0 8px 24px rgba(0,0,0,.14)!important;
+  }
+  html[data-km24-theme="light"] .km24MyListingActions>details.km24ListingMore .km24ListingMoreMenu{
+    background:#f6f8f7!important;
+    border-color:#dde4df!important;
+  }
+  html[data-km24-theme="light"] .km24MyListingActions>details.km24ListingMore .km24ListingMoreMenu .btn{
+    background:#fff!important;
+    border-color:#dfe5e1!important;
+    color:#1d2a23!important;
+    box-shadow:none!important;
+  }
+  html[data-km24-theme="dark"] .km24MyListingActions>details.km24ListingMore .km24ListingMoreMenu{
+    background:#111612!important;
+    border-color:rgba(255,255,255,.10)!important;
+  }
+  .km24MyListingActions>details.km24ListingMore .km24ListingMoreMenu .btn{
+    width:100%!important;
+    min-height:40px!important;
+    box-sizing:border-box!important;
+    justify-content:flex-start!important;
+  }
+  .km24MyListingCard{
+    overflow:visible!important;
+  }
+}

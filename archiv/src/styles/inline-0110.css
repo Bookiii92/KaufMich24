@@ -1,0 +1,28 @@
+
+@media(max-width:700px){
+ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+ body{min-height:100vh;min-height:100dvh;overflow-x:clip!important}
+ button,a,input,textarea,select{touch-action:manipulation}
+ input,textarea,select{font-size:16px!important}
+ button,a{-webkit-tap-highlight-color:transparent}
+ .km24BottomNav{
+   left:10px!important;right:10px!important;
+   bottom:max(10px,env(safe-area-inset-bottom))!important;
+   padding:7px 5px!important;
+   min-height:76px!important;
+   overflow:visible!important;pointer-events:auto!important;
+ }
+ .km24BottomNav a,.km24BottomNav button{
+   min-height:52px!important;font-family:inherit!important;pointer-events:auto!important;
+ }
+ .km24BottomSell{transform:translateY(-15px)!important}
+ body{padding-bottom:calc(106px + env(safe-area-inset-bottom))!important}
+ .km24MessagesPage.km24HasActive .km24ChatPane{
+   height:calc(100vh - 172px)!important;height:calc(100dvh - 172px)!important;
+   max-height:calc(100vh - 172px)!important;max-height:calc(100dvh - 172px)!important;
+ }
+ .buyModal,.km24PromoChoiceModal,.km24ReportModal{
+   max-height:calc(100vh - 24px)!important;max-height:calc(100dvh - 24px)!important;
+   -webkit-overflow-scrolling:touch;
+ }
+}

@@ -1,0 +1,6 @@
+
+@media(max-width:900px){
+  .km24DetailMainPanel>.km24DetailActionBox{margin:16px 0 18px!important}
+  .km24DetailMainPanel>.km24DetailActionBox.auctionbox{width:100%!important}
+  .km24DetailMainPanel>.km24DetailActionBox.panel{padding:16px!important}
+}

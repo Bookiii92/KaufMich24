@@ -1,0 +1,32 @@
+
+:root{--km24-autumn:#d67b35;--km24-autumn-deep:#9d4b27;--km24-autumn-gold:#efb45f;--km24-autumn-cream:#ffe1b5}
+html,body{background:radial-gradient(circle at 14% -8%,rgba(191,98,43,.12),transparent 34%),radial-gradient(circle at 92% 8%,rgba(116,69,35,.12),transparent 32%),#15120f!important}
+header{background:rgba(20,18,14,.95)!important;border-bottom-color:rgba(224,137,63,.22)!important}
+.hero.km24WowHero{background:radial-gradient(circle at 86% 18%,rgba(228,129,55,.19),transparent 24%),radial-gradient(circle at 10% 108%,rgba(178,87,40,.20),transparent 34%),linear-gradient(135deg,#143627 0%,#25291d 38%,#3d2b1d 68%,#5a2e1c 100%)!important;border-bottom:1px solid rgba(231,143,66,.34)!important;box-shadow:inset 0 -1px rgba(255,218,166,.07)}
+.hero.km24WowHero:after{height:3px!important;background:linear-gradient(90deg,transparent,#d77434 20%,#f0b25c 50%,#a64d27 80%,transparent)!important;opacity:.9}
+.km24WowHero h1 span{background:linear-gradient(92deg,#fff4df,#f2bd70 55%,#dc7938)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.season-ribbon{display:inline-flex!important;align-items:center;gap:7px;margin:0 0 11px;padding:7px 11px;border:1px solid rgba(244,178,104,.34)!important;border-radius:999px;background:linear-gradient(135deg,rgba(162,76,36,.30),rgba(101,55,31,.24))!important;color:#ffdcae!important;font-size:12px!important;font-weight:900!important;letter-spacing:.035em;box-shadow:0 8px 26px rgba(67,31,15,.18)}
+.km24HeroEyebrow{color:#f0c58e!important;border-color:rgba(239,180,95,.22)!important;background:rgba(143,76,34,.12)!important}
+.season-note{color:#eadfd3!important}
+.season-decor{opacity:.78!important}
+.season-decor span{filter:drop-shadow(0 8px 10px rgba(0,0,0,.34))!important}
+.season-decor .d1{font-size:52px!important;right:5%!important;top:10%!important}
+.season-decor .d2{font-size:36px!important;right:16%!important;bottom:10%!important}
+.season-decor .d3{font-size:31px!important;left:3%!important;bottom:4%!important}
+.season-decor .d4{font-size:27px!important;right:30%!important;top:12%!important;opacity:.76!important}
+.season-decor .pumpkin{font-size:78px!important;right:2%!important;bottom:1%!important;opacity:.68!important}
+.quickDiscover button{border-color:rgba(233,166,94,.22)!important;background:rgba(112,66,35,.22)!important;color:#f5d2a8!important}
+.quickDiscover button:hover{border-color:rgba(239,180,95,.42)!important;background:rgba(144,76,35,.30)!important}
+.km24CtaSecondary{border-color:rgba(239,180,95,.30)!important;background:rgba(115,67,35,.24)!important;color:#ffe5bf!important}
+.km24TrustPills span{border-color:rgba(232,159,83,.16)!important;background:rgba(111,62,32,.16)!important;color:#d8c6b1!important}
+.km24SectionKicker{color:#eaa05a!important}
+.km24QuickCard,.cat,.card,.km24WhyCard,.km24AuctionCard,.km24HomeFilter{border-color:rgba(213,133,69,.15)!important;background:linear-gradient(145deg,rgba(35,31,25,.94),rgba(17,19,16,.94))!important}
+.km24QuickCard:hover,.cat:hover,.card:hover,.km24WhyCard:hover,.km24AuctionCard:hover{border-color:rgba(222,133,61,.38)!important;box-shadow:0 18px 48px rgba(50,24,12,.28)!important}
+.km24QuickIcon,.km24WhyCard span{background:rgba(214,116,47,.13)!important}
+.km24QuickCard i{color:#efad65!important}
+.km24AuctionSection,.km24LatestSection,.km24CategorySection,.km24WhySection{position:relative}
+.km24AuctionSection:before,.km24CategorySection:before{content:' ';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 6% 12%,rgba(184,87,38,.055),transparent 17%),radial-gradient(circle at 93% 70%,rgba(223,139,61,.045),transparent 18%)}
+.km24HomeFilter summary{color:#e7d9ca!important}
+.badge.auction,.auction{background:#49301f!important;color:#f4c98f!important}
+footer{border-top-color:rgba(214,126,56,.14)!important}
+@media(max-width:600px){.season-ribbon{font-size:11px!important;padding:6px 9px}.season-decor .d1{font-size:35px!important;right:3%!important}.season-decor .d2{font-size:25px!important;right:15%!important}.season-decor .d3{display:none}.season-decor .d4{font-size:20px!important;right:26%!important}.season-decor .pumpkin{font-size:52px!important;opacity:.48!important}.hero.km24WowHero{background:radial-gradient(circle at 92% 12%,rgba(228,129,55,.14),transparent 26%),linear-gradient(145deg,#143126 0%,#29241a 58%,#4a291b 100%)!important}}

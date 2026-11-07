@@ -1,0 +1,23 @@
+
+  @media(max-width:700px){
+    html.km24SamsungSafe,html.km24SamsungSafe body{background-attachment:scroll!important}
+    html.km24SamsungSafe #km24AutumnMotion,html.km24SamsungSafe .km24Leaf{display:none!important;animation:none!important}
+    html.km24SamsungSafe header,html.km24SamsungSafe .km24BottomNav,
+    html.km24SamsungSafe .panel,html.km24SamsungSafe .legal,html.km24SamsungSafe .adminCard,
+    html.km24SamsungSafe .manageRow,html.km24SamsungSafe .notificationCard,html.km24SamsungSafe .msgList,
+    html.km24SamsungSafe .chatBox,html.km24SamsungSafe .km24AccountHero,html.km24SamsungSafe .km24AccountPoints,
+    html.km24SamsungSafe .km24AccountQuickGrid>a,html.km24SamsungSafe .km24SecurityBar,
+    html.km24SamsungSafe .km24MyListingCard,html.km24SamsungSafe .km24AccountAccordion>details{
+      -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+    }
+    html.km24SamsungSafe header,html.km24SamsungSafe main,html.km24SamsungSafe footer{
+      transform:none!important;-webkit-transform:none!important;perspective:none!important;-webkit-perspective:none!important;
+    }
+    html.km24SamsungSafe .km24BottomNav{
+      position:fixed!important;z-index:9999!important;left:10px!important;right:10px!important;bottom:10px!important;
+      width:auto!important;margin:0!important;transform:none!important;-webkit-transform:none!important;
+      isolation:isolate!important;overflow:visible!important;
+    }
+    html.km24SamsungSafe .km24BottomSell{transform:translateY(-15px)!important;-webkit-transform:translateY(-15px)!important}
+  }
+  

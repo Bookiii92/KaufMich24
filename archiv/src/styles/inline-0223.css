@@ -1,0 +1,28 @@
+
+#km24AreaBarSection{
+  position:relative!important;
+  top:auto!important;
+  z-index:12!important;
+}
+body.km24AreaJobs #app > *{
+  display:none!important;
+}
+body.km24AreaJobs #app > #km24AreaBarSection,
+body.km24AreaJobs #app > .km24JobsResultsSection{
+  display:block!important;
+}
+body.km24AreaJobs #km24AreaBarSection{
+  margin-bottom:8px!important;
+}
+body.km24AreaJobs .km24JobsResultsSection{
+  padding-top:4px!important;
+}
+@media(max-width:650px){
+  #km24AreaBarSection{
+    position:relative!important;
+    top:auto!important;
+  }
+  body.km24AreaJobs #km24AreaBarSection{
+    padding-top:8px!important;
+  }
+}

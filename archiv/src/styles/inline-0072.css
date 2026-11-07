@@ -1,0 +1,66 @@
+
+/* Mobile layout containment: keep branding in its header, hero in normal flow. */
+@media(max-width:700px){
+ html body>header{
+  display:block!important;position:sticky!important;top:0!important;left:auto!important;right:auto!important;
+  width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
+  margin:0!important;transform:none!important;translate:none!important;opacity:1!important;visibility:visible!important;
+  z-index:1000!important;
+ }
+ html body>header>.bar,html body>header>.wrap.bar,html body>header .km24Topbar{
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center!important;justify-content:space-between!important;
+  width:100%!important;height:60px!important;min-height:60px!important;max-height:60px!important;
+  margin:0 auto!important;padding:0 10px!important;gap:8px!important;position:relative!important;
+  transform:none!important;overflow:visible!important;
+ }
+ html body>header a.brand.km24Brand{
+  position:relative!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+  inset:auto!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center!important;justify-content:flex-start!important;gap:8px!important;
+  flex:0 1 auto!important;width:auto!important;max-width:57%!important;
+  min-width:0!important;height:48px!important;margin:0!important;padding:0!important;
+  transform:none!important;translate:none!important;opacity:1!important;visibility:visible!important;
+ }
+ html body>header a.km24Brand .km24LogoMark{
+  position:relative!important;inset:auto!important;display:grid!important;
+  width:40px!important;min-width:40px!important;height:40px!important;max-width:40px!important;
+  flex:0 0 40px!important;margin:0!important;transform:none!important;translate:none!important;
+ }
+ html body>header .km24BrandText{
+  position:static!important;display:block!important;max-width:calc(100% - 48px)!important;
+  margin:0!important;transform:none!important;translate:none!important;
+  font-size:17px!important;line-height:1.15!important;font-weight:900!important;
+  white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+ }
+ html body>header .km24BrandText small{display:none!important}
+ html body>header .nav{
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center!important;justify-content:flex-end!important;
+  width:auto!important;max-width:45%!important;margin:0 0 0 auto!important;
+  position:relative!important;transform:none!important;overflow:visible!important;
+ }
+ html body #app .hero.km24WowHero{
+  position:relative!important;inset:auto!important;top:auto!important;left:auto!important;
+  width:100%!important;height:auto!important;min-height:0!important;
+  margin:0!important;padding:32px 0 26px!important;transform:none!important;translate:none!important;
+ }
+ html body #app .hero.km24WowHero .wrap{position:relative!important;inset:auto!important;transform:none!important}
+ html body #app .hero.km24WowHero h1{
+  display:block!important;position:relative!important;inset:auto!important;
+  margin:0 0 14px!important;max-width:100%!important;
+  font-size:clamp(30px,9vw,43px)!important;line-height:1.16!important;
+  overflow-wrap:normal!important;transform:none!important;opacity:1!important;visibility:visible!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;
+ }
+ html body #app .hero.km24WowHero h1>span:last-child{
+  color:#6cd9ff!important;-webkit-text-fill-color:#6cd9ff!important;
+ }
+ html body>nav.km24BottomNav{
+  position:fixed!important;inset:auto 8px 8px!important;width:auto!important;
+  display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:center!important;justify-items:stretch!important;
+  min-height:64px!important;max-height:none!important;margin:0!important;transform:none!important;
+  opacity:1!important;visibility:visible!important;z-index:9999!important;
+ }
+}

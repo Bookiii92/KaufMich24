@@ -1,0 +1,26 @@
+
+.km24JoeBubbleActions{display:none!important}
+.km24JoeWidget{max-width:100%!important;box-sizing:border-box!important}
+.km24JoeBubble{flex:1 1 auto!important;min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+.km24JoeBubble b,.km24JoeBubble span{overflow-wrap:anywhere}
+@media(max-width:700px){
+ .km24HomeHero{overflow:hidden!important}
+ .km24HomeHero>.wrap.km24HomeHeroInner{
+   width:100%!important;max-width:100%!important;margin:0 auto!important;
+   padding-left:18px!important;padding-right:18px!important;box-sizing:border-box!important
+ }
+ .km24HomeHeroCopy,.km24HomeSearch,.km24HomeActions,.km24HeroStatCard{
+   width:100%!important;min-width:0!important;max-width:100%!important;
+   margin-left:0!important;margin-right:0!important;box-sizing:border-box!important
+ }
+ .km24JoeWidget{
+   display:grid!important;grid-template-columns:58px minmax(0,1fr)!important;
+   width:100%!important;max-width:100%!important;gap:9px!important;
+   margin:12px 0 4px!important;align-items:center!important;box-sizing:border-box!important
+ }
+ .km24JoeMascot{width:58px!important;height:64px!important;min-width:58px!important}
+ .km24JoeMascot svg{width:58px!important;height:64px!important}
+ .km24JoeBubble{width:100%!important;max-width:100%!important;padding:10px 11px!important;border-radius:15px!important}
+ .km24JoeBubble:before{top:22px!important}
+ .km24HomeSearch input,.km24HomeSearch button,.km24HomeActions .btn{max-width:100%!important;box-sizing:border-box!important}
+}

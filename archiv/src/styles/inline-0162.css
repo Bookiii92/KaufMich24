@@ -1,0 +1,16 @@
+
+@supports not (aspect-ratio:4/3){
+ html.km24MacSafari .pic{height:180px!important;min-height:180px!important}
+ html.km24MacSafari .km24AuctionPic{height:180px!important;min-height:180px!important}
+ html.km24MacSafari .photoTile{height:150px!important;min-height:150px!important}
+}
+html.km24MacSafari .buyOverlay,
+html.km24MacSafari .imageLightbox,
+html.km24MacSafari .km24PromoChoiceOverlay,
+html.km24MacSafari .km24PostCreatePromoOverlay,
+html.km24MacSafari .km24WatcherModalOverlay,
+html.km24MacSafari .km24AddressPromptOverlay,
+html.km24MacSafari .km24ReportOverlay,
+html.km24MacSafari .km24PurposeOverlay,
+html.km24MacSafari .km24ContactOverlay,
+html.km24MacSafari .km24OfferOverlay{top:0!important;right:0!important;bottom:0!important;left:0!important}

@@ -1,0 +1,69 @@
+
+.km24AdminPage{max-width:1180px!important;padding-bottom:110px}
+.km24AdminHeader{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;margin-top:10px}
+.km24AdminBack{margin-top:8px}
+.km24AdminPage .adminHero{margin:0 0 16px}
+.km24AdminPage .adminHero h1{font-size:clamp(30px,5vw,44px);margin:3px 0 5px}
+.km24AdminTabs{position:sticky;top:66px;z-index:40;display:flex;gap:7px;overflow-x:auto;padding:8px;margin:0 0 18px;border:1px solid rgba(213,137,69,.13);border-radius:16px;background:#171813;box-shadow:0 10px 28px rgba(0,0,0,.22);scrollbar-width:none}
+.km24AdminTabs::-webkit-scrollbar{display:none}
+.km24AdminTabs button{flex:0 0 auto;min-height:44px;padding:8px 12px;border:1px solid transparent;border-radius:11px;background:transparent;color:var(--mut);font-weight:850;display:flex;align-items:center;gap:7px;cursor:pointer}
+.km24AdminTabs button:hover{background:rgba(255,255,255,.035);color:var(--ink)}
+.km24AdminTabs button.active{background:rgba(19,138,91,.16);border-color:rgba(61,190,132,.28);color:#eaf8f1}
+.km24AdminTabs button b{min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:rgba(228,119,47,.15);display:grid;place-items:center;font-size:11px;color:#f2b47f}
+.km24AdminPanels{min-height:420px}
+.km24AdminPanel{display:none}
+.km24AdminPanel.active{display:block;animation:km24AdminPanelIn .16s ease-out}
+@keyframes km24AdminPanelIn{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+.km24AdminSectionHead{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin:0 0 14px}
+.km24AdminSectionHead>div>span{display:block;font-size:10px;letter-spacing:.14em;font-weight:950;color:#d8944f;margin-bottom:4px}
+.km24AdminSectionHead h2{margin:0;font-size:clamp(22px,3vw,29px)}
+.km24AdminCount{flex:0 0 auto;padding:7px 10px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.035);font-size:11px;color:var(--mut)}
+.km24AdminTaskGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.km24AdminTaskGrid button{min-width:0;min-height:88px;padding:13px;border:1px solid rgba(255,255,255,.07);border-radius:15px;background:linear-gradient(145deg,rgba(31,30,26,.98),rgba(23,25,21,.98));color:var(--ink);display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;text-align:left;cursor:pointer}
+.km24AdminTaskGrid button.needsAttention{border-color:rgba(228,119,47,.27);background:linear-gradient(145deg,rgba(63,38,23,.55),rgba(24,25,21,.98))}
+.km24AdminTaskGrid button:hover{border-color:rgba(213,137,69,.32);transform:translateY(-1px)}
+.km24AdminTaskIcon{font-size:22px}
+.km24AdminTaskGrid button span:nth-child(2){min-width:0}
+.km24AdminTaskGrid button b{display:block;font-size:23px;line-height:1}
+.km24AdminTaskGrid button small{display:block;margin-top:5px;color:var(--mut);font-weight:750;font-size:11px}
+.km24AdminTaskGrid button i{font-style:normal;font-size:24px;color:#8b948e}
+.km24AdminKpiGrid{grid-template-columns:repeat(3,minmax(0,1fr))!important;margin:0 0 15px}
+.km24AdminKpiGrid .kpi{padding:13px 14px!important}
+.km24AdminKpiGrid .kpi b{font-size:24px!important;margin-top:3px}
+.km24AdminSystemPanels{display:grid;gap:12px}
+.km24AdminSystemPanels:empty{display:none}
+.km24AdminSystemPanels>.panel{margin:0!important}
+.km24AdminPage .adminSection{margin:0 0 14px;padding:18px;border:1px solid rgba(213,137,69,.11);border-radius:18px;background:linear-gradient(145deg,rgba(28,24,19,.74),rgba(13,18,14,.84))}
+.km24AdminPage .adminSection+.adminSection{margin-top:14px}
+.km24AdminPage .adminToolbar{margin:0 0 14px}
+.km24AdminPage .adminSearch{background:#151713!important;border-color:rgba(255,255,255,.10)!important;min-height:46px}
+.km24AdminPage .manage{display:grid;gap:10px}
+.km24AdminPage .adminCard{margin:0!important;padding:13px 14px!important;border-radius:14px!important}
+.km24AdminPage .adminSub{background:rgba(255,255,255,.025)!important;border-color:rgba(255,255,255,.07)!important}
+.km24AdminPage .adminAudit{margin:14px 0 0;background:rgba(255,255,255,.018)}
+.km24AdminPage .adminAudit summary{padding:4px 1px}
+@media(max-width:820px){
+ .km24AdminTaskGrid{grid-template-columns:1fr 1fr}
+ .km24AdminTabs{top:61px}
+}
+@media(max-width:600px){
+ .km24AdminPage{padding-left:12px!important;padding-right:12px!important}
+ .km24AdminHeader{grid-template-columns:1fr;gap:6px}
+ .km24AdminBack{width:max-content;margin-top:0}
+ .km24AdminPage .adminHero{margin-bottom:8px}
+ .km24AdminPage .adminHero p{font-size:13px;line-height:1.4}
+ .km24AdminTabs{margin-left:-4px;margin-right:-4px;padding:6px;top:58px;border-radius:14px}
+ .km24AdminTabs button{min-height:42px;padding:7px 10px}
+ .km24AdminTabs button span{font-size:12px}
+ .km24AdminTaskGrid{gap:8px}
+ .km24AdminTaskGrid button{min-height:78px;padding:11px;grid-template-columns:auto 1fr}
+ .km24AdminTaskGrid button i{display:none}
+ .km24AdminTaskGrid button b{font-size:21px}
+ .km24AdminKpiGrid{grid-template-columns:1fr 1fr!important;gap:8px!important}
+ .km24AdminKpiGrid .kpi:last-child{grid-column:1/-1}
+ .km24AdminPage .adminSection{padding:14px;border-radius:15px}
+ .km24AdminSectionHead{gap:8px}
+ .km24AdminSectionHead h2{font-size:21px}
+ .km24AdminCount{padding:6px 8px}
+ .km24AdminPage .adminCard .actions{grid-template-columns:1fr!important}
+}

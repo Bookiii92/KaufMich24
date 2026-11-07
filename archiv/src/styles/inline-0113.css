@@ -1,0 +1,9 @@
+
+.km24MarketingPanel{margin:16px 0}
+.km24MarketingKpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:13px 0}
+.km24MarketingKpis>div{padding:12px;border-radius:13px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025)}
+.km24MarketingKpis b{display:block;font-size:22px;color:#fff}.km24MarketingKpis small{display:block;margin-top:3px;color:#819087;font-size:9px;text-transform:uppercase;letter-spacing:.05em}
+.km24MarketingRates{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}.km24MarketingRates span{padding:7px 9px;border-radius:999px;background:rgba(37,163,75,.10);border:1px solid rgba(69,198,105,.16);color:#9fe7b1;font-size:10px;font-weight:850}
+.km24CampaignLinks{display:grid;gap:7px;margin-top:12px}.km24CampaignLink{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:8px;align-items:center}.km24CampaignLink code{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:9px;border-radius:10px;background:#101410;border:1px solid rgba(255,255,255,.06);color:#acb8b0;font-size:10px}
+.km24MarketingTable{overflow:auto;margin-top:13px}.km24MarketingTable table{width:100%;border-collapse:collapse;min-width:620px}.km24MarketingTable th,.km24MarketingTable td{padding:9px 8px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left;font-size:11px}.km24MarketingTable th{color:#87948b;font-size:9px;text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:700px){.km24MarketingKpis{grid-template-columns:1fr 1fr}.km24MarketingKpis>div:last-child{grid-column:1/-1}.km24CampaignLink{grid-template-columns:70px minmax(0,1fr)}.km24CampaignLink button{grid-column:1/-1;width:100%}}

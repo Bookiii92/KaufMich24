@@ -1,0 +1,41 @@
+
+body.km24SellWizardPage{padding-bottom:calc(92px + env(safe-area-inset-bottom))!important}
+.km24SellWizardHead{max-width:920px;margin:14px auto 14px;padding:0 2px}
+.km24SellWizardMeta{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:8px;color:#9fb0a7;font-size:12px;font-weight:800}
+.km24SellWizardMeta strong{color:#f4fff8;font-size:13px}
+.km24SellWizardTrack{height:7px;border-radius:999px;overflow:hidden;background:#28322d;border:1px solid rgba(255,255,255,.06)}
+.km24SellWizardFill{height:100%;width:33.333%;border-radius:inherit;background:linear-gradient(90deg,#e8873f,#f2ae62);transition:width .2s ease}
+.km24SellWizardSaved{margin-top:7px;text-align:right;color:#81948a;font-size:11px;min-height:15px}
+#sf.km24SellWizardActive{display:block!important;max-width:920px!important;margin:0 auto!important}
+#sf.km24SellWizardActive>.main{display:block!important;width:100%!important;max-width:none!important}
+#sf.km24SellWizardActive>.side{display:none!important}
+.km24SellStep{display:none}
+.km24SellStep.km24SellStepActive{display:block}
+.km24SellStep>.panel,.km24SellStep>details{margin-bottom:13px}
+.km24WizardCategoryPanel .two{margin-top:8px}
+.km24WizardStepIntro{display:flex;gap:11px;align-items:flex-start;margin:4px 0 14px}
+.km24WizardStepNo{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#df7a33;color:#fff;font-weight:950}
+.km24WizardStepIntro h2{font-size:21px;line-height:1.15;margin:0 0 3px;color:#f4fff8}
+.km24WizardStepIntro p{margin:0;color:#96a99f;font-size:13px;line-height:1.4}
+.km24SellWizardNav{position:fixed;z-index:14950;left:0;right:0;bottom:0;border-top:1px solid rgba(232,135,63,.20);background:rgba(10,14,12,.97);box-shadow:0 -15px 36px rgba(0,0,0,.34);padding:9px max(12px,calc((100vw - 920px)/2 + 12px)) max(9px,env(safe-area-inset-bottom))}
+.km24SellWizardNavInner{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:9px;align-items:center}
+.km24SellWizardNav button{min-height:50px!important;border-radius:14px!important;font-weight:900!important;touch-action:manipulation!important}
+.km24SellWizardBack.km24WizardHidden{visibility:hidden;pointer-events:none}
+.km24SellWizardMsg{grid-column:1/-1;display:none;padding:8px 10px;border-radius:10px;background:#381b1b;color:#ffd6d6;font-size:12px;line-height:1.35}
+.km24SellWizardMsg.show{display:block}
+.km24WizardInvalid{outline:2px solid #db5555!important;outline-offset:1px!important}
+#sf.km24SellWizardActive .livePreview>button.btn.primary{display:none!important}
+.km24WizardOptional{opacity:.96}
+@media(max-width:700px){
+ .formPage>.wrap>h1{font-size:25px!important;margin-bottom:4px!important}
+ .formPage>.wrap>h1+.mut{display:none!important}
+ .km24SellWizardHead{margin:9px auto 11px}
+ #sf.km24SellWizardActive{padding:0!important}
+ .km24SellStep>.panel,.km24SellStep>details{border-radius:16px!important;padding:14px!important}
+ .km24WizardStepIntro h2{font-size:19px}
+ .km24SellWizardNav{padding-left:10px;padding-right:10px}
+ .km24SellWizardNavInner{grid-template-columns:minmax(0,.78fr) minmax(0,1.35fr)}
+ .km24SellWizardNav button{min-height:52px!important;font-size:14px!important;padding:10px 11px!important}
+ .km24WizardCategoryPanel .two,.km24SellStep .two{grid-template-columns:1fr!important}
+}
+@media(min-width:701px){.km24SellWizardNav{left:50%;right:auto;width:min(920px,calc(100vw - 24px));transform:translateX(-50%);border:1px solid rgba(232,135,63,.18);border-bottom:0;border-radius:18px 18px 0 0}}

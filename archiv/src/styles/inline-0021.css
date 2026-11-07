@@ -1,0 +1,197 @@
+
+/* 2026-10-17: stronger light-mode readability across home, cards, filters, footer and mobile nav. */
+html[data-km24-theme="light"]{
+  --ink:#1f2937!important;
+  --mut:#4b5563!important;
+  --bg:#f5f6f8!important;
+  --line:#d1d5db!important;
+  color-scheme:only light!important;
+}
+html[data-km24-theme="light"] body,
+html[data-km24-theme="light"] #app{
+  color:#1f2937!important;
+  -webkit-text-fill-color:initial;
+}
+
+/* Headings and important text on light surfaces */
+html[data-km24-theme="light"] .km24HomeSectionHead h1,
+html[data-km24-theme="light"] .km24HomeSectionHead h2,
+html[data-km24-theme="light"] .km24HomeSectionHead h3,
+html[data-km24-theme="light"] .marketSearchCompactHead h2,
+html[data-km24-theme="light"] .searchResultHead,
+html[data-km24-theme="light"] .searchResultHead b,
+html[data-km24-theme="light"] .searchResultHead strong,
+html[data-km24-theme="light"] .title,
+html[data-km24-theme="light"] .card .title,
+html[data-km24-theme="light"] .card .price{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .mut,
+html[data-km24-theme="light"] .meta,
+html[data-km24-theme="light"] .km24CardSeller,
+html[data-km24-theme="light"] .km24CardMeta,
+html[data-km24-theme="light"] .km24NearInfo,
+html[data-km24-theme="light"] .marketFilterHint,
+html[data-km24-theme="light"] .searchResultHead .mut{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+}
+
+/* Listing cards: location, favourites/views and price-change pill must remain readable. */
+html[data-km24-theme="light"] .card,
+html[data-km24-theme="light"] .km24ListingCard{
+  color:#1f2937!important;
+  -webkit-text-fill-color:initial;
+}
+html[data-km24-theme="light"] .km24PriceDrop{
+  background:#e8f5ef!important;
+  border-color:#9fd5bd!important;
+  color:#0b6845!important;
+  -webkit-text-fill-color:#0b6845!important;
+  font-weight:800!important;
+}
+html[data-km24-theme="light"] .km24OldPrice{
+  color:#5b6470!important;
+  -webkit-text-fill-color:#5b6470!important;
+}
+html[data-km24-theme="light"] .km24NewPill{
+  background:#dcfce7!important;
+  border-color:#86d79f!important;
+  color:#166534!important;
+  -webkit-text-fill-color:#166534!important;
+}
+
+/* Latest listings filters / tabs */
+html[data-km24-theme="light"] .marketFilterToggle{
+  background:#ffffff!important;
+  border-color:#cfd6dd!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  box-shadow:0 2px 8px rgba(15,23,42,.05)!important;
+}
+html[data-km24-theme="light"] .marketFilterToggle .marketFilterHint{
+  color:#5b6470!important;
+  -webkit-text-fill-color:#5b6470!important;
+}
+html[data-km24-theme="light"] .marketSearchPanel{
+  background:#ffffff!important;
+  color:#1f2937!important;
+  border-color:#d1d5db!important;
+}
+html[data-km24-theme="light"] .marketSearchPanel label{
+  color:#374151!important;
+  -webkit-text-fill-color:#374151!important;
+}
+html[data-km24-theme="light"] #latestSection .chip,
+html[data-km24-theme="light"] #latestSection .btn:not(.primary),
+html[data-km24-theme="light"] #latestSection button:not(.primary):not(.km24BottomSell){
+  color:#374151!important;
+  -webkit-text-fill-color:#374151!important;
+  opacity:1!important;
+}
+html[data-km24-theme="light"] #latestSection .chip.on,
+html[data-km24-theme="light"] #latestSection .btn.on,
+html[data-km24-theme="light"] #latestSection button.on{
+  background:#e8f5ef!important;
+  border-color:#9fd5bd!important;
+  color:#0b6845!important;
+  -webkit-text-fill-color:#0b6845!important;
+}
+
+/* Personalized compact bars are intentionally dark: force every text child to white. */
+html[data-km24-theme="light"] #km24PersonalizedHome .km24MiniBtn,
+html[data-km24-theme="light"] .km24MiniBtn{
+  background:#26322b!important;
+  border-color:#445149!important;
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+html[data-km24-theme="light"] #km24PersonalizedHome .km24MiniBtn *,
+html[data-km24-theme="light"] .km24MiniBtn *,
+html[data-km24-theme="light"] .km24MiniArrow{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+}
+
+/* Light footer */
+html[data-km24-theme="light"] .km24Footer{
+  background:#ffffff!important;
+  border-top-color:#dfe4e8!important;
+  color:#374151!important;
+}
+html[data-km24-theme="light"] .km24FooterLogo,
+html[data-km24-theme="light"] .km24FooterLogo b,
+html[data-km24-theme="light"] .km24FooterGrid>div:not(.km24FooterBrand)>b{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] .km24FooterBrand p,
+html[data-km24-theme="light"] .km24FooterGrid>div:not(.km24FooterBrand)>a,
+html[data-km24-theme="light"] .km24FooterBottom{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+}
+html[data-km24-theme="light"] .km24FooterTrust span{
+  background:#f3f4f6!important;
+  border-color:#d8dde3!important;
+  color:#374151!important;
+  -webkit-text-fill-color:#374151!important;
+}
+
+/* Light mobile navigation */
+@media(max-width:700px){
+  html[data-km24-theme="light"] .km24BottomNav{
+    background:#ffffff!important;
+    border-color:#dde2e7!important;
+    box-shadow:0 10px 30px rgba(15,23,42,.14)!important;
+  }
+  html[data-km24-theme="light"] .km24BottomNav>a,
+  html[data-km24-theme="light"] .km24BottomNav>button,
+  html[data-km24-theme="light"] .km24BottomNav b{
+    color:#374151!important;
+    -webkit-text-fill-color:#374151!important;
+    opacity:1!important;
+  }
+  html[data-km24-theme="light"] .km24BottomNav .active,
+  html[data-km24-theme="light"] .km24BottomNav .active b{
+    color:#b4232a!important;
+    -webkit-text-fill-color:#b4232a!important;
+  }
+  html[data-km24-theme="light"] .km24BottomSell>span{
+    background:#b4232a!important;
+    color:#ffffff!important;
+    -webkit-text-fill-color:#ffffff!important;
+  }
+  html[data-km24-theme="light"] .km24BottomSell>b{
+    color:#374151!important;
+    -webkit-text-fill-color:#374151!important;
+  }
+}
+
+/* Keep intentionally dark promo/chat surfaces readable after the light variable reset. */
+html[data-km24-theme="light"] .giveawayMini,
+html[data-km24-theme="light"] .giveawayMini *,
+html[data-km24-theme="light"] .km24JoeBubble,
+html[data-km24-theme="light"] .km24JoeBubble *,
+html[data-km24-theme="light"] .km24FounderHome,
+html[data-km24-theme="light"] .km24FounderHome *{
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+}
+
+/* Safari/iPhone: force the computed text fill after theme switches. */
+@supports (-webkit-touch-callout:none){
+  html.km24IOS[data-km24-theme="light"] .km24CardSeller,
+  html.km24IOS[data-km24-theme="light"] .km24CardMeta,
+  html.km24IOS[data-km24-theme="light"] .marketFilterToggle,
+  html.km24IOS[data-km24-theme="light"] .marketFilterHint,
+  html.km24IOS[data-km24-theme="light"] .searchResultHead,
+  html.km24IOS[data-km24-theme="light"] .km24Footer,
+  html.km24IOS[data-km24-theme="light"] .km24Footer *{
+    opacity:1!important;
+  }
+}

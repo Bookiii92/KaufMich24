@@ -1,0 +1,11 @@
+
+#km24PersonalizedHome .km24MiniSec{margin:6px 0!important;padding:0!important}
+#km24PersonalizedHome .km24MiniSec>.wrap{padding:0!important;width:calc(100% - 20px)!important}
+#km24PersonalizedHome .km24MiniSec .km24PersonalBox{padding:0!important;background:transparent!important;border:0!important}
+.km24MiniBtn{width:100%;min-height:48px;padding:9px 12px;border:1px solid rgba(255,255,255,.1);border-radius:13px;background:rgba(10,16,12,.84);color:inherit;font:inherit;font-weight:800;display:flex;align-items:center;justify-content:space-between}
+.km24MiniSec .km24PersonalHead,.km24MiniSec .km24PersonalGrid{display:none!important}
+.km24MiniSec.km24Open .km24PersonalGrid{display:grid!important;margin-top:10px}
+.km24MiniSec.km24Open .km24PersonalHead{display:flex!important;margin-top:8px}
+.km24MiniSec.km24Open .km24PersonalHead>div{display:none!important}
+.km24MiniSec.km24Open .km24MiniArrow{transform:rotate(90deg)}
+.km24MiniArrow{font-size:20px;transition:.15s}

@@ -1,0 +1,8 @@
+
+/* White/yellow surfaces must keep readable text in light and dark themes. */
+#km24AddressMissingNotice {color:#513b17!important;background:#fff8e7!important}
+#km24AddressMissingNotice b {color:#513b17!important;-webkit-text-fill-color:#513b17!important;opacity:1!important}
+#km24AddressMissingNotice small {color:#5a4b31!important;-webkit-text-fill-color:#5a4b31!important;opacity:1!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) {color:#253343!important;background:#ffffff!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) span {color:#253343!important;-webkit-text-fill-color:#253343!important;opacity:1!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) i {color:#56665d!important;-webkit-text-fill-color:#56665d!important;opacity:1!important}

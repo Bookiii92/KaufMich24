@@ -1,0 +1,129 @@
+
+@media (max-width:700px){
+  html body .km24BottomNav{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) 72px minmax(0,1fr) minmax(0,1fr)!important;
+    align-items:end!important;
+    overflow:visible!important;
+  }
+
+  html body .km24BottomNav>a,
+  html body .km24BottomNav>button{
+    min-width:0!important;
+  }
+
+  html body .km24BottomNav>button.km24BottomSell,
+  html body .km24BottomNav>button.km24BottomSell.active,
+  html body .km24BottomNav>button.km24BottomSell:hover,
+  html body .km24BottomNav>button.km24BottomSell:active,
+  html body .km24BottomNav>button.km24BottomSell:focus,
+  html body .km24BottomNav>button.km24BottomSell:focus-visible,
+  html body.km24HomeV5 .km24BottomNav>button.km24BottomSell,
+  html body.km24HomeV5 .km24BottomNav>button.km24BottomSell.active,
+  html.km24SamsungSafe body .km24BottomNav>button.km24BottomSell,
+  html[data-km24-theme="light"] body .km24BottomNav>button.km24BottomSell,
+  html[data-km24-theme="dark"] body .km24BottomNav>button.km24BottomSell{
+    -webkit-appearance:none!important;
+    appearance:none!important;
+    position:relative!important;
+    inset:auto!important;
+    width:72px!important;
+    min-width:72px!important;
+    max-width:72px!important;
+    height:66px!important;
+    min-height:66px!important;
+    max-height:66px!important;
+    margin:0 auto!important;
+    padding:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:4px!important;
+    border:0!important;
+    outline:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    background-color:transparent!important;
+    background-image:none!important;
+    box-shadow:none!important;
+    filter:none!important;
+    opacity:1!important;
+    transform:none!important;
+    -webkit-transform:none!important;
+    overflow:visible!important;
+    clip-path:none!important;
+    -webkit-clip-path:none!important;
+    -webkit-tap-highlight-color:transparent!important;
+  }
+
+  html body .km24BottomNav>button.km24BottomSell::before,
+  html body .km24BottomNav>button.km24BottomSell::after{
+    content:none!important;
+    display:none!important;
+    position:static!important;
+    width:0!important;
+    height:0!important;
+    border:0!important;
+    background:transparent!important;
+    background-image:none!important;
+    box-shadow:none!important;
+    filter:none!important;
+  }
+
+  html body .km24BottomNav>button.km24BottomSell>span{
+    position:static!important;
+    inset:auto!important;
+    flex:0 0 48px!important;
+    width:48px!important;
+    min-width:48px!important;
+    max-width:48px!important;
+    height:48px!important;
+    min-height:48px!important;
+    max-height:48px!important;
+    margin:0!important;
+    padding:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border:0!important;
+    outline:0!important;
+    border-radius:15px!important;
+    background:linear-gradient(145deg,#ff315b,#d91845)!important;
+    background-color:#e11d48!important;
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+    font-size:28px!important;
+    font-weight:500!important;
+    line-height:1!important;
+    box-shadow:0 7px 18px rgba(210,24,66,.22)!important;
+    filter:none!important;
+    transform:none!important;
+    -webkit-transform:none!important;
+    overflow:hidden!important;
+  }
+
+  html body .km24BottomNav>button.km24BottomSell>b{
+    position:static!important;
+    display:block!important;
+    visibility:visible!important;
+    opacity:1!important;
+    width:auto!important;
+    height:13px!important;
+    min-height:13px!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    background-image:none!important;
+    box-shadow:none!important;
+    color:inherit!important;
+    -webkit-text-fill-color:currentColor!important;
+    font-size:10px!important;
+    font-weight:800!important;
+    line-height:13px!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    transform:none!important;
+    -webkit-transform:none!important;
+  }
+}

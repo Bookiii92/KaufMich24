@@ -1,0 +1,8 @@
+
+/* Both headline lines must remain visible on the dark hero, including light theme. */
+.hero.km24WowHero h1{opacity:1!important;visibility:visible!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.hero.km24WowHero h1 span.km24HeroFirstLine,
+html[data-km24-theme="light"] .hero.km24WowHero h1 span.km24HeroFirstLine,
+html[data-km24-theme="dark"] .hero.km24WowHero h1 span.km24HeroFirstLine{
+display:inline!important;background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important;visibility:visible!important;text-shadow:0 2px 10px rgba(0,0,0,.28)!important
+}

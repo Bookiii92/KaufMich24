@@ -1,0 +1,62 @@
+
+@supports (-webkit-touch-callout:none){
+  html.km24IOS input:not([type="checkbox"]):not([type="radio"]),
+  html.km24IOS textarea,
+  html.km24IOS select{
+    font-size:16px!important;
+  }
+  html.km24IOS .km24LangPicker select{
+    font-size:16px!important;
+  }
+  html.km24IOS input[type="file"]{
+    display:block!important;
+    width:100%!important;
+    min-height:54px!important;
+    padding:8px!important;
+    border:1px solid #3d4a43!important;
+    border-radius:13px!important;
+    background:#0f1411!important;
+    color:#f4fff8!important;
+    -webkit-text-fill-color:#f4fff8!important;
+    color-scheme:dark!important;
+  }
+  html.km24IOS input[type="file"]::file-selector-button{
+    min-height:38px!important;
+    margin-right:10px!important;
+    padding:8px 12px!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+    border-radius:10px!important;
+    background:#1b2a22!important;
+    color:#f4fff8!important;
+    font:inherit!important;
+  }
+  html.km24IOS input[type="checkbox"],
+  html.km24IOS input[type="radio"]{
+    width:20px!important;
+    min-width:20px!important;
+    height:20px!important;
+    min-height:20px!important;
+    accent-color:#138a5b!important;
+  }
+  html.km24IOS .imageLightbox{z-index:15050!important}
+  html.km24IOS .buyOverlay{z-index:15060!important}
+  html.km24IOS .km24PromoChoiceOverlay,
+  html.km24IOS .km24PostCreatePromoOverlay,
+  html.km24IOS .km24WatcherModalOverlay,
+  html.km24IOS .km24AddressPromptOverlay,
+  html.km24IOS .km24ReportOverlay,
+  html.km24IOS .km24PurposeOverlay,
+  html.km24IOS .km24ContactOverlay,
+  html.km24IOS .km24OfferOverlay{
+    -webkit-backdrop-filter:none!important;
+    backdrop-filter:none!important;
+  }
+  html.km24IOS .km24PromoChoiceOverlay{z-index:15100!important}
+  html.km24IOS .km24PostCreatePromoOverlay{z-index:15110!important}
+  html.km24IOS .km24WatcherModalOverlay{z-index:15120!important}
+  html.km24IOS .km24AddressPromptOverlay{z-index:15130!important}
+  html.km24IOS .km24ReportOverlay{z-index:15140!important}
+  html.km24IOS .km24PurposeOverlay,
+  html.km24IOS .km24ContactOverlay,
+  html.km24IOS .km24OfferOverlay{z-index:15150!important}
+}

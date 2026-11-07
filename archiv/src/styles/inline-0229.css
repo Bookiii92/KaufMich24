@@ -1,0 +1,77 @@
+
+html[data-km24-theme="light"] .detail .side > .panel,
+html[data-km24-theme="light"] .detail .side > .auctionbox{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-color:#d9e1dc!important;
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+  box-shadow:0 6px 22px rgba(15,23,42,.07)!important;
+}
+html[data-km24-theme="light"] .detail .side > .panel h1,
+html[data-km24-theme="light"] .detail .side > .panel h2,
+html[data-km24-theme="light"] .detail .side > .panel h3,
+html[data-km24-theme="light"] .detail .side > .auctionbox h1,
+html[data-km24-theme="light"] .detail .side > .auctionbox h2,
+html[data-km24-theme="light"] .detail .side > .auctionbox h3,
+html[data-km24-theme="light"] .detail .side .seller,
+html[data-km24-theme="light"] .detail .side .big{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .detail .side .mut,
+html[data-km24-theme="light"] .detail .side small,
+html[data-km24-theme="light"] .detail .side .ratingStars{
+  color:#5b6470!important;
+  -webkit-text-fill-color:#5b6470!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html[data-km24-theme="light"] .detail .side input,
+html[data-km24-theme="light"] .detail .side select,
+html[data-km24-theme="light"] .detail .side textarea{
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  border-color:#cfd8d3!important;
+}
+html[data-km24-theme="light"] .detail .side .btn:not(.primary){
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+  border-color:#cfd8d3!important;
+}
+html[data-km24-theme="light"] .detail .side .btn.primary{
+  background:#13795b!important;
+  background-image:none!important;
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  border-color:#13795b!important;
+}
+html[data-km24-theme="light"] .detail .side .km24ProTrustChip{
+  background:#f8fbf9!important;
+  background-image:none!important;
+  border-color:#dbe5df!important;
+  color:#365046!important;
+  -webkit-text-fill-color:#365046!important;
+}
+html[data-km24-theme="light"] .detail .side .km24ProTrustChip.good{
+  background:#eef9f4!important;
+  border-color:#bfe0d1!important;
+  color:#176444!important;
+  -webkit-text-fill-color:#176444!important;
+}
+html[data-km24-theme="light"] .detail .side .km24ProSafety{
+  background:#f7faf8!important;
+  background-image:none!important;
+  border-color:#d9e3dd!important;
+  color:#53655c!important;
+  -webkit-text-fill-color:#53655c!important;
+}
+html[data-km24-theme="light"] .detail .side .km24ProSafety b{
+  color:#263c31!important;
+  -webkit-text-fill-color:#263c31!important;
+}

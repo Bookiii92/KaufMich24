@@ -1,0 +1,6 @@
+
+@supports (-webkit-touch-callout:none){
+ html.km24IOS,html.km24IOS body,html.km24IOS #app,html.km24IOS main,html.km24IOS header{pointer-events:auto!important}
+ html.km24IOS a,html.km24IOS button,html.km24IOS [onclick],html.km24IOS [role="button"]{pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+ html.km24IOS #km24JoePrefBackdrop{display:none!important;pointer-events:none!important}
+}

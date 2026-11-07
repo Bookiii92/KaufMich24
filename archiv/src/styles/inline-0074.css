@@ -1,0 +1,15 @@
+
+
+/* Exact mobile hero specificity fix for Chrome / Samsung Internet / Safari. */
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme] body.km24AutumnActualV3 #app .hero.km24WowHero h1>span:last-child{
+ color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;
+ background:none!important;background-image:none!important;
+ background-clip:border-box!important;-webkit-background-clip:border-box!important;
+ opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>.km24HeroFirstLine,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+}

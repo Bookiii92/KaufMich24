@@ -1,0 +1,6 @@
+
+.txSteps .km24TxStepAction{cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation;transition:transform .12s ease,border-color .12s ease,background .12s ease}
+.txSteps .km24TxStepAction:not(.done){border-color:rgba(19,138,91,.48)!important;background:rgba(19,138,91,.08)!important}
+.txSteps .km24TxStepAction:not(.done):active{transform:scale(.98)}
+.txSteps .km24TxStepAction:not(.done):focus-visible{outline:2px solid #21b978;outline-offset:2px}
+.txSteps .km24TxStepAction[data-km24-info="1"]:not(.done){border-style:dashed!important}

@@ -1,0 +1,41 @@
+
+@media(min-width:901px){
+/* Listing cards: locations, photo counts, auction labels, new badges. */
+html[data-km24-theme] body #app .km24CardMeta{font-size:13px!important;line-height:1.45!important}
+html[data-km24-theme] body #app .km24ThumbCount{font-size:12px!important;padding:4px 7px!important}
+html[data-km24-theme] body #app .km24CardTimer{font-size:12px!important}
+html[data-km24-theme] body #app .km24NewPill{font-size:11.5px!important;min-height:22px!important;padding:3px 7px!important}
+html[data-km24-theme] body #app .cats .cat{font-size:14px!important}
+html[data-km24-theme] body .km24BrandText small,
+html[data-km24-theme] body .km24BrandText{font-size:11.5px!important}
+html[data-km24-theme] body .km24FooterTrust span{font-size:12px!important}
+html[data-km24-theme] body .km24BizPills span{font-size:12.5px!important}
+html[data-km24-theme] body #app .km24BizEyebrow{font-size:12.5px!important}
+html[data-km24-theme] body #app .km24AccountKicker{font-size:13px!important}
+/* Explainer helper is rendered outside #app on some routes. */
+html[data-km24-theme] body .km24JoeGuideText{font-size:13px!important;line-height:1.5!important}
+/* Fee page: price detail, bonus points and legal tabs. */
+html[data-km24-theme] body #app .km24PromoPrices span,
+html[data-km24-theme] body #app .km24PromoPrices b{font-size:12.5px!important}
+html[data-km24-theme] body #app .km24PromoPrices strong{font-size:20px!important}
+html[data-km24-theme] body #app .km24FeesLaunchFacts,
+html[data-km24-theme] body #app .km24FeesLaunchFacts strong{font-size:13px!important;line-height:1.55!important}
+html[data-km24-theme] body #app .km24PointsRules span,
+html[data-km24-theme] body #app .km24PointsKicker{font-size:13px!important}
+html[data-km24-theme] body #app .km24FeesGroupHead,
+html[data-km24-theme] body #app .km24FeesGroupHead small{font-size:13px!important}
+html[data-km24-theme] body #app .km24LegalNav,
+html[data-km24-theme] body #app .km24LegalNav a{font-size:13px!important;line-height:1.4!important}
+html[data-km24-theme="light"] body #app .section .head .badge{
+ color:#175b3e!important;-webkit-text-fill-color:#175b3e!important;
+ background:#e6f4ec!important;font-size:12px!important;
+}
+/* On white service fee tables the old header color #c9d4cd was nearly invisible. */
+html[data-km24-theme="light"] body #app .km24SvcFeeTable th{
+ color:#293b52!important;-webkit-text-fill-color:#293b52!important;
+ background:#eaf0f7!important;font-size:13px!important;
+}
+html[data-km24-theme="light"] body #app .km24SvcFeeTable td{
+ color:#25374b!important;-webkit-text-fill-color:#25374b!important;font-size:13px!important;
+}
+}

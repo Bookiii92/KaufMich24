@@ -1,0 +1,53 @@
+
+html body .hero.km24WowHero {
+ background:linear-gradient(128deg,#081b43 0%,#081733 53%,#082c4c 100%) !important;
+ border-bottom:1px solid rgba(92,181,255,.22) !important;
+}
+html body .hero.km24WowHero::before{
+ background:radial-gradient(circle,rgba(47,151,255,.22),transparent 68%) !important;
+}
+html body .hero.km24WowHero::after{
+ background:radial-gradient(circle,rgba(57,209,249,.12),transparent 70%) !important;
+}
+html body .hero.km24WowHero .km24HeroEyebrow{
+ color:#bddcff !important;
+ border-color:rgba(153,205,255,.25) !important;
+ background:rgba(34,112,219,.14) !important;
+}
+html body .hero.km24WowHero h1{
+ font-family:"Sora",Arial,Helvetica,sans-serif !important;
+ font-weight:800 !important;
+ font-size:clamp(35px,6vw,74px) !important;
+ line-height:1.09 !important;
+ letter-spacing:-.065em !important;
+ max-width:850px !important;
+ color:#ffffff !important;
+ text-wrap:balance;
+}
+html body .hero.km24WowHero h1 span{
+ background:none !important;
+ background-clip:border-box !important;
+ -webkit-background-clip:border-box !important;
+ color:#55dbff !important;
+ -webkit-text-fill-color:#55dbff !important;
+ text-shadow:0 3px 24px rgba(69,206,255,.18);
+}
+html body .hero.km24WowHero .km24HeroText{
+ color:#d4e6fb !important;
+ max-width:700px !important;
+}
+html body .hero.km24WowHero .season-decor{opacity:.18 !important}
+html body .hero.km24WowHero .season-ribbon{opacity:.68}
+html body .hero.km24WowHero .km24TrustPills span{color:#c8d9ef !important}
+@media(max-width:480px){
+ html body .hero.km24WowHero{padding:48px 0 42px !important}
+ html body .hero.km24WowHero h1{
+  font-size:clamp(32px,9.2vw,43px) !important;
+  line-height:1.14 !important;
+  letter-spacing:-.064em !important;
+ }
+ html body .hero.km24WowHero .km24HeroText{
+  font-size:14px !important;
+  line-height:1.48 !important;
+ }
+}

@@ -1,0 +1,108 @@
+
+/* Readability fixes verified with desktop browser at 1440px in both themes. */
+@media(min-width:901px){
+/* Hero: specific enough to defeat global theme heading overrides. */
+html[data-km24-theme] body #app .hero.km24WowHero h1{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+ opacity:1!important;visibility:visible!important;
+ text-shadow:0 2px 14px rgba(0,0,0,.3)!important;
+}
+html[data-km24-theme] body #app .hero.km24WowHero h1>span:not(.km24HeroFirstLine){
+ background:none!important;background-image:none!important;
+ -webkit-background-clip:border-box!important;background-clip:border-box!important;
+ color:#63a8ff!important;-webkit-text-fill-color:#63a8ff!important;
+ opacity:1!important;visibility:visible!important;
+ text-shadow:none!important;
+}
+html[data-km24-theme] body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+ background:none!important;opacity:1!important;text-shadow:0 2px 14px rgba(0,0,0,.3)!important;
+}
+html[data-km24-theme] body #app .hero.km24WowHero .km24HeroText{
+ color:#f3f7ff!important;-webkit-text-fill-color:#f3f7ff!important;font-size:18px!important;
+}
+html[data-km24-theme="light"] body #app .hero.km24WowHero .search input::placeholder{
+ color:#425771!important;-webkit-text-fill-color:#425771!important;opacity:1!important;
+}
+/* Dark feature cards shown on the bright homepage. */
+html[data-km24-theme="light"] body #app .km24WhyCard,
+html[data-km24-theme="light"] body #app .km24WhyCard b,
+html[data-km24-theme="light"] body #app .km24WhyCard strong,
+html[data-km24-theme="light"] body #app .km24WhyCard span{
+ color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important;
+}
+html[data-km24-theme="light"] body #app .km24WhyCard p,
+html[data-km24-theme="light"] body #app .km24WhyCard small{
+ color:#e0e8ed!important;-webkit-text-fill-color:#e0e8ed!important;
+}
+/* Prize spotlight is a dark gold surface regardless of theme. */
+html[data-km24-theme="light"] body #app .giveawayCard.km24GiveawaySpotlight h2,
+html[data-km24-theme="light"] body #app .giveawayCard.km24GiveawaySpotlight h3,
+html[data-km24-theme="light"] body #app .giveawayCard.km24GiveawaySpotlight b,
+html[data-km24-theme="light"] body #app .giveawayCard.km24GiveawaySpotlight strong{
+ color:#fff8e9!important;-webkit-text-fill-color:#fff8e9!important;
+}
+html[data-km24-theme="light"] body #app .giveawayCard.km24GiveawaySpotlight p{
+ color:#f5ecdb!important;-webkit-text-fill-color:#f5ecdb!important;
+}
+/* Form field labels on white panels should not inherit dark-theme silver. */
+html[data-km24-theme="light"] body #app .auth .panel label,
+html[data-km24-theme="light"] body #app .formPage .panel label{
+ color:#24384b!important;-webkit-text-fill-color:#24384b!important;
+ font-size:14px!important;
+}
+/* Text on light sections, badges and the footer. */
+html[data-km24-theme="light"] body #app .section .km24SectionKicker,
+html[data-km24-theme="light"] body #app .km24FeesPage .km24SectionKicker{
+ color:#1657a3!important;-webkit-text-fill-color:#1657a3!important;
+ background:rgba(15,87,166,.08)!important;font-size:12px!important;
+}
+html[data-km24-theme="light"] body #app .km24FeesPage .head .badge,
+html[data-km24-theme="light"] body #app .km24FeesPage .km24FeeAudienceSection .badge{
+ color:#165c3c!important;-webkit-text-fill-color:#165c3c!important;
+ background:#e4f4eb!important;font-size:12px!important;
+}
+html[data-km24-theme="light"] body .km24Footer a,
+html[data-km24-theme="light"] body .km24Footer a:not(.btn){
+ color:#354860!important;-webkit-text-fill-color:#354860!important;
+}
+html[data-km24-theme="light"] body .km24Footer a:hover{
+ color:#084bc0!important;-webkit-text-fill-color:#084bc0!important;
+}
+html[data-km24-theme="light"] body #app .km24LegalNav a,
+html[data-km24-theme="light"] body #app .km24LegalLinks a{
+ color:#354860!important;-webkit-text-fill-color:#354860!important;
+}
+/* Muted on dark sections / night theme was #475569 on #080e18. */
+html[data-km24-theme="dark"] body #app .section .head .mut,
+html[data-km24-theme="dark"] body #app .km24FeesPage .km24FeeAudienceSection .mut,
+html[data-km24-theme="dark"] body #app .km24LatestSection .mut,
+html[data-km24-theme="dark"] body #app .km24JobsResultsSection .mut{
+ color:#cad6e9!important;-webkit-text-fill-color:#cad6e9!important;
+}
+html[data-km24-theme="dark"] body #app .km24FeesPage .km24FeeAudienceSection .plan p{
+ color:#c9d6e7!important;-webkit-text-fill-color:#c9d6e7!important;font-size:14px!important;
+}
+/* Improve size and legibility of ancillary information in desktop layouts. */
+html[data-km24-theme] body #app .km24SectionKicker,
+html[data-km24-theme] body #app .km24ChatKicker{
+ font-size:12px!important;letter-spacing:.06em!important;
+}
+html[data-km24-theme] body #app .km24PlanFacts span{font-size:13.5px!important;line-height:1.5!important}
+html[data-km24-theme] body #app .km24RecommendedTag{
+ font-size:12px!important;padding:6px 9px!important;
+ background:#0e4fc4!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+html[data-km24-theme] body #app .km24TypePill{
+ font-size:12px!important;padding:5px 9px!important;
+}
+html[data-km24-theme] body #app .km24TrustPills span{font-size:12px!important}
+html[data-km24-theme] body #app .km24ConvTop small{font-size:12px!important}
+html[data-km24-theme] body #app .km24JoeGuideText{font-size:13px!important;line-height:1.5!important}
+html[data-km24-theme="light"] body .km24JoeGuideToggle{
+ color:#334155!important;-webkit-text-fill-color:#334155!important;
+}
+html[data-km24-theme] body #app .km24FeesPage .km24FounderCounts span{
+ font-size:12px!important;
+}
+}

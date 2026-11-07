@@ -1,0 +1,34 @@
+
+@supports (-webkit-touch-callout:none){
+html.km24IOS body.km24CategoryLightRoute,
+html.km24IOS body.km24CategoryLightRoute #app,
+html.km24IOS body.km24CategoryLightRoute main,
+html.km24IOS body.km24CategoryLightRoute section.section{background:#0b0f0c!important;color:#edf3ef!important;}
+html.km24IOS body.km24CategoryLightRoute .section>.wrap{background:transparent!important;}
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro{background:linear-gradient(145deg,#171c18,#0e1310)!important;color:#edf3ef!important;border-color:#2f3a33!important;box-shadow:none!important;}
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro h1,
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro h2,
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro h3,
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro b,
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro strong,
+html.km24IOS body.km24CategoryLightRoute .head h1,
+html.km24IOS body.km24CategoryLightRoute .head h2,
+html.km24IOS body.km24CategoryLightRoute .head h3{color:#f4f8f5!important;-webkit-text-fill-color:#f4f8f5!important;}
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro p,
+html.km24IOS body.km24CategoryLightRoute .mut,
+html.km24IOS body.km24CategoryLightRoute .km24CategoryLegend{color:#9cab9f!important;-webkit-text-fill-color:#9cab9f!important;}
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedHint{background:#12281d!important;color:#a6e8bd!important;border-color:#28533d!important;-webkit-text-fill-color:#a6e8bd!important;}
+html.km24IOS body.km24CategoryLightRoute .km24CategoryServiceNote{background:#241c14!important;color:#dec5a4!important;border-color:#5a432d!important;-webkit-text-fill-color:#dec5a4!important;}
+html.km24IOS body.km24CategoryLightRoute .cat,
+html.km24IOS body.km24CategoryLightRoute .card,
+html.km24IOS body.km24CategoryLightRoute .empty,
+html.km24IOS body.km24CategoryLightRoute .km24SvcCard{background:#151a16!important;color:#edf3ef!important;border-color:#303b34!important;box-shadow:none!important;}
+html.km24IOS body.km24CategoryLightRoute .cat b,
+html.km24IOS body.km24CategoryLightRoute .card b,
+html.km24IOS body.km24CategoryLightRoute .card h3,
+html.km24IOS body.km24CategoryLightRoute .km24SvcCard h3{color:#f1f6f2!important;-webkit-text-fill-color:#f1f6f2!important;}
+html.km24IOS body.km24CategoryLightRoute .km24CategoryTab{background:#171d19!important;color:#dce5df!important;border-color:#344038!important;-webkit-text-fill-color:#dce5df!important;}
+html.km24IOS body.km24CategoryLightRoute .km24CategoryTab.on{background:#138a5b!important;color:#fff!important;border-color:#138a5b!important;-webkit-text-fill-color:#fff!important;}
+html.km24IOS body.km24CategoryLightRoute .km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary),
+html.km24IOS body.km24CategoryLightRoute .btn:not(.primary){background:#171d19!important;color:#edf3ef!important;border-color:#344038!important;-webkit-text-fill-color:#edf3ef!important;}
+}

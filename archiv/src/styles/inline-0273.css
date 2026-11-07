@@ -1,0 +1,24 @@
+
+/* Growth UX pass: brand consistency, readable hero and mobile tap targets. */
+#km24HalloweenBoostV2, .km24JoeHalloween {display:none!important;}
+body #app a[href="#/giveaway"],body #app a[href*="#/giveaway"] {display:none!important;}
+body #app .km24StartPrimary.btn.primary {background:linear-gradient(135deg,#1769ef,#084bbd)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 12px 28px rgba(15,93,219,.28)!important;border-color:transparent!important;}
+body #app .km24StartPrimary.btn.primary:hover {background:linear-gradient(135deg,#227cf8,#1259d2)!important;}
+body #app .km24StartHeroCopy h1 {color:#fff!important;-webkit-text-fill-color:#fff!important;line-height:1.12!important;overflow-wrap:break-word;}
+body #app .km24StartHeroCopy h1 span {color:#a5d6ff!important;-webkit-text-fill-color:#a5d6ff!important;background:none!important;background-image:none!important;}
+body #app .km24StartHeroCopy>p,body #app .km24StartTrustRow,body #app .km24StartAdBenefits small {color:#e4ecf7!important;-webkit-text-fill-color:#e4ecf7!important;opacity:1!important;}
+body #app .km24StartEyebrow {color:#c6e7ff!important;-webkit-text-fill-color:#c6e7ff!important;}
+body #app .km24StartSecondary {color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;border-color:rgba(255,255,255,.34)!important;}
+body #app .km24WowHero .search input {color:#f9fbff!important;-webkit-text-fill-color:#f9fbff!important;}
+body #app .km24WowHero .search input::placeholder {color:#d9e6f2!important;-webkit-text-fill-color:#d9e6f2!important;opacity:1!important;}
+body #app :is(a,button,input,select,textarea):focus-visible {outline:3px solid #74bdff!important;outline-offset:2px!important;}
+@media(max-width:700px){
+ body #app .km24StartHero h1 {font-size:clamp(30px,8.3vw,42px)!important;line-height:1.13!important;letter-spacing:-.035em!important;}
+ body #app .km24StartHeroGrid {grid-template-columns:minmax(0,1fr)!important;}
+ body #app .km24StartHeroCopy,body #app .km24StartBonus {min-width:0!important;max-width:100%!important;}
+ body #app .km24StartHeroCopy>p {font-size:16px!important;line-height:1.5!important;}
+ body #app .km24StartActions {display:grid!important;grid-template-columns:minmax(0,1fr)!important;}
+ body #app .km24StartActions .btn {width:100%!important;min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;white-space:normal!important;text-align:center!important;}
+ body #app .km24StartTrustRow {line-height:1.55!important;}
+ body #app .km24StartCategoryGrid {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}

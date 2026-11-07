@@ -1,0 +1,36 @@
+
+.km24ThumbCount{
+  margin-left:auto;
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:28px;
+  padding:0 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.10);
+  color:#aaa59d;
+  font-size:10px;
+  font-weight:850;
+  line-height:1;
+}
+.km24CardBody{padding:13px 13px 14px!important}
+.km24CardTitleRow .title{
+  min-height:40px;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  line-height:1.28;
+}
+.km24CardBody .price{margin-top:8px!important;font-weight:950;letter-spacing:-.02em}
+.km24CardSeller{margin-top:7px!important}
+.km24CardMeta{margin-top:10px!important;padding-top:9px!important;color:#89948d!important}
+@media(max-width:600px){
+  .km24ThumbCount{min-width:30px;height:26px;padding:0 7px;font-size:9px}
+  .km24CardBody{padding:11px 11px 12px!important}
+  .km24CardTitleRow .title{min-height:41px}
+  .km24CardBody .price{font-size:20px!important}
+}

@@ -1,0 +1,73 @@
+
+.km24PromoChoiceOverlay{
+  position:fixed!important;inset:0!important;z-index:12050!important;display:grid!important;place-items:center!important;
+  padding:18px!important;background:rgba(4,8,6,.78)!important;-webkit-backdrop-filter:blur(10px) saturate(120%)!important;
+  backdrop-filter:blur(10px) saturate(120%)!important;overflow-y:auto!important
+}
+.km24PromoChoiceModal{
+  width:min(680px,100%)!important;max-height:calc(100dvh - 36px)!important;overflow:auto!important;position:relative!important;
+  padding:26px!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:24px!important;
+  background:linear-gradient(160deg,#182019 0%,#101512 58%,#0c100e 100%)!important;color:#f4f8f5!important;
+  box-shadow:0 30px 90px rgba(0,0,0,.58),0 1px 0 rgba(255,255,255,.04) inset!important
+}
+.km24PromoChoiceModal h2{margin:2px 54px 8px 0!important;color:#f7faf8!important;font-size:27px!important;line-height:1.12!important;font-weight:900!important;letter-spacing:-.45px!important}
+.km24PromoChoiceModal>p{margin:0 0 20px!important;color:#aab6af!important;font-size:14px!important;line-height:1.55!important}
+.km24PromoClose{
+  position:absolute!important;right:16px!important;top:16px!important;width:40px!important;height:40px!important;border:1px solid rgba(255,255,255,.08)!important;
+  border-radius:12px!important;background:#1b231e!important;color:#e8efeb!important;font-size:22px!important;line-height:1!important;cursor:pointer!important;
+  display:grid!important;place-items:center!important;box-shadow:none!important
+}
+.km24PromoClose:hover{background:#222c26!important;border-color:rgba(255,255,255,.14)!important}
+.km24PromoChoiceGrid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important}
+.km24PromoPlanCard{
+  position:relative!important;padding:20px!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:18px!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015))!important;box-shadow:0 10px 30px rgba(0,0,0,.12)!important
+}
+.km24PromoPlanCard.recommended{border-color:rgba(54,190,116,.42)!important;background:linear-gradient(180deg,rgba(29,110,68,.16),rgba(255,255,255,.018))!important;box-shadow:0 0 0 1px rgba(54,190,116,.06) inset!important}
+.km24PromoPlanCard small{display:inline-flex!important;align-items:center!important;min-height:24px!important;padding:0 9px!important;border-radius:999px!important;background:#202823!important;color:#96a49b!important;font-size:10px!important;font-weight:900!important;letter-spacing:.09em!important}
+.km24PromoPlanCard.recommended small{background:rgba(41,155,94,.15)!important;color:#77d69f!important;border:1px solid rgba(79,205,132,.18)!important}
+.km24PromoPlanCard>b{display:block!important;margin:14px 0 0!important;color:#f5f8f6!important;font-size:22px!important;line-height:1.15!important;font-weight:900!important}
+.km24PromoPlanPrice{display:flex!important;align-items:baseline!important;flex-wrap:wrap!important;gap:8px!important;margin:16px 0 18px!important}
+.km24PromoPlanPrice strong{color:#fff!important;font-size:31px!important;line-height:1!important;font-weight:950!important;letter-spacing:-.55px!important}
+.km24PromoPlanPrice span{color:#d8c887!important;font-size:12px!important;font-weight:700!important}
+.km24PromoPlanActions{display:grid!important;gap:9px!important}
+.km24PromoPlanActions .btn,
+.km24PromoChoiceModal:has([data-km24-pay]) .btn{
+  width:100%!important;min-height:52px!important;padding:12px 15px!important;border-radius:13px!important;font-size:14.5px!important;font-weight:850!important;
+  justify-content:center!important;box-shadow:none!important;transition:background .15s ease,border-color .15s ease,transform .15s ease!important
+}
+.km24PromoPlanActions .btn.primary,
+.km24PromoChoiceModal:has([data-km24-pay]) [data-km24-pay="card"]{
+  border:1px solid #1b9d67!important;background:linear-gradient(180deg,#16945f,#11784e)!important;color:#fff!important;text-shadow:none!important
+}
+.km24PromoPlanActions .btn:not(.primary),
+.km24PromoChoiceModal:has([data-km24-pay]) [data-km24-pay="link"]{
+  border:1px solid rgba(255,255,255,.10)!important;background:#19211c!important;color:#edf3ef!important;text-shadow:none!important
+}
+.km24PromoPlanActions .btn:not(:disabled):active,
+.km24PromoChoiceModal:has([data-km24-pay]) .btn:not(:disabled):active{transform:scale(.99)!important}
+.km24PromoPlanActions .btn:disabled,
+.km24PromoChoiceModal:has([data-km24-pay]) .btn:disabled{
+  opacity:1!important;border-color:rgba(255,255,255,.06)!important;background:#171c19!important;color:#66736b!important;cursor:not-allowed!important
+}
+.km24PromoBalance{margin-top:18px!important;padding-top:16px!important;border-top:1px solid rgba(255,255,255,.07)!important;color:#8f9d94!important;font-size:12.5px!important}
+.km24PromoBalance b{color:#eef4f0!important}
+.km24PromoChoiceModal:has([data-km24-pay]){width:min(560px,100%)!important;max-width:560px!important}
+.km24PromoChoiceModal:has([data-km24-pay])>p{margin-bottom:16px!important}
+.km24PromoChoiceModal:has([data-km24-pay])>div[style*="display:grid"]{gap:10px!important;margin-top:18px!important}
+.km24PromoChoiceModal:has([data-km24-pay]) .btn{justify-content:flex-start!important;text-align:left!important;padding:14px 18px!important;min-height:58px!important;font-size:15.5px!important}
+.km24PromoChoiceModal:has([data-km24-pay]) [data-km24-pay="link"]{border-color:rgba(255,255,255,.12)!important;background:#f4f7f5!important;color:#162019!important}
+.km24PromoChoiceModal:has([data-km24-pay]) .btn:disabled{background:#171c19!important;color:#68756d!important}
+.km24PromoChoiceModal:has([data-km24-pay]) p.mut{margin:16px 0 0!important;color:#7f8c84!important;font-size:12px!important;line-height:1.5!important}
+@media(max-width:620px){
+  .km24PromoChoiceOverlay{padding:12px!important;align-items:center!important}
+  .km24PromoChoiceModal{padding:22px 18px 20px!important;border-radius:21px!important;max-height:calc(100dvh - 24px)!important}
+  .km24PromoChoiceModal h2{font-size:24px!important;margin-right:48px!important}
+  .km24PromoChoiceModal>p{font-size:13.5px!important;margin-bottom:17px!important}
+  .km24PromoChoiceGrid{grid-template-columns:1fr!important;gap:12px!important}
+  .km24PromoPlanCard{padding:18px!important;border-radius:16px!important}
+  .km24PromoPlanCard>b{font-size:21px!important}
+  .km24PromoPlanPrice{margin:14px 0 16px!important}
+  .km24PromoPlanPrice strong{font-size:29px!important}
+  .km24PromoClose{right:13px!important;top:13px!important;width:38px!important;height:38px!important}
+}

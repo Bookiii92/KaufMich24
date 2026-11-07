@@ -1,0 +1,102 @@
+
+.km24LangPicker{
+  position:relative!important;
+  height:48px!important;
+  min-width:72px!important;
+  padding:0 11px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  border-radius:16px!important;
+  border:1px solid rgba(113,255,174,.18)!important;
+  background:linear-gradient(145deg,rgba(29,55,43,.98),rgba(15,30,23,.98))!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.06)!important;
+  color:#f2fff7!important;
+  overflow:hidden!important;
+}
+.km24LangPicker>span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:18px!important;
+  font-size:14px!important;
+  opacity:.88!important;
+}
+.km24LangPicker:after{
+  content:"⌄"!important;
+  position:absolute!important;
+  right:8px!important;
+  top:50%!important;
+  transform:translateY(-54%)!important;
+  color:#9fb6aa!important;
+  font-size:13px!important;
+  font-weight:900!important;
+  pointer-events:none!important;
+}
+.km24LangPicker select{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  width:42px!important;
+  min-width:42px!important;
+  height:46px!important;
+  padding:0 14px 0 0!important;
+  margin:0!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  color:#f4fff8!important;
+  -webkit-text-fill-color:#f4fff8!important;
+  color-scheme:dark!important;
+  font-size:14px!important;
+  font-weight:950!important;
+  line-height:46px!important;
+  text-align:center!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+}
+.km24LangPicker select option{
+  background:#13231b!important;
+  color:#f4fff8!important;
+  -webkit-text-fill-color:#f4fff8!important;
+}
+.km24LangPicker:focus-within{
+  border-color:rgba(76,235,143,.52)!important;
+  box-shadow:0 0 0 3px rgba(38,177,99,.12),0 8px 22px rgba(0,0,0,.24)!important;
+}
+@media(max-width:700px){
+  .km24LangPicker{
+    height:52px!important;
+    min-width:66px!important;
+    width:66px!important;
+    padding:0 9px!important;
+    border-radius:17px!important;
+  }
+  .km24LangPicker>span{display:none!important}
+  .km24LangPicker:before{
+    content:"🌐"!important;
+    position:absolute!important;
+    left:8px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    font-size:12px!important;
+    opacity:.72!important;
+    pointer-events:none!important;
+  }
+  .km24LangPicker:after{
+    right:7px!important;
+    font-size:12px!important;
+  }
+  .km24LangPicker select{
+    width:100%!important;
+    min-width:0!important;
+    height:50px!important;
+    padding:0 13px 0 14px!important;
+    font-size:14px!important;
+    text-align:center!important;
+  }
+}
+@media(max-width:390px){
+  .km24LangPicker{min-width:62px!important;width:62px!important}
+  .km24LangPicker select{font-size:13px!important}
+}

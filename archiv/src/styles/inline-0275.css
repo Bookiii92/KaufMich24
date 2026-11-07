@@ -1,0 +1,22 @@
+
+@media(max-width:640px){
+  body .km24PurposeOverlay,body .km24ContactOverlay{
+    box-sizing:border-box!important;padding:12px!important;
+    padding-top:max(12px,env(safe-area-inset-top))!important;
+    padding-bottom:max(12px,env(safe-area-inset-bottom))!important;
+    overflow-y:auto!important;overscroll-behavior:contain!important;
+  }
+  body .km24PurposeOverlay .km24PurposeModal{
+    box-sizing:border-box!important;width:100%!important;max-width:520px!important;
+    max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding:18px 14px 16px!important;
+  }
+  body .km24PurposeOverlay .km24PurposeModal h2{font-size:23px!important;line-height:1.2!important;padding-right:38px!important}
+  body .km24PurposeOverlay .km24PurposeChoices{grid-template-columns:minmax(0,1fr)!important;gap:10px!important;margin-top:12px!important}
+  body .km24PurposeOverlay .km24PurposeChoice{box-sizing:border-box!important;min-height:94px!important;width:100%!important;padding:13px 14px!important}
+  body .km24PurposeOverlay .km24PurposeChoice>span{font-size:26px!important;margin-bottom:3px!important}
+  body .km24PurposeOverlay .km24PurposeChoice b{font-size:16px!important;margin-bottom:4px!important}
+  body .km24PurposeOverlay .km24PurposeChoice small{display:block!important;line-height:1.4!important}
+}
+@supports not (height:100dvh){@media(max-width:640px){body .km24PurposeOverlay .km24PurposeModal{max-height:calc(100vh - 24px)!important}}}

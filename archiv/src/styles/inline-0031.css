@@ -1,0 +1,73 @@
+
+/* KaufMich24 support readability — light theme */
+html[data-km24-theme="light"] .km24SupportPage{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportHero{
+  color:#f8fafc!important;
+  border-color:#25342d!important;
+  background:radial-gradient(circle at 85% 15%,rgba(46,205,93,.16),transparent 32%),linear-gradient(145deg,#18201c,#0c110e)!important;
+  box-shadow:0 12px 30px rgba(15,23,42,.10)!important
+}
+html[data-km24-theme="light"] .km24SupportHero h1{color:#ffffff!important;text-shadow:none!important}
+html[data-km24-theme="light"] .km24SupportHero p{color:#d1d5db!important}
+html[data-km24-theme="light"] .km24SupportHero .km24AccountKicker{color:#79e3a4!important}
+html[data-km24-theme="light"] .km24SupportChoiceGrid>a,
+html[data-km24-theme="light"] .km24SupportChoiceGrid>button{
+  background:#ffffff!important;
+  color:#111827!important;
+  border-color:#d9e0e6!important;
+  box-shadow:0 5px 16px rgba(15,23,42,.05)!important
+}
+html[data-km24-theme="light"] .km24SupportChoiceGrid>a:hover,
+html[data-km24-theme="light"] .km24SupportChoiceGrid>button:hover{background:#f8fafc!important;border-color:#9fd9ba!important}
+html[data-km24-theme="light"] .km24SupportChoiceGrid>*>span{background:#eaf7f0!important;color:#0b6f48!important}
+html[data-km24-theme="light"] .km24SupportChoiceGrid b{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportChoiceGrid small{color:#4b5563!important}
+html[data-km24-theme="light"] .km24SupportChoiceGrid i{color:#6b7280!important}
+html[data-km24-theme="light"] .km24SupportPage .km24AccountKicker{color:#08784c!important}
+html[data-km24-theme="light"] .km24SupportPage .km24AccountSectionHead h2,
+html[data-km24-theme="light"] .km24SupportPage .km24AccountSectionHead h3{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportPage .km24AccountSectionHead p{color:#4b5563!important}
+html[data-km24-theme="light"] .km24SupportFaqGrid details{
+  background:#ffffff!important;
+  border-color:#d9e0e6!important;
+  box-shadow:0 4px 14px rgba(15,23,42,.04)!important
+}
+html[data-km24-theme="light"] .km24SupportFaqGrid summary{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportFaqGrid details[open] summary{border-bottom-color:#e5e7eb!important;background:#f8fafc!important}
+html[data-km24-theme="light"] .km24SupportFaqGrid p{color:#374151!important}
+html[data-km24-theme="light"] .km24SupportTicket{
+  background:#ffffff!important;
+  border-color:#d9e0e6!important;
+  box-shadow:0 5px 16px rgba(15,23,42,.05)!important
+}
+html[data-km24-theme="light"] .km24SupportTicketTop h3{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportTicketCat{background:#f3f4f6!important;color:#4b5563!important}
+html[data-km24-theme="light"] .km24SupportTicket>p{color:#374151!important}
+html[data-km24-theme="light"] .km24SupportTicketMeta{color:#6b7280!important}
+html[data-km24-theme="light"] .km24SupportReply{background:#eefbf3!important;border-left-color:#138a5b!important}
+html[data-km24-theme="light"] .km24SupportReply b{color:#08784c!important}
+html[data-km24-theme="light"] .km24SupportReply p{color:#374151!important}
+html[data-km24-theme="light"] .km24SupportCount{background:#eef2f5!important;color:#374151!important}
+html[data-km24-theme="light"] .km24SupportEmpty{background:#ffffff!important;border-color:#cfd8df!important;color:#4b5563!important}
+html[data-km24-theme="light"] .km24SupportEmpty>b{color:#111827!important}
+html[data-km24-theme="light"] .km24SupportFormSection{background:#ffffff!important;border-color:#d9e0e6!important;box-shadow:0 6px 18px rgba(15,23,42,.04)!important}
+html[data-km24-theme="light"] .km24SupportForm label{color:#1f2937!important;font-weight:700!important}
+html[data-km24-theme="light"] .km24SupportForm input,
+html[data-km24-theme="light"] .km24SupportForm textarea,
+html[data-km24-theme="light"] .km24SupportForm select{background:#ffffff!important;color:#111827!important;border-color:#cbd5e1!important}
+html[data-km24-theme="light"] .km24SupportFormNote{background:#fff8e8!important;border-color:#f3d89e!important;color:#6b5731!important}
+html[data-km24-theme="light"] .km24Footer{color:#374151!important}
+html[data-km24-theme="light"] .km24Footer b{color:#111827!important}
+html[data-km24-theme="light"] .km24Footer a{color:#374151!important;opacity:1!important}
+html[data-km24-theme="light"] .km24Footer p,
+html[data-km24-theme="light"] .km24FooterBottom{color:#4b5563!important}
+@media(min-width:701px){
+  .km24SupportHero p{font-size:15px!important;line-height:1.6!important}
+  .km24SupportChoiceGrid b{font-size:14px!important}
+  .km24SupportChoiceGrid small{font-size:12.5px!important;line-height:1.45!important}
+  .km24SupportFaqGrid summary{font-size:14px!important;padding:15px 16px!important}
+  .km24SupportFaqGrid p{font-size:13.5px!important;line-height:1.6!important}
+  .km24SupportTicketTop h3{font-size:16px!important}
+  .km24SupportTicket>p{font-size:14px!important;line-height:1.55!important}
+  .km24SupportTicketMeta{font-size:11px!important}
+}

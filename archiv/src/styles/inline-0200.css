@@ -1,0 +1,23 @@
+
+body.km24JobEmployerForm #sf [data-sell-section="sale"],
+body.km24JobEmployerForm #sf [data-sell-section="price"],
+body.km24JobEmployerForm #sf .km24SellSalePanel,
+body.km24JobEmployerForm #sf .km24SellPricePanel,
+body.km24JobEmployerForm #sf .km24ProOptions{display:none!important}
+body.km24JobEmployerForm #sf #cond{display:none!important}
+body.km24JobEmployerForm #sf label:has(>#cond){display:none!important}
+body.km24JobEmployerForm #sf label:has(>#pickup),
+body.km24JobEmployerForm #sf label:has(>#ship){display:none!important}
+body.km24JobEmployerForm #sf .livePreview .km24PreviewPrice,
+body.km24JobEmployerForm #sf .livePreview .km24PreviewBadges{display:none!important}
+body.km24JobSeekerForm #wantedForm label:has(>#wcond){display:none!important}
+body.km24JobSeekerForm #wantedForm #wbudget{display:none!important}
+body.km24JobSeekerForm #wantedForm section.panel:has(#wbudget){display:none!important}
+@media(max-width:700px){
+ .km24JobsCreateGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ .km24JobsCreateGrid .plan{padding:12px!important;border-radius:15px!important;min-height:0!important}
+ .km24JobsCreateGrid .plan div[style*="font-size"]{font-size:27px!important}
+ .km24JobsCreateGrid .plan h3{font-size:15px!important;line-height:1.15!important;margin:7px 0 5px!important}
+ .km24JobsCreateGrid .plan p{font-size:11px!important;line-height:1.3!important;margin:0 0 9px!important}
+ .km24JobsCreateGrid .plan .btn{font-size:11px!important;padding:8px!important;min-height:38px!important;width:100%!important;white-space:normal!important}
+}

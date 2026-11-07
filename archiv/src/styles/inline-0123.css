@@ -1,0 +1,10 @@
+
+.km24LaunchDeadline{margin-top:14px;padding:14px 15px;border:1px solid rgba(229,145,68,.25);border-radius:15px;background:linear-gradient(145deg,rgba(69,42,21,.48),rgba(20,27,22,.92));box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.km24LaunchDeadline b{display:block;font-size:14px;color:#f2b276;margin-bottom:5px}
+.km24LaunchDeadline p{margin:0;color:#c5cec7;font-size:12px;line-height:1.5}
+.km24LaunchDeadline .km24LaunchAfter{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.07)}
+.km24LaunchDeadline a{display:inline-block;margin-top:9px;font-size:12px;font-weight:850;color:#9be6b5;text-decoration:none}
+.km24FeesLaunchPolicy{margin:0 0 14px!important}
+.km24FeesLaunchFacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px}
+.km24FeesLaunchFacts span{padding:9px 10px;border:1px solid rgba(255,255,255,.07);border-radius:11px;background:rgba(255,255,255,.025);font-size:11px;color:#c8d0ca}
+@media(max-width:650px){.km24FeesLaunchFacts{grid-template-columns:1fr}.km24LaunchDeadline{padding:12px 13px}}

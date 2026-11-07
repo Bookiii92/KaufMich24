@@ -1,0 +1,126 @@
+
+:root{
+ --u-bg:#050907;--u-bg2:#08110c;--u-surface:#0d1611;--u-surface2:#121e17;
+ --u-line:rgba(255,255,255,.085);--u-line2:rgba(81,225,133,.22);
+ --u-text:#f5faf7;--u-muted:#91a49a;--u-green:#25c46d;--u-green2:#0d8b52;
+ --u-gold:#ffbd63;--u-orange:#ee8744;--u-red:#ff6b6b;--u-blue:#75b8ff;
+ --u-r:22px;--u-shadow:0 22px 60px rgba(0,0,0,.32);--u-shadow-soft:0 12px 34px rgba(0,0,0,.22)
+}
+html,body{background:radial-gradient(circle at 92% 2%,rgba(36,196,109,.14),transparent 29%),radial-gradient(circle at 8% 18%,rgba(238,135,68,.055),transparent 25%),linear-gradient(180deg,#050907 0,#070c09 42%,#050806 100%)!important;color:var(--u-text)!important}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;letter-spacing:-.006em}
+.wrap{max-width:1240px!important}
+.mut,.meta{color:var(--u-muted)!important}
+
+/* HEADER */
+header{background:rgba(5,9,7,.96)!important;border-bottom:1px solid rgba(88,220,135,.10)!important;box-shadow:0 10px 40px rgba(0,0,0,.25)!important}
+.bar,.km24Topbar{min-height:76px!important;gap:12px!important}
+.brand,.km24Brand{font-weight:950!important;letter-spacing:-.045em!important;color:#fff!important}
+.logo,.km24LogoMark{width:46px!important;height:46px!important;border-radius:15px!important;background:linear-gradient(145deg,#2bd774,#0b824d)!important;box-shadow:0 12px 30px rgba(29,190,101,.28),inset 0 1px 0 rgba(255,255,255,.18)!important;border:1px solid rgba(255,255,255,.08)!important}
+.nav .btn,.km24Topbar .btn,.km24LangPicker,.accountNav{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018))!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:15px!important;color:#edf7f1!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.035)!important}
+.sellNav,.km24Topbar .sellNav{background:linear-gradient(135deg,#1aaa60,#087646)!important;border-color:rgba(80,235,137,.24)!important;box-shadow:0 10px 28px rgba(13,134,80,.28)!important}
+
+/* BUTTONS + INPUTS */
+.btn{border-radius:15px!important;min-height:44px!important;border:1px solid rgba(255,255,255,.09)!important;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025))!important;color:#eef7f1!important;font-weight:850!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.035)!important;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease!important}
+.btn:active{transform:scale(.985)!important}
+.btn.primary,.primary{background:linear-gradient(135deg,#23ba69,#0b7f4b)!important;color:#fff!important;border-color:rgba(105,255,158,.20)!important;box-shadow:0 12px 28px rgba(13,132,79,.28)!important}
+input,textarea,select,.field{background:#0b120e!important;color:#f3f8f5!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:14px!important;outline:none!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important}
+input:focus,textarea:focus,select:focus,.field:focus{border-color:rgba(47,212,107,.55)!important;box-shadow:0 0 0 4px rgba(37,196,109,.09)!important}
+
+/* HOME HERO */
+.km24HomeHero{position:relative!important;overflow:hidden!important;padding:64px 0 50px!important;background:radial-gradient(circle at 82% 32%,rgba(50,219,112,.20),transparent 27%),radial-gradient(circle at 15% 100%,rgba(238,135,68,.12),transparent 36%),linear-gradient(135deg,#07140c 0,#050907 48%,#0b1b11 100%)!important;border-bottom:1px solid rgba(255,255,255,.07)!important}
+.km24HomeHero:before{content:"";position:absolute;inset:-20%;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.035) 49%,transparent 60%);transform:rotate(-4deg);pointer-events:none}
+.km24HomeHeroInner{gap:34px!important}
+.km24HeroEyebrow,.km24UltraHeroBadge{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:8px 11px!important;border-radius:999px!important;background:rgba(35,196,109,.08)!important;border:1px solid rgba(84,231,136,.18)!important;color:#99f0b7!important;font-weight:900!important;font-size:11px!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+.km24HomeHeroCopy h1{margin-top:14px!important;font-size:clamp(44px,6vw,72px)!important;line-height:.95!important;letter-spacing:-.062em!important;max-width:760px!important;text-wrap:balance!important}
+.km24HomeHeroCopy h1 span{background:linear-gradient(90deg,#7ff0a4,#2ed978 55%,#ffbc6b 110%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.km24HomeHeroCopy>p{font-size:17px!important;line-height:1.6!important;max-width:680px!important;color:#a4b5ab!important}
+.km24HeroFinder{margin-top:24px!important;padding:9px!important;border-radius:21px!important;background:rgba(255,255,255,.035)!important;border:1px solid rgba(255,255,255,.085)!important;box-shadow:0 16px 45px rgba(0,0,0,.24)!important}
+.km24HeroSearchLine{background:#0d1611!important;border:1px solid rgba(89,224,137,.14)!important;border-radius:16px!important;padding:5px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important}
+.km24HeroSearchLine input{border:0!important;background:transparent!important;box-shadow:none!important;min-height:50px!important;font-size:16px!important}
+.km24HeroSearchLine button{min-width:118px!important;border-radius:13px!important;background:linear-gradient(135deg,#25c46d,#0d8650)!important;color:white!important;font-weight:950!important;box-shadow:0 8px 22px rgba(14,133,79,.25)!important}
+.km24HeroShortcuts{display:flex!important;gap:7px!important;flex-wrap:wrap!important;margin-top:8px!important}
+.km24HeroShortcuts button{border:1px solid rgba(255,255,255,.075)!important;background:rgba(255,255,255,.025)!important;color:#b8c7be!important;border-radius:999px!important;padding:8px 12px!important;font-size:11px!important;font-weight:850!important}
+.km24HeroStatCard{border-radius:26px!important;padding:24px!important;border:1px solid rgba(94,224,140,.15)!important;background:linear-gradient(145deg,rgba(20,36,27,.92),rgba(8,15,11,.96))!important;box-shadow:0 28px 70px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.05)!important;position:relative!important;overflow:hidden!important}
+.km24HeroStatCard:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-60px;top:-70px;background:rgba(39,210,102,.11);filter:blur(2px);pointer-events:none}
+.km24HeroStatIcon{width:56px!important;height:56px!important;border-radius:18px!important;background:linear-gradient(145deg,rgba(38,210,103,.16),rgba(255,189,99,.08))!important;border:1px solid rgba(255,255,255,.07)!important}
+
+/* ULTRA STRIP */
+.km24UltraRibbon{max-width:1240px;margin:16px auto 2px;padding:0 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.km24UltraRibbonItem{display:flex;align-items:center;gap:10px;min-height:60px;padding:10px 13px;border-radius:17px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));border:1px solid rgba(255,255,255,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.km24UltraRibbonItem i{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:11px;background:rgba(35,196,109,.10);font-style:normal;font-size:17px}
+.km24UltraRibbonItem b{display:block;font-size:12px;color:#e9f3ed}.km24UltraRibbonItem small{display:block;margin-top:2px;color:#7f9287;font-size:10px}
+
+/* SECTIONS */
+.km24HomeSectionHead{margin-bottom:18px!important;align-items:end!important}
+.km24SectionKicker{color:#70e396!important;font-weight:950!important;letter-spacing:.11em!important;font-size:10px!important}
+.km24HomeSectionHead h2{font-size:clamp(25px,3vw,35px)!important;letter-spacing:-.045em!important;margin-top:5px!important}
+.km24HomeSectionHead p{color:#81948a!important}
+.section{padding-top:38px!important;padding-bottom:8px!important}
+
+/* TRUST + PROMO */
+.km24TrustShell,.giveawayMini,.km24FounderHome{color:var(--u-text)!important;border:1px solid rgba(255,255,255,.085)!important;background:linear-gradient(145deg,rgba(18,29,22,.96),rgba(8,13,10,.96))!important;box-shadow:var(--u-shadow-soft)!important}
+.km24TrustShell{border-radius:26px!important}.km24TrustItem{background:rgba(255,255,255,.025)!important;border-color:rgba(255,255,255,.07)!important}.km24TrustTitle,.km24TrustItem b{color:#f5faf7!important}.km24TrustLead,.km24TrustItem small,.km24TrustFree{color:#8da096!important}.km24TrustIcon{background:rgba(34,201,101,.10)!important}
+.giveawayMini,.km24FounderHome{border-radius:22px!important;overflow:hidden!important}.giveawayMini{background:radial-gradient(circle at 95% 0,rgba(255,188,93,.12),transparent 35%),linear-gradient(145deg,#16160f,#0d110d)!important}.km24FounderHome{background:radial-gradient(circle at 0 100%,rgba(36,196,109,.11),transparent 33%),linear-gradient(145deg,#0d1711,#0a100c)!important}
+
+/* CATEGORY CARDS */
+.km24CategorySection .cats{gap:11px!important}
+.km24CategorySection .cat{position:relative!important;overflow:hidden!important;min-height:112px!important;border-radius:21px!important;padding:16px!important;background:linear-gradient(145deg,rgba(18,29,22,.96),rgba(10,16,12,.98))!important;color:#f0f7f2!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:0 12px 34px rgba(0,0,0,.18)!important;transition:transform .18s ease,border-color .18s ease!important}
+.km24CategorySection .cat:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-34px;bottom:-42px;background:rgba(36,196,109,.075);pointer-events:none}
+.km24CategorySection .cat i{font-size:30px!important;margin-bottom:9px!important}.km24CategorySection .cat b,.km24CategorySection .cat strong{font-size:13px!important}.km24CategorySection .cat:hover{transform:translateY(-3px)!important;border-color:rgba(78,226,132,.25)!important}
+
+/* LISTING CARDS */
+.grid{gap:15px!important}
+.card{position:relative!important;overflow:hidden!important;border-radius:24px!important;background:linear-gradient(180deg,#0f1812,#0a100c)!important;color:#f4f9f6!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:0 16px 42px rgba(0,0,0,.24)!important;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease!important}
+.card:hover{transform:translateY(-4px)!important;border-color:rgba(69,221,124,.22)!important;box-shadow:0 24px 60px rgba(0,0,0,.31)!important}
+.card .pic,.pic{height:205px!important;background:#0b100d!important;position:relative!important;overflow:hidden!important}
+.card .pic:after,.pic:after{content:"";position:absolute;inset:auto 0 0;height:44%;background:linear-gradient(transparent,rgba(4,8,5,.52));pointer-events:none}
+.card .pic img,.pic img{transition:transform .28s ease!important}.card:hover .pic img{transform:scale(1.025)!important}
+.cb{padding:15px 16px 17px!important}.title{height:auto!important;min-height:42px!important;font-size:15px!important;line-height:1.35!important;color:#f4f8f5!important;font-weight:900!important;letter-spacing:-.02em!important}.price{font-size:24px!important;line-height:1.05!important;margin-top:9px!important;color:#4ee188!important;font-weight:950!important;letter-spacing:-.04em!important}.meta{font-size:11px!important;border-top:1px solid rgba(255,255,255,.055)!important;padding-top:10px!important;margin-top:12px!important}.badge{border-radius:999px!important;background:rgba(37,196,109,.10)!important;color:#9af0b7!important;border:1px solid rgba(84,227,137,.14)!important;padding:5px 8px!important;font-size:10px!important}.badge.auction,.auction{background:rgba(238,135,68,.12)!important;color:#ffc083!important;border-color:rgba(238,135,68,.18)!important}
+
+/* AUCTIONS / WANTED */
+.km24AuctionCard{border-radius:24px!important;background:linear-gradient(180deg,#111913,#0a0f0c)!important;border-color:rgba(255,255,255,.075)!important;box-shadow:0 16px 42px rgba(0,0,0,.24)!important}.km24AuctionPic{height:205px!important}.km24AuctionBody{padding:15px 16px 17px!important}.km24AuctionPrice{font-size:24px!important;color:#ffbd63!important}.km24AuctionTimer{background:rgba(7,10,8,.86)!important;border-color:rgba(255,189,99,.20)!important;color:#ffd394!important}
+.km24WantedSection .card{border-color:rgba(117,184,255,.12)!important}.km24WantedSection .badge{background:rgba(117,184,255,.10)!important;color:#a9d1ff!important;border-color:rgba(117,184,255,.17)!important}
+
+/* COMPACT NAV */
+.km24CompactNavGrid a{min-height:62px!important;border-radius:18px!important;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018))!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important}.km24CompactNavGrid a span{display:grid!important;place-items:center!important;width:34px!important;height:34px!important;border-radius:11px!important;background:rgba(35,196,109,.08)!important}
+
+/* SEARCH / FILTER */
+.km24HomeFilter,.marketSearchPanel,.filterbar{border-radius:21px!important;background:linear-gradient(180deg,rgba(17,26,20,.96),rgba(9,14,11,.98))!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:0 12px 32px rgba(0,0,0,.17)!important}
+.chip{background:rgba(255,255,255,.035)!important;color:#b7c6bd!important;border-color:rgba(255,255,255,.075)!important}.chip.on{background:rgba(35,196,109,.12)!important;color:#97efb5!important;border-color:rgba(35,196,109,.22)!important}
+
+/* DETAIL */
+.detailgrid{gap:20px!important}.gallery,.detail .panel,.detail .side .panel{border-radius:24px!important;background:linear-gradient(180deg,#101913,#0b110d)!important;color:var(--u-text)!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:var(--u-shadow-soft)!important}.gallery{overflow:hidden!important}.mainpic{background:#080d0a!important}.thumb{border-radius:11px!important;border:2px solid transparent!important}.detail h1{font-size:clamp(27px,4vw,38px)!important;letter-spacing:-.045em!important;line-height:1.08!important}.detailprice{font-size:36px!important;color:#50e289!important;letter-spacing:-.05em!important}.seller{font-size:18px!important}.spec{background:rgba(255,255,255,.035)!important;border:1px solid rgba(255,255,255,.06)!important;border-radius:14px!important}.auctionbox{background:linear-gradient(145deg,rgba(255,189,99,.09),rgba(255,255,255,.025))!important;border-color:rgba(255,189,99,.18)!important}
+
+/* PANELS / ACCOUNT / ADMIN / MESSAGES */
+.panel,.legal,.adminCard,.manageRow,.notificationCard,.msgList,.chatBox,.km24AccountHero,.km24AccountPoints,.km24AccountQuickGrid>a,.km24SecurityBar,.km24MyListingCard,.km24AccountAccordion>details{background:linear-gradient(180deg,rgba(16,25,19,.98),rgba(9,14,11,.98))!important;color:#f1f7f3!important;border:1px solid rgba(255,255,255,.075)!important;border-radius:21px!important;box-shadow:0 12px 34px rgba(0,0,0,.18)!important}.manageRow{padding:13px!important}.msgItem{background:transparent!important;color:#eaf3ed!important;border-color:rgba(255,255,255,.055)!important}.bubble{background:rgba(255,255,255,.06)!important;color:#edf5f0!important}.bubble.mine{background:linear-gradient(135deg,#168c54,#0c7044)!important}.adminCard h3,.panel h2,.panel h3{letter-spacing:-.025em!important}
+
+/* SELL WIZARD */
+body.km24SellWizardPage .formPage{background:radial-gradient(circle at 80% 0,rgba(35,196,109,.08),transparent 30%)!important}.km24SellWizardHead{border-radius:26px!important;padding:20px!important;margin-top:18px!important;background:linear-gradient(145deg,rgba(20,34,25,.98),rgba(8,14,10,.99))!important;border:1px solid rgba(83,227,135,.14)!important;box-shadow:0 20px 55px rgba(0,0,0,.27)!important}.km24SellWizardMeta strong{font-size:16px!important}.km24SellWizardTrack{height:9px!important;background:#17241b!important}.km24SellWizardFill{background:linear-gradient(90deg,#23c66d,#6ae998 62%,#ffb960)!important;box-shadow:0 0 24px rgba(43,212,111,.25)!important}.km24WizardStepIntro{padding:17px!important;border-radius:20px!important;background:linear-gradient(145deg,rgba(33,65,44,.22),rgba(255,255,255,.018))!important;border:1px solid rgba(84,229,138,.10)!important}.km24WizardStepNo{width:42px!important;height:42px!important;flex-basis:42px!important;background:linear-gradient(145deg,#2bd774,#0e8b53)!important;box-shadow:0 9px 24px rgba(18,151,84,.24)!important}.km24WizardStepIntro h2{font-size:24px!important;letter-spacing:-.035em!important}.km24SellStep>.panel,.km24SellStep>details{border-radius:22px!important;background:linear-gradient(180deg,#101a13,#0a100c)!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:0 14px 38px rgba(0,0,0,.19)!important}.photos,.photoAdd{border-radius:20px!important;border:2px dashed rgba(71,220,124,.28)!important;background:radial-gradient(circle at 50% 0,rgba(37,196,109,.08),transparent 48%),rgba(255,255,255,.018)!important}.km24SellWizardNav{background:rgba(7,11,8,.97)!important;border-color:rgba(74,222,127,.18)!important;box-shadow:0 -18px 48px rgba(0,0,0,.38)!important}
+
+/* MOBILE BOTTOM NAV */
+.km24BottomNav{background:linear-gradient(180deg,rgba(12,18,14,.985),rgba(5,8,6,.995))!important;border:1px solid rgba(255,255,255,.085)!important;box-shadow:0 18px 50px rgba(0,0,0,.48)!important;border-radius:24px!important}.km24BottomNav>a,.km24BottomNav>button{border-radius:16px!important}.km24BottomNav a.on,.km24BottomNav .on{background:rgba(34,195,104,.08)!important;color:#59e38d!important}.km24BottomSell{border-radius:22px!important;background:linear-gradient(145deg,#25c96f,#087846)!important;box-shadow:0 12px 34px rgba(17,153,85,.35)!important;border:1px solid rgba(127,255,171,.18)!important}
+
+/* FLOATING CONTROLS */
+#kmAiFab{width:54px!important;height:54px!important;right:16px!important;bottom:154px!important;box-shadow:0 12px 32px rgba(0,0,0,.32)!important}.km24ScrollTop{width:48px!important;height:48px!important;right:22px!important;bottom:92px!important;opacity:.78!important}
+
+/* DESKTOP POLISH */
+@media(min-width:901px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}.km24CategorySection .cats{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
+
+/* MOBILE */
+@media(max-width:700px){
+ body{padding-bottom:118px!important}
+ header .bar,.km24Topbar{min-height:68px!important}.logo,.km24LogoMark{width:42px!important;height:42px!important;border-radius:14px!important}.brand,.km24Brand{font-size:23px!important}
+ .km24HomeHero{padding:34px 0 27px!important}.km24HomeHeroInner{gap:16px!important}.km24HomeHeroCopy h1{font-size:44px!important;line-height:.96!important}.km24HomeHeroCopy>p{font-size:14px!important;line-height:1.5!important}.km24HeroFinder{margin-top:17px!important;padding:7px!important;border-radius:18px!important}.km24HeroSearchLine{display:grid!important;grid-template-columns:1fr auto!important}.km24HeroSearchIcon{display:none!important}.km24HeroSearchLine input{min-height:46px!important;padding-left:12px!important}.km24HeroSearchLine button{min-width:86px!important}.km24HeroStatCard{padding:16px!important;border-radius:20px!important}.km24HeroStatCard b{font-size:20px!important}
+ .km24UltraRibbon{grid-template-columns:1fr 1fr!important;gap:7px!important;margin-top:10px!important}.km24UltraRibbonItem{min-height:56px!important;padding:9px 10px!important;border-radius:15px!important}.km24UltraRibbonItem i{width:30px!important;height:30px!important;flex-basis:30px!important}.km24UltraRibbonItem b{font-size:11px!important}.km24UltraRibbonItem small{font-size:9px!important}
+ .section{padding-top:28px!important}.km24HomeSectionHead h2{font-size:26px!important}.km24HomeSectionHead p{font-size:11px!important}
+ .km24CategorySection .cats{grid-template-columns:1fr 1fr!important;gap:9px!important}.km24CategorySection .cat{min-height:100px!important;border-radius:18px!important;padding:13px!important}
+ .grid{grid-template-columns:1fr 1fr!important;gap:10px!important}.card{border-radius:20px!important}.card .pic,.pic{height:165px!important}.cb{padding:12px 12px 14px!important}.title{font-size:13px!important;min-height:38px!important}.price{font-size:21px!important}.meta{font-size:10px!important}.badge{font-size:9px!important}
+ .km24AuctionGrid{gap:10px!important}.km24AuctionCard{border-radius:20px!important}.km24AuctionPic{height:170px!important}.km24AuctionBody{padding:12px!important}
+ .km24CompactNavGrid{grid-template-columns:1fr 1fr!important}.km24CompactNavGrid a{min-height:58px!important}
+ .km24TrustShell{padding:15px!important;border-radius:21px!important}.km24TrustGrid{gap:7px!important}.km24TrustItem{border-radius:15px!important;padding:11px!important}
+ .detailgrid,.formgrid,.msgLayout{grid-template-columns:1fr!important}.mainpic{height:min(76vw,430px)!important}.detail h1{font-size:27px!important}.detailprice{font-size:32px!important}
+ .km24SellWizardHead{margin:10px 10px 12px!important;padding:15px!important;border-radius:21px!important}.km24WizardStepIntro{padding:13px!important}.km24WizardStepNo{width:38px!important;height:38px!important;flex-basis:38px!important}.km24WizardStepIntro h2{font-size:21px!important}
+ .km24BottomNav{left:9px!important;right:9px!important;bottom:9px!important;min-height:72px!important;padding:6px 5px!important;border-radius:22px!important}.km24BottomSell{transform:translateY(-12px)!important}.km24BottomNav b{font-size:10px!important}
+ #kmAiFab{width:49px!important;height:49px!important;right:13px!important;bottom:139px!important}.km24ScrollTop{right:18px!important;bottom:86px!important}
+}
+@media(max-width:390px){.km24HomeHeroCopy h1{font-size:39px!important}.grid{gap:8px!important}.card .pic,.pic{height:148px!important}.cb{padding:10px!important}.price{font-size:19px!important}.km24UltraRibbonItem small{display:none!important}}

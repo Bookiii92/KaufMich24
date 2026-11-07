@@ -1,0 +1,87 @@
+
+@media(max-width:700px){
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1),
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2){
+  padding:6px 0 2px!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1)>.wrap,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2)>.wrap{
+  width:calc(100% - 20px)!important;
+  padding:0!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalBox,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalBox{
+  padding:10px!important;
+  border-radius:14px!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalHead,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalHead{
+  margin-bottom:8px!important;
+  align-items:center!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24SectionKicker,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24SectionKicker{
+  display:none!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalHead h2,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalHead h2{
+  margin:0!important;
+  font-size:16px!important;
+  line-height:1.2!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalHead p,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalHead p{
+  display:none!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalHead .btn,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalHead .btn{
+  min-height:34px!important;
+  padding:6px 9px!important;
+  font-size:11px!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalGrid,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalGrid{
+  display:flex!important;
+  grid-template-columns:none!important;
+  gap:8px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  padding:0 0 2px!important;
+  scroll-snap-type:x proximity;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24PersonalGrid>.card,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24PersonalGrid>.card{
+  flex:0 0 158px!important;
+  min-width:158px!important;
+  max-width:158px!important;
+  scroll-snap-align:start;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24CardPic,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24CardPic{
+  height:105px!important;
+  min-height:105px!important;
+  aspect-ratio:auto!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24CardBody,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24CardBody{
+  padding:8px!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .title,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .title{
+  font-size:11px!important;
+  line-height:1.25!important;
+  max-height:28px!important;
+  overflow:hidden!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .price,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .price{
+  font-size:14px!important;
+  margin-top:6px!important;
+ }
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24CardSeller,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24CardSeller,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(1) .km24CardMeta,
+ #km24PersonalizedHome>.km24PersonalSection:nth-child(2) .km24CardMeta{
+  font-size:9px!important;
+ }
+}

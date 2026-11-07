@@ -1,0 +1,98 @@
+
+/* Final chat contrast isolation: chat stays readable inside light/dark/Samsung themes. */
+.km24ChatPane,
+.km24ChatHeader,
+.km24ChatMessages,
+.km24ChatPolicy,
+.km24ChatComposer{forced-color-adjust:none!important}
+
+.km24ChatHeaderInfo b{
+ color:#ffffff!important;
+ -webkit-text-fill-color:#ffffff!important;
+ opacity:1!important
+}
+.km24ChatHeaderInfo span{
+ color:#c7d2cb!important;
+ -webkit-text-fill-color:#c7d2cb!important;
+ opacity:1!important
+}
+
+#km24ChatPolicy.km24ChatPolicy,
+#km24ChatPolicy.km24ChatPolicy.unlocked{
+ background:#123b2a!important;
+ border-color:#31835f!important;
+ color:#f4fff8!important;
+ -webkit-text-fill-color:#f4fff8!important;
+ box-shadow:inset 0 0 0 1px rgba(88,220,151,.08)!important
+}
+#km24ChatPolicy h4{
+ color:#9df4bf!important;
+ -webkit-text-fill-color:#9df4bf!important;
+ font-weight:900!important;
+ opacity:1!important
+}
+#km24ChatPolicy p,
+#km24ChatPolicy p *{
+ color:#f1f8f4!important;
+ -webkit-text-fill-color:#f1f8f4!important;
+ opacity:1!important
+}
+#km24ChatPolicy p strong{
+ color:#ffffff!important;
+ -webkit-text-fill-color:#ffffff!important;
+ font-weight:950!important
+}
+
+.km24BubbleText{
+ color:#ffffff!important;
+ -webkit-text-fill-color:#ffffff!important;
+ opacity:1!important
+}
+.km24MessageRow.theirs .km24BubbleText{
+ color:#f4f7f5!important;
+ -webkit-text-fill-color:#f4f7f5!important
+}
+.km24BubbleTime{
+ color:rgba(239,248,242,.78)!important;
+ -webkit-text-fill-color:rgba(239,248,242,.78)!important;
+ opacity:1!important
+}
+.km24BubbleTime span{
+ color:#b8ffca!important;
+ -webkit-text-fill-color:#b8ffca!important
+}
+
+html[data-km24-theme="light"] .km24ChatComposer textarea,
+html.km24SamsungLight .km24ChatComposer textarea{
+ background:#ffffff!important;
+ color:#18211c!important;
+ -webkit-text-fill-color:#18211c!important;
+ border-color:#cbd5cf!important;
+ caret-color:#18211c!important
+}
+html[data-km24-theme="light"] .km24ChatComposer textarea::placeholder,
+html.km24SamsungLight .km24ChatComposer textarea::placeholder{
+ color:#5f6b64!important;
+ -webkit-text-fill-color:#5f6b64!important;
+ opacity:1!important
+}
+html[data-km24-theme="dark"] .km24ChatComposer textarea{
+ background:#171e1a!important;
+ color:#f4fff8!important;
+ -webkit-text-fill-color:#f4fff8!important
+}
+html[data-km24-theme="dark"] .km24ChatComposer textarea::placeholder{
+ color:#aebbb3!important;
+ -webkit-text-fill-color:#aebbb3!important;
+ opacity:1!important
+}
+
+html.km24SamsungLight #km24ChatPolicy,
+html.km24SamsungLight #km24ChatPolicy *,
+html.km24SamsungLight .km24ChatHeaderInfo b,
+html.km24SamsungLight .km24ChatHeaderInfo span,
+html.km24SamsungLight .km24BubbleText,
+html.km24SamsungLight .km24BubbleTime,
+html.km24SamsungLight .km24BubbleTime span{
+ opacity:1!important
+}

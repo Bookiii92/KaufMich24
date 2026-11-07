@@ -1,0 +1,23 @@
+
+/* Auction header: strong contrast for "Auktion" and the number of bids. */
+html body #app .detail .auctionbox .badge.auction,
+html body #app .detail .auctionbox [class*="auctionBadge"],
+html body #app .detail .auctionbox [class*="AuctionBadge"],
+html body #app .detail .auctionbox [class*="auctionTag"],
+html body #app .detail .auctionbox [class*="AuctionTag"] {
+  color:#783600!important;
+  -webkit-text-fill-color:#783600!important;
+  opacity:1!important;
+  filter:none!important;
+  text-shadow:none!important;
+  font-weight:850!important;
+}
+html body #app .detail .auctionbox > :first-child:is(div,header) > :is(span,small,b,strong,em):first-child,
+html body #app .detail .auctionbox > :first-child:is(div,header) > :is(span,small,b,strong,em):last-child {
+  color:#344054!important;
+  -webkit-text-fill-color:#344054!important;
+  opacity:1!important;
+  filter:none!important;
+  text-shadow:none!important;
+  font-weight:800!important;
+}

@@ -1,0 +1,93 @@
+
+/* Scoped category page palette. Do not force a light panel in dark mode. */
+html[data-km24-theme="dark"] body.km24CategoryLightRoute,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute #app,
+html[data-km24-theme="dark"] body.km24CategoryRoute,
+html[data-km24-theme="dark"] body.km24CategoryRoute #app{
+  background:#0d1521!important;color:#edf5fb!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .section,
+html[data-km24-theme="dark"] body.km24CategoryRoute .section{
+  background:transparent!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro{
+  background:#192536!important;background-image:none!important;
+  color:#edf5fb!important;border:1px solid #334457!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22)!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h1 *,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h2,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h3{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;
+  background-image:none!important;text-shadow:none!important;
+  opacity:1!important;filter:none!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro p{
+  color:#b9c9d5!important;-webkit-text-fill-color:#b9c9d5!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedHint{
+  background:#193d43!important;color:#90ebd1!important;
+  -webkit-text-fill-color:#90ebd1!important;border-color:#2c6d6d!important;
+}
+html[data-km24-theme="dark"] .km24CategoryServiceNote{
+  background:#253347!important;color:#deebf6!important;
+  -webkit-text-fill-color:#deebf6!important;border-color:#42566c!important;
+}
+html[data-km24-theme="dark"] .km24CategoryServiceNote b,
+html[data-km24-theme="dark"] .km24CategoryServiceNote span{
+  color:#deebf6!important;-webkit-text-fill-color:#deebf6!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro .km24CategoryActions .btn.primary{
+  background:#136cdb!important;background-image:linear-gradient(110deg,#157bea,#145ccb)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#368cff!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary){
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .wrap>a.btn,
+html[data-km24-theme="dark"] body.km24CategoryRoute .wrap>a.btn{
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h1,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h2,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h3,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h1,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h2,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h3{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .mut,
+html[data-km24-theme="dark"] body.km24CategoryRoute .mut,
+html[data-km24-theme="dark"] .km24CategoryLegend{
+  color:#a8b9c8!important;-webkit-text-fill-color:#a8b9c8!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat,
+html[data-km24-theme="dark"] body.km24CategoryRoute .cat{
+  background:#172436!important;background-image:none!important;
+  color:#eaf3fa!important;border:1px solid #304257!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat b,
+html[data-km24-theme="dark"] body.km24CategoryRoute .cat b{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .empty,
+html[data-km24-theme="dark"] body.km24CategoryRoute .empty{
+  background:#172436!important;color:#b9c9d5!important;border-color:#304257!important;
+}
+html[data-km24-theme="dark"] .km24CategoryTab{
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] .km24CategoryTab.on{
+  background:#136cdb!important;color:#fff!important;
+  -webkit-text-fill-color:#fff!important;border-color:#368cff!important;
+}
+/* Prevent light text gradients from washing out the category heading. */
+html[data-km24-theme="light"] .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="light"] .km24UnifiedCategoryIntro h1 *{
+  color:#17352b!important;-webkit-text-fill-color:#17352b!important;
+  background-image:none!important;opacity:1!important;
+}

@@ -1,0 +1,173 @@
+
+html[data-km24-theme="light"],
+html[data-km24-theme="light"] body,
+html[data-km24-theme="light"] #app,
+html[data-km24-theme="light"] main{
+  background:#f5f6f8!important;
+  color:#1f2937!important;
+}
+html[data-km24-theme="light"] body,
+html[data-km24-theme="light"] .section,
+html[data-km24-theme="light"] body.km24AutumnActualV3 .section,
+html[data-km24-theme="light"] body.km24HomeCalmV1 .section,
+html[data-km24-theme="light"] #km24CurrentActualV3{
+  background:#f5f6f8!important;
+  background-image:none!important;
+}
+html[data-km24-theme="light"] header,
+html[data-km24-theme="light"] body.km24AutumnActualV3 header{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-bottom:1px solid #e5e7eb!important;
+  box-shadow:0 2px 12px rgba(15,23,42,.05)!important;
+}
+html[data-km24-theme="light"] .km24BrandText,
+html[data-km24-theme="light"] header b,
+html[data-km24-theme="light"] header strong{color:#1f2937!important}
+html[data-km24-theme="light"] .km24LangPicker,
+html[data-km24-theme="light"] .km24ThemeBtn,
+html[data-km24-theme="light"] header .btn:not(.primary),
+html[data-km24-theme="light"] #meBtn{
+  background:#f8fafc!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  border-color:#e5e7eb!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24LangPicker select{
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+}
+html[data-km24-theme="light"] .hero,
+html[data-km24-theme="light"] .hero.km24WowHero,
+html[data-km24-theme="light"] body.km24AutumnActualV3 .hero.km24WowHero,
+html[data-km24-theme="light"] body.km24HomeCalmV1 .hero.km24WowHero{
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  border-bottom:1px solid #e5e7eb!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] .hero:before,
+html[data-km24-theme="light"] .hero:after,
+html[data-km24-theme="light"] .season-decor,
+html[data-km24-theme="light"] .season-ribbon,
+html[data-km24-theme="light"] #km24HalloweenBoostV2,
+html[data-km24-theme="light"] #km24AutumnMotion,
+html[data-km24-theme="light"] .km24AutumnFX,
+html[data-km24-theme="light"] .km24AmbientLeaf,
+html[data-km24-theme="light"] .km24Leaf,
+html[data-km24-theme="light"] .km24HalloweenCorner,
+html[data-km24-theme="light"] .km24AutumnDecor{display:none!important}
+html[data-km24-theme="light"] h1,
+html[data-km24-theme="light"] h2,
+html[data-km24-theme="light"] h3,
+html[data-km24-theme="light"] h4,
+html[data-km24-theme="light"] b,
+html[data-km24-theme="light"] strong,
+html[data-km24-theme="light"] .title,
+html[data-km24-theme="light"] .price{color:#1f2937!important;text-shadow:none!important}
+html[data-km24-theme="light"] .mut,
+html[data-km24-theme="light"] .meta,
+html[data-km24-theme="light"] small{color:#6b7280!important}
+html[data-km24-theme="light"] .card,
+html[data-km24-theme="light"] .cat,
+html[data-km24-theme="light"] .panel,
+html[data-km24-theme="light"] .adminCard,
+html[data-km24-theme="light"] .legal,
+html[data-km24-theme="light"] .manageRow,
+html[data-km24-theme="light"] .notificationCard,
+html[data-km24-theme="light"] .msgList,
+html[data-km24-theme="light"] .chatBox,
+html[data-km24-theme="light"] .km24AccountHero,
+html[data-km24-theme="light"] .km24AccountPoints,
+html[data-km24-theme="light"] .km24AccountQuickGrid>a,
+html[data-km24-theme="light"] .km24SecurityBar,
+html[data-km24-theme="light"] .km24MyListingCard,
+html[data-km24-theme="light"] .km24AccountAccordion>details,
+html[data-km24-theme="light"] body.km24AutumnActualV3 .card,
+html[data-km24-theme="light"] body.km24AutumnActualV3 .cat,
+html[data-km24-theme="light"] body.km24AutumnActualV3 .panel{
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  border-color:#e5e7eb!important;
+  box-shadow:0 4px 16px rgba(15,23,42,.045)!important;
+}
+html[data-km24-theme="light"] #km24CurrentActualV3 .km24CurrentActualShell{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-color:#e5e7eb!important;
+  box-shadow:0 4px 18px rgba(15,23,42,.05)!important;
+}
+html[data-km24-theme="light"] #km24CurrentActualV3 .km24CurrentActualTile{
+  background:#f8fafc!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  border-color:#e5e7eb!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] #km24CurrentActualV3 .km24CurrentActualIcon{
+  background:#f3f4f6!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] input,
+html[data-km24-theme="light"] select,
+html[data-km24-theme="light"] textarea,
+html[data-km24-theme="light"] .field,
+html[data-km24-theme="light"] .marketSearchPanel,
+html[data-km24-theme="light"] .marketFilterToggle{
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+  border-color:#d1d5db!important;
+}
+html[data-km24-theme="light"] .btn:not(.primary){
+  background:#ffffff!important;
+  background-image:none!important;
+  color:#1f2937!important;
+  border-color:#d1d5db!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] .btn.primary,
+html[data-km24-theme="light"] .search button,
+html[data-km24-theme="light"] .km24BottomSell>span{
+  background:#b4232a!important;
+  background-image:none!important;
+  color:#ffffff!important;
+  border-color:#b4232a!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="light"] .km24Footer{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-top:1px solid #e5e7eb!important;
+  color:#1f2937!important;
+}
+html[data-km24-theme="light"] .km24BottomNav{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-color:#e5e7eb!important;
+  box-shadow:0 8px 24px rgba(15,23,42,.12)!important;
+}
+html[data-km24-theme="light"] .km24BottomNav a,
+html[data-km24-theme="light"] .km24BottomNav button{color:#6b7280!important}
+html[data-km24-theme="light"] .km24BottomNav .active,
+html[data-km24-theme="light"] .km24BottomNav [aria-current="true"],
+html[data-km24-theme="light"] .km24BottomSell>b{color:#b4232a!important}
+html[data-km24-theme="light"] #km24CookieJoeGuide .km24JoeGuideBubble,
+html[data-km24-theme="light"] #km24CookieJoeGuide.km24JoeCollapsed .km24JoeGuideMascot{
+  background:#ffffff!important;
+  background-image:none!important;
+  border-color:#e5e7eb!important;
+  box-shadow:0 6px 18px rgba(15,23,42,.08)!important;
+}
+html[data-km24-theme="light"] #km24CookieJoeGuide .km24JoeGuideTitle{color:#1f2937!important}
+html[data-km24-theme="light"] #km24CookieJoeGuide .km24JoeGuideText{color:#6b7280!important}
+@media(max-width:700px){
+  html[data-km24-theme="light"] .km24Topbar .accountNav,
+  html[data-km24-theme="light"] .km24Topbar .sellNav,
+  html[data-km24-theme="dark"] .km24Topbar .accountNav,
+  html[data-km24-theme="dark"] .km24Topbar .sellNav{display:none!important}
+}

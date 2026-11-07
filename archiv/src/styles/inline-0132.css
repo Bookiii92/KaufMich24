@@ -1,0 +1,74 @@
+
+/* KaufMich24: compact homepage accordions for "Für dich" + "Zuletzt angesehen" */
+#kmForYouSection.km24CompactPersonalItem,
+#kmRecentSection.km24CompactPersonalItem{
+  padding:0!important;
+  margin:8px 0!important;
+  min-height:0!important;
+}
+#kmForYouSection.km24CompactPersonalItem>.wrap,
+#kmRecentSection.km24CompactPersonalItem>.wrap{
+  width:100%!important;
+  max-width:none!important;
+  padding:0!important;
+  margin:0!important;
+}
+.km24CompactToggle{
+  width:100%;
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 14px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  background:rgba(12,20,15,.78);
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+.km24CompactToggleLeft{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.2;
+}
+.km24CompactToggleIcon{
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  flex:0 0 30px;
+  border-radius:9px;
+  background:rgba(42,170,103,.12);
+}
+.km24CompactToggleArrow{
+  flex:0 0 auto;
+  font-size:20px;
+  opacity:.72;
+  transition:transform .18s ease;
+}
+.km24CompactPersonalItem.km24CompactOpen .km24CompactToggleArrow{
+  transform:rotate(90deg);
+}
+.km24CompactBody{display:none}
+.km24CompactPersonalItem.km24CompactOpen .km24CompactBody{display:block}
+.km24CompactPersonalItem.km24CompactOpen .km24CompactToggle{margin-bottom:12px}
+@media(max-width:700px){
+  #kmForYouSection.km24CompactPersonalItem,
+  #kmRecentSection.km24CompactPersonalItem{margin:6px 0!important}
+  .km24CompactToggle{
+    min-height:48px;
+    padding:8px 12px;
+    border-radius:13px;
+  }
+  .km24CompactToggleLeft{font-size:14px}
+  .km24CompactToggleIcon{width:28px;height:28px;flex-basis:28px}
+}

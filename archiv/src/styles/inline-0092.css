@@ -1,0 +1,28 @@
+
+.km24ListingCard.km24TopActive{border-color:rgba(242,196,77,.55)!important;box-shadow:0 14px 36px rgba(207,155,34,.12)!important}
+.km24ListingCard.km24HomeActive{box-shadow:0 0 0 1px rgba(52,210,101,.16),0 14px 38px rgba(28,150,70,.11)!important}
+.km24PromoFlagStack{position:absolute;right:9px;bottom:9px;z-index:5;display:flex;flex-direction:column;align-items:flex-end;gap:5px;pointer-events:none}
+.km24PromoFlag{display:inline-flex;align-items:center;min-height:25px;padding:0 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:9px;font-weight:950;letter-spacing:.045em;box-shadow:0 5px 14px rgba(0,0,0,.24)}
+.km24PromoFlag.top{background:linear-gradient(135deg,rgba(119,82,10,.94),rgba(177,124,19,.94));color:#fff1b8;border-color:rgba(255,218,107,.42)}
+.km24PromoFlag.home{background:linear-gradient(135deg,rgba(12,99,53,.95),rgba(18,139,72,.95));color:#d8ffe6;border-color:rgba(94,236,145,.34)}
+.km24HomeBoostSection{padding-top:27px!important;padding-bottom:8px!important}
+.km24HomeBoostBox{padding:17px;border-radius:22px;border:1px solid rgba(240,178,76,.19);background:radial-gradient(circle at 95% 5%,rgba(224,134,46,.12),transparent 28%),linear-gradient(145deg,rgba(35,29,22,.92),rgba(13,20,15,.95));box-shadow:0 16px 42px rgba(0,0,0,.16)}
+.km24HomeBoostHead{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:14px}
+.km24HomeBoostHead h2{margin:3px 0 2px;font-size:clamp(24px,3vw,32px)}
+.km24HomeBoostHead p{margin:0;color:#8f9a93;font-size:12px}
+.km24HomeBoostKicker{font-size:10px;font-weight:950;letter-spacing:.12em;color:#efb762}
+.km24PromoDetailBadges{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 10px}
+.km24PromoDetailBadge{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:900;border:1px solid rgba(255,255,255,.12)}
+.km24PromoDetailBadge.top{background:rgba(143,98,18,.20);color:#f4d67d;border-color:rgba(231,191,71,.28)}
+.km24PromoDetailBadge.home{background:rgba(24,132,67,.16);color:#94ebb0;border-color:rgba(66,210,109,.24)}
+.km24PromoOwnerStatus{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.km24PromoOwnerChip{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;border-radius:999px;font-size:9px;font-weight:900;border:1px solid rgba(255,255,255,.08)}
+.km24PromoOwnerChip.top{background:rgba(148,103,21,.16);color:#e9cb71;border-color:rgba(226,181,57,.22)}
+.km24PromoOwnerChip.home{background:rgba(27,131,66,.14);color:#86e9a3;border-color:rgba(62,206,104,.20)}
+.km24PromoBtn:disabled{opacity:.72!important;cursor:default!important}
+@media(max-width:700px){
+ .km24HomeBoostBox{padding:13px;border-radius:18px}
+ .km24HomeBoostHead{align-items:flex-start}
+ .km24PromoFlagStack{right:7px;bottom:7px}
+ .km24PromoFlag{font-size:8px;min-height:23px;padding:0 7px}
+}

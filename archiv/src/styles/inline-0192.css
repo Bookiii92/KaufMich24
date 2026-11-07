@@ -1,0 +1,45 @@
+
+/* Founder page: keep the intentionally dark cards high-contrast in light mode too. */
+.km24FounderPage .km24FounderHero,
+.km24FounderPage .km24FounderCounter,
+.km24FounderPage .km24FounderStatus,
+.km24FounderPage .km24FounderSteps article,
+.km24FounderPage .km24FounderBenefits>div,
+.km24FounderPage .km24FounderRules,
+.km24FounderPage .km24FounderFinal{color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important}
+.km24FounderPage .km24FounderHero h1,
+.km24FounderPage .km24FounderHero h2,
+.km24FounderPage .km24FounderHero h3,
+.km24FounderPage .km24FounderSteps b,
+.km24FounderPage .km24FounderBenefits b,
+.km24FounderPage .km24FounderRules h2,
+.km24FounderPage .km24FounderFinal h2{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;text-shadow:none!important}
+.km24FounderPage .km24FounderHero h1 span,
+.km24FounderPage .km24FounderEyebrow,
+.km24FounderPage .km24FounderFinal>div>span{color:#ffad5a!important;-webkit-text-fill-color:#ffad5a!important}
+.km24FounderPage .km24FounderHero p,
+.km24FounderPage .km24FounderHero p b,
+.km24FounderPage .km24FounderCounter span,
+.km24FounderPage .km24FounderStatus span,
+.km24FounderPage .km24FounderSteps p,
+.km24FounderPage .km24FounderBenefits p,
+.km24FounderPage .km24FounderRules p,
+.km24FounderPage .km24FounderFinal p{color:#e5e7eb!important;-webkit-text-fill-color:#e5e7eb!important;opacity:1!important}
+.km24FounderPage .km24FounderCounter small{color:#d8dee3!important;-webkit-text-fill-color:#d8dee3!important;opacity:1!important}
+.km24FounderPage .km24FounderCounter b{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;opacity:1!important}
+.km24FounderPage .km24FounderCounter>div{background:#415149!important}
+
+@media(max-width:700px){
+  /* Language picker: show an explicit DE/FR/IT/EN label; the native select stays fully tappable. */
+  .km24LangPicker{position:relative!important;width:66px!important;min-width:66px!important;max-width:66px!important;height:40px!important;min-height:40px!important;padding:0!important;display:grid!important;place-items:center!important;overflow:visible!important;background:#ffffff!important;border:1px solid #d1d5db!important;border-radius:12px!important;color:#111827!important;box-shadow:0 2px 8px rgba(15,23,42,.08)!important}
+  .km24LangPicker>span{display:block!important;color:#111827!important;-webkit-text-fill-color:#111827!important;font-size:12px!important;font-weight:900!important;line-height:1!important;letter-spacing:.03em!important;pointer-events:none!important}
+  .km24LangPicker:after{content:"⌄"!important;display:block!important;position:absolute!important;right:8px!important;top:50%!important;transform:translateY(-55%)!important;color:#6b7280!important;font-size:11px!important;font-weight:900!important;line-height:1!important;pointer-events:none!important}
+  .km24LangPicker select{position:absolute!important;inset:0!important;width:100%!important;min-width:100%!important;height:100%!important;min-height:100%!important;margin:0!important;padding:0!important;opacity:0!important;z-index:3!important;display:block!important;appearance:auto!important;-webkit-appearance:menulist!important;cursor:pointer!important;pointer-events:auto!important}
+
+  /* Keep the raised + button, but leave the label in its own clear row. */
+  .km24BottomNav{min-height:76px!important;padding-top:7px!important;padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;align-items:end!important}
+  .km24BottomNav>a,.km24BottomNav>button{min-height:54px!important;overflow:visible!important}
+  .km24BottomSell{transform:none!important;-webkit-transform:none!important;min-height:64px!important;justify-content:flex-end!important;padding-bottom:2px!important}
+  .km24BottomSell>span{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;flex:0 0 48px!important;transform:translateY(-9px)!important;-webkit-transform:translateY(-9px)!important;margin-bottom:-5px!important;line-height:1!important;position:relative!important;z-index:2!important}
+  .km24BottomSell>b{display:block!important;position:relative!important;z-index:3!important;margin-top:4px!important;line-height:1.15!important;white-space:nowrap!important;opacity:1!important}
+}

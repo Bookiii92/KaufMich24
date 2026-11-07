@@ -1,0 +1,147 @@
+
+/* 2026-10-01: readability + responsive category fixes */
+html,body{max-width:100%;overflow-x:hidden!important}
+.wrap{width:100%!important;min-width:0!important}
+
+/* Language picker: explicit light control, independent of the site's dark variables */
+.km24LangPicker{
+  background:#fff!important;
+  border-color:#cfd8d3!important;
+  color:#17352b!important;
+  box-shadow:0 4px 14px rgba(23,53,43,.10)!important;
+}
+.km24LangPicker select{
+  background:#fff!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  color-scheme:light!important;
+  opacity:1!important;
+}
+.km24LangPicker select option{
+  background:#fff!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+}
+
+/* Services are integrated into categories; don't show a separate desktop/home entry */
+#km24ServicesTopLink,.km24ServicesTopLink,#km24SvcHome{display:none!important}
+
+/* Category pages: light, legible and contained */
+body.km24CategoryLightRoute,
+body.km24CategoryLightRoute #app{
+  background:#f6f7f5!important;
+  color:#17352b!important;
+}
+body.km24CategoryLightRoute .section{background:transparent!important}
+body.km24CategoryLightRoute .head h1,
+body.km24CategoryLightRoute .head h2,
+body.km24CategoryLightRoute .head h3{color:#17352b!important}
+body.km24CategoryLightRoute .mut{color:#66756d!important}
+
+.km24UnifiedCategoryIntro{
+  background:#fff!important;
+  color:#17352b!important;
+  border-color:#d8e0db!important;
+  box-shadow:0 8px 24px rgba(17,52,40,.07)!important;
+}
+.km24UnifiedCategoryIntro h1,
+.km24UnifiedCategoryIntro h2,
+.km24UnifiedCategoryIntro h3,
+.km24UnifiedCategoryIntro b,
+.km24UnifiedCategoryIntro strong{
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+}
+.km24UnifiedCategoryIntro p{color:#5f6f67!important}
+.km24UnifiedHint{
+  background:#e9f5ef!important;
+  color:#0d6646!important;
+  border-color:#c6dfd2!important;
+}
+.km24CategoryServiceNote{
+  background:#fff7eb!important;
+  color:#654b34!important;
+  border-color:#e7cda9!important;
+}
+.km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary){
+  background:#f7f4ef!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  border-color:#d5ddd8!important;
+}
+.km24UnifiedCategoryIntro .km24CategoryActions .btn.primary{
+  background:#138a5b!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+/* Filter pills were white-on-white because --ink is light in the dark theme */
+.km24CategoryTabs{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:8px!important;
+  overflow:visible!important;
+  max-width:100%!important;
+}
+.km24CategoryTab{
+  background:#fff!important;
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+  border-color:#cfd8d3!important;
+  opacity:1!important;
+}
+.km24CategoryTab:hover{background:#eef6f2!important;border-color:#9dcbb8!important}
+.km24CategoryTab.on{
+  background:#138a5b!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border-color:#138a5b!important;
+}
+.km24CategoryLegend{color:#66756d!important}
+
+/* Subcategories: never let long labels force the page wider than the viewport */
+body.km24CategoryLightRoute .cats,
+body.km24CategoryLightRoute #subcats{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  grid-template-columns:repeat(auto-fit,minmax(145px,1fr))!important;
+  gap:10px!important;
+}
+body.km24CategoryLightRoute .cat{
+  min-width:0!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  background:#fff!important;
+  color:#17352b!important;
+  border-color:#d8e0db!important;
+  box-shadow:0 4px 14px rgba(17,52,40,.05)!important;
+}
+body.km24CategoryLightRoute .cat b{
+  color:#17352b!important;
+  -webkit-text-fill-color:#17352b!important;
+}
+body.km24CategoryLightRoute .empty{
+  background:#fff!important;
+  color:#66756d!important;
+  border-color:#cfd8d3!important;
+}
+
+@media(max-width:760px){
+  .km24UnifiedCategoryIntro{padding:15px!important}
+  .km24UnifiedCategoryIntro h1{font-size:26px!important}
+  .km24CategoryActions{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .km24CategoryActions .btn{width:100%!important;min-width:0!important}
+  body.km24CategoryLightRoute .cats,
+  body.km24CategoryLightRoute #subcats{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:390px){
+  body.km24CategoryLightRoute .cats,
+  body.km24CategoryLightRoute #subcats{
+    grid-template-columns:1fr 1fr!important;
+  }
+}

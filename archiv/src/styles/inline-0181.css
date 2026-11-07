@@ -1,0 +1,151 @@
+
+/* Professional light/dark theme. Light is the default for new visitors. */
+html[data-km24-theme="light"]{color-scheme:light!important;--km-bg:#f5f6f8;--km-surface:#ffffff;--km-surface2:#f9fafb;--km-text:#1f2937;--km-muted:#6b7280;--km-line:#e5e7eb;--km-accent:#c62828;--km-accent2:#a61f1f;--km-shadow:0 8px 28px rgba(15,23,42,.07)}
+html[data-km24-theme="dark"]{color-scheme:dark!important;--km-bg:#111315;--km-surface:#191c1f;--km-surface2:#202428;--km-text:#f3f4f6;--km-muted:#9ca3af;--km-line:#30353a;--km-accent:#e34a4a;--km-accent2:#c73535;--km-shadow:0 12px 32px rgba(0,0,0,.24)}
+
+html[data-km24-theme] body,
+html[data-km24-theme] #app,
+html[data-km24-theme] main{background:var(--km-bg)!important;color:var(--km-text)!important}
+html[data-km24-theme] body{transition:background-color .18s ease,color .18s ease}
+html[data-km24-theme] h1,html[data-km24-theme] h2,html[data-km24-theme] h3,
+html[data-km24-theme] h4,html[data-km24-theme] b,html[data-km24-theme] strong{color:var(--km-text)!important}
+html[data-km24-theme] .mut,html[data-km24-theme] small,html[data-km24-theme] .meta{color:var(--km-muted)!important}
+
+/* Remove seasonal/promotional visual noise in both themes. */
+html[data-km24-theme] #km24HalloweenBoostV2,
+html[data-km24-theme] #km24AutumnMotion,
+html[data-km24-theme] .km24AutumnFX,
+html[data-km24-theme] .km24AmbientLeaf,
+html[data-km24-theme] .km24Leaf,
+html[data-km24-theme] .season-decor,
+html[data-km24-theme] .season-ribbon,
+html[data-km24-theme] .km24HalloweenCorner,
+html[data-km24-theme] .km24AutumnDecor{display:none!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero:before,
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero:after{display:none!important;content:none!important}
+
+/* Header */
+html[data-km24-theme] header{background:color-mix(in srgb,var(--km-surface) 96%,transparent)!important;border-bottom:1px solid var(--km-line)!important;box-shadow:0 3px 16px rgba(15,23,42,.04)!important}
+html[data-km24-theme] .km24Topbar{background:transparent!important}
+html[data-km24-theme] .km24BrandText{color:var(--km-text)!important}
+html[data-km24-theme] .km24BrandText small{color:var(--km-muted)!important}
+html[data-km24-theme] .km24LogoMark{background:#0B2A7A url('/icon.svg?v=blue-center-20261027') center/cover no-repeat!important;color:transparent!important;-webkit-text-fill-color:transparent!important;border-color:rgba(14,91,255,.28)!important;box-shadow:none!important}html[data-km24-theme] .km24LogoMark>span{display:none!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html[data-km24-theme] .km24LangPicker,
+html[data-km24-theme] .km24ThemeBtn,
+html[data-km24-theme] header .btn{background:var(--km-surface2)!important;border:1px solid var(--km-line)!important;color:var(--km-text)!important;box-shadow:none!important}
+html[data-km24-theme] .km24LangPicker select{color:var(--km-text)!important;-webkit-text-fill-color:var(--km-text)!important;background:transparent!important}
+html[data-km24-theme] header .sellNav{background:var(--km-accent)!important;border-color:var(--km-accent)!important;color:#fff!important}
+
+/* Theme chooser */
+.km24ThemeWrap{position:relative;display:flex;align-items:center;flex:0 0 auto}
+.km24ThemeBtn{width:44px!important;height:44px!important;min-width:44px!important;padding:0!important;border-radius:13px!important;display:grid!important;place-items:center!important;font-size:18px!important;cursor:pointer}
+.km24ThemeMenu{position:absolute;z-index:12050;right:0;top:calc(100% + 8px);width:164px;padding:6px;border:1px solid var(--km-line);border-radius:14px;background:var(--km-surface);box-shadow:var(--km-shadow)}
+.km24ThemeMenu[hidden]{display:none!important}
+.km24ThemeMenu button{width:100%;min-height:42px;padding:8px 10px;border:0;border-radius:10px;background:transparent;color:var(--km-text);display:grid;grid-template-columns:26px 1fr;gap:7px;align-items:center;text-align:left;font:inherit;cursor:pointer}
+.km24ThemeMenu button:hover,.km24ThemeMenu button.active{background:var(--km-surface2)}
+.km24ThemeMenu button.active b{color:var(--km-accent)!important}
+
+/* Home hero */
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero,
+html[data-km24-theme] .hero.km24WowHero{background:var(--km-surface)!important;border-bottom:1px solid var(--km-line)!important;box-shadow:none!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .km24HeroEyebrow,
+html[data-km24-theme] .km24HeroEyebrow{color:var(--km-muted)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero h1,
+html[data-km24-theme] .hero.km24WowHero h1{color:var(--km-text)!important;text-shadow:none!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero h1 span,
+html[data-km24-theme] .hero.km24WowHero h1 span{color:var(--km-accent)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .km24HeroText,
+html[data-km24-theme] .hero.km24WowHero .km24HeroText{color:var(--km-muted)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .search,
+html[data-km24-theme] .hero.km24WowHero .search{background:var(--km-surface)!important;border:1px solid var(--km-line)!important;box-shadow:0 6px 22px rgba(15,23,42,.06)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .search input,
+html[data-km24-theme] .hero.km24WowHero .search input{background:var(--km-surface)!important;border-color:transparent!important;color:var(--km-text)!important;-webkit-text-fill-color:var(--km-text)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .search input::placeholder,
+html[data-km24-theme] .hero.km24WowHero .search input::placeholder{color:var(--km-muted)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .hero.km24WowHero .search button,
+html[data-km24-theme] .hero.km24WowHero .search button{background:var(--km-accent)!important;border-color:var(--km-accent)!important;color:#fff!important;box-shadow:none!important}
+
+/* Home quick access */
+html[data-km24-theme] #km24CurrentActualV3{background:var(--km-bg)!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualShell{background:var(--km-surface)!important;border:1px solid var(--km-line)!important;box-shadow:var(--km-shadow)!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualHead h2{color:var(--km-text)!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualHead small,
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualHead>span{color:var(--km-muted)!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualTile{background:var(--km-surface2)!important;border:1px solid var(--km-line)!important;color:var(--km-text)!important;box-shadow:none!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualTile:hover{border-color:color-mix(in srgb,var(--km-accent) 40%,var(--km-line))!important;box-shadow:0 6px 18px rgba(15,23,42,.06)!important}
+html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualIcon{background:color-mix(in srgb,var(--km-accent) 8%,var(--km-surface2))!important;box-shadow:none!important}
+
+/* Sections, categories, listing cards, panels */
+html[data-km24-theme] body.km24AutumnActualV3 .section,
+html[data-km24-theme] .section{background:var(--km-bg)!important}
+html[data-km24-theme] body.km24AutumnActualV3 .cat,
+html[data-km24-theme] .cat,
+html[data-km24-theme] body.km24AutumnActualV3 .card,
+html[data-km24-theme] .card,
+html[data-km24-theme] body.km24AutumnActualV3 .panel,
+html[data-km24-theme] .panel,
+html[data-km24-theme] .adminCard,
+html[data-km24-theme] .legal,
+html[data-km24-theme] .manageRow,
+html[data-km24-theme] .notificationCard,
+html[data-km24-theme] .msgList,
+html[data-km24-theme] .chatBox,
+html[data-km24-theme] .km24AccountHero,
+html[data-km24-theme] .km24AccountPoints,
+html[data-km24-theme] .km24AccountQuickGrid>a,
+html[data-km24-theme] .km24SecurityBar,
+html[data-km24-theme] .km24MyListingCard,
+html[data-km24-theme] .km24AccountAccordion>details{background:var(--km-surface)!important;border-color:var(--km-line)!important;color:var(--km-text)!important;box-shadow:none!important}
+html[data-km24-theme] .cat:hover,
+html[data-km24-theme] .card:hover{border-color:color-mix(in srgb,var(--km-accent) 35%,var(--km-line))!important;box-shadow:0 7px 22px rgba(15,23,42,.06)!important;transform:none!important}
+html[data-km24-theme] .cat b,
+html[data-km24-theme] .card .title,
+html[data-km24-theme] .card .price{color:var(--km-text)!important}
+html[data-km24-theme] .km24SectionKicker{color:var(--km-accent)!important}
+html[data-km24-theme] .km24CategorySection .km24SectionKicker{display:none!important}
+
+/* Inputs and filters */
+html[data-km24-theme] body.km24AutumnActualV3 input,
+html[data-km24-theme] body.km24AutumnActualV3 select,
+html[data-km24-theme] body.km24AutumnActualV3 textarea,
+html[data-km24-theme] input,
+html[data-km24-theme] select,
+html[data-km24-theme] textarea,
+html[data-km24-theme] .field{background:var(--km-surface)!important;border-color:var(--km-line)!important;color:var(--km-text)!important;-webkit-text-fill-color:var(--km-text)!important}
+html[data-km24-theme] input::placeholder,html[data-km24-theme] textarea::placeholder{color:var(--km-muted)!important;opacity:1!important}
+html[data-km24-theme] .marketSearchPanel{background:var(--km-surface)!important;border-color:var(--km-line)!important;box-shadow:none!important;color:var(--km-text)!important}
+html[data-km24-theme] .marketFilterToggle{background:var(--km-surface)!important;border-color:var(--km-line)!important;color:var(--km-text)!important}
+html[data-km24-theme] .btn{border-color:var(--km-line)!important;background:var(--km-surface)!important;color:var(--km-text)!important;box-shadow:none!important}
+html[data-km24-theme] .btn.primary{background:var(--km-accent)!important;border-color:var(--km-accent)!important;color:#fff!important}
+
+/* Footer */
+html[data-km24-theme] .km24Footer{background:var(--km-surface)!important;border-top:1px solid var(--km-line)!important;color:var(--km-text)!important}
+html[data-km24-theme] .km24FooterGrid>div:not(.km24FooterBrand)>b{color:var(--km-text)!important}
+html[data-km24-theme] .km24FooterGrid>div:not(.km24FooterBrand)>a,
+html[data-km24-theme] .km24FooterBrand p,
+html[data-km24-theme] .km24FooterBottom{color:var(--km-muted)!important}
+html[data-km24-theme] .km24FooterTrust span{background:var(--km-surface2)!important;border-color:var(--km-line)!important;color:var(--km-muted)!important}
+
+/* Mobile bottom navigation */
+html[data-km24-theme] .km24BottomNav{background:color-mix(in srgb,var(--km-surface) 97%,transparent)!important;border-color:var(--km-line)!important;box-shadow:0 10px 28px rgba(15,23,42,.14)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html[data-km24-theme] .km24BottomNav a,
+html[data-km24-theme] .km24BottomNav button{color:var(--km-muted)!important}
+html[data-km24-theme] .km24BottomNav .active,
+html[data-km24-theme] .km24BottomNav [aria-current="true"]{color:var(--km-accent)!important}
+html[data-km24-theme] .km24BottomSell>span{background:var(--km-accent)!important;color:#fff!important;box-shadow:0 8px 22px color-mix(in srgb,var(--km-accent) 28%,transparent)!important}
+html[data-km24-theme] .km24BottomSell>b{color:var(--km-accent)!important}
+
+/* Cookie Joe stays available, but visually quieter. */
+html[data-km24-theme] #km24CookieJoeGuide .km24JoeGuideBubble{background:var(--km-surface)!important;border-color:var(--km-line)!important;box-shadow:var(--km-shadow)!important}
+html[data-km24-theme] #km24CookieJoeGuide .km24JoeGuideTitle{color:var(--km-text)!important}
+html[data-km24-theme] #km24CookieJoeGuide .km24JoeGuideText{color:var(--km-muted)!important}
+html[data-km24-theme] #km24CookieJoeGuide .km24JoeGuideKicker{color:var(--km-accent)!important}
+
+@media(max-width:700px){
+  html[data-km24-theme] .km24Topbar .accountNav,
+  html[data-km24-theme] .km24Topbar .sellNav{display:none!important}
+  html[data-km24-theme] .km24Topbar{height:60px!important}
+  html[data-km24-theme] .km24ThemeBtn{width:42px!important;height:42px!important;min-width:42px!important}
+  html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualShell{padding:14px!important;border-radius:18px!important}
+  html[data-km24-theme] #km24CurrentActualV3 .km24CurrentActualTile{border-radius:13px!important}
+}

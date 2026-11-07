@@ -1,0 +1,71 @@
+
+:root{--km24-green:#26b66f;--km24-green2:#0b7c4c;--km24-orange:#f29a4a;--km24-ink:#07100b;--km24-panel:#101713;--km24-panel2:#151d18;--km24-line:rgba(255,255,255,.09);--km24-text:#f6fff9;--km24-muted:#91a298}
+html,body{background:
+ radial-gradient(circle at 12% -8%,rgba(38,182,111,.11),transparent 29%),
+ radial-gradient(circle at 92% 4%,rgba(242,154,74,.08),transparent 26%),
+ #070b08!important;color:var(--km24-text)!important}
+body{background-attachment:fixed!important}
+header{background:rgba(5,10,7,.94)!important;border-bottom:1px solid rgba(68,225,126,.13)!important;box-shadow:0 8px 28px rgba(0,0,0,.28)!important}
+.logo{background:linear-gradient(145deg,#28bd73,#0c7549)!important;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 9px 22px rgba(11,124,76,.32)!important}
+.btn{border-radius:14px!important;border-color:rgba(255,255,255,.09)!important;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025))!important;color:#f4fff8!important;box-shadow:0 8px 20px rgba(0,0,0,.12)!important}
+.btn.primary{background:linear-gradient(135deg,#24b66d,#0c7b4b)!important;border-color:rgba(72,232,136,.34)!important;box-shadow:0 10px 26px rgba(15,141,82,.25)!important;color:white!important}
+.btn.primary:active{transform:translateY(1px)!important}
+
+/* Hero: visibly different */
+.km24HomeHero{padding:18px 0 12px!important;background:transparent!important;border:0!important}
+.km24HomeHeroInner{position:relative;overflow:hidden;display:grid!important;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr)!important;gap:20px!important;padding:36px!important;border-radius:30px!important;border:1px solid rgba(103,236,154,.16)!important;background:
+ radial-gradient(circle at 82% 12%,rgba(242,154,74,.17),transparent 25%),
+ radial-gradient(circle at 15% 95%,rgba(40,195,116,.20),transparent 30%),
+ linear-gradient(145deg,#101a14 0%,#0a100c 58%,#121813 100%)!important;box-shadow:0 28px 85px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.035)!important}
+.km24HomeHeroInner:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 0 44%,rgba(255,255,255,.025) 45%,transparent 46%)}
+.km24HeroEyebrow{display:inline-flex!important;align-items:center!important;gap:7px!important;padding:7px 11px!important;border-radius:999px!important;background:rgba(242,154,74,.10)!important;border:1px solid rgba(242,154,74,.20)!important;color:#ffc27d!important;font-size:11px!important;font-weight:900!important;letter-spacing:.05em!important}
+.km24HomeHeroCopy h1{margin:14px 0 0!important;font-size:clamp(44px,6vw,72px)!important;line-height:.94!important;letter-spacing:-.055em!important;text-shadow:0 12px 35px rgba(0,0,0,.35)!important}
+.km24HomeHeroCopy h1 span{background:linear-gradient(90deg,#67ec9a,#f0b165)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.km24HomeHeroCopy>p{font-size:17px!important;max-width:620px!important;color:#a8b9af!important}
+.km24HeroFinder{margin-top:24px!important;padding:8px!important;border-radius:20px!important;background:rgba(0,0,0,.22)!important;border:1px solid rgba(255,255,255,.075)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important}
+.km24HeroSearchLine{background:#f5fff8!important;border-radius:15px!important;padding:5px!important;min-height:58px!important;box-shadow:0 14px 32px rgba(0,0,0,.20)!important}
+.km24HeroSearchLine input{color:#13231a!important;background:transparent!important;font-size:16px!important}
+.km24HeroSearchLine input::placeholder{color:#728178!important}
+.km24HeroSearchLine button{border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#22b66b,#0d7a4b)!important;color:#fff!important;font-weight:900!important;min-width:112px!important}
+.km24HeroSearchIcon{color:#0b7547!important;font-size:23px!important}
+.km24HeroShortcuts{padding:6px 3px 0!important;gap:7px!important}
+.km24HeroShortcuts button{border-radius:999px!important;border:1px solid rgba(255,255,255,.08)!important;background:rgba(255,255,255,.035)!important;color:#cfddd4!important;padding:8px 12px!important}
+.km24HeroStatCard{align-self:stretch!important;display:flex!important;flex-direction:column!important;justify-content:center!important;border-radius:24px!important;border:1px solid rgba(242,154,74,.22)!important;background:linear-gradient(155deg,rgba(50,34,20,.56),rgba(17,22,18,.92))!important;box-shadow:0 18px 45px rgba(0,0,0,.28)!important;padding:24px!important}
+.km24HeroStatIcon{width:58px!important;height:58px!important;border-radius:18px!important;background:linear-gradient(145deg,rgba(242,154,74,.25),rgba(242,154,74,.08))!important;border:1px solid rgba(242,154,74,.22)!important;font-size:28px!important}
+.km24HeroStatCard small{color:#f2ad69!important}.km24HeroStatCard b{font-size:26px!important;line-height:1.05!important}.km24HeroStatCard div>span{font-size:13px!important;line-height:1.45!important}.km24HeroStatCard .btn{margin-top:4px!important;width:100%!important;background:linear-gradient(135deg,#f3a255,#d97929)!important;border-color:#f2ad69!important;color:#1a0c03!important;font-weight:950!important}
+
+/* Sections + category tiles */
+.km24HomeSectionHead{margin-bottom:14px!important;align-items:center!important}.km24SectionKicker{display:inline-flex!important;padding:5px 9px!important;border-radius:999px!important;background:rgba(38,182,111,.08)!important;border:1px solid rgba(38,182,111,.14)!important;color:#6edfa0!important;font-size:10px!important;letter-spacing:.09em!important}.km24HomeSectionHead h2{font-size:clamp(26px,3.2vw,38px)!important;letter-spacing:-.035em!important}.km24HomeSectionHead p{color:#889990!important}
+.cats{gap:10px!important}.cat{border-radius:20px!important;border:1px solid rgba(255,255,255,.08)!important;background:linear-gradient(145deg,#121915,#0d120f)!important;box-shadow:0 13px 30px rgba(0,0,0,.18)!important;transition:transform .16s ease,border-color .16s ease,background .16s ease!important}.cat:hover{transform:translateY(-3px)!important;border-color:rgba(63,214,119,.24)!important;background:linear-gradient(145deg,#152019,#0e1511)!important}.cat .ico,.cat>span:first-child{filter:drop-shadow(0 8px 15px rgba(0,0,0,.18))!important}
+
+/* Listing cards */
+.grid{gap:13px!important}.card{border-radius:21px!important;border:1px solid rgba(255,255,255,.08)!important;background:linear-gradient(160deg,#141b17,#0d120f)!important;box-shadow:0 14px 34px rgba(0,0,0,.22)!important;overflow:hidden!important;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease!important}.card:hover{transform:translateY(-4px)!important;border-color:rgba(57,216,117,.24)!important;box-shadow:0 20px 42px rgba(0,0,0,.30)!important}.card img,.km24CardMainImg{transition:transform .3s ease!important}.card:hover img{transform:scale(1.025)!important}.price{color:#7ee5a5!important;font-weight:950!important}.badge{border-radius:999px!important}
+.km24AuctionCard{border-radius:22px!important;border-color:rgba(242,154,74,.18)!important;background:linear-gradient(155deg,#191711,#0d110e)!important;box-shadow:0 15px 35px rgba(0,0,0,.22)!important}.km24AuctionTimer{background:linear-gradient(135deg,rgba(242,154,74,.94),rgba(204,103,30,.94))!important;color:#170901!important;border:0!important;font-weight:950!important}.km24AuctionPrice{color:#ffd08e!important}
+
+/* Trust, giveaway, compact links */
+.km24TrustShell{border-radius:24px!important;background:linear-gradient(145deg,#121a15,#0e1410)!important;border:1px solid rgba(255,255,255,.08)!important;color:#effaf3!important;box-shadow:0 18px 45px rgba(0,0,0,.22)!important}.km24TrustTitle,.km24TrustItem b{color:#effaf3!important}.km24TrustLead,.km24TrustItem small,.km24TrustFree{color:#8fa097!important}.km24TrustItem{background:rgba(255,255,255,.025)!important;border-color:rgba(255,255,255,.07)!important}.km24TrustIcon{background:rgba(37,180,108,.09)!important}.km24TrustBottom{border-color:rgba(255,255,255,.07)!important}
+.giveawayMini,.km24FounderHome{border-radius:22px!important;box-shadow:0 15px 36px rgba(0,0,0,.22)!important}.giveawayMini{border:1px solid rgba(242,154,74,.22)!important;background:linear-gradient(120deg,#2a1a0f,#14110d)!important}.km24FounderHome{border:1px solid rgba(38,182,111,.18)!important;background:linear-gradient(120deg,#101b15,#0d120f)!important}
+.km24CompactNavGrid a{border-radius:18px!important;min-height:60px!important;background:linear-gradient(145deg,#111814,#0d120f)!important;border-color:rgba(255,255,255,.075)!important;box-shadow:0 10px 26px rgba(0,0,0,.16)!important}
+
+/* Detail page */
+.detail .panel,.detail .side>.panel{border-radius:22px!important;background:linear-gradient(155deg,#141b17,#0d120f)!important;border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 15px 38px rgba(0,0,0,.22)!important}.detail h1{letter-spacing:-.03em!important}.detail .price{font-size:30px!important}
+
+/* Sell wizard visually distinct */
+body.km24SellWizardPage .formPage>.wrap{max-width:980px!important}.km24SellWizardHead{padding:15px 16px!important;border-radius:20px!important;background:linear-gradient(145deg,#121a15,#0d120f)!important;border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 14px 30px rgba(0,0,0,.20)!important}.km24SellWizardTrack{height:9px!important;background:#1b2820!important}.km24SellWizardFill{background:linear-gradient(90deg,#28bd73,#f29a4a)!important;box-shadow:0 0 18px rgba(41,190,115,.32)!important}.km24SellStep>.panel,.km24SellStep>details{border-radius:22px!important;border:1px solid rgba(255,255,255,.08)!important;background:linear-gradient(155deg,#141c17,#0c110e)!important;box-shadow:0 15px 34px rgba(0,0,0,.22)!important}.km24WizardStepNo{background:linear-gradient(135deg,#28bd73,#0e7b4b)!important;box-shadow:0 8px 20px rgba(35,185,108,.25)!important}.km24SellWizardNav{border-color:rgba(71,222,128,.18)!important;background:rgba(7,12,9,.97)!important;box-shadow:0 -18px 45px rgba(0,0,0,.42)!important}.km24SellWizardNext,.km24SellWizardPublish{background:linear-gradient(135deg,#25bc71,#0b7748)!important;font-size:15px!important}
+
+/* Bottom navigation */
+.km24BottomNav{border:1px solid rgba(255,255,255,.10)!important;background:linear-gradient(180deg,rgba(17,23,19,.98),rgba(7,11,8,.99))!important;box-shadow:0 18px 55px rgba(0,0,0,.50),inset 0 1px 0 rgba(255,255,255,.035)!important;border-radius:24px!important}.km24BottomSell{filter:drop-shadow(0 10px 17px rgba(26,178,99,.28))!important}.km24BottomSell>span:first-child,.km24BottomSell .km24BottomIcon{background:linear-gradient(145deg,#2bc276,#0d7b4b)!important;box-shadow:0 0 0 5px rgba(38,182,111,.09)!important}
+
+/* Inputs */
+input,textarea,select{border-radius:13px!important}.panel input,.panel textarea,.panel select{background:#0a100c!important;border-color:rgba(255,255,255,.09)!important;color:#f4fff8!important}.panel input:focus,.panel textarea:focus,.panel select:focus{border-color:rgba(49,208,111,.45)!important;box-shadow:0 0 0 3px rgba(38,182,111,.08)!important;outline:none!important}
+
+@media(max-width:700px){
+ body{padding-bottom:calc(120px + env(safe-area-inset-bottom))!important}
+ .km24HomeHero{padding:10px 0 8px!important}.km24HomeHeroInner{grid-template-columns:1fr!important;padding:20px 16px!important;border-radius:24px!important;gap:16px!important}.km24HomeHeroCopy h1{font-size:43px!important;line-height:.95!important}.km24HomeHeroCopy>p{font-size:14px!important}.km24HeroFinder{padding:6px!important;border-radius:17px!important}.km24HeroSearchLine{min-height:54px!important}.km24HeroSearchLine button{min-width:88px!important;padding:0 12px!important}.km24HeroStatCard{padding:17px!important;border-radius:20px!important}.km24HeroStatCard b{font-size:22px!important}.km24HeroStatIcon{width:48px!important;height:48px!important;font-size:23px!important}
+ .km24CategorySection{padding-top:26px!important}.cats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.cat{min-height:98px!important;padding:13px!important}.km24HomeSectionHead h2{font-size:27px!important}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.card{border-radius:17px!important}.card .body,.cardBody{padding:10px!important}.card h3{font-size:13px!important}.price{font-size:17px!important}
+ .km24TrustShell{border-radius:20px!important;padding:15px!important}.km24TrustGrid{gap:7px!important}.km24TrustItem{border-radius:14px!important}
+ .km24CompactNavGrid{gap:7px!important}.km24CompactNavGrid a{min-height:55px!important;border-radius:16px!important}
+ .km24SellWizardHead{margin:8px 10px 10px!important;border-radius:18px!important}.km24SellStep>.panel,.km24SellStep>details{border-radius:18px!important}
+ .km24BottomNav{left:8px!important;right:8px!important;bottom:max(8px,env(safe-area-inset-bottom))!important;border-radius:22px!important}
+}

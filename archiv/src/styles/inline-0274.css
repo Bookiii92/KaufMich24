@@ -1,0 +1,12 @@
+
+/* Keep the existing two-step age/terms confirmation, not the duplicate legacy block. */
+#app #af .km24RegisterOriginalLegalHidden{display:none!important}
+#app #af:has(#km24SignupLegal) #legalr{display:none!important}
+#app #af #km24SignupLegal:not(.km24WizardHidden){display:block;margin:8px 0 12px;padding:14px;border:1px solid #c9ded2;border-radius:12px;background:#f4fbf6;color:#19392a}
+#app #af #km24SignupLegal label{display:flex;align-items:flex-start;gap:10px;line-height:1.5;font-weight:600}
+#app #af #km24SignupLegal input[type="checkbox"]{width:20px;height:20px;min-width:20px;margin:2px 0 0;accent-color:#117a4c}
+#app #af label:has(> #pw){position:relative}
+#app #af #pw{padding-right:92px!important}
+#app #af .km24PassReveal{position:absolute;right:7px;bottom:6px;min-width:76px;min-height:34px;padding:5px 9px;border-radius:9px;border:1px solid #b9cbc2;background:#f5f9f7;color:#144c32;font:700 12px/1.1 inherit;cursor:pointer;z-index:2}
+#app #af .km24PassReveal:focus-visible{outline:2px solid #137b50;outline-offset:2px}
+@media(max-width:700px){#app #af .km24SignupWizardActions button{min-height:48px}#app #af #km24SignupLegal:not(.km24WizardHidden){padding:13px 11px}#app #af input,#app #af select{font-size:16px}}

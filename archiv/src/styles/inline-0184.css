@@ -1,0 +1,46 @@
+
+/* Professional compact feed for "Neu in deinen Kategorien" */
+.km24CategoryFeedPro{padding-top:18px!important;padding-bottom:10px!important}
+.km24CategoryFeedPro .km24PersonalHead{margin-bottom:12px!important;align-items:end!important;gap:12px!important}
+.km24CategoryFeedPro .km24PersonalHead h2{margin:0!important;padding-left:10px!important;border-left:3px solid var(--km-accent,#c62828)!important;font-size:24px!important;line-height:1.08!important;letter-spacing:-.025em!important}
+.km24CategoryFeedPro .km24PersonalHead p{margin:5px 0 0!important;color:var(--km-muted,#6b7280)!important;font-size:11px!important;line-height:1.35!important}
+.km24CategoryFeedPro .km24PersonalGrid{gap:12px!important}
+.km24CategoryFeedPro .km24PersonalGrid .card{overflow:hidden!important;border-radius:16px!important;background:var(--km-surface,#fff)!important;border:1px solid var(--km-line,#e5e7eb)!important;box-shadow:none!important;min-width:0!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardPic,
+.km24CategoryFeedPro .km24PersonalGrid .pic{height:auto!important;min-height:0!important;aspect-ratio:4/3!important;background:color-mix(in srgb,var(--km-surface2,#f3f4f6) 92%,#dfe3e7)!important;border-bottom:1px solid var(--km-line,#e5e7eb)!important;overflow:hidden!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardMainImg,
+.km24CategoryFeedPro .km24PersonalGrid .km24CardPic>img,
+.km24CategoryFeedPro .km24PersonalGrid .pic>img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;transform:none!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24ThumbStrip{display:none!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardOverlay{padding:8px!important;background:linear-gradient(180deg,rgba(0,0,0,.13),transparent 46%)!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24TypePill,
+.km24CategoryFeedPro .km24PersonalGrid .km24CardTimer{min-height:23px!important;padding:0 7px!important;font-size:9px!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardBody{padding:10px 11px 11px!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardTitleRow .title{min-height:34px!important;height:auto!important;font-size:13px!important;line-height:1.28!important;font-weight:850!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24Verified{width:17px!important;height:17px!important;font-size:9px!important}
+.km24CategoryFeedPro .km24PersonalGrid .price{margin-top:7px!important;font-size:18px!important;line-height:1.1!important;font-weight:950!important;letter-spacing:-.025em!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardSeller{display:none!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardMeta{margin-top:8px!important;padding-top:7px!important;border-top:1px solid var(--km-line,#e5e7eb)!important;font-size:10px!important;line-height:1.2!important;color:var(--km-muted,#6b7280)!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardMeta span:first-child{max-width:100%!important}
+.km24CategoryFeedPro .km24PersonalGrid .km24CardMeta span:last-child{display:none!important}
+
+@media(max-width:700px){
+ .km24CategoryFeedPro{padding-top:14px!important}
+ .km24CategoryFeedPro .km24PersonalHead{margin-bottom:10px!important}
+ .km24CategoryFeedPro .km24PersonalHead h2{font-size:21px!important;padding-left:9px!important}
+ .km24CategoryFeedPro .km24PersonalHead p{font-size:10px!important}
+ .km24CategoryFeedPro .km24PersonalGrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ .km24CategoryFeedPro .km24PersonalGrid .card{border-radius:14px!important}
+ .km24CategoryFeedPro .km24PersonalGrid .km24CardPic,
+ .km24CategoryFeedPro .km24PersonalGrid .pic{aspect-ratio:1.12/1!important}
+ .km24CategoryFeedPro .km24PersonalGrid .km24CardBody{padding:9px 9px 10px!important}
+ .km24CategoryFeedPro .km24PersonalGrid .km24CardTitleRow .title{min-height:31px!important;font-size:12px!important;line-height:1.25!important}
+ .km24CategoryFeedPro .km24PersonalGrid .price{font-size:16px!important;margin-top:6px!important}
+ .km24CategoryFeedPro .km24PersonalGrid .km24CardMeta{font-size:9px!important;margin-top:7px!important;padding-top:6px!important}
+ .km24CategoryFeedPro .km24PersonalGrid .km24TypePill,
+ .km24CategoryFeedPro .km24PersonalGrid .km24CardTimer{min-height:21px!important;padding:0 6px!important;font-size:8px!important}
+}
+@media(max-width:390px){
+ .km24CategoryFeedPro .km24PersonalGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .km24CategoryFeedPro .km24PersonalHead h2{font-size:20px!important}
+}

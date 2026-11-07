@@ -1,0 +1,9 @@
+
+.km24ReviewAction{margin-top:10px!important;display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important}
+.km24ReviewDone{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border-radius:999px;border:1px solid rgba(19,138,91,.35);background:rgba(19,138,91,.10);font-size:12px;font-weight:800}
+.km24ReviewOverlay{position:fixed;inset:0;z-index:16050;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:18px}
+.km24ReviewModal{width:min(460px,100%);max-height:90vh;overflow:auto;background:#121713;border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.km24ReviewModal h3{margin:0 0 6px}.km24ReviewModal p{margin:0 0 14px;color:var(--mut)}
+.km24ReviewStars{display:flex;gap:8px;margin:10px 0 14px}.km24ReviewStars button{appearance:none;border:0;background:transparent;font-size:34px;line-height:1;cursor:pointer;opacity:.42;padding:2px}.km24ReviewStars button.on{opacity:1;transform:scale(1.06)}
+.km24ReviewModal textarea{width:100%;min-height:105px;resize:vertical;box-sizing:border-box}
+.km24ReviewModal .actions{margin-top:14px;justify-content:flex-end}

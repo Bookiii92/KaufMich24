@@ -1,0 +1,7 @@
+
+.km24AccountExtrasSplit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.km24AccountExtraCard{margin:0!important}
+.km24AccountExtraCard .btn{justify-content:center}
+@media(max-width:700px){
+  .km24AccountExtrasSplit{grid-template-columns:1fr;gap:12px}
+}

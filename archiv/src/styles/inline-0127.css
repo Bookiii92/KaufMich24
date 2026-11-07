@@ -1,0 +1,101 @@
+
+/* Samsung Internet narrow-screen fallback: avoid Chromium/Samsung grid intrinsic-width overflow. */
+html.km24SamsungDetailFix,
+html.km24SamsungDetailFix body{
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix #app{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:100vw!important;
+  max-width:100vw!important;
+  min-width:0!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail>.wrap{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:100vw!important;
+  max-width:100vw!important;
+  min-width:0!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:14px!important;
+  padding-right:14px!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail .detailgrid{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail .detailgrid>div,
+html.km24SamsungDetailFix .detail .detailgrid>.main,
+html.km24SamsungDetailFix .detail .detailgrid>.side{
+  box-sizing:border-box!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail .side{
+  position:static!important;
+  margin-top:12px!important;
+}
+html.km24SamsungDetailFix .detail .gallery,
+html.km24SamsungDetailFix .detail .panel,
+html.km24SamsungDetailFix .detail .km24DetailMainPanel,
+html.km24SamsungDetailFix .detail .km24DetailQuick,
+html.km24SamsungDetailFix .detail .km24DetailSpecs,
+html.km24SamsungDetailFix .detail .panel .specs,
+html.km24SamsungDetailFix .detail .km24DetailDescription{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+html.km24SamsungDetailFix .detail .km24DetailQuick{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  overflow-x:hidden!important;
+}
+html.km24SamsungDetailFix .detail .km24DetailSpecs,
+html.km24SamsungDetailFix .detail .panel .specs{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:7px!important;
+}
+html.km24SamsungDetailFix .detail .km24DetailSpec,
+html.km24SamsungDetailFix .detail .panel .specs>.spec{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+html.km24SamsungDetailFix .detail .mainpic,
+html.km24SamsungDetailFix .detail .mainpic img{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+}
+html.km24SamsungDetailFix .detail .thumbs{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+}

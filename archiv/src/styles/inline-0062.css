@@ -1,0 +1,77 @@
+
+/* KaufMich24 photo mass import: dark-only palette; light theme untouched. */
+html[data-km24-theme="dark"] #app .km24d {
+  color:#f2f6ff!important;
+  -webkit-text-fill-color:#f2f6ff!important;
+  color-scheme:dark!important;
+  padding-bottom:110px!important;
+}
+html[data-km24-theme="dark"] #app .km24d > :is(h1,p),
+html[data-km24-theme="dark"] #app .km24d .km24d-panel :is(h2,h3,p,label,span,small,strong,article,div,summary),
+html[data-km24-theme="dark"] #app .km24d .km24d-row :is(h2,h3,p,label,span,small,strong,article,div,summary) {
+  color:#f2f6ff!important;
+  -webkit-text-fill-color:#f2f6ff!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel {
+  background:#142234!important;
+  background-image:none!important;
+  border:1px solid #385b83!important;
+  box-shadow:0 6px 22px rgba(0,0,0,.16)!important;
+  color:#f2f6ff!important;
+  -webkit-text-fill-color:#f2f6ff!important;
+  color-scheme:dark!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel .km24d-row {
+  background:#192b42!important;
+  background-image:none!important;
+  border-color:#42618a!important;
+  color:#f2f6ff!important;
+  -webkit-text-fill-color:#f2f6ff!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel input:not([type="checkbox"]),
+html[data-km24-theme="dark"] #app .km24d .km24d-panel select,
+html[data-km24-theme="dark"] #app .km24d .km24d-panel textarea {
+  background:#1b2c43!important;
+  background-image:none!important;
+  color:#f2f6ff!important;
+  -webkit-text-fill-color:#f2f6ff!important;
+  border:1px solid #4a6d96!important;
+  color-scheme:dark!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel input::placeholder,
+html[data-km24-theme="dark"] #app .km24d .km24d-panel textarea::placeholder {
+  color:#afc3de!important;
+  -webkit-text-fill-color:#afc3de!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel button,
+html[data-km24-theme="dark"] #app .km24d .km24d-panel input[type="file"]::file-selector-button {
+  background:#1159e8!important;
+  background-image:none!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border:1px solid #2874ff!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel button:disabled {
+  opacity:.55!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-panel input[type="checkbox"] {
+  accent-color:#257bff!important;
+  color-scheme:dark!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+html[data-km24-theme="dark"] #app .km24d .km24d-message,
+html[data-km24-theme="dark"] #app .km24d .km24d-panel .km24d-message {
+  background:#142845!important;
+  background-image:none!important;
+  color:#edf4ff!important;
+  -webkit-text-fill-color:#edf4ff!important;
+  border:1px solid #3681d9!important;
+  border-left:5px solid #1488ff!important;
+  border-radius:12px!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}

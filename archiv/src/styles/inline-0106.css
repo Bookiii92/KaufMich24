@@ -1,0 +1,110 @@
+
+/* Final responsive pass: mobile, tablet and desktop */
+html{max-width:100%;overflow-x:clip}
+body,#app,main,footer,.wrap,.formPage,.detail,.panel,.legal,.adminCard,.card{min-width:0}
+img,video,iframe,svg{max-width:100%}
+.panel,.legal,.adminCard,.km24FeedbackItem,.km24AdminMini,.km24SvcCard,.km24MyListingCard{overflow-wrap:anywhere}
+.panel table,.legal table,.adminCard table{max-width:100%}
+
+@media(min-width:701px) and (max-width:980px){
+  .km24AccountQuickGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .km24AdminFeatureGrid{grid-template-columns:1fr!important}
+  .km24AdminFeedbackControls{grid-template-columns:140px minmax(0,1fr)!important}
+  .km24SvcToolbar{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+@media(max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+
+  /* Keep the top bar stable. The autumn layer must never override sticky positioning. */
+  body>header,header{
+    position:sticky!important;
+    top:0!important;
+    z-index:50!important;
+  }
+  main,footer{position:relative!important;z-index:2!important}
+
+  #app,.wrap,.formPage,.detail,.section,.main,.side,
+  .panel,.legal,.adminCard,.manageRow,.notificationCard,
+  .km24AccountPage,.km24MessagesPage,.km24SvcDetail,.km24SvcCard,
+  .km24FeedbackBox,.km24FeedbackItem,.km24AdminMini{
+    width:100%;
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  .head,.searchResultHead,.km24AccountSectionHead,.km24FeedbackHead,
+  .km24SvcMeta,.km24ActiveCode{
+    flex-wrap:wrap!important;
+    min-width:0!important;
+  }
+
+  .head>*,.actions>*,.km24FeedbackHead>*,.km24SvcMeta>*{min-width:0}
+
+  .actions,.marketSearchActions,.notificationActions{
+    max-width:100%;
+  }
+
+  .manageRow{grid-template-columns:68px minmax(0,1fr)!important}
+  .manageRow .actions{grid-column:1/-1!important}
+
+  .km24AccountHero{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    align-items:start!important;
+    gap:12px!important;
+  }
+  .km24AccountIdentity,.km24AccountHeroText{min-width:0!important}
+  .km24AccountHeroText h1{overflow-wrap:anywhere!important}
+  .km24LogoutTop{align-self:start!important}
+
+  .km24AccountStats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .km24AccountQuickGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .km24AccountQuickGrid a{min-width:0!important}
+
+  .km24SvcMeta{justify-content:flex-start!important}
+  .km24SvcThreadSend{min-width:0!important}
+  .km24SvcThreadSend input{min-width:0!important}
+  .km24SvcGallery{scroll-snap-type:x proximity}
+  .km24SvcGallery img{scroll-snap-align:start}
+
+  .km24CodeRow,.km24AccountExtrasSplit,.km24AdminFeatureGrid,
+  .km24AdminCodeForm,.km24AdminFeedbackControls{
+    grid-template-columns:1fr!important;
+  }
+  .km24AdminCodeForm .wide{grid-column:auto!important}
+
+  .km24MessagesPage.km24HasActive .km24ChatPane{
+    height:calc(100dvh - 172px)!important;
+    min-height:0!important;
+    max-height:calc(100dvh - 172px)!important;
+  }
+  .km24ChatMessages{min-height:0!important;overscroll-behavior:contain}
+  .chatMessages{max-height:54dvh!important}
+  .chatSend input{min-width:0!important}
+
+  .buyModal{
+    max-width:100%!important;
+    max-height:calc(100dvh - 20px)!important;
+    overflow:auto!important;
+  }
+
+  .panel table,.legal table,.adminCard table{
+    display:block;
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  input,textarea,select{max-width:100%!important}
+}
+
+@media(max-width:430px){
+  .km24AccountHero{grid-template-columns:1fr!important}
+  .km24LogoutTop{width:100%!important}
+  .km24AccountSectionHead{align-items:flex-start!important}
+  .km24AccountSectionHead>.btn{width:100%!important}
+  .km24SvcThreadSend{display:grid!important;grid-template-columns:1fr!important}
+  .km24SvcThreadSend .btn,.km24SvcThreadSend button{width:100%!important}
+  .km24ActiveCode{align-items:flex-start!important}
+}

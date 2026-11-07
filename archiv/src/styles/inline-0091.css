@@ -1,0 +1,10 @@
+
+.notifyModern .notificationActions [data-delete-note],
+.notificationActions [data-delete-note]{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ border-color:rgba(202,75,67,.42)!important;
+ background:rgba(126,42,37,.16)!important;
+ color:#ffb8b2!important
+}
+.notifyModern .notificationActions [data-delete-note]:active,
+.notificationActions [data-delete-note]:active{background:rgba(149,47,40,.28)!important}

@@ -1,0 +1,73 @@
+
+/* Messages page keeps a dark conversation surface even when the global site theme is light. */
+.km24ConversationPane,.km24ChatPane{
+  color:#eaf0ec!important;
+  -webkit-text-fill-color:initial!important;
+}
+.km24ConversationHead b,
+.km24ChatPageHead h1,
+.km24ConvTop b,
+.km24ChatHeaderInfo b{
+  color:#f8fbf9!important;
+  -webkit-text-fill-color:#f8fbf9!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24ConversationHead small,
+.km24ChatPageHead p,
+.km24ConvTop small,
+.km24ConvListing,
+.km24ConvPreview,
+.km24ChatHeaderInfo span,
+.km24ChatListEmpty{
+  color:#aeb9b2!important;
+  -webkit-text-fill-color:#aeb9b2!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24ChatKicker{
+  color:#7bea9a!important;
+  -webkit-text-fill-color:#7bea9a!important;
+  opacity:1!important;
+}
+.km24ConvPreview.isUnread{
+  color:#eef4f0!important;
+  -webkit-text-fill-color:#eef4f0!important;
+}
+.km24ChatTab{
+  color:#aeb8b2!important;
+  -webkit-text-fill-color:#aeb8b2!important;
+}
+.km24ChatTab.on{
+  color:#7bea9a!important;
+  -webkit-text-fill-color:#7bea9a!important;
+}
+.km24ConvMenuBtn,.km24ChatMoreBtn{
+  color:#d6dfd9!important;
+  -webkit-text-fill-color:#d6dfd9!important;
+}
+.km24ConvMenu button{
+  color:#eaf0ec!important;
+  -webkit-text-fill-color:#eaf0ec!important;
+}
+.km24ConvMenu button.km24Danger{
+  color:#ffaaa4!important;
+  -webkit-text-fill-color:#ffaaa4!important;
+}
+.km24ChatSearch input{
+  color:#edf3ef!important;
+  -webkit-text-fill-color:#edf3ef!important;
+  caret-color:#edf3ef!important;
+}
+.km24ChatSearch input::placeholder{
+  color:#9aa69f!important;
+  -webkit-text-fill-color:#9aa69f!important;
+  opacity:1!important;
+}
+/* Android/Samsung light mode can otherwise force dark text into the dark conversation pane. */
+html.km24SamsungSafe[data-km24-theme="light"] .km24ConversationPane,
+html.km24SamsungSafe[data-km24-theme="light"] .km24ConversationPane *,
+html.km24SamsungSafe[data-km24-theme="light"] .km24ChatPane,
+html.km24SamsungSafe[data-km24-theme="light"] .km24ChatPane *{
+  text-shadow:none!important;
+}

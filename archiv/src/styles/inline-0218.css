@@ -1,0 +1,9 @@
+
+@media(max-width:700px){
+  html.km24SamsungSafe .km24AvatarQuickInput[type="file"]{
+    display:none!important;visibility:hidden!important;opacity:0!important;
+    width:0!important;height:0!important;min-width:0!important;min-height:0!important;
+    position:absolute!important;inset:auto!important;overflow:hidden!important;pointer-events:none!important;
+  }
+  html.km24SamsungSafe .km24AvatarQuickEdit{position:relative!important;overflow:visible!important;cursor:pointer!important}
+}

@@ -1,0 +1,85 @@
+
+/* KaufMich24 brand palette — matched to the blue/cyan K logo */
+html[data-km24-theme="light"]{
+  --km-bg:#f4f7fc!important;--km-surface:#ffffff!important;--km-surface2:#f7f9fd!important;
+  --km-text:#142033!important;--km-muted:#66758a!important;--km-line:#dce4f0!important;
+  --km-accent:#0b63f6!important;--km-accent2:#0849c7!important;--km-shadow:0 10px 30px rgba(12,55,120,.08)!important;
+}
+html[data-km24-theme="dark"]{
+  --km-bg:#080e18!important;--km-surface:#101925!important;--km-surface2:#152131!important;
+  --km-text:#f3f7ff!important;--km-muted:#9aa9bc!important;--km-line:#26364b!important;
+  --km-accent:#1877ff!important;--km-accent2:#0b5de8!important;--km-shadow:0 14px 36px rgba(0,0,0,.30)!important;
+}
+html[data-km24-theme]{--g:#0b63f6!important;--g2:#18d7cf!important;--km24-green:#18d7cf!important;--km24-green2:#68efe2!important}
+
+/* Main marketplace/jobs switch */
+html[data-km24-theme] .km24AreaSwitch button.active{
+  background:linear-gradient(135deg,#0b43d8 0%,#0b63f6 55%,#18cfd0 135%)!important;
+  color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 28px rgba(11,99,246,.28)!important;
+}
+html[data-km24-theme] .km24AreaSwitch button:not(.active){background:transparent!important;color:var(--km-text)!important}
+html[data-km24-theme] .km24JobsHubTop small{color:#168be8!important}
+html[data-km24-theme] .km24JobKindTabs button.active{background:#0b63f6!important;border-color:#0b63f6!important;color:#fff!important}
+
+/* Hero */
+html[data-km24-theme] .hero.km24WowHero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(24,215,207,.20),transparent 34%),
+    radial-gradient(circle at 10% 105%,rgba(11,99,246,.20),transparent 38%),
+    linear-gradient(135deg,#081426 0%,#0a1b35 55%,#0a3242 115%)!important;
+  border-bottom:1px solid rgba(68,142,255,.14)!important;
+}
+html[data-km24-theme] .km24WowHero h1 span{
+  background:linear-gradient(92deg,#ffffff 0%,#58b9ff 55%,#27e6d4 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+}
+html[data-km24-theme] .km24HeroEyebrow,
+html[data-km24-theme] .km24SectionKicker{color:#70c7ff!important}
+html[data-km24-theme] .km24HeroEyebrow{
+  border-color:rgba(68,170,255,.28)!important;background:rgba(22,111,229,.12)!important;
+}
+html[data-km24-theme] .km24WowHero .km24HeroText{color:#aebbd0!important}
+
+/* Primary CTAs and search */
+html[data-km24-theme] .btn.primary,
+html[data-km24-theme] header .sellNav,
+html[data-km24-theme] .km24WowHero .search button,
+html[data-km24-theme] .marketSearchActions .btn:first-child,
+html[data-km24-theme] button.primary,
+html[data-km24-theme] .primary{
+  background:linear-gradient(135deg,#0b52e5,#0b73f6)!important;
+  border-color:transparent!important;color:#fff!important;
+  box-shadow:0 10px 24px rgba(11,99,246,.20)!important;
+}
+
+/* Bottom navigation */
+html[data-km24-theme] .km24BottomSell{
+  background:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  color:#fff!important;box-shadow:0 10px 28px rgba(11,99,246,.30)!important;
+}
+html[data-km24-theme] .km24BottomNav [data-nav].active,
+html[data-km24-theme] .km24BottomNav button.active,
+html[data-km24-theme] .km24BottomNav a.active{color:#56b8ff!important}
+html[data-km24-theme] .km24BottomNav [data-nav].active span,
+html[data-km24-theme] .km24BottomNav button.active span,
+html[data-km24-theme] .km24BottomNav a.active span{color:#3ba7ff!important}
+
+/* General selected states, badges and links */
+html[data-km24-theme] .notificationCard.unread{border-left-color:#0b63f6!important}
+html[data-km24-theme] .notificationFilters .btn.on{background:#0b63f6!important;color:#fff!important}
+html[data-km24-theme] a:not(.brand):not(.card):not(.btn):focus-visible,
+html[data-km24-theme] button:focus-visible{outline-color:#18cfd0!important}
+
+/* Cards / hover accents */
+html[data-km24-theme] .km24QuickCard:hover{border-color:rgba(24,207,208,.34)!important;box-shadow:0 12px 30px rgba(11,99,246,.10)!important}
+
+/* Cookie Joe: keep character, remove old green UI tint */
+html[data-km24-theme] #kmAiPanel .kmAiMsg.user{background:#0b63f6!important}
+html[data-km24-theme] #kmAiPanel #kmAiSend{background:#0b63f6!important}
+html[data-km24-theme] #kmAiPanel .kmAiQuick button{border-color:#27405c!important}
+
+/* Dark theme browser surfaces */
+html[data-km24-theme="dark"] body{background:#080e18!important}
+html[data-km24-theme="dark"] header{background:rgba(8,14,24,.90)!important}
+html[data-km24-theme="light"] header{background:rgba(255,255,255,.94)!important}

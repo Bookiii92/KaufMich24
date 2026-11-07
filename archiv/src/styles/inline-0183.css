@@ -1,0 +1,43 @@
+
+/* Professional marketplace card previews: fill the image area, keep focal position, no empty side bars. */
+.km24ListingCard .km24CardPic,
+.km24AuctionCard .km24AuctionPic{
+  height:190px!important;
+  min-height:190px!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  background:var(--km-surface2,#f3f4f6)!important;
+}
+.km24ListingCard .km24CardPic>.km24CardMainImg,
+.km24AuctionCard .km24AuctionPic>.km24CardMainImg,
+.km24ListingCard .km24CardPic>img,
+.km24AuctionCard .km24AuctionPic>img{
+  width:100%!important;
+  height:100%!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  transform:none!important;
+  background:var(--km-surface2,#f3f4f6)!important;
+}
+.km24ListingCard:hover .km24CardPic>img,
+.km24AuctionCard:hover .km24AuctionPic>img{transform:none!important}
+.km24ListingCard .km24CardOverlay,
+.km24AuctionCard .km24CardOverlay{background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 38%,transparent 78%,rgba(0,0,0,.08))!important}
+
+@media(max-width:700px){
+  .km24ListingCard .km24CardPic,
+  .km24AuctionCard .km24AuctionPic{
+    height:176px!important;
+    min-height:176px!important;
+  }
+  /* Thumbnails on result cards add clutter; the full gallery stays inside the listing. */
+  .km24ListingCard>.km24ThumbStrip,
+  .km24AuctionCard>.km24ThumbStrip{display:none!important}
+  .km24ListingCard .km24CardBody{padding:11px 12px 12px!important}
+  .km24ListingCard .km24CardTitleRow .title{min-height:0!important;height:auto!important;-webkit-line-clamp:2!important;font-size:15px!important;line-height:1.28!important}
+  .km24ListingCard .km24CardBody .price{font-size:21px!important;margin-top:7px!important}
+  .km24ListingCard .km24CardSeller{margin-top:6px!important}
+  .km24ListingCard .km24CardMeta{margin-top:8px!important;padding-top:8px!important}
+}

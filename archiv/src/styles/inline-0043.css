@@ -1,0 +1,175 @@
+
+/* Central readability guard for intentionally dark overlays and legacy dark cards. */
+.km24PurposeModal,
+.buyModal,
+.km24ReviewModal,
+.km24ReportModal,
+.km24PromoChoiceModal,
+.km24PostCreatePromoModal,
+.km24WatcherModal{
+  color:#f3f6f4!important;
+}
+.km24PurposeModal h1,.km24PurposeModal h2,.km24PurposeModal h3,.km24PurposeModal h4,
+.buyModal h1,.buyModal h2,.buyModal h3,.buyModal h4,
+.km24ReviewModal h1,.km24ReviewModal h2,.km24ReviewModal h3,.km24ReviewModal h4,
+.km24ReportModal h1,.km24ReportModal h2,.km24ReportModal h3,.km24ReportModal h4,
+.km24PromoChoiceModal h1,.km24PromoChoiceModal h2,.km24PromoChoiceModal h3,.km24PromoChoiceModal h4,
+.km24PostCreatePromoModal h1,.km24PostCreatePromoModal h2,.km24PostCreatePromoModal h3,.km24PostCreatePromoModal h4,
+.km24WatcherModal h1,.km24WatcherModal h2,.km24WatcherModal h3,.km24WatcherModal h4,
+.km24PurposeModal b,.km24PurposeModal strong,
+.buyModal b,.buyModal strong,
+.km24ReviewModal b,.km24ReviewModal strong,
+.km24ReportModal b,.km24ReportModal strong,
+.km24PromoChoiceModal b,.km24PromoChoiceModal strong,
+.km24PostCreatePromoModal b,.km24PostCreatePromoModal strong,
+.km24WatcherModal b,.km24WatcherModal strong{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24PurposeModal .mut,.km24PurposeModal p,.km24PurposeModal small,
+.buyModal .mut,.buyModal p,.buyModal small,
+.km24ReviewModal .mut,.km24ReviewModal p,.km24ReviewModal small,
+.km24ReportModal .mut,.km24ReportModal p,.km24ReportModal small,
+.km24PromoChoiceModal .mut,.km24PromoChoiceModal>p,.km24PromoChoiceModal small,.km24PromoBalance,
+.km24PostCreatePromoModal .mut,.km24PostCreatePromoModal>p,.km24PostCreatePromoModal small,.km24PostCreatePromoNote,
+.km24WatcherModal .mut,.km24WatcherModal>p,.km24WatcherModal small,.km24WatcherHint{
+  color:#bdc8c1!important;
+  -webkit-text-fill-color:#bdc8c1!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.km24PurposeChoice,
+.km24PurposeChoice b{
+  color:#f7faf8!important;
+  -webkit-text-fill-color:#f7faf8!important;
+}
+.km24PurposeChoice small{
+  color:#c4cdc7!important;
+  -webkit-text-fill-color:#c4cdc7!important;
+  opacity:1!important;
+}
+.km24PurposeModal .km24SectionKicker{
+  color:#ff7f83!important;
+  -webkit-text-fill-color:#ff7f83!important;
+}
+.km24PromoPlanPrice span{
+  color:#e5ca7b!important;
+  -webkit-text-fill-color:#e5ca7b!important;
+}
+.km24ReportModal label,.km24WatcherForm label{
+  color:#e8eeea!important;
+  -webkit-text-fill-color:#e8eeea!important;
+}
+.km24ReportModal select,.km24ReportModal textarea,
+.km24WatcherForm input,.km24WatcherForm select{
+  background:#101511!important;
+  color:#f4f7f5!important;
+  -webkit-text-fill-color:#f4f7f5!important;
+  border-color:#3e4942!important;
+  color-scheme:dark!important;
+}
+.km24ReportModal select option,.km24WatcherForm select option{
+  background:#101511!important;
+  color:#f4f7f5!important;
+}
+
+/* Legacy buyer/account cards become proper light surfaces in light mode. */
+html[data-km24-theme="light"] .marketStat,
+html[data-km24-theme="light"] .activityCard{
+  background:#ffffff!important;
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+  border-color:#d7dee0!important;
+  box-shadow:0 2px 12px rgba(15,23,42,.05)!important;
+}
+html[data-km24-theme="light"] .marketStat b,
+html[data-km24-theme="light"] .activityCard b,
+html[data-km24-theme="light"] .activityCard strong,
+html[data-km24-theme="light"] .activityCard h2,
+html[data-km24-theme="light"] .activityCard h3{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] .marketStat .mut,
+html[data-km24-theme="light"] .activityCard .mut,
+html[data-km24-theme="light"] .activityCard small,
+html[data-km24-theme="light"] .activityCard .meta{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+}
+
+/* Upload / editing surfaces. */
+html[data-km24-theme="light"] .photoAdd,
+html[data-km24-theme="light"] .imageAdjust{
+  background:#ffffff!important;
+  color:#1f2937!important;
+  -webkit-text-fill-color:#1f2937!important;
+  border-color:#cbd5d1!important;
+}
+html[data-km24-theme="light"] .photoAdd b,
+html[data-km24-theme="light"] .photoAdd strong,
+html[data-km24-theme="light"] .imageAdjust b,
+html[data-km24-theme="light"] .imageAdjust strong{
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+}
+html[data-km24-theme="light"] .photoAdd .mut,
+html[data-km24-theme="light"] .imageAdjust .mut,
+html[data-km24-theme="light"] .imageAdjust label{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+}
+
+/* Giveaway detail still contains intentionally dark boxes. */
+html[data-km24-theme="light"] .giveawayStatus:not(.ok),
+html[data-km24-theme="light"] .giveawayTerms>div{
+  color:#eef3ef!important;
+  -webkit-text-fill-color:#eef3ef!important;
+}
+html[data-km24-theme="light"] .giveawayStatus:not(.ok) b,
+html[data-km24-theme="light"] .giveawayTerms>div b,
+html[data-km24-theme="light"] .giveawayTerms>div strong{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+html[data-km24-theme="light"] .giveawayStatus:not(.ok) .mut,
+html[data-km24-theme="light"] .giveawayTerms>div .mut,
+html[data-km24-theme="light"] .giveawayTerms>div small,
+html[data-km24-theme="light"] .giveawayTerms>div p{
+  color:#c6cec9!important;
+  -webkit-text-fill-color:#c6cec9!important;
+  opacity:1!important;
+}
+
+/* Samsung/iOS can retain text-fill from a previous theme: force recomputation on the affected surfaces. */
+@supports (-webkit-touch-callout:none){
+  html.km24IOS .km24PurposeModal,html.km24IOS .km24PurposeModal *,
+  html.km24IOS .buyModal,html.km24IOS .buyModal *,
+  html.km24IOS .km24ReviewModal,html.km24IOS .km24ReviewModal *,
+  html.km24IOS .km24ReportModal,html.km24IOS .km24ReportModal *,
+  html.km24IOS .km24PromoChoiceModal,html.km24IOS .km24PromoChoiceModal *,
+  html.km24IOS .km24PostCreatePromoModal,html.km24IOS .km24PostCreatePromoModal *,
+  html.km24IOS .km24WatcherModal,html.km24IOS .km24WatcherModal *{
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+}
+
+.km24PurposeClose,.km24PromoClose,.km24PostCreatePromoClose,.km24WatcherModalClose{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+html[data-km24-theme="light"] .buyModal .btn:not(.primary),
+html[data-km24-theme="light"] .km24ReviewModal .btn:not(.primary),
+html[data-km24-theme="light"] .km24ReportModal .btn:not(.primary),
+html[data-km24-theme="light"] .km24PromoChoiceModal .btn:not(.primary),
+html[data-km24-theme="light"] .km24WatcherModal .btn:not(.primary){
+  background:#ffffff!important;
+  color:#21332a!important;
+  -webkit-text-fill-color:#21332a!important;
+  border-color:#dbe3de!important;
+}

@@ -1,0 +1,17 @@
+
+@supports (-webkit-touch-callout:none){
+  html.km24IOS header .km24LangPicker{position:relative!important;flex:0 0 66px!important;width:66px!important;min-width:66px!important;max-width:66px!important;height:38px!important;padding:0!important;overflow:visible!important;pointer-events:auto!important;touch-action:manipulation!important}
+  html.km24IOS header .km24LangPicker>span,html.km24IOS header .km24LangPicker:before,html.km24IOS header .km24LangPicker:after{display:none!important;content:none!important;pointer-events:none!important}
+  html.km24IOS header #km24LangSelect{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;width:0!important;height:0!important;position:absolute!important}
+  html.km24IOS header #km24IOSLangBtn{position:absolute!important;inset:0!important;z-index:60!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;width:100%!important;height:100%!important;padding:0 6px!important;border:0!important;border-radius:11px!important;background:transparent!important;color:#f4fff8!important;-webkit-text-fill-color:#f4fff8!important;font-size:12px!important;line-height:1!important;font-weight:950!important;letter-spacing:0!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+  html.km24IOS header #km24IOSLangBtn:before{content:'🌐'!important;display:inline-block!important;font-size:11px!important;line-height:1!important}
+  html.km24IOS header #km24IOSLangBtn:after{content:'⌄'!important;display:inline-block!important;font-size:11px!important;line-height:1!important;color:#a8bbb0!important;-webkit-text-fill-color:#a8bbb0!important;margin-left:1px!important}
+  html.km24IOS #km24IOSLangMenu{position:fixed!important;top:66px!important;right:8px!important;z-index:2147483400!important;display:none!important;grid-template-columns:repeat(4,minmax(44px,1fr))!important;gap:6px!important;width:min(244px,calc(100vw - 16px))!important;padding:8px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:15px!important;background:#111713!important;box-shadow:0 18px 48px rgba(0,0,0,.48)!important;pointer-events:auto!important}
+  html.km24IOS #km24IOSLangMenu.open{display:grid!important}
+  html.km24IOS #km24IOSLangMenu button{min-height:44px!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:11px!important;background:#1b241e!important;color:#eef8f1!important;-webkit-text-fill-color:#eef8f1!important;font-weight:950!important;pointer-events:auto!important;touch-action:manipulation!important}
+  html.km24IOS #km24IOSLangMenu button.active{background:#0d8150!important;border-color:#43b978!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+  html.km24IOS body header #kmAiFab{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;touch-action:manipulation!important}
+  html.km24IOS body #kmAiPanel{display:none!important;visibility:hidden!important;pointer-events:none!important}
+  html.km24IOS body #kmAiPanel.open{display:flex!important;visibility:visible!important;pointer-events:auto!important}
+  html.km24IOS body #kmAiPanel #kmAiClose{z-index:80!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+}

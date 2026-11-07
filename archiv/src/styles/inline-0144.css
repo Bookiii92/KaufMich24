@@ -1,0 +1,24 @@
+
+.km24AnalyticsPage{padding-top:26px;padding-bottom:56px}
+.km24AnalyticsHero{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px}
+.km24AnalyticsHero h1{margin:4px 0}.km24AnalyticsHero p{margin:0;color:#7f8d84}
+.km24AnalyticsGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.km24AnalyticsMetric{padding:15px;border:1px solid rgba(255,255,255,.075);border-radius:17px;background:rgba(255,255,255,.025)}
+.km24AnalyticsMetric small{display:block;color:#7f8d84;font-size:10px}.km24AnalyticsMetric b{display:block;margin-top:4px;font-size:27px}.km24AnalyticsMetric span{display:block;margin-top:3px;color:#87958c;font-size:10px}
+.km24AnalyticsListings{display:grid;gap:10px;margin-top:14px}
+.km24AnalyticsListing{padding:14px;border:1px solid rgba(255,255,255,.075);border-radius:18px;background:linear-gradient(145deg,rgba(27,31,28,.96),rgba(14,18,15,.96))}
+.km24AnalyticsListingHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.km24AnalyticsListing h3{margin:0;font-size:16px}.km24AnalyticsListing .mut{font-size:10px}
+.km24AnalyticsMini{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:11px}.km24AnalyticsMini>div{padding:9px;border-radius:12px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05)}.km24AnalyticsMini b{display:block;font-size:17px}.km24AnalyticsMini small{font-size:9px;color:#7d8982}
+.km24AnalyticsActions{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}
+.km24AnalyticsDetailTop{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.km24AnalyticsPeriod{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.km24AnalyticsPeriod>div{padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.022)}.km24AnalyticsPeriod b{display:block;font-size:20px}.km24AnalyticsPeriod small{font-size:9px;color:#7f8c84}
+.km24AnalyticsChart{margin-top:14px;padding:15px;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.km24AnalyticsChartBars{height:150px;display:flex;align-items:flex-end;gap:4px;margin-top:13px;padding-top:10px;border-top:1px solid rgba(255,255,255,.05)}
+.km24AnalyticsBar{flex:1;min-width:3px;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,rgba(69,221,111,.85),rgba(31,126,62,.45));position:relative}
+.km24AnalyticsBar:hover:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);white-space:nowrap;padding:5px 7px;border-radius:8px;background:#20251f;color:#fff;font-size:9px;z-index:3}
+.km24AnalyticsTrend{display:inline-flex;margin-top:5px;padding:3px 6px;border-radius:999px;font-size:9px;font-weight:900;background:rgba(255,255,255,.05);color:#aab5ae}.km24AnalyticsTrend.up{color:#8de7a5;background:rgba(44,171,80,.10)}.km24AnalyticsTrend.down{color:#e0b083;background:rgba(174,109,40,.10)}
+.km24AnalyticsHints{display:grid;gap:9px;margin-top:14px}.km24AnalyticsHint{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:11px;align-items:center;padding:13px;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.022)}.km24AnalyticsHintIcon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(58,208,100,.08);font-size:20px}.km24AnalyticsHint b{display:block;font-size:13px}.km24AnalyticsHint small{display:block;margin-top:3px;color:#7f8d84;line-height:1.4}
+.km24AnalyticsBtn{border-color:rgba(75,188,220,.24)!important;background:rgba(46,125,149,.08)!important}
+@media(max-width:760px){.km24AnalyticsGrid{grid-template-columns:1fr 1fr}.km24AnalyticsMini{grid-template-columns:repeat(3,1fr)}.km24AnalyticsPeriod{grid-template-columns:repeat(2,1fr)}.km24AnalyticsHero{display:block}.km24AnalyticsHero>.btn{width:100%;margin-top:10px}.km24AnalyticsHint{grid-template-columns:40px minmax(0,1fr)}.km24AnalyticsHint>.btn{grid-column:1/-1;width:100%}}
+@media(max-width:390px){.km24AnalyticsGrid{grid-template-columns:1fr 1fr}.km24AnalyticsMini{grid-template-columns:1fr 1fr}}

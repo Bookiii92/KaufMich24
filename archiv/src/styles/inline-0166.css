@@ -1,0 +1,7 @@
+
+/* Signup stays deliberately short. Contact/address data is collected only before buying/selling/contacting. */
+#af #lnr,#af #signupAddressBlock{display:none!important}
+.km24FounderSellerState{margin-top:12px;padding:12px 13px;border-radius:13px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);font-size:12px;line-height:1.5}
+.km24FounderSellerState b{color:#fff}
+.km24FounderSellerState.good{border-color:rgba(62,199,105,.24);background:rgba(29,137,67,.10);color:#bfeccc}
+.km24FounderSellerState.wait{border-color:rgba(232,139,66,.22);background:rgba(150,82,30,.10);color:#e8c39d}

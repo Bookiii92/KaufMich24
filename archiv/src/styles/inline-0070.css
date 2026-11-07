@@ -1,0 +1,18 @@
+
+@media(min-width:901px){
+html[data-km24-theme] body.km24CategoryRoute #app button.cat b,
+html[data-km24-theme] body.km24CategoryLightRoute #app button.cat b{
+font-size:14px!important;line-height:1.45!important;font-weight:750!important;
+}
+html[data-km24-theme] body #app .km24FeesPage .km24PointsRules span,
+html[data-km24-theme] body #app .km24FeesPage .km24PromoPrices span,
+html[data-km24-theme] body #app .km24FeesPage .km24FeesLaunchFacts,
+html[data-km24-theme] body #app .km24FeesPage .km24FeesLaunchFacts strong{
+font-size:13px!important;line-height:1.5!important;
+}
+html[data-km24-theme] body #app .km24FeesPage .km24PromoPrices b{
+font-size:13px!important;
+}
+html[data-km24-theme] body #app .km24LegalNav a{
+font-size:13px!important;
+}

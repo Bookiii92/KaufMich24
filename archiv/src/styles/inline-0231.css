@@ -1,0 +1,80 @@
+
+/* Final admin contrast guard: dark admin surfaces must keep light text even when the site theme is light. */
+body.km24AdminMode .km24AdminTabs{
+  color:#f4f7f5!important;
+  -webkit-text-fill-color:#f4f7f5!important;
+}
+body.km24AdminMode .km24AdminTabs button,
+body.km24AdminMode .km24AdminTabs button span{
+  color:#cfd7d2!important;
+  -webkit-text-fill-color:#cfd7d2!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+body.km24AdminMode .km24AdminTabs button.active,
+body.km24AdminMode .km24AdminTabs button.active span{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+body.km24AdminMode .km24AdminTabs button b{
+  color:#ffd1a8!important;
+  -webkit-text-fill-color:#ffd1a8!important;
+  opacity:1!important;
+}
+body.km24AdminMode .km24AdminTaskGrid button,
+body.km24AdminMode .km24AdminTaskGrid button span,
+body.km24AdminMode .km24AdminTaskGrid button b{
+  color:#f7faf8!important;
+  -webkit-text-fill-color:#f7faf8!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+body.km24AdminMode .km24AdminTaskGrid button small{
+  color:#d5ddd8!important;
+  -webkit-text-fill-color:#d5ddd8!important;
+  opacity:1!important;
+}
+body.km24AdminMode .km24AdminTaskGrid button i{
+  color:#d8dfdb!important;
+  -webkit-text-fill-color:#d8dfdb!important;
+  opacity:1!important;
+}
+body.km24AdminMode .km24AdminPage .adminSection,
+body.km24AdminMode .km24AdminPage .adminCard,
+body.km24AdminMode .km24AdminPage .adminSub{
+  color:#eef4f0!important;
+  -webkit-text-fill-color:#eef4f0!important;
+}
+body.km24AdminMode .km24AdminPage .adminSection h1,
+body.km24AdminMode .km24AdminPage .adminSection h2,
+body.km24AdminMode .km24AdminPage .adminSection h3,
+body.km24AdminMode .km24AdminPage .adminCard b,
+body.km24AdminMode .km24AdminPage .adminCard strong{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+}
+body.km24AdminMode .km24AdminPage .adminSection .mut,
+body.km24AdminMode .km24AdminPage .adminCard .mut,
+body.km24AdminMode .km24AdminPage .adminSub,
+body.km24AdminMode .km24AdminPage .adminSub *{
+  color:#c8d1cb!important;
+  -webkit-text-fill-color:#c8d1cb!important;
+  opacity:1!important;
+}
+body.km24AdminMode .km24AdminCount{
+  color:#e5ece8!important;
+  -webkit-text-fill-color:#e5ece8!important;
+}
+body.km24AdminMode .km24AdminOverviewHint{
+  color:#58615c!important;
+  -webkit-text-fill-color:#58615c!important;
+  opacity:1!important;
+}
+@media(max-width:700px){
+  body.km24AdminMode .km24AdminTabs button,
+  body.km24AdminMode .km24AdminTabs button span,
+  body.km24AdminMode .km24AdminTaskGrid button b,
+  body.km24AdminMode .km24AdminTaskGrid button small{
+    opacity:1!important;
+  }
+}

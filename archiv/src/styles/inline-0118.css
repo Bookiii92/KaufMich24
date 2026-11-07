@@ -1,0 +1,556 @@
+
+:root{
+  color-scheme:dark!important;
+  --km-bg:#0a0d0b;
+  --km-bg-2:#0e120f;
+  --km-surface:#121713;
+  --km-surface-2:#171d19;
+  --km-surface-3:#1d251f;
+  --km-line:#29342d;
+  --km-line-soft:rgba(255,255,255,.075);
+  --km-text:#f3f6f4;
+  --km-muted:#99a59e;
+  --km-green:#18a665;
+  --km-green-2:#0d7f4b;
+  --km-green-soft:rgba(24,166,101,.12);
+  --km-orange:#d58a49;
+  --km-orange-soft:rgba(213,138,73,.12);
+  --km-danger:#e06464;
+  --km-radius:18px;
+  --km-radius-sm:13px;
+  --km-shadow:0 18px 48px rgba(0,0,0,.24);
+  --km-shadow-soft:0 10px 30px rgba(0,0,0,.14);
+  --g:var(--km-green)!important;
+  --g2:var(--km-green-2)!important;
+  --ink:var(--km-text)!important;
+  --mut:var(--km-muted)!important;
+  --bg:var(--km-bg)!important;
+  --line:var(--km-line)!important;
+}
+*{scrollbar-color:#344239 #0b0f0c}
+html{background:var(--km-bg)!important;scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 8% -10%,rgba(24,166,101,.08),transparent 28%),
+    radial-gradient(circle at 96% 0,rgba(213,138,73,.075),transparent 22%),
+    linear-gradient(180deg,var(--km-bg-2),var(--km-bg))!important;
+  color:var(--km-text)!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+  background-size:32px 32px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.4),transparent 58%);
+}
+::selection{background:rgba(24,166,101,.35);color:#fff}
+a{color:inherit}
+.wrap{max-width:1240px!important;padding-left:22px!important;padding-right:22px!important}
+.section{padding:34px 0!important}
+h1,h2,h3,h4{letter-spacing:-.025em}
+h1{font-weight:900} h2,h3{font-weight:850}
+p{line-height:1.58}
+.mut{color:var(--km-muted)!important}
+
+/* Header */
+body>header,header{
+  background:rgba(8,11,9,.88)!important;
+  border-bottom:1px solid rgba(255,255,255,.075)!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.16)!important;
+  -webkit-backdrop-filter:blur(18px)!important;
+  backdrop-filter:blur(18px)!important;
+}
+.bar{height:72px!important;gap:12px!important}
+.km24Brand{gap:10px!important}
+.km24LogoMark,.logo{
+  width:40px!important;height:40px!important;border-radius:13px!important;
+  background:linear-gradient(145deg,#0b7544,#14a961)!important;
+  border:1px solid rgba(124,244,170,.18)!important;
+  box-shadow:0 9px 24px rgba(9,108,62,.26)!important;
+}
+.km24BrandText{font-size:21px!important;font-weight:950!important;letter-spacing:-.035em!important}
+.km24BrandText small{display:block!important;font-size:9px!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:#7f9388!important;margin-top:1px!important}
+.nav{gap:7px!important}
+.btn,.choice,button{
+  -webkit-tap-highlight-color:transparent;
+}
+.btn{
+  min-height:44px!important;
+  border:1px solid var(--km-line-soft)!important;
+  border-radius:13px!important;
+  background:linear-gradient(180deg,#1b211d,#151a17)!important;
+  color:var(--km-text)!important;
+  padding:10px 14px!important;
+  font-weight:800!important;
+  box-shadow:none!important;
+  transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease!important;
+}
+.btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.15)!important;background:#1d251f!important}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn.primary,.primary{
+  border-color:transparent!important;
+  background:linear-gradient(135deg,var(--km-green),var(--km-green-2))!important;
+  color:#fff!important;
+  box-shadow:0 8px 22px rgba(15,134,79,.24)!important;
+}
+.btn.primary:hover,.primary:hover{filter:brightness(1.06)}
+.accountNav{max-width:150px!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+
+/* Focus + controls */
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:3px solid rgba(48,207,123,.28)!important;
+  outline-offset:2px!important;
+}
+input,textarea,select,.field{
+  border:1px solid var(--km-line)!important;
+  border-radius:13px!important;
+  background:#0f1411!important;
+  color:var(--km-text)!important;
+  min-height:48px!important;
+  padding:11px 13px!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important;
+  transition:border-color .16s ease,box-shadow .16s ease,background .16s ease!important;
+}
+textarea{min-height:120px!important;line-height:1.5!important;resize:vertical}
+input:focus,textarea:focus,select:focus{
+  border-color:rgba(48,207,123,.5)!important;
+  box-shadow:0 0 0 4px rgba(24,166,101,.09)!important;
+  background:#111813!important;
+}
+input::placeholder,textarea::placeholder{color:#65736b!important}
+.stack{gap:15px!important}
+.stack label,label{font-weight:780!important}
+.stack label{font-size:12.5px!important;color:#cbd3ce!important}
+
+/* Panels / surfaces */
+.panel,.legal,.adminCard,.msgList,.chatBox,.notificationCard,.km24FeedbackItem,.km24AdminMini,.km24SvcCard,.km24MyListingCard{
+  border:1px solid var(--km-line-soft)!important;
+  border-radius:var(--km-radius)!important;
+  background:linear-gradient(180deg,rgba(21,27,23,.98),rgba(15,20,17,.98))!important;
+  color:var(--km-text)!important;
+  box-shadow:var(--km-shadow-soft)!important;
+}
+.panel{padding:20px!important}
+.notice{
+  border:1px solid rgba(40,194,111,.18)!important;
+  background:rgba(25,151,84,.10)!important;
+  color:#bce8cd!important;
+  border-radius:13px!important;
+}
+.notice.err,.err{
+  border-color:rgba(224,100,100,.2)!important;
+  background:rgba(224,100,100,.10)!important;
+  color:#ffc7c7!important;
+}
+
+/* Home hero */
+.km24HomeHero,.hero{
+  position:relative!important;
+  overflow:hidden!important;
+  border-bottom:1px solid rgba(255,255,255,.07)!important;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(213,138,73,.20),transparent 28%),
+    radial-gradient(circle at 18% 12%,rgba(24,166,101,.18),transparent 30%),
+    linear-gradient(135deg,#0d2419 0%,#0c1712 52%,#18140f 100%)!important;
+}
+.km24HomeHero:before,.hero:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(255,255,255,.035),transparent 34%,transparent 66%,rgba(255,255,255,.018));
+}
+.km24HomeHeroInner{min-height:390px!important;display:grid!important;grid-template-columns:minmax(0,1.45fr) minmax(280px,.65fr)!important;align-items:center!important;gap:34px!important;padding-top:54px!important;padding-bottom:54px!important}
+.km24HomeHeroCopy{max-width:760px!important}
+.km24HeroEyebrow,.km24SectionKicker,.km24UxKicker{
+  display:inline-flex!important;align-items:center!important;
+  min-height:28px!important;padding:5px 9px!important;border-radius:999px!important;
+  border:1px solid rgba(213,138,73,.18)!important;background:rgba(213,138,73,.08)!important;
+  color:#e7b17e!important;font-size:9px!important;font-weight:950!important;letter-spacing:.10em!important;text-transform:uppercase!important;
+}
+.km24HomeHero h1,.hero h1{
+  margin:13px 0 12px!important;
+  font-size:clamp(42px,6vw,72px)!important;
+  line-height:.98!important;
+  letter-spacing:-.055em!important;
+}
+.km24HomeHero h1 span{color:#61d895!important}
+.km24HomeHeroCopy>p{max-width:690px!important;margin:0 0 22px!important;color:#b7c4bc!important;font-size:17px!important}
+.km24HeroFinder{
+  padding:9px!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:18px!important;
+  background:rgba(6,10,7,.48)!important;box-shadow:0 18px 48px rgba(0,0,0,.22)!important;
+}
+.km24HeroSearchLine{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto!important;gap:8px!important;align-items:center!important}
+.km24HeroSearchIcon{font-size:24px!important;color:#718077!important;padding-left:8px!important}
+.km24HeroSearchLine input{
+  border:0!important;background:transparent!important;box-shadow:none!important;
+  min-height:54px!important;font-size:16px!important;padding-left:4px!important;
+}
+.km24HeroSearchLine button{
+  min-height:48px!important;border:0!important;border-radius:13px!important;padding:0 20px!important;
+  background:linear-gradient(135deg,var(--km-green),var(--km-green-2))!important;color:#fff!important;font-weight:900!important;
+}
+.km24HeroShortcuts{display:flex!important;gap:7px!important;flex-wrap:wrap!important;padding:3px 3px 0!important}
+.km24HeroShortcuts button{
+  min-height:34px!important;border:0!important;border-radius:999px!important;padding:6px 10px!important;
+  background:transparent!important;color:#9faea5!important;font-size:11px!important;font-weight:800!important;
+}
+.km24HeroShortcuts button:hover{background:rgba(255,255,255,.05)!important;color:#fff!important}
+.km24HeroStatCard{
+  padding:22px!important;border:1px solid rgba(255,255,255,.09)!important;border-radius:22px!important;
+  background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.025))!important;
+  box-shadow:var(--km-shadow)!important;
+}
+.km24HeroStatIcon{display:grid!important;place-items:center!important;width:48px!important;height:48px!important;border-radius:15px!important;background:var(--km-orange-soft)!important;font-size:23px!important;margin-bottom:14px!important}
+.km24HeroStatCard small{color:#9ba9a1!important;font-size:10px!important;text-transform:uppercase!important;letter-spacing:.08em!important}
+.km24HeroStatCard b{display:block!important;font-size:21px!important;margin:4px 0!important}
+.km24HeroStatCard span{color:#98a49d!important;font-size:12px!important}
+.km24HeroStatCard .btn{width:100%!important;margin-top:16px!important}
+
+/* Section headings */
+.km24HomeSectionHead,.head,.searchResultHead,.km24AccountSectionHead,.km24FeedbackHead{
+  gap:14px!important;
+}
+.km24HomeSectionHead h2,.head h2,.searchResultHead h2{
+  margin:4px 0!important;font-size:clamp(24px,3vw,32px)!important;line-height:1.05!important;
+}
+.km24HomeSectionHead p,.head p{margin:5px 0 0!important;color:var(--km-muted)!important;font-size:12.5px!important}
+
+/* Categories */
+.km24CategorySection{padding-top:30px!important;padding-bottom:18px!important}
+.cats{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:10px!important}
+.cat{
+  min-height:92px!important;padding:14px!important;border-radius:16px!important;
+  border:1px solid var(--km-line-soft)!important;
+  background:linear-gradient(180deg,#151b17,#101511)!important;color:var(--km-text)!important;
+  box-shadow:none!important;transition:transform .16s ease,border-color .16s ease,background .16s ease!important;
+}
+.cat:hover{transform:translateY(-2px)!important;border-color:rgba(54,206,125,.25)!important;background:#182019!important}
+.cat i{font-size:25px!important;margin-bottom:8px!important}
+.cat b,.cat strong{font-size:12px!important;line-height:1.2!important}
+
+/* Quick tasks */
+.km24UxHomeGuide{padding:10px 0 8px!important}
+.km24UxGuideBox{
+  padding:18px!important;border-radius:20px!important;border:1px solid var(--km-line-soft)!important;
+  background:linear-gradient(145deg,rgba(24,31,26,.96),rgba(15,20,17,.96))!important;box-shadow:var(--km-shadow-soft)!important;
+}
+.km24UxTaskGrid{gap:9px!important}
+.km24UxTask{
+  min-height:76px!important;padding:12px!important;border-radius:14px!important;
+  border:1px solid rgba(255,255,255,.065)!important;background:rgba(255,255,255,.022)!important;
+}
+.km24UxTask:hover{border-color:rgba(42,197,112,.26)!important;background:rgba(24,166,101,.055)!important}
+.km24UxTask>span{background:rgba(255,255,255,.045)!important}
+
+/* Promo bands */
+.km24HomeGiveaway,.km24FounderHomeBand{padding:6px 0!important}
+.giveawayMini,.km24FounderHome{
+  min-height:76px!important;border:1px solid var(--km-line-soft)!important;border-radius:18px!important;
+  background:linear-gradient(135deg,rgba(213,138,73,.10),rgba(22,28,24,.98))!important;
+  box-shadow:var(--km-shadow-soft)!important;
+}
+.km24FounderHome{background:linear-gradient(135deg,rgba(24,166,101,.09),rgba(22,28,24,.98))!important}
+.km24CompactNav{padding:10px 0 2px!important}
+.km24CompactNavGrid{gap:9px!important}
+.km24CompactNavGrid>a{
+  min-height:66px!important;border:1px solid var(--km-line-soft)!important;border-radius:15px!important;
+  background:rgba(255,255,255,.022)!important;
+}
+
+/* Cards */
+.grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+.card{
+  border-radius:18px!important;border:1px solid var(--km-line-soft)!important;
+  background:linear-gradient(180deg,#151b17,#111612)!important;color:var(--km-text)!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.12)!important;
+  transform:translateZ(0);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease!important;
+}
+.card:hover{transform:translateY(-3px)!important;border-color:rgba(255,255,255,.13)!important;box-shadow:0 16px 38px rgba(0,0,0,.22)!important}
+.pic{
+  height:auto!important;aspect-ratio:4/3!important;background:#0d110e!important;
+  border-bottom:1px solid rgba(255,255,255,.05)!important;
+}
+.pic img,.km24CardMainImg{width:100%!important;height:100%!important}
+.cb{padding:13px!important}
+.title{height:auto!important;min-height:38px!important;font-size:14px!important;line-height:1.35!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.price{font-size:20px!important;letter-spacing:-.025em!important;margin-top:7px!important}
+.meta{font-size:11px!important;color:#8c9991!important}
+.badge{border-radius:999px!important;padding:4px 7px!important;font-size:9px!important;font-weight:900!important}
+.km24AuctionGrid{gap:13px!important}
+.km24AuctionCard{
+  border-radius:18px!important;border:1px solid var(--km-line-soft)!important;
+  background:linear-gradient(180deg,#171b16,#101511)!important;overflow:hidden!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.13)!important;
+}
+.km24AuctionPic{aspect-ratio:4/3!important;height:auto!important;background:#0d110e!important}
+.km24AuctionPic img{}
+.km24AuctionBody{padding:13px!important}
+.km24AuctionBody h3{font-size:14px!important;line-height:1.35!important}
+.km24AuctionPrice{font-size:19px!important;font-weight:950!important}
+
+/* Search + filters */
+.km24HomeFilter{
+  border:1px solid var(--km-line-soft)!important;border-radius:17px!important;background:#101511!important;overflow:hidden!important;margin:15px 0!important;
+}
+.km24HomeFilter>summary{
+  min-height:52px!important;padding:13px 15px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;
+  list-style:none!important;cursor:pointer!important;font-weight:850!important;
+}
+.km24HomeFilter>summary::-webkit-details-marker{display:none}
+.km24HomeFilter>summary span{color:var(--km-muted)!important;font-size:11px!important;font-weight:650!important}
+.km24HomeFilter[open]>summary{border-bottom:1px solid var(--km-line-soft)!important}
+.marketSearchPanel{padding:15px!important;border:0!important;background:transparent!important}
+.marketSearchGrid{gap:10px!important}
+.marketSearchActions{gap:8px!important;margin-top:12px!important}
+.compactFilterGroups{gap:8px!important}
+.filterGroup{border-color:var(--km-line-soft)!important;background:#111713!important}
+.filterGroup summary{min-height:48px!important}
+.searchResultHead{margin:16px 0 12px!important}
+.empty{
+  border:1px dashed rgba(255,255,255,.12)!important;border-radius:16px!important;
+  background:rgba(255,255,255,.018)!important;color:#8d9b92!important;padding:34px 18px!important;
+}
+
+/* Sell / create / forms */
+.formPage,.detail{padding:28px 0 72px!important}
+.formgrid,.detailgrid{gap:18px!important}
+.km24SellIntro{
+  border-radius:22px!important;border:1px solid var(--km-line-soft)!important;
+  background:linear-gradient(145deg,rgba(23,30,25,.98),rgba(14,19,16,.98))!important;
+}
+.km24SellStep{border-color:rgba(255,255,255,.065)!important;background:rgba(255,255,255,.022)!important}
+.km24SellStep:hover{border-color:rgba(24,166,101,.25)!important}
+.km24SellPhotoPanel{background:linear-gradient(145deg,rgba(18,29,22,.98),rgba(14,19,16,.98))!important}
+.photoAdd,.photos{
+  border:1px dashed rgba(127,150,137,.42)!important;border-radius:16px!important;
+  background:rgba(255,255,255,.015)!important;
+}
+.photoAdd:hover,.photos:hover{border-color:rgba(46,199,117,.42)!important;background:rgba(24,166,101,.04)!important}
+.photoManager{gap:9px!important}
+.two{gap:10px!important}
+.choices{gap:9px!important}
+.choice{
+  min-height:74px!important;border:1px solid var(--km-line-soft)!important;border-radius:14px!important;
+  background:rgba(255,255,255,.021)!important;color:var(--km-text)!important;
+}
+.choice.on{border-color:rgba(44,201,115,.55)!important;background:rgba(24,166,101,.10)!important;box-shadow:0 0 0 1px rgba(24,166,101,.16) inset!important}
+
+/* Listing detail */
+.detailgrid{grid-template-columns:minmax(0,1.55fr) minmax(300px,.65fr)!important}
+.detail .side{position:sticky!important;top:92px!important}
+.gallery{border-color:var(--km-line-soft)!important;border-radius:20px!important;background:#0d110e!important;box-shadow:var(--km-shadow-soft)!important}
+.mainpic{height:min(58vw,620px)!important;background:#0b0f0c!important}
+.mainpic img{object-fit:contain!important;object-position:center!important}
+.thumbs{gap:8px!important;padding:10px!important;background:#101511!important}
+.thumb{width:78px!important;height:60px!important;border-radius:10px!important;object-fit:cover!important}
+.detail h1{font-size:clamp(27px,4vw,38px)!important;line-height:1.08!important}
+.detailprice{font-size:clamp(27px,4vw,36px)!important;letter-spacing:-.04em!important}
+.specs{gap:8px!important}
+.spec{border:1px solid rgba(255,255,255,.045)!important;border-radius:12px!important;background:rgba(255,255,255,.022)!important;padding:11px!important}
+.auctionbox{border-color:rgba(213,138,73,.20)!important;background:rgba(213,138,73,.075)!important;border-radius:16px!important}
+.km24UxTradeGuide{background:rgba(24,166,101,.055)!important;border-color:rgba(24,166,101,.17)!important}
+
+/* Account */
+.km24AccountPage{max-width:1100px!important;margin:0 auto!important}
+.km24AccountHero{
+  border-radius:22px!important;border:1px solid var(--km-line-soft)!important;
+  background:
+    radial-gradient(circle at 94% 10%,rgba(24,166,101,.13),transparent 26%),
+    linear-gradient(145deg,#161d18,#0f1411)!important;
+  box-shadow:var(--km-shadow)!important;
+}
+.km24AccountStats{gap:9px!important}
+.km24AccountStats>*{border:1px solid var(--km-line-soft)!important;border-radius:14px!important;background:rgba(255,255,255,.022)!important}
+.km24AccountQuickGrid{gap:9px!important}
+.km24AccountQuickGrid>a,.km24UxAccountMoreGrid>a{
+  border-color:var(--km-line-soft)!important;background:rgba(255,255,255,.022)!important;border-radius:14px!important;
+}
+.km24AccountQuickGrid>a:hover,.km24UxAccountMoreGrid>a:hover{border-color:rgba(24,166,101,.24)!important;background:rgba(24,166,101,.045)!important}
+.km24UxAccountMore{border-color:var(--km-line-soft)!important;background:rgba(255,255,255,.014)!important}
+
+/* Messages */
+.km24MessagesPage,.msgLayout{gap:12px!important}
+.msgList,.chatBox{overflow:hidden!important}
+.msgItem{padding:13px!important;border-bottom:1px solid var(--km-line-soft)!important}
+.msgItem:hover{background:rgba(255,255,255,.025)!important}
+.chatMessages,.km24ChatMessages{background:#0d120f!important}
+.bubble{border:1px solid rgba(255,255,255,.05)!important;background:#182019!important;color:#e8eeea!important}
+.bubble.mine{background:rgba(24,166,101,.16)!important;border-color:rgba(24,166,101,.16)!important}
+.chatSend{border-top:1px solid var(--km-line-soft)!important;background:#111713!important;padding:10px!important}
+
+/* Services, notifications, admin */
+.km24SvcCard,.notificationCard,.adminCard,.km24AdminMini,.km24FeedbackItem{transition:border-color .16s ease,background .16s ease!important}
+.km24SvcCard:hover,.notificationCard:hover,.adminCard:hover{border-color:rgba(255,255,255,.13)!important}
+.kpiGrid{gap:9px!important}
+.kpi{border:1px solid var(--km-line-soft)!important;border-radius:15px!important;background:rgba(255,255,255,.022)!important;padding:14px!important}
+.kpi b{font-size:25px!important}
+.adminToolbar{gap:8px!important}
+.adminSearch{background:#0f1411!important;color:var(--km-text)!important}
+.notificationFilters{gap:8px!important}
+
+/* Legal/footer */
+.legal{max-width:920px!important;margin:30px auto!important;padding:26px!important;line-height:1.68!important}
+.km24LegalNav{gap:6px!important}
+.km24LegalNav a{border-color:var(--km-line-soft)!important;background:rgba(255,255,255,.022)!important}
+.km24Footer{
+  margin-top:30px!important;border-top:1px solid var(--km-line-soft)!important;
+  background:#080b09!important;color:#98a59d!important;
+}
+.km24FooterGrid{gap:28px!important}
+.km24Footer a{color:#a8b3ac!important}
+.km24Footer a:hover{color:#fff!important}
+.km24FooterBottom{border-top:1px solid rgba(255,255,255,.06)!important}
+
+/* Floating support */
+#kmAiFab{
+  border:1px solid rgba(255,255,255,.10)!important;
+  background:linear-gradient(135deg,var(--km-green),var(--km-green-2))!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.32)!important;
+}
+#kmAiPanel{border-color:var(--km-line-soft)!important;background:#101511!important;box-shadow:0 24px 70px rgba(0,0,0,.5)!important}
+
+/* Bottom navigation */
+.km24BottomNav{
+  border:1px solid rgba(255,255,255,.08)!important;
+  background:rgba(11,15,12,.94)!important;
+  -webkit-backdrop-filter:blur(18px)!important;backdrop-filter:blur(18px)!important;
+  box-shadow:0 -10px 34px rgba(0,0,0,.28)!important;
+}
+.km24BottomNav>a,.km24BottomNav>button{color:#87938c!important}
+.km24BottomNav [data-nav].active{color:#69d894!important}
+.km24BottomSell{
+  background:linear-gradient(145deg,#10a05d,#086f42)!important;
+  box-shadow:0 10px 26px rgba(5,108,61,.34)!important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#0b0f0c}
+::-webkit-scrollbar-thumb{background:#334039;border:2px solid #0b0f0c;border-radius:999px}
+
+/* Responsive */
+@media(max-width:980px){
+  .cats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .km24HomeHeroInner{grid-template-columns:1fr!important;min-height:0!important}
+  .km24HeroStatCard{display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important;gap:12px!important}
+  .km24HeroStatIcon{margin:0!important}
+  .km24HeroStatCard .btn{width:auto!important;margin:0!important}
+  .detailgrid{grid-template-columns:1fr!important}
+  .detail .side{position:static!important}
+}
+@media(max-width:700px){
+  body{padding-bottom:88px!important}
+  .wrap{padding-left:14px!important;padding-right:14px!important}
+  .section{padding:24px 0!important}
+  body>header,header{box-shadow:0 6px 20px rgba(0,0,0,.18)!important}
+  .bar{height:60px!important;padding-left:12px!important;padding-right:12px!important}
+  .km24LogoMark,.logo{width:36px!important;height:36px!important;border-radius:11px!important}
+  .km24BrandText{font-size:18px!important}
+  .km24BrandText small{display:none!important}
+  .nav{gap:5px!important}
+  .nav .btn{min-height:40px!important;height:40px!important;padding:0 10px!important}
+  .accountNav{max-width:105px!important;font-size:12px!important}
+  .km24DesktopNav{display:none!important}
+  .sellNav{width:44px!important;min-width:44px!important;padding:0!important}
+
+  .km24HomeHeroInner{padding-top:30px!important;padding-bottom:32px!important;gap:18px!important}
+  .km24HomeHero h1,.hero h1{font-size:clamp(37px,12vw,50px)!important;margin-top:10px!important}
+  .km24HomeHeroCopy>p{font-size:14px!important;margin-bottom:17px!important}
+  .km24HeroFinder{padding:7px!important;border-radius:16px!important}
+  .km24HeroSearchLine{grid-template-columns:auto minmax(0,1fr) auto!important;gap:5px!important}
+  .km24HeroSearchIcon{font-size:20px!important;padding-left:5px!important}
+  .km24HeroSearchLine input{min-height:48px!important;font-size:15px!important;padding:8px 4px!important}
+  .km24HeroSearchLine button{min-height:44px!important;padding:0 13px!important;font-size:13px!important}
+  .km24HeroShortcuts{overflow-x:auto!important;flex-wrap:nowrap!important;scrollbar-width:none!important}
+  .km24HeroShortcuts::-webkit-scrollbar{display:none!important}
+  .km24HeroShortcuts button{white-space:nowrap!important}
+  .km24HeroStatCard{grid-template-columns:42px 1fr!important;padding:14px!important;border-radius:17px!important}
+  .km24HeroStatIcon{width:42px!important;height:42px!important}
+  .km24HeroStatCard b{font-size:16px!important}
+  .km24HeroStatCard span{font-size:10px!important}
+  .km24HeroStatCard .btn{grid-column:1/-1!important;width:100%!important;min-height:42px!important}
+
+  .km24HomeSectionHead{align-items:flex-start!important;flex-wrap:wrap!important}
+  .km24HomeSectionHead .btn{min-height:38px!important;padding:7px 10px!important;font-size:11px!important}
+  .cats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  .cat{min-height:82px!important;padding:12px!important;border-radius:14px!important}
+  .cat i{font-size:23px!important;margin-bottom:6px!important}
+
+  .km24UxGuideBox{padding:13px!important;border-radius:16px!important}
+  .km24UxTaskGrid{grid-template-columns:1fr 1fr!important;gap:7px!important}
+  .km24UxTask{min-height:70px!important;padding:10px!important}
+  .km24UxTask small{display:none!important}
+  .km24CompactNav{display:none!important}
+
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+  .card{border-radius:15px!important}
+  .cb{padding:10px!important}
+  .title{font-size:12.5px!important;min-height:34px!important}
+  .price{font-size:16px!important}
+  .meta{font-size:9.5px!important}
+  .badge{font-size:8px!important}
+
+  .km24AuctionGrid{
+    display:grid!important;grid-auto-flow:column!important;grid-auto-columns:minmax(78%,1fr)!important;
+    grid-template-columns:none!important;overflow-x:auto!important;overscroll-behavior-inline:contain!important;
+    scroll-snap-type:x proximity!important;padding-bottom:5px!important;scrollbar-width:none!important;
+  }
+  .km24AuctionGrid::-webkit-scrollbar{display:none!important}
+  .km24AuctionCard{scroll-snap-align:start!important}
+
+  .km24HomeFilter>summary{align-items:flex-start!important;flex-direction:column!important;gap:2px!important}
+  .marketSearchPanel{padding:11px!important}
+  .marketSearchPanel.marketMobileOpen .marketSearchGrid{grid-template-columns:1fr 1fr!important}
+  .marketSearchPanel.marketMobileOpen .marketSearchGrid label{font-size:10.5px!important}
+
+  .formPage,.detail{padding-top:18px!important;padding-bottom:34px!important}
+  .panel{padding:15px!important;border-radius:16px!important}
+  .formgrid,.detailgrid{gap:12px!important}
+  .km24SellIntro{padding:14px!important;border-radius:17px!important}
+  .km24SellSteps{display:flex!important;overflow-x:auto!important;scrollbar-width:none!important}
+  .km24SellSteps::-webkit-scrollbar{display:none!important}
+  .km24SellStep{min-width:132px!important}
+  .mainpic{height:min(84vw,440px)!important}
+  .detail h1{font-size:28px!important}
+  .detailprice{font-size:29px!important}
+
+  .km24AccountQuickGrid{grid-template-columns:1fr 1fr!important}
+  .km24AccountHero{border-radius:18px!important}
+  .km24AccountStats{grid-template-columns:1fr 1fr!important}
+
+  .legal{margin:16px 10px!important;padding:17px!important;border-radius:16px!important}
+  .km24Footer{display:block!important;padding-bottom:calc(112px + env(safe-area-inset-bottom))!important}
+
+  .km24BottomNav{
+    left:8px!important;right:8px!important;bottom:8px!important;width:auto!important;
+    height:72px!important;border-radius:22px!important;padding:5px 6px calc(5px + env(safe-area-inset-bottom))!important;
+    z-index:10020!important;
+  }
+  .km24BottomNav>a,.km24BottomNav>button{
+    min-width:0!important;min-height:58px!important;border:0!important;background:transparent!important;border-radius:14px!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:2px!important;
+  }
+  .km24BottomNav span{font-size:21px!important;line-height:1!important}
+  .km24BottomNav b{font-size:9px!important;line-height:1!important}
+  .km24BottomSell{
+    transform:translateY(-12px)!important;border-radius:18px!important;width:58px!important;height:58px!important;min-height:58px!important;
+  }
+  .km24BottomSell span{font-size:30px!important}
+  #kmAiFab{
+    right:14px!important;bottom:92px!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;
+    padding:0!important;border-radius:50%!important;font-size:0!important;display:grid!important;place-items:center!important;
+  }
+  #kmAiFab:before{content:"💬";font-size:21px}
+  #kmAiPanel{right:10px!important;left:10px!important;bottom:150px!important;width:auto!important;max-height:62dvh!important;border-radius:18px!important}
+
+  .two{grid-template-columns:1fr!important}
+}
+@media(max-width:390px){
+  .km24BrandText{font-size:16px!important}
+  .accountNav{max-width:82px!important}
+  .km24UxTaskGrid{grid-template-columns:1fr!important}
+  .km24AccountQuickGrid{grid-template-columns:1fr 1fr!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}

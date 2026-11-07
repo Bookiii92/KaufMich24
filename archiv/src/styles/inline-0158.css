@@ -1,0 +1,32 @@
+
+@media(max-width:700px){
+ body.km24HomeV5{padding-bottom:132px!important}
+ body.km24HomeV5 #km24HalloweenBoostV2,body.km24HomeV5 .season-decor,body.km24HomeV5 .km24AutumnFX{display:none!important;visibility:hidden!important;pointer-events:none!important}
+ body.km24HomeV5 .km24HomeHero{padding:20px 0 16px!important;min-height:0!important}
+ body.km24HomeV5 .km24HomeHeroInner{display:block!important}
+ body.km24HomeV5 .km24HomeHeroCopy{max-width:none!important}
+ body.km24HomeV5 .km24HeroEyebrow{display:inline-flex!important;max-width:100%!important;white-space:normal!important;font-size:9.5px!important;line-height:1.2!important;padding:6px 9px!important;margin:0 0 8px!important}
+ body.km24HomeV5 .km24HomeHeroCopy h1{font-size:clamp(36px,10.8vw,48px)!important;line-height:.98!important;letter-spacing:-.045em!important;margin:6px 0 10px!important;color:#f5faf7!important;-webkit-text-fill-color:#f5faf7!important}
+ body.km24HomeV5 .km24HomeHeroCopy h1 span{background:none!important;color:#62df91!important;-webkit-text-fill-color:#62df91!important;text-shadow:none!important}
+ body.km24HomeV5 .km24HomeHeroCopy>p{font-size:14px!important;line-height:1.45!important;margin:0 0 14px!important;color:#aab7af!important;max-width:34em!important}
+ body.km24HomeV5 .km24HeroStatCard,body.km24HomeV5 .km24DesktopSeasonCard{display:none!important}
+ body.km24HomeV5 .km24HeroFinder{margin-top:0!important;width:100%!important}
+ body.km24HomeV5 .km24HeroSearchLine{display:grid!important;grid-template-columns:30px minmax(0,1fr) 82px!important;align-items:center!important;gap:4px!important;min-height:54px!important;height:54px!important;padding:5px!important;border-radius:16px!important;overflow:hidden!important}
+ body.km24HomeV5 .km24HeroSearchIcon{display:grid!important;place-items:center!important;width:30px!important;min-width:30px!important;font-size:19px!important}
+ body.km24HomeV5 .km24HeroSearchLine input{width:100%!important;min-width:0!important;height:44px!important;min-height:44px!important;padding:0 7px!important;font-size:16px!important;border:0!important;box-shadow:none!important}
+ body.km24HomeV5 .km24HeroSearchLine button{width:82px!important;min-width:82px!important;max-width:82px!important;height:44px!important;min-height:44px!important;padding:0 8px!important;font-size:12px!important;border-radius:12px!important;white-space:nowrap!important}
+ body.km24HomeV5 .km24HeroShortcuts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;margin-top:8px!important}
+ body.km24HomeV5 .km24HeroShortcuts button{width:100%!important;min-width:0!important;min-height:36px!important;padding:6px 5px!important;font-size:10px!important;line-height:1.1!important;border-radius:11px!important}
+ body.km24HomeV5 .km24CategorySection{padding-top:16px!important}
+ body.km24HomeV5 .km24BottomNav{left:10px!important;right:10px!important;bottom:6px!important;min-height:64px!important;padding:4px 5px calc(4px + env(safe-area-inset-bottom))!important;border-radius:18px!important}
+ body.km24HomeV5 .km24BottomNav>a,body.km24HomeV5 .km24BottomNav>button{min-height:44px!important}
+ body.km24HomeV5 .km24BottomSell{transform:translateY(-8px)!important;-webkit-transform:translateY(-8px)!important}
+ html.km24SamsungSafe body.km24HomeV5 .km24BottomNav{left:10px!important;right:10px!important;bottom:6px!important}
+ html.km24SamsungSafe body.km24HomeV5 .km24BottomSell{transform:translateY(-8px)!important;-webkit-transform:translateY(-8px)!important}
+}
+@media(max-width:380px){
+ body.km24HomeV5 .km24HomeHeroCopy h1{font-size:34px!important}
+ body.km24HomeV5 .km24HeroSearchLine{grid-template-columns:26px minmax(0,1fr) 72px!important}
+ body.km24HomeV5 .km24HeroSearchIcon{width:26px!important;min-width:26px!important}
+ body.km24HomeV5 .km24HeroSearchLine button{width:72px!important;min-width:72px!important;max-width:72px!important;font-size:11px!important}
+}

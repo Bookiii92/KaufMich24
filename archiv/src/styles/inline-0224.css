@@ -1,0 +1,5 @@
+
+/* Verkaufsinserate wieder anzeigen; nur die Such-/Filterbox bleibt auf der Startseite verborgen. */
+body.km24AreaMarket #latestSection.km24MainSearchSection,
+body.km24AreaMarket #latestSection{display:block!important}
+body.km24AreaMarket #latestSection .km24HomeFilter{display:none!important}

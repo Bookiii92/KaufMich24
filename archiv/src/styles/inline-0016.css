@@ -1,0 +1,41 @@
+
+/* Mobile chat: keep messages readable and visible even when the appointment policy card is shown. */
+.km24ChatPane{color:#e8efea!important}
+.km24ChatHeaderInfo b{color:#f4fff8!important;-webkit-text-fill-color:#f4fff8!important}
+.km24ChatHeaderInfo span{color:#aab8af!important;-webkit-text-fill-color:#aab8af!important}
+.km24BubbleText{color:#f4fff8!important;-webkit-text-fill-color:#f4fff8!important}
+.km24MessageRow.theirs .km24BubbleText{color:#edf4ef!important;-webkit-text-fill-color:#edf4ef!important}
+.km24ChatPolicy{color:#e8efea!important}
+.km24ChatPolicy h4,.km24ChatPolicy b{color:#f5f2e9!important;-webkit-text-fill-color:#f5f2e9!important}
+.km24ChatPolicy p{color:#d3ddd6!important;-webkit-text-fill-color:#d3ddd6!important}
+.km24PolicyExplain{color:#d4cec2!important;-webkit-text-fill-color:#d4cec2!important}
+.km24PolicyExplain b{color:#fff7e8!important;-webkit-text-fill-color:#fff7e8!important}
+.km24ContactLockedHint{color:#d7b77e!important;-webkit-text-fill-color:#d7b77e!important}
+.km24WaitingLine{color:#c4cec7!important;-webkit-text-fill-color:#c4cec7!important}
+.km24ChatComposer textarea{color:#f4fff8!important;-webkit-text-fill-color:#f4fff8!important}
+.km24ChatComposer textarea::placeholder{color:#a8b3ac!important;opacity:1!important}
+@media(max-width:900px){
+  .km24MessagesPage.km24HasActive .km24ChatPane{
+    height:calc(100dvh - 88px)!important;
+    max-height:calc(100dvh - 88px)!important;
+    overflow:hidden!important;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatPolicy{
+    flex:0 0 auto!important;
+    max-height:min(220px,30dvh)!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatMessages{
+    flex:1 1 220px!important;
+    min-height:180px!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .km24MessagesPage.km24HasActive .km24ChatComposer{flex:0 0 auto!important}
+}
+@media(max-width:600px){
+  .km24MessagesPage.km24HasActive .km24ChatPolicy{max-height:min(205px,29dvh)!important}
+  .km24MessagesPage.km24HasActive .km24ChatMessages{min-height:170px!important}
+}

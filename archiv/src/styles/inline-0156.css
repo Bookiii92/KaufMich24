@@ -1,0 +1,4 @@
+
+.km24ListingCard .km24CardPic,.km24AuctionCard .km24AuctionPic{background:#0d110e!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.km24ListingCard .km24CardMainImg,.km24AuctionCard .km24CardMainImg,.km24ListingCard .km24CardPic>img,.km24AuctionCard .km24AuctionPic>img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:50% 50%!important;transform:none!important;-webkit-transform:none!important}
+.km24ListingCard:hover .km24CardMainImg,.km24AuctionCard:hover .km24CardMainImg,.km24ListingCard:active .km24CardMainImg,.km24AuctionCard:active .km24CardMainImg{transform:none!important;-webkit-transform:none!important}

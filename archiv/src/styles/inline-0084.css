@@ -1,0 +1,53 @@
+
+.km24AuctionCard .km24AuctionPriceLabel{
+  margin-top:8px;color:#8d968f;font-size:10px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.07em
+}
+.km24AuctionCard .km24AuctionPrice{margin-top:2px!important}
+.km24AuctionTimer.km24Soon{border-color:rgba(255,183,77,.28);background:rgba(48,34,12,.90)}
+.km24AuctionTimer.km24Urgent{
+  color:#ffe0b0!important;border-color:rgba(255,116,76,.42)!important;
+  background:rgba(91,35,18,.94)!important;
+  box-shadow:0 0 0 3px rgba(255,112,72,.08)
+}
+
+.km24AuctionDetailBox{
+  border:1px solid rgba(255,183,77,.22)!important;
+  background:linear-gradient(160deg,rgba(36,29,18,.97),rgba(19,19,16,.98))!important;
+  border-radius:19px!important;padding:17px!important
+}
+.km24AuctionDetailHead{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  margin-bottom:14px;padding-bottom:11px;border-bottom:1px solid rgba(255,255,255,.07)
+}
+.km24AuctionDetailHead>span:first-child{color:#ffc96f;font-size:12px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.km24AuctionDetailBidCount{
+  display:inline-flex;align-items:center;min-height:27px;padding:0 9px;border-radius:999px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  color:#a8afa9;font-size:11px;font-weight:850
+}
+.km24AuctionDetailBox>.mut:first-of-type{display:block;margin-top:2px;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.km24AuctionDetailPrice{font-size:31px!important;line-height:1.05!important;margin:4px 0 8px!important;color:#fff}
+.km24AuctionDetailBox #countdown{
+  margin-top:12px!important;padding:11px 12px;border-radius:13px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);
+  color:#ffd48a;font-size:14px;font-weight:900
+}
+.km24AuctionDetailBox #countdown.km24UrgentCountdown{
+  color:#ffd2c1;background:rgba(117,42,20,.25);border-color:rgba(255,116,76,.26)
+}
+.km24BidPrompt{display:flex;justify-content:space-between;gap:10px;align-items:end;margin:15px 0 7px}
+.km24BidPrompt b{font-size:13px}.km24BidPrompt small{color:#8e9991;font-size:11px;text-align:right}
+.km24AuctionDetailBox #bidf{margin-top:0!important}
+.km24AuctionDetailBox #bidf input{font-weight:850}
+.km24AuctionDetailBox #bidf .btn.primary{font-weight:900}
+.km24LeadingNotice{border-color:rgba(67,221,106,.25)!important;background:rgba(35,145,67,.14)!important}
+.km24AuctionDetailBox .bidHistory{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
+.km24AuctionDetailBox .bidRow{background:rgba(255,255,255,.035)}
+@media(max-width:600px){
+  .km24AuctionDetailBox{padding:14px!important;border-radius:17px!important}
+  .km24AuctionDetailPrice{font-size:28px!important}
+  .km24AuctionDetailBox #countdown{font-size:13px}
+  .km24BidPrompt{align-items:flex-start;flex-direction:column;gap:3px}
+  .km24BidPrompt small{text-align:left}
+}

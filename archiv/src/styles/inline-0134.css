@@ -1,0 +1,26 @@
+
+.km24SignupStepper{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:12px 0 16px}
+.km24SignupStep{min-width:0;padding:9px 7px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--mut);font-size:11px;font-weight:850;text-align:center;line-height:1.2}
+.km24SignupStep b{display:grid;place-items:center;width:22px;height:22px;margin:0 auto 5px;border-radius:999px;background:#eef2ef;color:#53665d;font-size:11px}
+.km24SignupStep.active{border-color:#138a5b;background:#eff9f3;color:#17352b}
+.km24SignupStep.active b,.km24SignupStep.done b{background:#138a5b;color:#fff}
+.km24SignupStep.done{color:#35634e}
+.km24WizardHidden{display:none!important}
+.km24SignupWizardActions{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;margin-top:2px}
+.km24SignupWizardActions.single{grid-template-columns:1fr}
+.km24SignupWizardHint{margin:-4px 0 8px;padding:9px 11px;border-radius:10px;background:#f7f4ef;color:var(--mut);font-size:12px;line-height:1.4}
+.km24TrustStatusGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 18px}
+.km24TrustStatusItem{display:flex;align-items:center;gap:8px;min-width:0;padding:10px 11px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:12px;font-weight:800}
+.km24TrustStatusItem i{display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:999px;background:#edf1ee;color:#7d8b83;font-style:normal}
+.km24TrustStatusItem.ok{border-color:#b7ddc7;background:#f2fbf5;color:#245b40}
+.km24TrustStatusItem.ok i{background:#138a5b;color:#fff}
+.km24TrustStatusItem.optional{border-style:dashed}
+.km24TrustStatusHeadline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 8px}
+.km24TrustStatusHeadline b{font-size:13px}
+.km24TrustStatusHeadline small{color:var(--mut)}
+@media(max-width:700px){
+ .km24SignupStepper{gap:5px}
+ .km24SignupStep{padding:8px 4px;font-size:10px}
+ .km24TrustStatusGrid{grid-template-columns:1fr 1fr}
+ .km24TrustStatusHeadline{align-items:flex-start;flex-direction:column;gap:2px}
+}

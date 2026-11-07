@@ -1,0 +1,39 @@
+
+body.km24Guest .km24ListingCard .price,
+body.km24Guest .km24AuctionCard .km24AuctionPrice,
+body.km24Guest .km24GuestLockedPrice{
+  color:#f0c66f!important;
+  font-weight:800!important;
+  font-size:clamp(14px,1.45vw,18px)!important;
+  line-height:1.25!important;
+}
+body.km24Guest .km24GuestPriceFilter{display:block!important}
+
+.km24GuestConversion{padding:12px 0 0}
+.km24GuestConversionBox{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:16px 18px;border:1px solid rgba(19,138,91,.18);border-radius:18px;
+  background:linear-gradient(135deg,rgba(19,138,91,.10),rgba(255,255,255,.78));
+  box-shadow:0 12px 34px rgba(23,53,43,.07)
+}
+.km24GuestConversionCopy{display:flex;align-items:center;gap:12px;min-width:0}
+.km24GuestConversionIcon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:13px;background:#17352b;color:#fff;font-size:20px}
+.km24GuestConversionCopy b{display:block;font-size:14px}
+.km24GuestConversionCopy span{display:block;margin-top:3px;color:var(--mut);font-size:12px;line-height:1.35}
+.km24GuestConversionActions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.km24SignupAssist{
+  margin:0 0 14px;padding:12px 13px;border:1px solid rgba(19,138,91,.18);
+  border-radius:14px;background:rgba(19,138,91,.07)
+}
+.km24SignupAssist b{display:block;font-size:13px}
+.km24SignupAssist span{display:block;margin-top:4px;color:var(--mut);font-size:11px;line-height:1.45}
+.km24SignupSteps{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.km24SignupSteps i{font-style:normal;padding:5px 7px;border-radius:999px;background:rgba(23,53,43,.07);font-size:9px;font-weight:850}
+.auth .panel,#af,#as,#sw{position:relative;z-index:2;pointer-events:auto!important}
+#as,#sw,.sellNav,.km24BottomSell{touch-action:manipulation}
+@media(max-width:700px){
+  .km24GuestConversion{padding:10px 12px 0}
+  .km24GuestConversionBox{align-items:stretch;flex-direction:column;padding:14px}
+  .km24GuestConversionActions{display:grid;grid-template-columns:1fr 1fr}
+  .km24GuestConversionActions .btn{width:100%;justify-content:center}
+}

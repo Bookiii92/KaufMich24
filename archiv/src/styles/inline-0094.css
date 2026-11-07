@@ -1,0 +1,15 @@
+
+@media(max-width:700px){
+  html,body{max-width:100%;overflow-x:hidden}
+  #app,.wrap,.formPage,.panel,.card,.km24ListingCard,.km24AuctionCard{min-width:0;max-width:100%}
+  img,video,iframe{max-width:100%}
+  .km24PromoChoiceOverlay{padding:8px;align-items:end}
+  .km24PromoChoiceModal{max-height:calc(100dvh - 16px);overflow:auto;border-radius:18px;padding:17px}
+  .km24PromoChoiceGrid{grid-template-columns:1fr}
+  .km24PromoPlanPrice{flex-wrap:wrap}
+  .km24PromoPlanPrice strong{font-size:25px}
+  .km24HomeBoostHead{align-items:flex-start;flex-direction:column}
+  .km24PromoOwnerStatus{width:100%}
+  .km24PromoOwnerChip{max-width:100%;white-space:normal;line-height:1.25}
+  .notificationActions,.actions{min-width:0;max-width:100%}
+}

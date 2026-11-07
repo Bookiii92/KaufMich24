@@ -1,0 +1,93 @@
+
+html[data-km24-theme="dark"] .detail .panel,
+html[data-km24-theme="dark"] .detail .auctionbox,
+html[data-km24-theme="dark"] .detail .spec{
+  background:#0b1628!important;
+  background-image:none!important;
+  border-color:#243754!important;
+  color:#eef4ff!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.20)!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox{
+  border-color:#4a3b20!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03),0 10px 28px rgba(0,0,0,.22)!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox .big,
+html[data-km24-theme="dark"] .detail .panel h1,
+html[data-km24-theme="dark"] .detail .panel h2,
+html[data-km24-theme="dark"] .detail .panel h3,
+html[data-km24-theme="dark"] .detail .seller,
+html[data-km24-theme="dark"] .detail .spec b,
+html[data-km24-theme="dark"] .detail .detailprice{
+  color:#f8fbff!important;
+  -webkit-text-fill-color:#f8fbff!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox small,
+html[data-km24-theme="dark"] .detail .auctionbox .mut,
+html[data-km24-theme="dark"] .detail .panel .mut,
+html[data-km24-theme="dark"] .detail .spec small,
+html[data-km24-theme="dark"] .detail .meta{
+  color:#9fb0c8!important;
+  -webkit-text-fill-color:#9fb0c8!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox .countdown{
+  color:#f0c66b!important;
+  -webkit-text-fill-color:#f0c66b!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox .notice{
+  background:rgba(19,138,91,.17)!important;
+  border:1px solid rgba(103,214,163,.28)!important;
+  color:#b8efd2!important;
+  -webkit-text-fill-color:#b8efd2!important;
+  box-shadow:none!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox .notice *{
+  color:#b8efd2!important;
+  -webkit-text-fill-color:#b8efd2!important;
+}
+html[data-km24-theme="dark"] .detail .badge.auction{
+  background:rgba(224,167,66,.14)!important;
+  border:1px solid rgba(224,167,66,.30)!important;
+  color:#f0c66b!important;
+  -webkit-text-fill-color:#f0c66b!important;
+}
+html[data-km24-theme="dark"] .detail .badge:not(.auction):not(.dealer){
+  background:rgba(31,157,99,.14)!important;
+  border:1px solid rgba(79,201,139,.24)!important;
+  color:#91e7b7!important;
+  -webkit-text-fill-color:#91e7b7!important;
+}
+html[data-km24-theme="dark"] .detail .badge.dealer{
+  background:rgba(72,87,200,.16)!important;
+  border:1px solid rgba(113,128,230,.28)!important;
+  color:#b8c2ff!important;
+  -webkit-text-fill-color:#b8c2ff!important;
+}
+html[data-km24-theme="dark"] .detail .btn:not(.primary){
+  background:#101f35!important;
+  border-color:#2e4668!important;
+  color:#e8f0fb!important;
+  -webkit-text-fill-color:#e8f0fb!important;
+}
+html[data-km24-theme="dark"] .detail .btn.primary{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+html[data-km24-theme="dark"] .detail .auctionbox input,
+html[data-km24-theme="dark"] .detail .panel input,
+html[data-km24-theme="dark"] .detail .panel textarea,
+html[data-km24-theme="dark"] .detail .panel select{
+  background:#081322!important;
+  border-color:#314967!important;
+  color:#f8fbff!important;
+  -webkit-text-fill-color:#f8fbff!important;
+}
+html[data-km24-theme="dark"] .detail .ratingStars{
+  color:#f2c56c!important;
+  -webkit-text-fill-color:#f2c56c!important;
+}
+html[data-km24-theme="dark"] .detail .desc{
+  color:#d9e3f0!important;
+  -webkit-text-fill-color:#d9e3f0!important;
+}

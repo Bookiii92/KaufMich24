@@ -1,0 +1,86 @@
+
+/* Compact hero controls: one real search, three lightweight shortcuts. */
+.km24HeroFinder{max-width:720px;margin-top:20px}
+.km24HeroSearchLine{
+  display:grid!important;
+  grid-template-columns:42px minmax(0,1fr) auto!important;
+  align-items:center;
+  gap:6px;
+  padding:6px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.055);
+  box-shadow:0 14px 38px rgba(0,0,0,.16);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px)
+}
+.km24HeroSearchIcon{
+  display:grid;place-items:center;
+  width:42px;height:42px;border-radius:13px;
+  background:rgba(255,255,255,.055);
+  color:#98a79e;font-size:23px
+}
+.km24HeroSearchLine input{
+  width:100%!important;min-width:0!important;min-height:46px!important;
+  margin:0!important;padding:0 8px!important;
+  border:0!important;background:transparent!important;
+  color:#eef4f0!important;box-shadow:none!important;outline:0!important
+}
+.km24HeroSearchLine input::placeholder{color:#849189!important}
+.km24HeroSearchLine button{
+  min-height:46px!important;
+  padding:0 20px!important;
+  border:0!important;border-radius:13px!important;
+  background:linear-gradient(145deg,#24a953,#168442)!important;
+  color:#fff!important;font-weight:900!important;
+  box-shadow:0 9px 24px rgba(20,142,64,.18)
+}
+.km24HeroShortcuts{
+  display:flex;
+  gap:8px;
+  margin-top:9px;
+  overflow-x:auto;
+  scrollbar-width:none
+}
+.km24HeroShortcuts::-webkit-scrollbar{display:none}
+.km24HeroShortcuts button{
+  flex:0 0 auto;
+  min-height:36px!important;
+  padding:0 12px!important;
+  border:1px solid rgba(255,255,255,.09)!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.035)!important;
+  color:#b8c4bc!important;
+  font-size:11px!important;font-weight:820!important;
+  white-space:nowrap
+}
+.km24HeroShortcuts button:active{transform:scale(.98)}
+
+/* Sell belongs in the top bar next to the profile; bottom quick nav remains unchanged. */
+.km24Topbar .sellNav{display:inline-flex!important}
+
+@media(max-width:700px){
+  .km24Topbar .sellNav{
+    width:44px!important;min-width:44px!important;height:44px!important;
+    padding:0!important;border-radius:13px!important
+  }
+  .km24Topbar .sellNav .sellShort{display:inline!important;font-size:24px!important;line-height:1!important}
+  .km24Topbar .sellNav .sellFull{display:none!important}
+  .km24Topbar .accountNav{max-width:96px!important}
+  .km24HeroFinder{margin-top:16px!important}
+  .km24HeroSearchLine{
+    grid-template-columns:38px minmax(0,1fr) auto!important;
+    gap:4px!important;padding:5px!important;border-radius:16px!important
+  }
+  .km24HeroSearchIcon{width:38px;height:40px;border-radius:11px;font-size:21px}
+  .km24HeroSearchLine input{min-height:44px!important;font-size:16px!important;padding:0 5px!important}
+  .km24HeroSearchLine button{min-height:44px!important;padding:0 14px!important;font-size:14px!important}
+  .km24HeroShortcuts{gap:6px;margin-top:8px}
+  .km24HeroShortcuts button{min-height:34px!important;padding:0 10px!important;font-size:10.5px!important}
+}
+@media(max-width:380px){
+  .km24Topbar .accountNav{max-width:78px!important;padding-left:8px!important;padding-right:8px!important}
+  .km24HeroSearchLine{grid-template-columns:34px minmax(0,1fr) auto!important}
+  .km24HeroSearchIcon{width:34px}
+  .km24HeroSearchLine button{padding:0 11px!important}
+}

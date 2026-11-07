@@ -1,0 +1,16 @@
+
+/* Marketplace must never expose the large legacy filter accordion. Jobs may still use it. */
+body.km24AreaMarket .km24HomeFilter,
+body.km24AreaMarket .marketSearchPanel,
+body.km24AreaMarket .compactFilterGroups{
+  display:none!important;
+  visibility:hidden!important;
+  max-height:0!important;
+  min-height:0!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+}

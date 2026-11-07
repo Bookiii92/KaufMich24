@@ -1,0 +1,14 @@
+
+.km24AdminTaskGridSimple{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.km24AdminOverviewHint{margin-top:12px;padding:11px 13px;border:1px solid rgba(255,255,255,.06);border-radius:13px;background:rgba(255,255,255,.02);color:var(--mut);font-size:12px;line-height:1.45}
+body.km24AdminMode #kmAiFab,
+body.km24AdminMode #kmAiPanel,
+body.km24AdminMode #km24CookieJoeGuide,
+body.km24AdminMode .km24BottomNav,
+body.km24AdminMode .km24Footer{display:none!important}
+body.km24AdminMode{padding-bottom:0!important}
+@media(max-width:700px){
+ .km24AdminTaskGridSimple{grid-template-columns:1fr!important}
+ .km24AdminTaskGridSimple button{min-height:68px!important}
+ .km24AdminTabs button{padding-left:9px!important;padding-right:9px!important}
+}

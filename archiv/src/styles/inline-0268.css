@@ -1,0 +1,61 @@
+
+/* Only #/verification: protect legibility in dark mode. No global theme changes. */
+html[data-km24-theme="dark"] body:has(#app .km24VerificationPage),
+html[data-km24-theme="dark"] #app:has(.km24VerificationPage),
+html[data-km24-theme="dark"] #app .km24VerificationPage {
+  background:#0b1220!important;
+  background-image:none!important;
+  color:#eaf0f9!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage > .panel {
+  background:#111c2c!important;
+  background-image:none!important;
+  border-color:#2a3a50!important;
+  color:#eaf0f9!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage > .panel > h1,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard b,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard div,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard label {
+  color:#edf3fc!important;
+  -webkit-text-fill-color:#edf3fc!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard {
+  background:#192638!important;
+  background-image:none!important;
+  border-color:#34465d!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .mut,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard small {
+  color:#bbc9db!important;
+  -webkit-text-fill-color:#bbc9db!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage input:not([type="checkbox"]),
+html[data-km24-theme="dark"] #app .km24VerificationPage select,
+html[data-km24-theme="dark"] #app .km24VerificationPage textarea {
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  background:#101a29!important;
+  background-image:none!important;
+  border-color:#52647c!important;
+  color-scheme:dark!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage input::placeholder,
+html[data-km24-theme="dark"] #app .km24VerificationPage textarea::placeholder {
+  color:#a8b7c9!important;
+  -webkit-text-fill-color:#a8b7c9!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard .btn:not(.primary) {
+  background:#27374d!important;
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  border-color:#52647c!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .btn.primary {
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}

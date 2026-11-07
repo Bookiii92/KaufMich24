@@ -1,0 +1,53 @@
+
+/* KaufMich24: coherent business/dealer creation chooser, dark mode only. */
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch {
+  background:linear-gradient(140deg,#11283d 0%,#0e1b30 58%,#152e44 100%) !important;
+  border:1px solid #2c96c9 !important;
+  color:#ecf5ff !important;
+  box-shadow:0 14px 30px rgba(0,8,26,.27) !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:first-child {
+  color:#6de3df !important;
+  -webkit-text-fill-color:#6de3df !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > h2 {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > p {
+  color:#d2dfed !important;
+  -webkit-text-fill-color:#d2dfed !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child {
+  background:linear-gradient(145deg,#172d42 0%,#1b293e 100%) !important;
+  border:1px solid #369bc9 !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child > strong {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child > span {
+  color:#d4e3ed !important;
+  -webkit-text-fill-color:#d4e3ed !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] {
+  background:linear-gradient(135deg,#078c93 0%,#0b687d 54%,#0b4b67 100%) !important;
+  border:1px solid #2cddd5 !important;
+  color:#fff !important;
+  box-shadow:0 6px 18px rgba(0,8,24,.2) !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] > strong,
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] > span {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"]:focus-visible {
+  outline:3px solid #a3fff1 !important;
+  outline-offset:3px;
+}
+@media (hover:hover) {
+  html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"]:hover {
+    background:linear-gradient(135deg,#099a9f,#0c5974) !important;
+  }
+}

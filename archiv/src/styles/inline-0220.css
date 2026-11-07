@@ -1,0 +1,38 @@
+
+body.km24AreaJobs .km24QuickFilterBar{display:none!important}
+#km24AreaBarSection{padding:10px 0 8px;position:relative;z-index:12}
+.km24AreaSwitch{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.km24AreaSwitch button{min-height:44px;border:0;border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:900;cursor:pointer}
+.km24AreaSwitch button.active{background:#c9151e;color:#fff;box-shadow:0 5px 14px rgba(201,21,30,.24)}
+.km24JobsHub{margin-top:10px;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
+.km24JobsHub[hidden]{display:none!important}
+.km24JobsHubTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.km24JobsHubTop small{font-weight:950;letter-spacing:.08em;color:#c9151e}
+.km24JobsHubTop h1{margin:4px 0 4px;font-size:24px;line-height:1.1}
+.km24JobsHubTop p{margin:0;color:var(--muted)}
+.km24JobsHubIcon{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border-radius:14px;background:color-mix(in srgb,#c9151e 12%,var(--card));font-size:25px}
+.km24JobKindTabs{display:flex;gap:7px;overflow:auto;margin:14px 0 12px;padding-bottom:2px}
+.km24JobKindTabs button{white-space:nowrap;min-height:38px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--text);font:inherit;font-size:13px;font-weight:850}
+.km24JobKindTabs button.active{border-color:#c9151e;background:#c9151e;color:#fff}
+.km24JobsHubActions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.km24JobsHubActions .btn{justify-content:center;text-align:center}
+.km24JobFilterHidden,.km24JobFilterGroupEmpty{display:none!important}
+.km24JobCard .km24TypePill,.km24JobCard .price{display:none!important}
+.km24JobCard .km24CardOverlay{display:flex!important;align-items:flex-start!important;justify-content:flex-start!important}
+.km24JobBadge{display:inline-flex;align-items:center;min-height:28px;padding:5px 9px;border-radius:999px;background:rgba(10,10,10,.82);color:#fff;font-size:12px;font-weight:950;line-height:1}
+.km24JobsEmpty{display:grid!important;gap:6px;padding:28px 16px!important;text-align:center}
+.km24JobsEmpty span{color:var(--muted)}
+body.km24AreaMarket .km24JobCard{display:none!important}
+body.km24AreaJobs .km24FounderSpotlight,body.km24AreaJobs .km24WhySection{display:none!important}
+@media(max-width:650px){
+ #km24AreaBarSection{padding:8px 10px 6px}
+ #km24AreaBarSection>.wrap{padding:0!important}
+ .km24AreaSwitch{border-radius:14px}
+ .km24AreaSwitch button{min-height:42px;font-size:14px}
+ .km24JobsHub{padding:14px;border-radius:16px}
+ .km24JobsHubTop h1{font-size:21px}
+ .km24JobsHubTop p{font-size:13px}
+ .km24JobsHubActions{grid-template-columns:1fr}
+ .km24JobKindTabs button{font-size:12px;padding:0 11px}
+}
+

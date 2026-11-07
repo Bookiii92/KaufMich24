@@ -1,0 +1,6 @@
+
+.detail .km24DetailOverview,.detail .km24DetailSpecsExtra,.detail .panel .specs{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important;width:100%!important;max-width:100%!important;align-items:stretch!important}
+.detail .km24DetailOverview>.spec,.detail .km24DetailSpecsExtra>.spec,.detail .panel .specs>.spec{display:block!important;grid-column:auto!important;width:auto!important;max-width:none!important;min-width:0!important;height:auto!important;min-height:0!important;margin:0!important;padding:9px 10px!important;border-radius:12px!important;box-sizing:border-box!important}
+.detail .km24DetailOverview>.spec small,.detail .km24DetailSpecsExtra>.spec small,.detail .panel .specs>.spec small{display:block!important;margin:0 0 2px!important;font-size:10px!important;line-height:1.15!important}
+.detail .km24DetailOverview>.spec b,.detail .km24DetailSpecsExtra>.spec b,.detail .panel .specs>.spec b{display:block!important;margin:0!important;font-size:13.5px!important;line-height:1.2!important;overflow-wrap:anywhere!important}
+@media(min-width:760px){.detail .km24DetailOverview{grid-template-columns:repeat(4,minmax(0,1fr))!important}.detail .km24DetailSpecsExtra{grid-template-columns:repeat(3,minmax(0,1fr))!important}}

@@ -1,0 +1,41 @@
+
+/* KaufMich24: two main worlds, Jobs and Services remain separate within the second world. */
+#km24WorldsHubV3{display:block;box-sizing:border-box;width:100%;max-width:1160px;margin:0 auto;padding:12px 18px 4px;position:relative;z-index:15}
+#km24WorldsHubV3[hidden],#km24WorldsHubV3 .km24WorldSubV3[hidden]{display:none!important}
+#km24WorldsHubV3 .km24WorldMainV3{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px;padding:6px;border:1px solid #ccdbee;border-radius:19px;background:#f5f9ff;box-shadow:0 5px 18px rgba(22,61,113,.07)}
+#km24WorldsHubV3 .km24WorldMainLinkV3{display:flex!important;box-sizing:border-box;min-width:0;min-height:75px;padding:11px 8px;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;text-decoration:none!important;border:1px solid transparent;border-radius:14px;background:transparent;color:#183d6c!important;-webkit-text-fill-color:#183d6c!important;font:inherit!important;opacity:1!important}
+#km24WorldsHubV3 .km24WorldMainLinkV3 .km24WorldIconV3{font-size:22px;line-height:1.05}
+#km24WorldsHubV3 .km24WorldMainLinkV3 strong{font-size:15px;line-height:1.2;font-weight:900;letter-spacing:-.015em;color:inherit!important;-webkit-text-fill-color:inherit!important}
+#km24WorldsHubV3 .km24WorldMainLinkV3 small{font-size:11.5px;line-height:1.25;font-weight:650;color:inherit!important;-webkit-text-fill-color:inherit!important;opacity:.85}
+#km24WorldsHubV3 .km24WorldMainLinkV3.is-active{background:#0b63ef!important;border-color:#0b63ef!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 5px 15px rgba(11,99,239,.2)}
+#km24WorldsHubV3 .km24WorldMainLinkV3.is-active strong,#km24WorldsHubV3 .km24WorldMainLinkV3.is-active small{color:#fff!important;-webkit-text-fill-color:#fff!important}
+#km24WorldsHubV3 .km24WorldSubV3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}
+#km24WorldsHubV3 .km24WorldSubLinkV3{box-sizing:border-box;display:flex;justify-content:center;align-items:center;min-height:48px;gap:8px;padding:11px 8px;border:1px solid #c5d8f1;border-radius:12px;background:#edf5ff;text-decoration:none!important;color:#1a4a83!important;-webkit-text-fill-color:#1a4a83!important;font:inherit!important;font-size:13.5px!important;line-height:1.25!important;font-weight:850!important;white-space:normal;text-align:center}
+#km24WorldsHubV3 .km24WorldSubLinkV3.is-active{border-color:#0b63ef!important;background:#dceaff!important;color:#0c49a1!important;-webkit-text-fill-color:#0c49a1!important;box-shadow:inset 0 0 0 1px #0b63ef}
+#km24WorldsHubV3 a:focus-visible{outline:3px solid #11acdd!important;outline-offset:2px}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldMainV3{background:#152338!important;border-color:#344c68!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldMainLinkV3:not(.is-active){color:#e8f1ff!important;-webkit-text-fill-color:#e8f1ff!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldSubLinkV3{background:#20334d!important;border-color:#3b587b!important;color:#e7f1ff!important;-webkit-text-fill-color:#e7f1ff!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldSubLinkV3.is-active{background:#174a84!important;border-color:#64a0fa!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+#app #km24AreaBarSection .km24AreaSwitch,#app #km24ThreeWorldsServices{display:none!important}
+#app #km24AreaBarSection{padding:0!important;margin:0!important}
+#app #km24AreaBarSection .km24JobsHub{margin-top:9px!important}
+html[data-km24-theme="light"] .hero.km24WowHero .km24HeroEyebrow,
+html[data-km24-theme="light"] .km24HeroEyebrow{background:#e6f0ff!important;border:1px solid #c7daf5!important;color:#164779!important;-webkit-text-fill-color:#164779!important;text-shadow:none!important;opacity:1!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .km24HeroEyebrow,
+html[data-km24-theme="dark"] .km24HeroEyebrow{background:#183455!important;border:1px solid #345d85!important;color:#eef6ff!important;-webkit-text-fill-color:#eef6ff!important;text-shadow:none!important;opacity:1!important}
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button{background:#e8f1ff!important;background-image:none!important;border:1px solid #bdd1ef!important;color:#173f70!important;-webkit-text-fill-color:#173f70!important;text-shadow:none!important;opacity:1!important;box-shadow:none!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button{background:#203a5a!important;background-image:none!important;border:1px solid #426184!important;color:#edf5ff!important;-webkit-text-fill-color:#edf5ff!important;text-shadow:none!important;opacity:1!important;box-shadow:none!important}
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button:hover,
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button:focus-visible{background:#d7e9ff!important;border-color:#6da3ef!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button:hover,
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button:focus-visible{background:#2b5179!important;border-color:#76b2f4!important}
+@media(max-width:650px){
+ #km24WorldsHubV3{padding:9px 10px 3px!important}
+ #km24WorldsHubV3 .km24WorldMainV3{gap:5px;padding:5px;border-radius:16px}
+ #km24WorldsHubV3 .km24WorldMainLinkV3{min-height:76px;padding:8px 4px;gap:4px}
+ #km24WorldsHubV3 .km24WorldMainLinkV3 strong{font-size:clamp(12.5px,3.55vw,15px)}
+ #km24WorldsHubV3 .km24WorldMainLinkV3 small{font-size:clamp(10px,2.75vw,12px)}
+ #km24WorldsHubV3 .km24WorldSubV3{gap:6px;margin-top:8px}
+ #km24WorldsHubV3 .km24WorldSubLinkV3{min-height:46px;padding:10px 4px;font-size:12.5px!important;gap:5px}
+}

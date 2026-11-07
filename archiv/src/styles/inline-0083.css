@@ -1,0 +1,24 @@
+
+.km24QuickFilterBar{display:flex;gap:7px;overflow-x:auto;padding:2px 1px 10px;scrollbar-width:none}
+.km24QuickFilterBar::-webkit-scrollbar{display:none}
+.km24QuickFilter{
+  flex:0 0 auto;min-height:36px;padding:0 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.035);
+  color:#c8d0ca;font:inherit;font-size:12px;font-weight:850;cursor:pointer
+}
+.km24QuickFilter.active{background:rgba(46,196,91,.15);border-color:rgba(78,224,119,.38);color:#9af0b2}
+.km24ActiveFilters{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0 10px}
+.km24ActiveFilter{
+  display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:0 9px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.09);background:#181b18;color:#bfc8c1;font-size:11px;font-weight:800
+}
+.km24ActiveFilter button{appearance:none;border:0;background:transparent;color:#8f9a92;padding:0;min-height:0;font-size:15px;line-height:1;cursor:pointer}
+.marketFilterToggle .km24FilterCount{
+  display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;margin-left:6px;
+  border-radius:999px;background:#238c4a;color:#fff;font-size:10px;font-weight:950
+}
+@media(max-width:700px){
+  .km24QuickFilterBar{margin:0 -2px 3px;padding-bottom:9px}
+  .km24QuickFilter{min-height:38px;font-size:12px}
+  .km24ActiveFilters{margin-top:4px}
+}

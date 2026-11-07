@@ -1,0 +1,39 @@
+
+/* KaufMich24 canonical theme palette: same colours in Chrome, Samsung Internet, Safari and installed web app. */
+html[data-km24-theme="light"],html[data-km24-theme="light"] body,html[data-km24-theme="light"] #app,
+html.km24SamsungSafe[data-km24-theme="light"],html.km24SamsungSafe[data-km24-theme="light"] body,html.km24SamsungSafe[data-km24-theme="light"] #app{
+ --bg:#fff!important;--card:#fff!important;--text:#142033!important;--muted:#53657a!important;
+ --km-bg:#fff!important;--km-surface:#fff!important;--km-surface2:#f7f9fd!important;
+ --km-text:#142033!important;--km-muted:#53657a!important;--km-line:#dce4f0!important;
+ --km-accent:#0b63f6!important;--g:#0b63f6!important;color-scheme:only light!important}
+html[data-km24-theme="dark"],html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] #app{
+ --bg:#080e18!important;--card:#101925!important;--text:#f3f7ff!important;--muted:#aabbd0!important;
+ --km-bg:#080e18!important;--km-surface:#101925!important;--km-surface2:#152131!important;
+ --km-text:#f3f7ff!important;--km-muted:#aabbd0!important;--km-line:#30445c!important;
+ --km-accent:#1877ff!important;--g:#1877ff!important;color-scheme:dark!important}
+html[data-km24-theme="light"] body,html[data-km24-theme="light"] body #app,html[data-km24-theme="light"] body main{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] body #app,html[data-km24-theme="dark"] body main{background-color:#080e18!important;color:#f3f7ff!important}
+html[data-km24-theme="light"] body header{background:#fff!important;color:#142033!important;border-bottom-color:#dce4f0!important}
+html[data-km24-theme="dark"] body header{background:#101925!important;color:#f3f7ff!important;border-bottom-color:#30445c!important}
+/* A navy promotional hero with explicitly visible text on both themes, including Android Chrome. */
+html[data-km24-theme] body #app .hero.km24WowHero{background:linear-gradient(128deg,#081b43,#081733 53%,#082c4c)!important;border-bottom-color:#244872!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1{color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>span{color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>.km24HeroFirstLine{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .hero.km24WowHero .km24HeroText,html[data-km24-theme] body #app .hero.km24WowHero p.season-note{color:#e2edff!important;-webkit-text-fill-color:#e2edff!important;opacity:1!important;visibility:visible!important}
+html[data-km24-theme="light"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#e6f0ff!important;border-color:#c7daf5!important;color:#164779!important;-webkit-text-fill-color:#164779!important}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#183455!important;border-color:#345d85!important;color:#eef6ff!important;-webkit-text-fill-color:#eef6ff!important}
+/* Search field and placeholder use one contrast-safe palette across browsers. */
+html[data-km24-theme] body #app .hero.km24WowHero .search{background:#fff!important;border-color:#dce4f0!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input{background:#fff!important;background-image:none!important;color:#182b43!important;-webkit-text-fill-color:#182b43!important;color-scheme:only light!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input::placeholder{color:#53657a!important;-webkit-text-fill-color:#53657a!important;opacity:1!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search button,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary,html[data-km24-theme] body #app .km24AreaSwitch button.active{background:#0b63f6!important;background-image:none!important;border-color:#0b63f6!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .km24AreaSwitch button.active *,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary *{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body .km24BottomNav{background:#fff!important;background-image:none!important;border-color:#e2e8f0!important}
+html[data-km24-theme="dark"] body .km24BottomNav{background:#101925!important;background-image:none!important;border-color:#30445c!important}
+html[data-km24-theme="light"] body .km24BottomNav>a:not(.active),html[data-km24-theme="light"] body .km24BottomNav>button:not(.active){color:#48566a!important;-webkit-text-fill-color:#48566a!important}
+html[data-km24-theme="dark"] body .km24BottomNav>a:not(.active),html[data-km24-theme="dark"] body .km24BottomNav>button:not(.active){color:#c8d9ef!important;-webkit-text-fill-color:#c8d9ef!important}
+html[data-km24-theme] body .km24BottomNav .active{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html[data-km24-theme] body .km24BottomSell{background:linear-gradient(145deg,#0b55e8,#0b77f7)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body #app .card,html[data-km24-theme="light"] body #app .cat,html[data-km24-theme="light"] body #app .panel{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body #app .card,html[data-km24-theme="dark"] body #app .cat,html[data-km24-theme="dark"] body #app .panel{background-color:#101925!important;color:#f3f7ff!important}

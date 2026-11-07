@@ -1,0 +1,18 @@
+
+@media(min-width:901px){
+html[data-km24-theme="light"] body #app .km24BizHeroCard>small{
+ color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;
+ font-size:13px!important;opacity:1!important;
+}
+html[data-km24-theme="light"] body #app .km24SupportHero .km24AccountKicker{
+ color:#baf4d1!important;-webkit-text-fill-color:#baf4d1!important;
+ font-size:13px!important;opacity:1!important;
+}
+html[data-km24-theme="light"] body #app .km24FeesGroupHead>*{
+ color:#35475e!important;-webkit-text-fill-color:#35475e!important;
+ font-size:13px!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .search button{
+ background:#1158bf!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+}

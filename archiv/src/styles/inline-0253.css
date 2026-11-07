@@ -1,0 +1,75 @@
+
+/* KaufMich24 signature slogan: expressive editorial lettering without effects */
+html body .hero.km24WowHero h1{
+ font-family:"Bricolage Grotesque","Sora",Arial,sans-serif!important;
+ font-weight:800!important;
+ font-size:clamp(39px,5.3vw,70px)!important;
+ letter-spacing:-.045em!important;
+ line-height:1.15!important;
+ text-transform:none!important;
+ text-shadow:none!important;
+ max-width:900px!important;
+ text-wrap:balance!important;
+ color:#f7fbff!important;
+ -webkit-text-fill-color:#f7fbff!important;
+}
+html body .hero.km24WowHero h1>span{
+ font-family:"Bricolage Grotesque","Sora",Arial,sans-serif!important;
+ font-weight:800!important;
+ font-size:inherit!important;
+ letter-spacing:-.047em!important;
+ line-height:inherit!important;
+ display:inline!important;
+ position:static!important;
+ margin:0!important;
+ padding:0!important;
+ transform:none!important;
+ filter:none!important;
+ background:none!important;
+ background-image:none!important;
+ background-clip:border-box!important;
+ -webkit-background-clip:border-box!important;
+ -webkit-text-stroke:0!important;
+ text-shadow:none!important;
+ color:#6bd8ff!important;
+ -webkit-text-fill-color:#6bd8ff!important;
+}
+html body .hero.km24WowHero h1>span::after{
+ content:none!important;
+ display:none!important;
+}
+html[data-km24-theme="light"] body .hero.km24WowHero h1,
+html.km24SamsungSafe[data-km24-theme="light"] body .hero.km24WowHero h1{
+ color:#152440!important;
+ -webkit-text-fill-color:#152440!important;
+ text-shadow:none!important;
+}
+html[data-km24-theme="light"] body .hero.km24WowHero h1>span,
+html.km24SamsungSafe[data-km24-theme="light"] body .hero.km24WowHero h1>span{
+ color:#155edb!important;
+ -webkit-text-fill-color:#155edb!important;
+ background:none!important;
+ background-image:none!important;
+ -webkit-text-stroke:0!important;
+}
+html[data-km24-theme="dark"] body .hero.km24WowHero h1{
+ color:#f7fbff!important;
+ -webkit-text-fill-color:#f7fbff!important;
+}
+html[data-km24-theme="dark"] body .hero.km24WowHero h1>span{
+ color:#6bd8ff!important;
+ -webkit-text-fill-color:#6bd8ff!important;
+ background:none!important;
+ background-image:none!important;
+}
+@media(max-width:600px){
+ html body .hero.km24WowHero h1{
+  font-size:clamp(35px,9vw,47px)!important;
+  line-height:1.17!important;
+  letter-spacing:-.042em!important;
+ }
+ html body .hero.km24WowHero h1>span{
+  font-size:inherit!important;
+  letter-spacing:-.048em!important;
+ }
+}

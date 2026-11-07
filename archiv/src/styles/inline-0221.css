@@ -1,0 +1,1 @@
+body.km24AreaJobs #grid .km24ListingCard:not([data-km24-job-card="1"]){display:none!important} body.km24AreaJobs #grid .card:not(.km24JobCard){display:none!important} body.km24AreaJobs #grid .km24JobCard{display:block!important}

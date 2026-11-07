@@ -1,0 +1,262 @@
+
+@media(max-width:700px){
+  /* iPhone/mobile readability layer — light mode */
+  html.km24IOS[data-km24-theme="light"] body,
+  html.km24IOS[data-km24-theme="light"] #app,
+  html.km24IOS[data-km24-theme="light"] main,
+  html.km24IOS[data-km24-theme="light"] .section,
+  html.km24IOS[data-km24-theme="light"] .formPage,
+  html.km24IOS[data-km24-theme="light"] .detail{
+    color:#1f2937!important;
+    -webkit-text-fill-color:initial;
+  }
+
+  html.km24IOS[data-km24-theme="light"] .panel,
+  html.km24IOS[data-km24-theme="light"] .card,
+  html.km24IOS[data-km24-theme="light"] .cat,
+  html.km24IOS[data-km24-theme="light"] .legal,
+  html.km24IOS[data-km24-theme="light"] .adminCard,
+  html.km24IOS[data-km24-theme="light"] .manageRow,
+  html.km24IOS[data-km24-theme="light"] .msgList,
+  html.km24IOS[data-km24-theme="light"] .chatBox,
+  html.km24IOS[data-km24-theme="light"] .filterbar,
+  html.km24IOS[data-km24-theme="light"] .gallery,
+  html.km24IOS[data-km24-theme="light"] .choice,
+  html.km24IOS[data-km24-theme="light"] .km24AccountHero,
+  html.km24IOS[data-km24-theme="light"] .km24AccountQuickGrid>a,
+  html.km24IOS[data-km24-theme="light"] .km24AccountAccordion>details,
+  html.km24IOS[data-km24-theme="light"] .km24MyListingCard,
+  html.km24IOS[data-km24-theme="light"] .notificationCard,
+  html.km24IOS[data-km24-theme="light"] .marketSearchPanel,
+  html.km24IOS[data-km24-theme="light"] .km24DetailMainPanel,
+  html.km24IOS[data-km24-theme="light"] .km24JobActionPanel,
+  html.km24IOS[data-km24-theme="light"] .km24SellerTrustPanel{
+    background:#fff!important;
+    color:#1f2937!important;
+    border-color:#d7dde3!important;
+  }
+
+  html.km24IOS[data-km24-theme="light"] .panel h1,
+  html.km24IOS[data-km24-theme="light"] .panel h2,
+  html.km24IOS[data-km24-theme="light"] .panel h3,
+  html.km24IOS[data-km24-theme="light"] .card h1,
+  html.km24IOS[data-km24-theme="light"] .card h2,
+  html.km24IOS[data-km24-theme="light"] .card h3,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage h1,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage h2,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage h3,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage b,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage strong,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage .title,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage .price{
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+
+  html.km24IOS[data-km24-theme="light"] .mut,
+  html.km24IOS[data-km24-theme="light"] .meta,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage small,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage p,
+  html.km24IOS[data-km24-theme="light"] .km24AccountPage em,
+  html.km24IOS[data-km24-theme="light"] .km24AccountStats span,
+  html.km24IOS[data-km24-theme="light"] .km24AccountQuickGrid small,
+  html.km24IOS[data-km24-theme="light"] .km24MyListingCard small,
+  html.km24IOS[data-km24-theme="light"] .km24CardSeller,
+  html.km24IOS[data-km24-theme="light"] .km24CardMeta,
+  html.km24IOS[data-km24-theme="light"] .marketFilterHint{
+    color:#4b5563!important;
+    -webkit-text-fill-color:#4b5563!important;
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+
+  /* Account onboarding banner is intentionally dark in both themes. */
+  html.km24IOS .km24FirstListing{
+    background:linear-gradient(145deg,#173524,#111a15)!important;
+    border-color:#3c7a57!important;
+  }
+  html.km24IOS .km24FirstListing b{
+    color:#f8fafc!important;
+    -webkit-text-fill-color:#f8fafc!important;
+    opacity:1!important;
+  }
+  html.km24IOS .km24FirstListing small{
+    color:#d4ded8!important;
+    -webkit-text-fill-color:#d4ded8!important;
+    opacity:1!important;
+    line-height:1.45!important;
+  }
+  html.km24IOS .km24FirstListing .btn.primary{
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+  }
+
+  /* Header: always readable on the dark mobile header. */
+  html.km24IOS .km24Topbar .km24BrandText{
+    color:#f8fafc!important;
+    -webkit-text-fill-color:#f8fafc!important;
+    text-shadow:none!important;
+  }
+  html.km24IOS .km24Topbar .km24BrandText>small{
+    color:#cbd5cf!important;
+    -webkit-text-fill-color:#cbd5cf!important;
+    opacity:1!important;
+  }
+
+  /* Language selector: prevent white-on-white / dark-on-dark Safari states. */
+  html.km24IOS[data-km24-theme="light"] .km24LangPicker{
+    background:#fff!important;
+    border-color:#d7dde3!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24LangPicker select{
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    background:transparent!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] .km24LangPicker:after{
+    color:#4b5563!important;
+  }
+
+  /* Form controls + placeholders */
+  html.km24IOS[data-km24-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+  html.km24IOS[data-km24-theme="light"] textarea,
+  html.km24IOS[data-km24-theme="light"] select,
+  html.km24IOS[data-km24-theme="light"] .field{
+    background:#fff!important;
+    color:#111827!important;
+    -webkit-text-fill-color:#111827!important;
+    border-color:#c7d0d8!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] input::placeholder,
+  html.km24IOS[data-km24-theme="light"] textarea::placeholder{
+    color:#6b7280!important;
+    -webkit-text-fill-color:#6b7280!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="light"] label{
+    color:#374151!important;
+    -webkit-text-fill-color:#374151!important;
+  }
+  html.km24IOS[data-km24-theme="light"] button:disabled,
+  html.km24IOS[data-km24-theme="light"] input:disabled,
+  html.km24IOS[data-km24-theme="light"] select:disabled,
+  html.km24IOS[data-km24-theme="light"] textarea:disabled{
+    color:#6b7280!important;
+    -webkit-text-fill-color:#6b7280!important;
+    opacity:1!important;
+  }
+
+  /* Dark mode */
+  html.km24IOS[data-km24-theme="dark"] body,
+  html.km24IOS[data-km24-theme="dark"] #app,
+  html.km24IOS[data-km24-theme="dark"] main{
+    color:#edf5f0!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .panel,
+  html.km24IOS[data-km24-theme="dark"] .card,
+  html.km24IOS[data-km24-theme="dark"] .cat,
+  html.km24IOS[data-km24-theme="dark"] .legal,
+  html.km24IOS[data-km24-theme="dark"] .adminCard,
+  html.km24IOS[data-km24-theme="dark"] .manageRow,
+  html.km24IOS[data-km24-theme="dark"] .msgList,
+  html.km24IOS[data-km24-theme="dark"] .chatBox,
+  html.km24IOS[data-km24-theme="dark"] .filterbar,
+  html.km24IOS[data-km24-theme="dark"] .gallery,
+  html.km24IOS[data-km24-theme="dark"] .choice,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountHero,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountQuickGrid>a,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountAccordion>details,
+  html.km24IOS[data-km24-theme="dark"] .km24MyListingCard,
+  html.km24IOS[data-km24-theme="dark"] .notificationCard,
+  html.km24IOS[data-km24-theme="dark"] .marketSearchPanel,
+  html.km24IOS[data-km24-theme="dark"] .km24DetailMainPanel,
+  html.km24IOS[data-km24-theme="dark"] .km24JobActionPanel,
+  html.km24IOS[data-km24-theme="dark"] .km24SellerTrustPanel{
+    background:#151b18!important;
+    color:#edf5f0!important;
+    border-color:#39463f!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .panel h1,
+  html.km24IOS[data-km24-theme="dark"] .panel h2,
+  html.km24IOS[data-km24-theme="dark"] .panel h3,
+  html.km24IOS[data-km24-theme="dark"] .card h1,
+  html.km24IOS[data-km24-theme="dark"] .card h2,
+  html.km24IOS[data-km24-theme="dark"] .card h3,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountPage h1,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountPage h2,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountPage h3,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountPage b,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountPage strong,
+  html.km24IOS[data-km24-theme="dark"] .title,
+  html.km24IOS[data-km24-theme="dark"] .price{
+    color:#f8fafc!important;
+    -webkit-text-fill-color:#f8fafc!important;
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .mut,
+  html.km24IOS[data-km24-theme="dark"] .meta,
+  html.km24IOS[data-km24-theme="dark"] small,
+  html.km24IOS[data-km24-theme="dark"] .km24AccountStats span,
+  html.km24IOS[data-km24-theme="dark"] .km24CardSeller,
+  html.km24IOS[data-km24-theme="dark"] .km24CardMeta,
+  html.km24IOS[data-km24-theme="dark"] .marketFilterHint{
+    color:#b4c0b9!important;
+    -webkit-text-fill-color:#b4c0b9!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] input:not([type="checkbox"]):not([type="radio"]),
+  html.km24IOS[data-km24-theme="dark"] textarea,
+  html.km24IOS[data-km24-theme="dark"] select,
+  html.km24IOS[data-km24-theme="dark"] .field{
+    background:#0e1411!important;
+    color:#f8fafc!important;
+    -webkit-text-fill-color:#f8fafc!important;
+    border-color:#46534c!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] input::placeholder,
+  html.km24IOS[data-km24-theme="dark"] textarea::placeholder{
+    color:#9aa7a0!important;
+    -webkit-text-fill-color:#9aa7a0!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] label{
+    color:#d7e1db!important;
+    -webkit-text-fill-color:#d7e1db!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .km24LangPicker{
+    background:#18201c!important;
+    border-color:#435048!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .km24LangPicker select{
+    color:#f8fafc!important;
+    -webkit-text-fill-color:#f8fafc!important;
+    background:transparent!important;
+    opacity:1!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] .km24LangPicker:after{
+    color:#c7d2cc!important;
+  }
+  html.km24IOS[data-km24-theme="dark"] button:disabled,
+  html.km24IOS[data-km24-theme="dark"] input:disabled,
+  html.km24IOS[data-km24-theme="dark"] select:disabled,
+  html.km24IOS[data-km24-theme="dark"] textarea:disabled{
+    color:#9aa7a0!important;
+    -webkit-text-fill-color:#9aa7a0!important;
+    opacity:1!important;
+  }
+
+  /* Keep primary/action buttons legible in every mode. */
+  html.km24IOS .btn.primary,
+  html.km24IOS button.primary,
+  html.km24IOS a.primary,
+  html.km24IOS .km24BottomSell>span{
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+  }
+}
