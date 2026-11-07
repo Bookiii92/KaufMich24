@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "source": "original/frontend-live-2026-11-07.html",
+  "source_updated_at": "2026-11-07 22:40:50.431959+00",
+  "source_md5": "7b4d2ffd9ea2eff12f2c9bf6d9fd4fef",
+  "source_utf8_bytes": 2356200,
+  "css_files": 280,
+  "js_files": 166,
+  "text_nodes": 72,
+  "notice": "Static build-time split. Do not use template.html or standalone JS parts directly in production. Rebuild into the exact original HTML using tools/rebuild.mjs."
+}

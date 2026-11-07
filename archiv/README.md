@@ -47,10 +47,24 @@ Dieses GitHub-Archiv selbst benötigt **keinen Live-Rollback**, da es nicht ver�
 
 - [x] Datenbank-HTML unverändert exportieren und im isolierten Branch ablegen.
 - [x] Architekturdokumentation erstellen.
-- [ ] Code in `HTML`, `CSS`, `JavaScript` und Textbausteine trennen, Rebuild bytegenau gegen Original prüfen.
-- [ ] Staging-/Mobiltests für Startseite, Inserate und Bietablauf dokumentieren.
+- [x] CSS (280 Dateien), JavaScript (166 Dateien) und statische HTML-Textbausteine (72 Einträge) ohne Laufzeitänderung trennen; Rundreise-Vergleich nach jedem Teil erfolgreich.
+- [ ] Nicht-produktive Mobil-/Staging-Tests für Startseite, Inserate und Bietablauf dokumentieren (echte Gebote nur mit separatem Testkonto/Testdaten).
 - [ ] Nach ausdrücklicher Benutzerbestätigung mit Schritt 2 (vollständige Datei-Backups und Restore-Test) fortfahren.
 
 ## 7. Sicherheit und Zugänge
 
 Repository `Bookiii92/KaufMich24` ist derzeit **öffentlich**. Bitte keine Passwörter, Tokens, Service-Role-Keys, Stripe-Secrets oder Signierschlüssel committen oder im Chat teilen. Ein rudimentärer Muster-Check des HTML-Exports fand keine typischen Secret-Marker; die vollständige Sicherheitsprüfung ist Bestandteil von Schritt 4. Die Domain-Registrierung und Google Play Console sind eigene Zugänge.
+
+## 8. Verlustfreier modularer Wiederaufbau
+
+- `src/template.html`: HTML-Gerüst mit eindeutig indizierten Platzhaltern.
+- `src/styles/inline-*.css`: 280 ursprüngliche CSS-Blöcke.
+- `src/scripts/inline-*.js`: 166 ursprüngliche JavaScript-Blöcke (werden erst beim Zusammenbau in ihre Originalpositionen eingefügt).
+- `src/texts/strings.original.json`: 72 statische Textabschnitte mit Original-Leerzeichen.
+- `src/stages/01-css.template.html` und `02-js.template.html`: Zwischenstände zum Prüfen der einzelnen Refactoring-Schritte.
+- `src/manifest.json`: Quellen-Zeitpunkt, Anzahl der Teile, Länge und Integritätsprüfsumme.
+- `tools/rebuild.mjs`: baut die Originaldatei zusammen und kontrolliert **exakte Stringgleichheit + UTF-8-Grösse + MD5**.
+
+Im Repository ausführen: `node archiv/tools/rebuild.mjs`; optional `node archiv/tools/rebuild.mjs --write` erstellt nur die lokale Datei `archiv/dist/index.html` (keine Veröffentlichung). Die getrennten CSS-/JS-Quellen sind **keine sofort unabhängig ladbaren Browser-Bundles**; beim Build entsteht wieder dasselbe HTML. Erst nach separaten Tests dürfte man echte externe Assets daraus machen.
+
+Ein **echter Git-Tag** `stand-vor-aufraeumen` wurde mangels Tag-Erstellfunktion des verbundenen GitHub-Zugangs noch nicht erstellt. Der gleichnamige *Branch* zeigt unveränderlich auf den ursprünglichen Export-Commit `e8aa9dacb41f06deb52773ea45600ff44e88270b`. Bitte nicht löschen oder bewegen.
