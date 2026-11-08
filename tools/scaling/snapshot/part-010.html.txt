@@ -1,0 +1,2670 @@
+n K logo */
+html[data-km24-theme="light"]{
+  --km-bg:#f4f7fc!important;--km-surface:#ffffff!important;--km-surface2:#f7f9fd!important;
+  --km-text:#142033!important;--km-muted:#66758a!important;--km-line:#dce4f0!important;
+  --km-accent:#0b63f6!important;--km-accent2:#0849c7!important;--km-shadow:0 10px 30px rgba(12,55,120,.08)!important;
+}
+html[data-km24-theme="dark"]{
+  --km-bg:#080e18!important;--km-surface:#101925!important;--km-surface2:#152131!important;
+  --km-text:#f3f7ff!important;--km-muted:#9aa9bc!important;--km-line:#26364b!important;
+  --km-accent:#1877ff!important;--km-accent2:#0b5de8!important;--km-shadow:0 14px 36px rgba(0,0,0,.30)!important;
+}
+html[data-km24-theme]{--g:#0b63f6!important;--g2:#18d7cf!important;--km24-green:#18d7cf!important;--km24-green2:#68efe2!important}
+
+/* Main marketplace/jobs switch */
+html[data-km24-theme] .km24AreaSwitch button.active{
+  background:linear-gradient(135deg,#0b43d8 0%,#0b63f6 55%,#18cfd0 135%)!important;
+  color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 28px rgba(11,99,246,.28)!important;
+}
+html[data-km24-theme] .km24AreaSwitch button:not(.active){background:transparent!important;color:var(--km-text)!important}
+html[data-km24-theme] .km24JobsHubTop small{color:#168be8!important}
+html[data-km24-theme] .km24JobKindTabs button.active{background:#0b63f6!important;border-color:#0b63f6!important;color:#fff!important}
+
+/* Hero */
+html[data-km24-theme] .hero.km24WowHero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(24,215,207,.20),transparent 34%),
+    radial-gradient(circle at 10% 105%,rgba(11,99,246,.20),transparent 38%),
+    linear-gradient(135deg,#081426 0%,#0a1b35 55%,#0a3242 115%)!important;
+  border-bottom:1px solid rgba(68,142,255,.14)!important;
+}
+html[data-km24-theme] .km24WowHero h1 span{
+  background:linear-gradient(92deg,#ffffff 0%,#58b9ff 55%,#27e6d4 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+}
+html[data-km24-theme] .km24HeroEyebrow,
+html[data-km24-theme] .km24SectionKicker{color:#70c7ff!important}
+html[data-km24-theme] .km24HeroEyebrow{
+  border-color:rgba(68,170,255,.28)!important;background:rgba(22,111,229,.12)!important;
+}
+html[data-km24-theme] .km24WowHero .km24HeroText{color:#aebbd0!important}
+
+/* Primary CTAs and search */
+html[data-km24-theme] .btn.primary,
+html[data-km24-theme] header .sellNav,
+html[data-km24-theme] .km24WowHero .search button,
+html[data-km24-theme] .marketSearchActions .btn:first-child,
+html[data-km24-theme] button.primary,
+html[data-km24-theme] .primary{
+  background:linear-gradient(135deg,#0b52e5,#0b73f6)!important;
+  border-color:transparent!important;color:#fff!important;
+  box-shadow:0 10px 24px rgba(11,99,246,.20)!important;
+}
+
+/* Bottom navigation */
+html[data-km24-theme] .km24BottomSell{
+  background:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  color:#fff!important;box-shadow:0 10px 28px rgba(11,99,246,.30)!important;
+}
+html[data-km24-theme] .km24BottomNav [data-nav].active,
+html[data-km24-theme] .km24BottomNav button.active,
+html[data-km24-theme] .km24BottomNav a.active{color:#56b8ff!important}
+html[data-km24-theme] .km24BottomNav [data-nav].active span,
+html[data-km24-theme] .km24BottomNav button.active span,
+html[data-km24-theme] .km24BottomNav a.active span{color:#3ba7ff!important}
+
+/* General selected states, badges and links */
+html[data-km24-theme] .notificationCard.unread{border-left-color:#0b63f6!important}
+html[data-km24-theme] .notificationFilters .btn.on{background:#0b63f6!important;color:#fff!important}
+html[data-km24-theme] a:not(.brand):not(.card):not(.btn):focus-visible,
+html[data-km24-theme] button:focus-visible{outline-color:#18cfd0!important}
+
+/* Cards / hover accents */
+html[data-km24-theme] .km24QuickCard:hover{border-color:rgba(24,207,208,.34)!important;box-shadow:0 12px 30px rgba(11,99,246,.10)!important}
+
+/* Cookie Joe: keep character, remove old green UI tint */
+html[data-km24-theme] #kmAiPanel .kmAiMsg.user{background:#0b63f6!important}
+html[data-km24-theme] #kmAiPanel #kmAiSend{background:#0b63f6!important}
+html[data-km24-theme] #kmAiPanel .kmAiQuick button{border-color:#27405c!important}
+
+/* Dark theme browser surfaces */
+html[data-km24-theme="dark"] body{background:#080e18!important}
+html[data-km24-theme="dark"] header{background:rgba(8,14,24,.90)!important}
+html[data-km24-theme="light"] header{background:rgba(255,255,255,.94)!important}
+</style>
+<style id="km24-buyer-compact-v2-style">
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard{align-items:start!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxFlowExtras{grid-column:1/-1!important;width:100%!important;margin:0!important;gap:6px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimeline{min-height:0!important;height:auto!important;padding:0!important;overflow:hidden!important;border-radius:11px!important;background:rgba(255,255,255,.018)!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimeline>summary{padding:9px 11px!important;font-size:11px!important;line-height:1.25!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxTimelineRows{margin:0!important;padding:0 11px 9px!important;gap:5px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24CancelState{padding:8px 10px!important;font-size:10.5px!important;line-height:1.35!important;border-radius:10px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions{gap:6px!important}
+body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions .btn{font-size:10.5px!important;padding:8px 9px!important}
+@media(max-width:700px){
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard{grid-template-columns:70px minmax(0,1fr)!important;gap:9px 10px!important;padding:11px!important;border-radius:14px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic{width:70px!important;height:70px!important;min-width:70px!important;border-radius:11px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic+div{min-width:0!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.activityPic+div>b{display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important;font-size:16px!important;line-height:1.22!important;margin:0!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .activityStatus{font-size:11.5px!important;line-height:1.25!important;margin-top:4px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .txSteps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3px!important;margin:7px 0 5px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .txSteps>span{display:flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;padding:4px 2px!important;font-size:7.8px!important;line-height:1.08!important;border-radius:6px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxStepTime{display:none!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .badge{font-size:9.5px!important;padding:5px 7px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard small.mut{font-size:10.5px!important;line-height:1.3!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxFlowExtras{grid-column:1/-1!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:7px!important;margin-top:0!important;width:100%!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions .btn{width:100%!important;min-height:39px!important;padding:8px 7px!important;font-size:10.5px!important;line-height:1.2!important;justify-content:center!important;margin:0!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions [data-purchase-chat]{order:1!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard>.actions a.btn{order:2!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24TxActions>*{min-width:0!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24ProblemBtn{width:100%!important;min-height:36px!important}
+ body.km24BuyerCompactRoute .km24BuyerPurchaseCard .km24ReviewAction{margin-top:6px!important}
+}
+</style>
+<script id="km24-buyer-compact-v2-js">
+(function(){
+ if(window.__km24BuyerCompactV2)return;window.__km24BuyerCompactV2=true;
+ function onBuyer(){return (location.hash||'').split('?')[0]==='#/buyer'}
+ function apply(){
+  try{document.body&&document.body.classList.toggle('km24BuyerCompactRoute',onBuyer())}catch(_){}
+  if(!onBuyer())return;
+  document.querySelectorAll('.activityCard [data-purchase-chat]').forEach(function(chat){
+   var card=chat.closest('.activityCard');if(!card)return;
+   card.classList.add('km24BuyerPurchaseCard');
+   var actions=chat.closest('.actions');
+   var main=card.querySelector('.activityPic')&&card.querySelector('.activityPic').nextElementSibling;
+   if(actions){
+    var detail=actions.querySelector('a.btn');
+    chat.classList.add('primary');if(chat.textContent!=='💬 Verkäufer')chat.textContent='💬 Verkäufer';
+    if(detail&&detail.textContent!=='Inserat')detail.textContent='Inserat';
+   }
+  });
+ }
+ function queue(){setTimeout(apply,60);setTimeout(apply,350)}
+ try{if(typeof buyerCenter==='function'){var base=buyerCenter;buyerCenter=async function(){var out=await base.apply(this,arguments);queue();return out};window.buyerCenter=buyerCenter}}catch(_){}
+ addEventListener('hashchange',queue);addEventListener('pageshow',queue);
+ queue();
+})();
+</script>
+<style id="km24-avatar-quick-mobile-fix-v2">
+@media(max-width:700px){
+  .km24AvatarQuickInput[type="file"]{
+    position:absolute!important;
+    left:-9999px!important;
+    top:0!important;
+    right:auto!important;
+    bottom:auto!important;
+    inset:auto!important;
+    width:1px!important;
+    height:1px!important;
+    min-width:0!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    opacity:0!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    -webkit-appearance:none!important;
+    appearance:none!important;
+  }
+  .km24AvatarQuickEdit{position:relative!important;overflow:visible!important;cursor:pointer!important}
+}
+</style>
+<script id="km24-avatar-quick-mobile-fix-v2-js">
+(function(){
+ if(window.__km24AvatarQuickMobileFixV2)return;window.__km24AvatarQuickMobileFixV2=true;
+ document.addEventListener("click",function(e){
+   try{
+     if(!window.matchMedia || !window.matchMedia("(max-width:700px)").matches)return;
+     if(e.target&&e.target.closest&&e.target.closest(".km24AvatarQuickInput"))return;
+     var wrap=e.target&&e.target.closest&&e.target.closest(".km24AvatarQuickEdit");
+     if(!wrap)return;
+     var input=wrap.querySelector(".km24AvatarQuickInput[type=file]");
+     if(!input)return;
+     e.preventDefault();
+     input.click();
+   }catch(_){}
+ },true);
+})();
+</script>
+
+<style id="km24-avatar-ios-hardfix-v3">
+html.km24IOS body .km24AvatarQuickEdit input.km24AvatarQuickInput[type="file"],
+html body .km24AvatarQuickEdit input.km24AvatarQuickInput[type="file"]{
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  position:absolute!important;
+  left:-9999px!important;
+  top:0!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:1px!important;
+  height:1px!important;
+  min-width:0!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  pointer-events:none!important;
+  -webkit-appearance:none!important;
+  appearance:none!important;
+}
+</style>
+<script id="km24-avatar-ios-hardfix-v3-js">
+(function(){
+ if(window.__km24AvatarIosHardFixV3)return;window.__km24AvatarIosHardFixV3=true;
+ document.addEventListener("click",function(e){
+   try{
+     var wrap=e.target&&e.target.closest&&e.target.closest(".km24AvatarQuickEdit");
+     if(!wrap)return;
+     var input=wrap.querySelector("input.km24AvatarQuickInput[type=file]");
+     if(!input)return;
+     e.preventDefault();e.stopPropagation();
+     input.click();
+   }catch(_){}
+ },true);
+})();
+</script>\n
+<style id="km24-promo-force-v1-style">
+.km24ListingCard.km24PromoForceTop{
+  border:1.5px solid rgba(199,207,218,.92)!important;
+  box-shadow:0 0 0 1px rgba(226,231,238,.15),0 10px 24px rgba(0,0,0,.18)!important;
+  transform:none!important;
+}
+.km24ListingCard.km24PromoForceHome{
+  border:2px solid rgba(224,180,73,.95)!important;
+  box-shadow:0 0 0 1px rgba(244,211,123,.20),0 12px 28px rgba(181,129,31,.24)!important;
+  transform:none!important;
+}
+.km24ListingCard.km24PromoForceBoth{
+  border:2px solid rgba(224,180,73,.98)!important;
+  box-shadow:0 0 0 1px rgba(244,211,123,.24),0 13px 30px rgba(181,129,31,.27)!important;
+  transform:none!important;
+}
+.km24ListingCard.km24PromoForceBoth .km24CardBody{background:inherit!important}
+.km24PromoForceBadge{
+  position:absolute;right:9px;left:auto;bottom:9px;z-index:30;
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:24px;padding:4px 8px;border-radius:999px;
+  background:rgba(10,15,22,.88);color:#f5d98a!important;
+  border:1px solid rgba(239,199,101,.52);
+  box-shadow:0 4px 12px rgba(0,0,0,.26);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  font-size:8.5px;font-weight:900;letter-spacing:.035em;
+  text-align:center;white-space:nowrap;pointer-events:none;
+}
+.km24PromoForceBadge.top{background:rgba(20,23,28,.94);color:#f2f5f8!important;border-color:rgba(213,220,230,.82);font-size:10.5px;min-height:28px;padding:5px 10px;letter-spacing:.045em;box-shadow:0 5px 15px rgba(0,0,0,.30)}
+.km24PromoForceBadge.home{background:rgba(31,24,9,.93);color:#f6dc91!important;border-color:rgba(224,180,73,.64)}
+@media(max-width:600px){
+ .km24PromoForceBadge{right:7px;bottom:7px;min-height:22px;padding:3px 7px;font-size:7.5px}
+ .km24ListingCard.km24PromoForceTop{box-shadow:0 0 0 1px rgba(226,231,238,.12),0 8px 20px rgba(0,0,0,.16)!important}.km24ListingCard.km24PromoForceHome,.km24ListingCard.km24PromoForceBoth{box-shadow:0 0 0 1px rgba(244,211,123,.18),0 9px 22px rgba(181,129,31,.22)!important}
+}
+</style>
+<script id="km24-promo-force-v1-script">
+(function(){
+ if(window.__km24PromoForceV1)return;window.__km24PromoForceV1=true;
+ let runId=0,timer=0,busy=false;
+ const active=v=>{if(!v)return false;const t=Date.parse(v);return Number.isFinite(t)&&t>Date.now()};
+ function apply(card,row){
+   const top=!!row&&active(row.featured_until),home=!!row&&active(row.home_boost_until),state=top&&home?'both':top?'top':home?'home':'none';
+   if(card.dataset.km24PromoForce===state && (state==='none'||card.querySelector('.km24PromoForceBadge')))return;
+   card.dataset.km24PromoForce=state;
+   card.classList.remove('km24PromoForceTop','km24PromoForceHome','km24PromoForceBoth');
+   card.querySelector('.km24PromoForceBadge')?.remove();
+   if(state==='none')return;
+   card.classList.add(state==='both'?'km24PromoForceBoth':state==='top'?'km24PromoForceTop':'km24PromoForceHome');
+   const pic=card.querySelector('.km24CardPic');if(!pic)return;
+   const b=document.createElement('div');
+   b.className='km24PromoForceBadge '+(state==='top'?'top':state==='home'?'home':'both');
+   b.textContent=state==='both'?'⭐ TOP · 🥇 GOLD · STARTSEITE':state==='top'?'⭐ TOP':'🥇 GOLD · STARTSEITE';
+   pic.appendChild(b);
+ }
+ async function refresh(){
+   if(busy||typeof db==='undefined')return;
+   const cards=[...document.querySelectorAll('.km24ListingCard[data-listing-id]')];
+   const ids=[...new Set(cards.map(c=>c.dataset.listingId).filter(Boolean))];
+   if(!ids.length)return;
+   busy=true;const my=++runId;
+   try{
+     const q=await db.from('listings').select('id,featured_until,home_boost_until').in('id',ids);
+     if(my!==runId||q.error)return;
+     const map={};(q.data||[]).forEach(x=>map[x.id]=x);
+     cards.forEach(c=>apply(c,map[c.dataset.listingId]));
+   }catch(e){console.warn('KM24 promo force',e)}finally{busy=false}
+ }
+ function schedule(ms=80){clearTimeout(timer);timer=setTimeout(refresh,ms)}
+ const root=document.getElementById('app')||document.body;
+ new MutationObserver(()=>schedule(60)).observe(root,{childList:true,subtree:true});
+ addEventListener('hashchange',()=>schedule(120));
+ addEventListener('pageshow',()=>schedule(120));
+ setTimeout(refresh,150);setTimeout(refresh,700);setTimeout(refresh,1800);
+})();
+</script>
+<script id="km24-native-bridge-v1" src="https://aaqqcnrnrvybboirrrtd.supabase.co/functions/v1/kaufmich-native-bridge"></script>
+<style id="km24-promo-canonical-v2-style">
+.km24ListingCard .km24PromoFlagStack,.km24ListingCard .km24PromoBadge{display:none!important}
+</style>
+<script id="km24-promo-canonical-v2">
+(function(){
+  if(window.__km24PromoCanonicalV2)return;
+  window.__km24PromoCanonicalV2=true;
+  const active=v=>{if(!v)return false;const t=Date.parse(v);return Number.isFinite(t)&&t>Date.now()};
+  const stateFor=l=>{
+    const top=!!l&&active(l.featured_until),home=!!l&&active(l.home_boost_until);
+    return top&&home?'both':top?'top':home?'home':'none';
+  };
+  const classFor=s=>s==='both'?'km24PromoForceBoth':s==='top'?'km24PromoForceTop':s==='home'?'km24PromoForceHome':'';
+  const textFor=s=>s==='both'?'⭐ TOP · 🥇 GOLD · STARTSEITE':s==='top'?'⭐ TOP':'🥇 GOLD · STARTSEITE';
+  const badgeClass=s=>'km24PromoForceBadge '+(s==='top'?'top':s==='home'?'home':'both');
+  const originalCard=(typeof card==='function')?card:null;
+
+  function renderCard(l){
+    let html=originalCard(l),state=stateFor(l);
+    if(state==='none')return html;
+    const promoClass=classFor(state);
+    html=html.replace(/class="card km24ListingCard([^"]*)"/,function(_,rest){
+      return 'class="card km24ListingCard '+promoClass+rest+'" data-km24-promo-force="'+state+'"';
+    });
+    if(html.indexOf('km24PromoForceBadge')<0){
+      html=html.replace('<div class="pic km24CardPic">','<div class="pic km24CardPic"><div class="'+badgeClass(state)+'">'+textFor(state)+'</div>');
+    }
+    return html;
+  }
+
+  if(originalCard){
+    card=renderCard;
+    try{window.card=renderCard}catch(_){}
+  }
+
+  function apply(cardEl,row){
+    if(!cardEl||!row)return;
+    const state=stateFor(row),promoClass=classFor(state);
+    cardEl.classList.remove('km24PromoForceTop','km24PromoForceHome','km24PromoForceBoth');
+    cardEl.querySelector('.km24PromoForceBadge')?.remove();
+    cardEl.dataset.km24PromoForce=state;
+    if(state==='none')return;
+    cardEl.classList.add(promoClass);
+    const pic=cardEl.querySelector('.km24CardPic');
+    if(!pic)return;
+    const b=document.createElement('div');
+    b.className=badgeClass(state);
+    b.textContent=textFor(state);
+    pic.appendChild(b);
+  }
+
+  function sync(){
+    try{
+      const arr=Array.isArray(window.listings)?window.listings:(typeof listings!=='undefined'&&Array.isArray(listings)?listings:[]);
+      if(!arr.length)return;
+      const map={};arr.forEach(x=>{if(x&&x.id)map[x.id]=x});
+      document.querySelectorAll('.km24ListingCard[data-listing-id]').forEach(c=>{
+        const row=map[c.dataset.listingId];
+        if(row)apply(c,row);
+      });
+    }catch(e){console.warn('KM24 promo canonical sync',e)}
+  }
+
+  let timer=0;
+  const schedule=()=>{clearTimeout(timer);timer=setTimeout(sync,25)};
+  try{new MutationObserver(schedule).observe(document.getElementById('app')||document.body,{childList:true,subtree:true})}catch(_){}
+  addEventListener('pageshow',schedule,{passive:true});
+  addEventListener('hashchange',schedule,{passive:true});
+  sync();setTimeout(sync,80);setTimeout(sync,300);setTimeout(sync,1000);
+})();
+</script>
+
+<script id="km24-home-orchestrator-v1">
+(function(){
+ if(window.__km24HomeOrchestratorV1)return;window.__km24HomeOrchestratorV1=true;
+ const baseHome=home;
+ let generation=0;
+ function onHome(){const h=(location.hash||'#/').split('?')[0];return h==='#/'||h==='#'}
+ async function km24HomeOrchestrated(){
+   const run=++generation;
+   await baseHome();
+   if(run!==generation||!onHome())return;
+   const hooks=(window.__km24HomeHooks||[]).slice();
+   for(const hook of hooks){
+     if(run!==generation||!onHome())return;
+     try{await hook()}catch(e){console.warn('KM24 home hook failed',e)}
+   }
+ }
+ home=km24HomeOrchestrated;window.home=km24HomeOrchestrated;
+ if(onHome())setTimeout(function(){km24HomeOrchestrated()},0);
+})();
+</script>
+<style id="km24-sales-sheet-v1">
+.km24SalesOverlay{position:fixed;inset:0;z-index:100000;background:rgba(3,18,46,.78);display:flex;align-items:flex-start;justify-content:center;padding:18px;overflow:auto;-webkit-overflow-scrolling:touch}
+.km24SalesModal{width:min(900px,100%);background:#fff;border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35);padding:16px;color:#0b1f3a}
+.km24SalesModalHead{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:4px 2px 14px}.km24SalesModalHead h2{margin:0;font-size:20px}.km24SalesModalHead p{margin:3px 0 0;color:#64748b;font-size:13px}
+.km24SalesClose{border:0;background:#eef2f7;border-radius:999px;width:40px;height:40px;font-size:24px;cursor:pointer}.km24SalesStage{position:relative;margin:0 auto;background:#dbe7f5;border-radius:18px;overflow:hidden}
+.km24SalesSheet{position:absolute;left:0;top:0;width:794px;height:1123px;box-sizing:border-box;padding:34px 38px 30px;background:radial-gradient(circle at 80% 8%,#0b63b9 0,#063b76 24%,#021d45 58%,#011630 100%);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+.km24SalesBrand{height:68px;display:flex;align-items:center;gap:14px}.km24SalesBrand img{width:64px;height:64px;border-radius:16px}.km24SalesBrandName{font-size:34px;font-weight:800;line-height:.95;letter-spacing:-1px}.km24SalesBrandName b{color:#21b8ff}.km24SalesClaim{font-size:15px;font-weight:700;letter-spacing:.6px;margin-top:5px;color:#fff}
+.km24SalesStatus{display:inline-flex;align-items:center;margin-top:18px;padding:10px 18px;border-radius:999px;background:linear-gradient(90deg,#0c8cff,#18b7ff);font-weight:800;font-size:17px;letter-spacing:.8px}.km24SalesStatus.sold{background:linear-gradient(90deg,#0d9f6e,#25c28a)}
+.km24SalesTitle{font-size:34px;line-height:1.08;font-weight:850;margin:15px 0 4px;max-height:74px;overflow:hidden}.km24SalesSub{font-size:18px;color:#d7e7f7;margin-bottom:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.km24SalesHero{position:relative;height:330px;border-radius:28px;overflow:hidden;background:#0a2f5d}.km24SalesHero img{width:100%;height:100%;object-fit:cover;display:block}.km24SalesHero:after{content:"";position:absolute;inset:auto 0 0;height:92px;background:linear-gradient(transparent,rgba(1,13,31,.82));pointer-events:none}
+.km24SalesPrice,.km24SalesLoc{position:absolute;bottom:14px;z-index:2;border-radius:20px;padding:11px 18px;font-weight:850}.km24SalesPrice{left:16px;font-size:29px;background:#062b5d;border:2px solid #19a8ff}.km24SalesLoc{right:16px;color:#092b55;background:#fff;font-size:18px;min-width:165px;text-align:center}
+.km24SalesThumbs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}.km24SalesThumb{height:142px;border-radius:22px;overflow:hidden;background:#0b3769}.km24SalesThumb img{width:100%;height:100%;object-fit:cover;display:block}
+.km24SalesSpecs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 14px;margin-top:16px}.km24SalesSpec{height:66px;box-sizing:border-box;border-radius:16px;background:#fff;color:#08264d;padding:8px 12px;overflow:hidden}.km24SalesSpec strong{display:block;font-size:18px;line-height:1.12;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.km24SalesSpec span{display:block;color:#6c7b90;font-size:13px;margin-top:4px}
+.km24SalesHighlights{height:54px;overflow:hidden;margin:14px 0 12px;font-size:15px;line-height:1.45;font-weight:650;color:#fff}.km24SalesBottom{display:grid;grid-template-columns:1fr 92px;gap:14px;align-items:stretch}.km24SalesCta{height:74px;border-radius:22px;background:linear-gradient(90deg,#0b8df5,#16b7ff);display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:24px;font-weight:850}.km24SalesCtaArrow{font-size:34px}.km24SalesQr{height:92px;background:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;padding:7px;box-sizing:border-box}.km24SalesQr canvas,.km24SalesQr img{max-width:78px!important;max-height:78px!important}.km24SalesUrl{font-size:12px;color:#b8d1e8;margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.km24SalesActions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;padding-top:14px}.km24SalesActions .btn{min-height:44px}.km24SalesPdfBtn{background:#0b72e7!important;color:#fff!important;border-color:#0b72e7!important}.km24SalesBusy{opacity:.65;pointer-events:none}@media(max-width:700px){.km24SalesOverlay{padding:8px}.km24SalesModal{border-radius:18px;padding:10px}.km24SalesModalHead h2{font-size:18px}.km24SalesActions{justify-content:stretch}.km24SalesActions .btn{flex:1}}
+.km24SalesModalHead h2{color:#0b1f3a!important;text-shadow:none!important;opacity:1!important}.km24SalesModalHead p{color:#64748b!important;opacity:1!important}.km24SalesClose{color:#0b1f3a!important;background:#eef2f7!important;opacity:1!important}.km24SalesSpec,.km24SalesSpec *{opacity:1!important;text-shadow:none!important}.km24SalesSpec strong{color:#08264d!important;font-weight:800!important}.km24SalesSpec span{color:#6c7b90!important}.km24SalesHighlights{font-size:14px!important;line-height:1.5!important;height:58px!important;margin-top:12px!important}.km24SalesCta{color:#fff!important}.km24SalesStatus{color:#fff!important}.km24SalesPrice{color:#fff!important}.km24SalesLoc{color:#092b55!important}
+</style>
+<script id="km24-sales-sheet-v1">
+(function(){if(window.km24SalesSheetInstalled)return;window.km24SalesSheetInstalled=true;
+const SCRIPT_PDF='https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js',SCRIPT_QR='https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
+const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),cond=v=>({new:'Neu',used:'Gebraucht',like_new:'Wie neu',refurbished:'Aufbereitet',defective:'Defekt'}[v]||v||''),fmt=v=>new Intl.NumberFormat('de-CH',{maximumFractionDigits:0}).format(Number(v||0));
+const labels={mileage_km:'Kilometer',fuel:'Treibstoff',gearbox:'Getriebe',power_ps:'Leistung',drive:'Antrieb',mfk:'MFK',year:'Jahrgang',color:'Farbe',brand:'Marke',model:'Modell',body:'Aufbau',engine_cc:'Hubraum',doors:'Türen',seats:'Sitzplätze',size:'Grösse',material:'Material',manufacturer:'Hersteller',storage:'Speicher',ram:'RAM',screen_size:'Display',rooms:'Zimmer',living_area:'Wohnfläche',floor:'Etage'};
+const loadScript=(src,ready)=>new Promise((res,rej)=>{if(ready())return res();let old=[...document.scripts].find(s=>s.src===src);if(old){old.addEventListener('load',()=>res(),{once:true});old.addEventListener('error',rej,{once:true});return}let s=document.createElement('script');s.src=src;s.async=true;s.onload=()=>res();s.onerror=rej;document.head.appendChild(s)});
+function val(k,v){if(v==null||v==='')return'';if(k==='mileage_km')return fmt(v)+' km';if(k==='power_ps')return fmt(v)+' PS';if(k==='engine_cc')return fmt(v)+' cm³';if(typeof v==='boolean')return v?'Ja':'Nein';if(Array.isArray(v))return v.join(', ');if(typeof v==='object')return'';return String(v)}
+function lab(k){return labels[k]||k.replace(/_/g,' ').replace(/\b\w/g,m=>m.toUpperCase())}function price(l){if(l.price_type==='free')return'KOSTENLOS';if(l.price_type==='on_request')return'PREIS AUF ANFRAGE';let n=Number(l.price_chf||l.auction_start_price_chf||0);if(!n)return'CHF –';let p='CHF '+fmt(n)+'.–';return l.price_type==='auction'?'AB '+p:p}
+function meta(l){let x=l.extra_fields||{},p=[],d=String(l.description||'');let y=x.year; if(!y){let m=d.match(/\b((?:19|20)\d{2})\s*(?:jg|jahrgang)\b/i);if(m)y=m[1]} if(y)p.push(y);if(x.color)p.push(x.color);if(l.condition)p.push(cond(l.condition));return p.join(' · ')||cond(l.condition)||'KaufMich24 Inserat'}
+function specs(l){let x=l.extra_fields||{},out=[],seen=new Set(),d=String(l.description||'');const add=(v,label)=>{v=String(v==null?'':v).trim();if(!v||seen.has(label)||out.length>=6)return;seen.add(label);out.push([v,label])};let pref=l.category_slug==='autos'?['mileage_km','fuel','gearbox','power_ps','drive','mfk']:Object.keys(x);for(let k of pref){let v=val(k,x[k]);if(v)add(v,lab(k))}if(l.category_slug==='autos'){
+ if(!seen.has('Kilometer')){let m=d.match(/\b(\d{2,3}(?:['.\s]\d{3})|\d{5,6})\s*km\b/i);if(m){let n=String(m[1]).replace(/\D/g,'');add(fmt(n)+' km','Kilometer')}}
+ if(!seen.has('Jahrgang')){let m=d.match(/\b((?:19|20)\d{2})\s*(?:jg|jahrgang)\b/i);if(m)add(m[1],'Jahrgang')}
+ if(!seen.has('MFK')){let m=d.match(/\b((?:19|20)\d{2})\s*mfk\b/i);if(m)add(m[1],'MFK')}
+}
+for(let k of Object.keys(x)){if(out.length>=6)break;if(['brand','model','year','color'].includes(k))continue;let v=val(k,x[k]);if(v)add(v,lab(k))}
+add(cond(l.condition)||'–','Zustand');add([l.postal_code,l.city].filter(Boolean).join(' '),'Standort');add(l.pickup_available?'Ja':'Nein','Abholung');add(l.shipping_available?'Ja':'Nein','Versand');add(l.delivery_available?'Ja':'Nein','Lieferung');if(out.length<6)add(String(l.category_slug||'Inserat').replace(/_/g,' '),'Kategorie');return out.slice(0,6)}
+function highlights(l){let s=String(l.description||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();if(!s)return'Alle Details, Bilder und Kontaktmöglichkeiten findest du direkt im Inserat auf KaufMich24.ch.';return s.length>210?s.slice(0,207)+'…':s}
+function img(p){try{return IMG(p)}catch(_){return db.storage.from('listing-images').getPublicUrl(p).data.publicUrl}}
+function sheet(l,paths){let is=paths.map(img).filter(Boolean),h=is[0]||'',a=is[1]||h,b=is[2]||a||h,sp=specs(l),url='https://kaufmich24.ch/listing/'+encodeURIComponent(l.id),sold=l.status==='sold';return `<div class="km24SalesSheet" id="km24SalesSheetNode"><div class="km24SalesBrand"><img src="/icon.svg?v=blue-20261027" alt="KaufMich24"><div><div class="km24SalesBrandName">KaufMich <b>24</b></div><div class="km24SalesClaim">DER SCHWEIZER MARKTPLATZ<br>FÜR ALLES, WAS DU SUCHST</div></div></div><div class="km24SalesStatus ${sold?'sold':''}">${sold?'✓ VERKAUFT':'JETZT ZU VERKAUFEN'}</div><div class="km24SalesTitle">${esc(l.title)}</div><div class="km24SalesSub">${esc(meta(l))}</div><div class="km24SalesHero">${h?`<img crossorigin="anonymous" src="${esc(h)}" alt="">`:''}<div class="km24SalesPrice">${esc(price(l))}</div><div class="km24SalesLoc">● ${esc([l.postal_code,l.city].filter(Boolean).join(' '))}</div></div><div class="km24SalesThumbs"><div class="km24SalesThumb">${a?`<img crossorigin="anonymous" src="${esc(a)}" alt="">`:''}</div><div class="km24SalesThumb">${b?`<img crossorigin="anonymous" src="${esc(b)}" alt="">`:''}</div></div><div class="km24SalesSpecs">${sp.map(v=>`<div class="km24SalesSpec"><strong>${esc(v[0])}</strong><span>${esc(v[1])}</span></div>`).join('')}</div><div class="km24SalesHighlights">${esc(highlights(l))}</div><div class="km24SalesBottom"><div class="km24SalesCta"><span>Jetzt auf KaufMich24.ch ansehen</span><span class="km24SalesCtaArrow">›</span></div><div class="km24SalesQr" id="km24SalesQr"></div></div><div class="km24SalesUrl">${esc(url)}</div></div>`}
+function scale(){let st=document.querySelector('.km24SalesStage'),sh=document.getElementById('km24SalesSheetNode');if(!st||!sh)return;let p=st.parentElement,cs=getComputedStyle(p),inner=Math.max(1,p.clientWidth-(parseFloat(cs.paddingLeft)||0)-(parseFloat(cs.paddingRight)||0)),w=Math.min(794,inner),s=w/794;st.style.width=w+'px';st.style.height=(1123*s)+'px';st.style.margin='0 auto';sh.style.transform='scale('+s+')';sh.style.transformOrigin='top left'}
+async function openSheet(id){if(!user){go('#/login');return}try{if((typeof profile==='undefined'||!profile)&&typeof loadProfile==='function')await loadProfile()}catch(_){}let isAdmin=!!(typeof profile!=='undefined'&&profile&&profile.is_admin),lq=db.from('listings').select('*').eq('id',id);if(!isAdmin)lq=lq.eq('seller_id',user.id);let [lr,ir]=await Promise.all([lq.maybeSingle(),db.from('listing_images').select('storage_path,sort_order').eq('listing_id',id).order('sort_order',{ascending:true})]);if(lr.error||!lr.data){alert('Das Inserat konnte nicht geladen werden.');return}let o=document.createElement('div');o.className='km24SalesOverlay';o.innerHTML=`<div class="km24SalesModal"><div class="km24SalesModalHead"><div><h2>Verkaufsbild erstellen</h2><p>Automatisch aus deinem KaufMich24-Inserat · bereit als PDF & JPG</p></div><button class="km24SalesClose" type="button" aria-label="Schliessen">×</button></div><div class="km24SalesStage">${sheet(lr.data,(ir.data||[]).map(x=>x.storage_path))}</div><div class="km24SalesActions"><button type="button" class="btn" data-sales-close>Schliessen</button><button type="button" class="btn primary km24SalesPdfBtn" data-sales-pdf>⬇ PDF herunterladen</button><button type="button" class="btn km24SalesJpgBtn" data-sales-jpg>🖼 JPG herunterladen</button></div></div>`;document.body.appendChild(o);scale();window.addEventListener('resize',scale);o.addEventListener('click',e=>{if(e.target===o||e.target.closest('.km24SalesClose')||e.target.closest('[data-sales-close]')){window.removeEventListener('resize',scale);o.remove()}});try{await loadScript(SCRIPT_QR,()=>!!window.QRCode);let q=document.getElementById('km24SalesQr');if(q)new QRCode(q,{text:'https://kaufmich24.ch/listing/'+encodeURIComponent(id),width:78,height:78,colorDark:'#062b5d',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(_){let q=document.getElementById('km24SalesQr');if(q)q.textContent='QR'}let p=o.querySelector('[data-sales-pdf]');p.onclick=async()=>{let old=p.textContent;p.textContent='PDF wird erstellt…';p.classList.add('km24SalesBusy');try{await loadScript(SCRIPT_PDF,()=>!!window.html2pdf);let sh=document.getElementById('km24SalesSheetNode');await Promise.all([...sh.querySelectorAll('img')].map(im=>im.complete?Promise.resolve():new Promise(r=>{im.onload=im.onerror=()=>r()})));let title=String(lr.data.title||'KaufMich24').replace(/[^a-z0-9äöüéèàçß_-]+/gi,'_').slice(0,60);await html2pdf().set({margin:0,filename:'KaufMich24_'+title+'.pdf',image:{type:'jpeg',quality:.96},html2canvas:{scale:2,useCORS:true,backgroundColor:'#011630',logging:false},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}}).from(sh).save()}catch(err){console.error(err);alert('PDF konnte nicht erstellt werden. Bitte versuche es erneut.')}finally{p.textContent=old;p.classList.remove('km24SalesBusy')}}}
+document.addEventListener('click',e=>{let b=e.target.closest&&e.target.closest('[data-sales-sheet]');if(!b)return;e.preventDefault();e.stopPropagation();openSheet(b.getAttribute('data-sales-sheet'))},true);window.km24OpenSalesSheet=openSheet})();
+</script><style id="km24-sales-contrast-v2">
+.km24SalesModal,.km24SalesModal *{-webkit-text-fill-color:initial}
+.km24SalesModalHead h2{color:#0b1f3a!important;-webkit-text-fill-color:#0b1f3a!important;opacity:1!important;filter:none!important}
+.km24SalesClose{color:#0b1f3a!important;-webkit-text-fill-color:#0b1f3a!important;opacity:1!important}
+.km24SalesSpec{background:#fff!important;color:#071b33!important;opacity:1!important;filter:none!important;mix-blend-mode:normal!important}
+.km24SalesSpec strong,.km24SalesSpec strong *{color:#071b33!important;-webkit-text-fill-color:#071b33!important;opacity:1!important;filter:none!important;mix-blend-mode:normal!important;text-shadow:none!important;font-weight:900!important}
+.km24SalesSpec span,.km24SalesSpec span *{color:#52657b!important;-webkit-text-fill-color:#52657b!important;opacity:1!important;filter:none!important;mix-blend-mode:normal!important;text-shadow:none!important;font-weight:600!important}
+</style><script id="km24-pdf-direct-v7">
+(function(){
+ if(window.km24PdfDirectV7)return;window.km24PdfDirectV7=true;
+ const H2C='https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+ const JSPDF='https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js';
+ const load=(src,ready)=>new Promise((res,rej)=>{if(ready())return res();let s=[...document.scripts].find(x=>x.src===src);if(s){s.addEventListener('load',()=>res(),{once:true});s.addEventListener('error',rej,{once:true});return}let n=document.createElement('script');n.src=src;n.async=true;n.onload=()=>res();n.onerror=rej;document.head.appendChild(n)});
+ const timeout=(p,ms,msg)=>Promise.race([p,new Promise((_,rej)=>setTimeout(()=>rej(new Error(msg||'Zeitüberschreitung')),ms))]);
+ const waitImages=root=>Promise.all([...root.querySelectorAll('img')].map(im=>im.complete&&im.naturalWidth?Promise.resolve():new Promise(r=>{im.onload=im.onerror=()=>r()})));
+ const waitImage=(im,ms=1200)=>Promise.race([new Promise(r=>{if(im&&im.complete&&im.naturalWidth)return r();if(!im)return r();im.onload=im.onerror=()=>r()}),new Promise(r=>setTimeout(r,ms))]);
+ async function rasterizeLogo(src,clone){
+  try{const original=src.querySelector('.km24SalesBrand img'),target=clone.querySelector('.km24SalesBrand img');if(!original||!target)return;await waitImage(original,800);if(!original.naturalWidth)return;const c=document.createElement('canvas');c.width=160;c.height=160;const ctx=c.getContext('2d');ctx.clearRect(0,0,160,160);ctx.drawImage(original,0,0,160,160);target.src=c.toDataURL('image/png');target.removeAttribute('crossorigin')}catch(e){console.warn('KM24 logo raster fallback',e)}
+ }
+ function coverCanvasFromImage(img,cssW,cssH,ratio=2){
+  if(!img||!img.naturalWidth||!img.naturalHeight)return null;
+  const tw=Math.max(1,Math.round(cssW*ratio)),th=Math.max(1,Math.round(cssH*ratio));
+  const c=document.createElement('canvas');c.width=tw;c.height=th;c.style.width='100%';c.style.height='100%';c.style.display='block';
+  const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+  const iw=img.naturalWidth,ih=img.naturalHeight,scale=Math.max(tw/iw,th/ih),dw=iw*scale,dh=ih*scale,dx=(tw-dw)/2,dy=(th-dh)/2;
+  ctx.clearRect(0,0,tw,th);ctx.drawImage(img,dx,dy,dw,dh);return c;
+ }
+ async function rasterizeListingImages(src,clone){
+  const jobs=[];
+  const heroSrc=src.querySelector('.km24SalesHero img'),heroWrap=clone.querySelector('.km24SalesHero');
+  if(heroSrc&&heroWrap)jobs.push((async()=>{await waitImage(heroSrc);const heroH=src.classList.contains('km24JobSheet')?488:330;const c=coverCanvasFromImage(heroSrc,718,heroH,2);if(c){const old=heroWrap.querySelector('img');if(old)old.replaceWith(c)}})());
+  const srcThumbs=[...src.querySelectorAll('.km24SalesThumb img')],cloneThumbs=[...clone.querySelectorAll('.km24SalesThumb')];
+  srcThumbs.forEach((im,i)=>{const wrap=cloneThumbs[i];if(!wrap)return;jobs.push((async()=>{await waitImage(im);const c=coverCanvasFromImage(im,350,142,2);if(c){const old=wrap.querySelector('img');if(old)old.replaceWith(c)}})())});
+  await Promise.all(jobs);
+ }
+ function forceExportStyles(root){
+  root.style.setProperty('position','relative','important');root.style.setProperty('left','0','important');root.style.setProperty('top','0','important');root.style.setProperty('transform','none','important');root.style.setProperty('transform-origin','top left','important');root.style.setProperty('width','794px','important');root.style.setProperty('height','1123px','important');root.style.setProperty('margin','0','important');root.style.setProperty('opacity','1','important');root.style.setProperty('visibility','visible','important');root.style.setProperty('background','radial-gradient(circle at 80% 8%,#0b63b9 0,#063b76 24%,#021d45 58%,#011630 100%)','important');
+  root.querySelectorAll('.km24SalesHero,.km24SalesThumb').forEach(el=>{el.style.setProperty('overflow','hidden','important');el.style.setProperty('position','relative','important')});
+  root.querySelectorAll('.km24SalesHero img,.km24SalesThumb img').forEach(el=>{el.style.setProperty('width','100%','important');el.style.setProperty('height','100%','important');el.style.setProperty('object-fit','cover','important');el.style.setProperty('object-position','center center','important');el.style.setProperty('display','block','important')});
+  root.querySelectorAll('.km24SalesSpec').forEach(el=>{el.style.setProperty('background','#fff','important');el.style.setProperty('color','#071b33','important');el.style.setProperty('opacity','1','important')});
+  root.querySelectorAll('.km24SalesSpec strong').forEach(el=>{el.style.setProperty('color','#071b33','important');el.style.setProperty('-webkit-text-fill-color','#071b33','important');el.style.setProperty('opacity','1','important');el.style.setProperty('font-weight','900','important');el.style.setProperty('text-shadow','none','important')});
+  root.querySelectorAll('.km24SalesSpec span').forEach(el=>{el.style.setProperty('color','#52657b','important');el.style.setProperty('-webkit-text-fill-color','#52657b','important');el.style.setProperty('opacity','1','important');el.style.setProperty('font-weight','600','important');el.style.setProperty('text-shadow','none','important')});
+ }
+ function roundedRect(ctx,x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+ function fitFont(ctx,text,maxWidth,start,min,weight){let size=start;while(size>min){ctx.font=weight+' '+size+'px Arial,Helvetica,sans-serif';if(ctx.measureText(text).width<=maxWidth)break;size-=1}return size}
+ function repaintSpecs(canvas,root){
+  const ctx=canvas.getContext('2d'),rr=root.getBoundingClientRect(),sx=canvas.width/794,sy=canvas.height/1123;
+  root.querySelectorAll('.km24SalesSpec').forEach(el=>{const r=el.getBoundingClientRect(),x=(r.left-rr.left)*sx,y=(r.top-rr.top)*sy,w=r.width*sx,h=r.height*sy,pad=12*sx,rad=16*sx;ctx.save();roundedRect(ctx,x,y,w,h,rad);ctx.fillStyle='#ffffff';ctx.fill();ctx.textBaseline='top';const strong=el.querySelector('strong'),span=el.querySelector('span'),v=(strong?.textContent||'').trim(),l=(span?.textContent||'').trim();let vs=fitFont(ctx,v,w-pad*2,18*sx,12*sx,'900');ctx.font='900 '+vs+'px Arial,Helvetica,sans-serif';ctx.fillStyle='#071b33';ctx.fillText(v,x+pad,y+8*sy,w-pad*2);ctx.font='600 '+(13*sx)+'px Arial,Helvetica,sans-serif';ctx.fillStyle='#52657b';ctx.fillText(l,x+pad,y+37*sy,w-pad*2);ctx.restore()})
+ }
+ function exportTitle(src){return (src.querySelector('.km24SalesTitle')?.textContent||'KaufMich24').trim().replace(/[^a-z0-9äöüéèàçß_-]+/gi,'_').slice(0,60)}
+ async function renderSalesCanvas(){
+  const src=document.getElementById('km24SalesSheetNode');if(!src)throw new Error('Verkaufsblatt nicht gefunden');
+  await timeout(load(H2C,()=>!!window.html2canvas),10000,'Bild-Export konnte nicht geladen werden');
+  await Promise.race([waitImages(src),new Promise(r=>setTimeout(r,1200))]);
+  const clone=src.cloneNode(true);clone.removeAttribute('id');forceExportStyles(clone);
+  await rasterizeListingImages(src,clone);
+  const origQr=src.querySelector('.km24SalesQr canvas'),cloneQr=clone.querySelector('.km24SalesQr');if(origQr&&cloneQr){try{const qi=new Image();qi.src=origQr.toDataURL('image/png');qi.style.width='78px';qi.style.height='78px';cloneQr.innerHTML='';cloneQr.appendChild(qi)}catch(_){}}
+  await rasterizeLogo(src,clone);
+  const host=document.createElement('div');host.setAttribute('aria-hidden','true');host.style.cssText='position:fixed;left:-10000px;top:0;width:794px;height:1123px;overflow:hidden;background:#011630;pointer-events:none;z-index:-2147483647;';host.appendChild(clone);document.body.appendChild(host);
+  try{
+   await Promise.race([waitImages(clone),new Promise(r=>setTimeout(r,1200))]);await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+   const canvas=await timeout(window.html2canvas(clone,{scale:1.75,useCORS:true,allowTaint:false,backgroundColor:'#011630',logging:false,width:794,height:1123,windowWidth:794,windowHeight:1123,scrollX:0,scrollY:0}),15000,'Verkaufsbild konnte nicht erstellt werden');
+   if(!canvas||canvas.width<100||canvas.height<100)throw new Error('Verkaufsbild ist leer');
+   repaintSpecs(canvas,clone);return {canvas,src};
+  }finally{host.remove()}
+ }
+ async function savePdf(){
+  const rendered=await renderSalesCanvas();await timeout(load(JSPDF,()=>!!window.jspdf?.jsPDF),10000,'PDF-Bibliothek konnte nicht geladen werden');
+  const data=rendered.canvas.toDataURL('image/jpeg',0.96);if(!data||data.length<5000)throw new Error('PDF-Bild ist leer');
+  const {jsPDF}=window.jspdf,pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4',compress:true});pdf.setFillColor(255,255,255);pdf.rect(0,0,210,297,'F');pdf.addImage(data,'JPEG',2.5,3.5,205,290,undefined,'FAST');pdf.save('KaufMich24_'+exportTitle(rendered.src)+'.pdf');
+ }
+ async function saveJpg(){
+  const rendered=await renderSalesCanvas();const blob=await new Promise((res,rej)=>rendered.canvas.toBlob(b=>b?res(b):rej(new Error('JPG konnte nicht erstellt werden')),'image/jpeg',0.96));
+  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='KaufMich24_'+exportTitle(rendered.src)+'.jpg';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+ }
+ document.addEventListener('click',async function(e){
+  const pdf=e.target?.closest?.('[data-sales-pdf]'),jpg=e.target?.closest?.('[data-sales-jpg]'),btn=pdf||jpg;if(!btn)return;
+  e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();if(btn.dataset.km24ExportBusy==='1')return;btn.dataset.km24ExportBusy='1';const old=btn.textContent;btn.textContent=pdf?'PDF wird erstellt…':'JPG wird erstellt…';btn.classList.add('km24SalesBusy');
+  try{if(pdf)await savePdf();else await saveJpg()}catch(err){console.error('KM24 export v7 failed',err);alert((pdf?'PDF':'JPG')+' konnte nicht erstellt werden: '+(err?.message||'Unbekannter Fehler'))}finally{btn.textContent=old;btn.classList.remove('km24SalesBusy');delete btn.dataset.km24ExportBusy}
+ },true);
+})();
+</script><style id="km24-sales-modal-polish-v1">.km24SalesModalHead h2{color:#0b1f3a!important;-webkit-text-fill-color:#0b1f3a!important;opacity:1!important;visibility:visible!important;text-shadow:none!important;filter:none!important}.km24SalesModalHead p{color:#64748b!important;-webkit-text-fill-color:#64748b!important;opacity:1!important}.km24SalesStage{margin-left:auto!important;margin-right:auto!important}</style><style id="km24-admin-sales-sheet-v1-style">
+.km24AdminSalesPanel{border:1px solid rgba(11,99,246,.38)!important;background:linear-gradient(135deg,rgba(11,99,246,.08),rgba(24,207,208,.06))!important}.km24AdminSalesPanel .btn{width:100%;justify-content:center}.km24AdminSalesPanel small{display:block;margin-top:8px;line-height:1.35}
+</style>
+<script id="km24-admin-sales-sheet-v1">
+(function(){
+ if(window.__km24AdminSalesSheetV1)return;window.__km24AdminSalesSheetV1=true;
+ let timer=0;
+ function listingId(){let h=(location.hash||'').split('?')[0],m=h.match(/^#\/listing\/([0-9a-f-]{36})$/i);if(!m)m=(location.pathname||'').match(/\/listing\/([0-9a-f-]{36})\/?$/i);return m?m[1]:''}
+ async function apply(){
+  const id=listingId();if(!id)return;
+  if(typeof user==='undefined'||!user)return;
+  try{if((typeof profile==='undefined'||!profile)&&typeof loadProfile==='function')await loadProfile()}catch(_){}
+  if(typeof profile==='undefined'||!profile||!profile.is_admin)return;
+  const side=document.querySelector('.detail .side');if(!side)return;
+  let panel=side.querySelector('.km24AdminSalesPanel');
+  if(panel){let b=panel.querySelector('[data-sales-sheet]');if(b)b.setAttribute('data-sales-sheet',id);return}
+  panel=document.createElement('div');panel.className='panel km24AdminSalesPanel';
+  panel.innerHTML='<b>🛠 Admin-Werkzeug</b><small class="mut">Verkaufsbild dieses Inserats als PDF oder JPG herunterladen.</small><button type="button" class="btn primary" style="margin-top:10px" data-sales-sheet="'+id+'">🖨 Verkaufsbild / PDF</button>';
+  side.appendChild(panel);
+ }
+ function schedule(ms=60){clearTimeout(timer);timer=setTimeout(apply,ms)}
+ addEventListener('hashchange',()=>schedule(80));addEventListener('pageshow',()=>schedule(80));
+ document.addEventListener('DOMContentLoaded',()=>schedule(20),{once:true});
+ try{new MutationObserver(()=>schedule(80)).observe(document.getElementById('app')||document.documentElement,{childList:true,subtree:true})}catch(_){}
+ schedule(20);setTimeout(()=>schedule(0),300);setTimeout(()=>schedule(0),1000);
+})();
+</script>
+<style id="km24-detail-mobile-order-v1-style">
+@media(max-width:900px){
+  .km24DetailMainPanel>.km24DetailActionBox{margin:16px 0 18px!important}
+  .km24DetailMainPanel>.km24DetailActionBox.auctionbox{width:100%!important}
+  .km24DetailMainPanel>.km24DetailActionBox.panel{padding:16px!important}
+}
+</style>
+<script id="km24-detail-mobile-order-v1">
+(function(){
+  if(window.__km24DetailMobileOrderV1)return;
+  window.__km24DetailMobileOrderV1=true;
+  var mq=window.matchMedia('(max-width: 900px)');
+  function sync(){
+    try{
+      var grid=document.querySelector('.detailgrid');
+      if(!grid)return;
+      var main=grid.querySelector('.km24DetailMainPanel');
+      var side=grid.querySelector(':scope > aside.side');
+      if(!main||!side)return;
+      var action=document.querySelector('.km24DetailActionBox');
+      if(!action){
+        action=side.firstElementChild;
+        if(!action)return;
+        action.classList.add('km24DetailActionBox');
+      }
+      if(mq.matches){
+        if(action.parentElement!==main){
+          var price=main.querySelector('.detailprice');
+          var anchor=main.querySelector('.km24DetailQuick,.km24DetailOverview,.km24DetailSectionTitle');
+          if(anchor)main.insertBefore(action,anchor);
+          else if(price&&price.nextSibling)main.insertBefore(action,price.nextSibling);
+          else main.appendChild(action);
+        }
+      }else{
+        if(action.parentElement!==side)side.insertBefore(action,side.firstChild);
+      }
+    }catch(e){}
+  }
+  var queued=false;
+  function queue(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;sync()})}
+  new MutationObserver(queue).observe(document.getElementById('app')||document.body,{childList:true,subtree:true});
+  if(mq.addEventListener)mq.addEventListener('change',queue);else if(mq.addListener)mq.addListener(queue);
+  addEventListener('hashchange',queue);addEventListener('pageshow',queue);addEventListener('resize',queue);
+  queue();
+})();
+</script>
+<style id="km24-brand-slogan-sora-v1">
+html body .hero.km24WowHero {
+ background:linear-gradient(128deg,#081b43 0%,#081733 53%,#082c4c 100%) !important;
+ border-bottom:1px solid rgba(92,181,255,.22) !important;
+}
+html body .hero.km24WowHero::before{
+ background:radial-gradient(circle,rgba(47,151,255,.22),transparent 68%) !important;
+}
+html body .hero.km24WowHero::after{
+ background:radial-gradient(circle,rgba(57,209,249,.12),transparent 70%) !important;
+}
+html body .hero.km24WowHero .km24HeroEyebrow{
+ color:#bddcff !important;
+ border-color:rgba(153,205,255,.25) !important;
+ background:rgba(34,112,219,.14) !important;
+}
+html body .hero.km24WowHero h1{
+ font-family:"Sora",Arial,Helvetica,sans-serif !important;
+ font-weight:800 !important;
+ font-size:clamp(35px,6vw,74px) !important;
+ line-height:1.09 !important;
+ letter-spacing:-.065em !important;
+ max-width:850px !important;
+ color:#ffffff !important;
+ text-wrap:balance;
+}
+html body .hero.km24WowHero h1 span{
+ background:none !important;
+ background-clip:border-box !important;
+ -webkit-background-clip:border-box !important;
+ color:#55dbff !important;
+ -webkit-text-fill-color:#55dbff !important;
+ text-shadow:0 3px 24px rgba(69,206,255,.18);
+}
+html body .hero.km24WowHero .km24HeroText{
+ color:#d4e6fb !important;
+ max-width:700px !important;
+}
+html body .hero.km24WowHero .season-decor{opacity:.18 !important}
+html body .hero.km24WowHero .season-ribbon{opacity:.68}
+html body .hero.km24WowHero .km24TrustPills span{color:#c8d9ef !important}
+@media(max-width:480px){
+ html body .hero.km24WowHero{padding:48px 0 42px !important}
+ html body .hero.km24WowHero h1{
+  font-size:clamp(32px,9.2vw,43px) !important;
+  line-height:1.14 !important;
+  letter-spacing:-.064em !important;
+ }
+ html body .hero.km24WowHero .km24HeroText{
+  font-size:14px !important;
+  line-height:1.48 !important;
+ }
+}
+</style>
+<style id="km24-brand-lettering-clean-v3">
+/* KaufMich24 signature slogan: expressive editorial lettering without effects */
+html body .hero.km24WowHero h1{
+ font-family:"Bricolage Grotesque","Sora",Arial,sans-serif!important;
+ font-weight:800!important;
+ font-size:clamp(39px,5.3vw,70px)!important;
+ letter-spacing:-.045em!important;
+ line-height:1.15!important;
+ text-transform:none!important;
+ text-shadow:none!important;
+ max-width:900px!important;
+ text-wrap:balance!important;
+ color:#f7fbff!important;
+ -webkit-text-fill-color:#f7fbff!important;
+}
+html body .hero.km24WowHero h1>span{
+ font-family:"Bricolage Grotesque","Sora",Arial,sans-serif!important;
+ font-weight:800!important;
+ font-size:inherit!important;
+ letter-spacing:-.047em!important;
+ line-height:inherit!important;
+ display:inline!important;
+ position:static!important;
+ margin:0!important;
+ padding:0!important;
+ transform:none!important;
+ filter:none!important;
+ background:none!important;
+ background-image:none!important;
+ background-clip:border-box!important;
+ -webkit-background-clip:border-box!important;
+ -webkit-text-stroke:0!important;
+ text-shadow:none!important;
+ color:#6bd8ff!important;
+ -webkit-text-fill-color:#6bd8ff!important;
+}
+html body .hero.km24WowHero h1>span::after{
+ content:none!important;
+ display:none!important;
+}
+html[data-km24-theme="light"] body .hero.km24WowHero h1,
+html.km24SamsungSafe[data-km24-theme="light"] body .hero.km24WowHero h1{
+ color:#152440!important;
+ -webkit-text-fill-color:#152440!important;
+ text-shadow:none!important;
+}
+html[data-km24-theme="light"] body .hero.km24WowHero h1>span,
+html.km24SamsungSafe[data-km24-theme="light"] body .hero.km24WowHero h1>span{
+ color:#155edb!important;
+ -webkit-text-fill-color:#155edb!important;
+ background:none!important;
+ background-image:none!important;
+ -webkit-text-stroke:0!important;
+}
+html[data-km24-theme="dark"] body .hero.km24WowHero h1{
+ color:#f7fbff!important;
+ -webkit-text-fill-color:#f7fbff!important;
+}
+html[data-km24-theme="dark"] body .hero.km24WowHero h1>span{
+ color:#6bd8ff!important;
+ -webkit-text-fill-color:#6bd8ff!important;
+ background:none!important;
+ background-image:none!important;
+}
+@media(max-width:600px){
+ html body .hero.km24WowHero h1{
+  font-size:clamp(35px,9vw,47px)!important;
+  line-height:1.17!important;
+  letter-spacing:-.042em!important;
+ }
+ html body .hero.km24WowHero h1>span{
+  font-size:inherit!important;
+  letter-spacing:-.048em!important;
+ }
+}
+</style>
+<style id="km24-category-theme-coherence-v1">
+/* Scoped category page palette. Do not force a light panel in dark mode. */
+html[data-km24-theme="dark"] body.km24CategoryLightRoute,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute #app,
+html[data-km24-theme="dark"] body.km24CategoryRoute,
+html[data-km24-theme="dark"] body.km24CategoryRoute #app{
+  background:#0d1521!important;color:#edf5fb!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .section,
+html[data-km24-theme="dark"] body.km24CategoryRoute .section{
+  background:transparent!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro{
+  background:#192536!important;background-image:none!important;
+  color:#edf5fb!important;border:1px solid #334457!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.22)!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h1 *,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h2,
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro h3{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;
+  background-image:none!important;text-shadow:none!important;
+  opacity:1!important;filter:none!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro p{
+  color:#b9c9d5!important;-webkit-text-fill-color:#b9c9d5!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedHint{
+  background:#193d43!important;color:#90ebd1!important;
+  -webkit-text-fill-color:#90ebd1!important;border-color:#2c6d6d!important;
+}
+html[data-km24-theme="dark"] .km24CategoryServiceNote{
+  background:#253347!important;color:#deebf6!important;
+  -webkit-text-fill-color:#deebf6!important;border-color:#42566c!important;
+}
+html[data-km24-theme="dark"] .km24CategoryServiceNote b,
+html[data-km24-theme="dark"] .km24CategoryServiceNote span{
+  color:#deebf6!important;-webkit-text-fill-color:#deebf6!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro .km24CategoryActions .btn.primary{
+  background:#136cdb!important;background-image:linear-gradient(110deg,#157bea,#145ccb)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#368cff!important;
+}
+html[data-km24-theme="dark"] .km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary){
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .wrap>a.btn,
+html[data-km24-theme="dark"] body.km24CategoryRoute .wrap>a.btn{
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h1,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h2,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h3,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h1,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h2,
+html[data-km24-theme="dark"] body.km24CategoryRoute .head h3{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .mut,
+html[data-km24-theme="dark"] body.km24CategoryRoute .mut,
+html[data-km24-theme="dark"] .km24CategoryLegend{
+  color:#a8b9c8!important;-webkit-text-fill-color:#a8b9c8!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat,
+html[data-km24-theme="dark"] body.km24CategoryRoute .cat{
+  background:#172436!important;background-image:none!important;
+  color:#eaf3fa!important;border:1px solid #304257!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat b,
+html[data-km24-theme="dark"] body.km24CategoryRoute .cat b{
+  color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .empty,
+html[data-km24-theme="dark"] body.km24CategoryRoute .empty{
+  background:#172436!important;color:#b9c9d5!important;border-color:#304257!important;
+}
+html[data-km24-theme="dark"] .km24CategoryTab{
+  background:#253449!important;color:#edf5fb!important;
+  -webkit-text-fill-color:#edf5fb!important;border-color:#45586c!important;
+}
+html[data-km24-theme="dark"] .km24CategoryTab.on{
+  background:#136cdb!important;color:#fff!important;
+  -webkit-text-fill-color:#fff!important;border-color:#368cff!important;
+}
+/* Prevent light text gradients from washing out the category heading. */
+html[data-km24-theme="light"] .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="light"] .km24UnifiedCategoryIntro h1 *{
+  color:#17352b!important;-webkit-text-fill-color:#17352b!important;
+  background-image:none!important;opacity:1!important;
+}
+</style>
+<style id="km24-video-upload-mobile-fix-20261106">
+.photoAdd{position:relative!important;overflow:hidden}
+.photoAdd input#attachments,.photoAdd input#eattachments{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;opacity:0!important;cursor:pointer!important;pointer-events:auto!important;z-index:3!important}
+#attachmentMsg,#eattachmentMsg{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:10px;font-size:13px;line-height:1.4}
+</style>
+<script id="km24-video-upload-mobile-fix-20261106-js">
+(function(){
+ const ids=["attachments","eattachments"];
+ const types={mp4:1,mov:1,webm:1,pdf:1,doc:1,docx:1,xls:1,xlsx:1,txt:1};
+ document.addEventListener("change",function(event){
+  const input=event.target;
+  if(!input||!ids.includes(input.id))return;
+  const files=Array.from(input.files||[]),el=document.getElementById(input.id==="attachments"?"attachmentMsg":"eattachmentMsg");
+  if(!el)return;
+  if(!files.length){el.textContent="";return;}
+  const allowedMime=["video/mp4","video/webm","video/quicktime","application/pdf","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","text/plain"];
+  const invalid=files.filter(f=>!types[(f.name.split(".").pop()||"").toLowerCase()]&&!allowedMime.includes(f.type));
+  const big=files.filter(f=>f.size>52428800);
+  const notes=[];
+  if(files.length>4)notes.push("Maximal 4 Dateien möglich.");
+  if(big.length)notes.push(big.map(f=>f.name+" ist "+(f.size/1048576).toFixed(1)+" MB gross (maximal 50 MB).").join(" "));
+  if(invalid.length)notes.push("Nicht unterstützte Datei: "+invalid.map(f=>f.name).join(", "));
+  el.textContent=notes.length?notes.join(" "):("✓ "+files.length+" Datei(en) ausgewählt: "+files.map(f=>f.name+" ("+(f.size/1048576).toFixed(1)+" MB)").join(", ")+". Upload beim "+(input.id==="attachments"?"Veröffentlichen":"Speichern")+".");
+  el.style.color=notes.length?"#ffb4ab":"#47d6a5";
+  el.setAttribute("role","status");el.setAttribute("aria-live","polite");
+ },true);
+})();
+</script></body>
+
+
+
+
+
+
+
+
+<style id="km24-filter-contrast-final-v3">\n@media(max-width:700px){\n  html body .marketSearchPanel details.filterGroup>summary,\n  html body .marketSearchPanel details.filterGroup>summary *,\n  html body .marketSearchPanel .compactFilterGroups details.filterGroup>summary,\n  html body .marketSearchPanel .compactFilterGroups details.filterGroup>summary *{\n    color:#f4f7f5!important;\n    -webkit-text-fill-color:#f4f7f5!important;\n    opacity:1!important;\n    text-shadow:none!important;\n  }\n  html body .marketSearchPanel details.filterGroup>summary:after,\n  html body .marketSearchPanel .compactFilterGroups details.filterGroup>summary:after{\n    color:#e7ece9!important;\n    -webkit-text-fill-color:#e7ece9!important;\n    opacity:1!important;\n  }\n  html body .marketSearchPanel details.filterGroup .filterGroupBody label,\n  html body .marketSearchPanel details.filterGroup .filterGroupHint,\n  html body .marketSearchPanel .compactFilterGroups details.filterGroup .filterGroupBody label,\n  html body .marketSearchPanel .compactFilterGroups details.filterGroup .filterGroupHint{\n    color:#cbd5d1!important;\n    -webkit-text-fill-color:#cbd5d1!important;\n    opacity:1!important;\n    text-shadow:none!important;\n  }\n  html body .marketSearchPanel details.filterGroup .filterGroupBody input,\n  html body .marketSearchPanel details.filterGroup .filterGroupBody select,\n  html body .marketSearchPanel details.filterGroup .filterGroupBody textarea{\n    color:#17352b!important;\n    -webkit-text-fill-color:#17352b!important;\n    background:#ffffff!important;\n    opacity:1!important;\n  }\n}\n</style><style id="km24-light-blue-final-v1">
+html.km24SamsungSafe[data-km24-theme="light"] .km24AreaSwitch button.active{
+  background:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;
+  background-image:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 28px rgba(11,99,246,.24)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24AreaSwitch button.active *{
+  background:transparent!important;background-image:none!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .btn.primary,
+html.km24SamsungSafe[data-km24-theme="light"] .search button,
+html.km24SamsungSafe[data-km24-theme="light"] .km24WowHero .search button,
+html.km24SamsungSafe[data-km24-theme="light"] .marketSearchActions .btn:first-child{
+  background:linear-gradient(135deg,#0b52e5,#0b73f6)!important;background-image:linear-gradient(135deg,#0b52e5,#0b73f6)!important;
+  border-color:transparent!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 9px 22px rgba(11,99,246,.18)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomSell>span,
+html[data-km24-theme="light"] .km24BottomSell>span:first-child,
+html[data-km24-theme="light"] .km24BottomSell .km24BottomIcon{
+  background:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  background-image:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;
+  color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;
+  box-shadow:0 10px 26px rgba(11,99,246,.28)!important;
+}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav>a,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav>button,
+html[data-km24-theme="light"] .km24BottomNav>a,
+html[data-km24-theme="light"] .km24BottomNav>button{color:#53657a!important;-webkit-text-fill-color:#53657a!important}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active b,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on b,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"],
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"] b,
+html[data-km24-theme="light"] .km24BottomSell>b{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .active span,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav .on span,
+html.km24SamsungSafe[data-km24-theme="light"] .km24BottomNav [aria-current="true"] span{color:#168be8!important;-webkit-text-fill-color:#168be8!important}
+html[data-km24-theme="light"] .km24AreaSwitch{border-color:#d9e3f0!important;background:#fff!important;box-shadow:0 10px 28px rgba(11,67,135,.07)!important}
+html[data-km24-theme="light"] .km24HeroEyebrow{color:#145ea8!important;background:#eef6ff!important;border-color:#bfdcff!important}
+html[data-km24-theme="light"] .km24WowHero .search{border-color:#d9e4f2!important;background:#fff!important;box-shadow:0 14px 38px rgba(14,62,126,.08)!important}
+</style><style id="km24-cross-device-light-blue-v2">
+html[data-km24-theme="light"] #km24AreaBarSection .km24AreaSwitch button.active,
+html[data-km24-theme="light"] .km24AreaSwitch button.active{background:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;background-image:linear-gradient(135deg,#0b43d8 0%,#0b63f6 58%,#18cfd0 135%)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;box-shadow:0 10px 28px rgba(11,99,246,.24)!important}
+html[data-km24-theme="light"] #km24AreaBarSection .km24AreaSwitch button.active *,html[data-km24-theme="light"] .km24AreaSwitch button.active *{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] .btn.primary,html[data-km24-theme="light"] button.primary,html[data-km24-theme="light"] a.primary,html[data-km24-theme="light"] .search button,html[data-km24-theme="light"] .marketSearchActions .btn:first-child,html[data-km24-theme="light"] header .sellNav{background:linear-gradient(135deg,#0b52e5,#0b73f6)!important;background-image:linear-gradient(135deg,#0b52e5,#0b73f6)!important;border-color:transparent!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 9px 22px rgba(11,99,246,.18)!important}
+html[data-km24-theme="light"] .km24BottomSell,html[data-km24-theme="light"] .km24BottomSell>span,html[data-km24-theme="light"] .km24BottomSell>span:first-child,html[data-km24-theme="light"] .km24BottomSell .km24BottomIcon{background:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;background-image:linear-gradient(145deg,#0b55e8 0%,#0b77f7 58%,#18cfd0 120%)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:transparent!important;box-shadow:0 10px 26px rgba(11,99,246,.28)!important}
+html[data-km24-theme="light"] .km24BottomNav .active,html[data-km24-theme="light"] .km24BottomNav .active b,html[data-km24-theme="light"] .km24BottomNav .on,html[data-km24-theme="light"] .km24BottomNav .on b,html[data-km24-theme="light"] .km24BottomNav [aria-current="true"],html[data-km24-theme="light"] .km24BottomNav [aria-current="true"] b,html[data-km24-theme="light"] .km24BottomSell>b{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html[data-km24-theme="light"] .km24BottomNav .active span,html[data-km24-theme="light"] .km24BottomNav .on span,html[data-km24-theme="light"] .km24BottomNav [aria-current="true"] span{color:#168be8!important;-webkit-text-fill-color:#168be8!important}
+html[data-km24-theme="light"] .chip.on,html[data-km24-theme="light"] .btn.on,html[data-km24-theme="light"] .km24JobKindTabs button.active,html[data-km24-theme="light"] .notificationFilters .btn.on{background:#0b63f6!important;background-image:none!important;border-color:#0b63f6!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] .km24JobsHubTop small,html[data-km24-theme="light"] .km24AccountKicker{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html.km24IOS[data-km24-theme="light"] input[type="checkbox"],html.km24IOS[data-km24-theme="light"] input[type="radio"]{accent-color:#0b63f6!important}
+html.km24IOS[data-km24-theme="light"] input[type="file"]{background:#fff!important;color:#142033!important;-webkit-text-fill-color:#142033!important;border-color:#d8e2ef!important;color-scheme:light!important}
+html.km24IOS[data-km24-theme="light"] input[type="file"]::file-selector-button{background:#eef5ff!important;color:#0b4fc7!important;-webkit-text-fill-color:#0b4fc7!important;border-color:#c5d9f4!important}
+@media(min-width:701px){html[data-km24-theme="light"] header .sellNav,html[data-km24-theme="light"] .km24AreaSwitch button.active,html[data-km24-theme="light"] #km24AreaBarSection .km24AreaSwitch button.active{box-shadow:0 8px 22px rgba(11,99,246,.16)!important}html[data-km24-theme="light"] a:focus-visible,html[data-km24-theme="light"] button:focus-visible,html[data-km24-theme="light"] input:focus-visible,html[data-km24-theme="light"] select:focus-visible,html[data-km24-theme="light"] textarea:focus-visible{outline-color:#18cfd0!important}}
+</style><style id="km24-iphone-light-brand-final-v1">
+@media(max-width:700px){
+  html.km24IOS[data-km24-theme="light"] .km24AccountKicker{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important;opacity:1!important}
+  html.km24IOS[data-km24-theme="light"] .km24AccountBadges .verified{background:#eef6ff!important;border-color:#bfdcff!important;color:#0b4fc7!important;-webkit-text-fill-color:#0b4fc7!important}
+}
+</style></html>
+<style id="km24-promo-full-card-frame-v1">
+/* Promotion level is shown by the OUTER frame of the complete listing card */
+body .km24ListingCard.km24PromoForceTop{
+  border:2.5px solid #c6ccd3!important;
+  outline:1px solid rgba(255,255,255,.12)!important;
+  outline-offset:-3.5px!important;
+  box-shadow:0 0 0 1px rgba(198,204,211,.16),0 10px 26px rgba(0,0,0,.20)!important;
+}
+body .km24ListingCard.km24PromoForceHome,
+body .km24ListingCard.km24PromoForceBoth{
+  border:2.5px solid #d9ad42!important;
+  outline:1px solid rgba(255,231,162,.18)!important;
+  outline-offset:-3.5px!important;
+  box-shadow:0 0 0 1px rgba(217,173,66,.18),0 10px 28px rgba(0,0,0,.21)!important;
+}
+@media(max-width:600px){
+  body .km24ListingCard.km24PromoForceTop,
+  body .km24ListingCard.km24PromoForceHome,
+  body .km24ListingCard.km24PromoForceBoth{border-width:2.5px!important}
+}
+</style>
+
+<style id="km24-job-sales-sheet-v1-style">
+.km24SalesSheet.km24JobSheet .km24SalesStatus{background:linear-gradient(135deg,#0b63f6,#18cfd0)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24SalesSheet.km24JobSheet .km24SalesPrice{display:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesTitle{letter-spacing:-.4px}
+.km24SalesSheet.km24JobSheet .km24SalesHero:after{display:none!important;content:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesCta{background:linear-gradient(135deg,#0b63f6,#18bfe8)!important}
+.km24SalesSheet.km24JobSheet .km24SalesThumbs{display:none!important}
+.km24SalesSheet.km24JobSheet .km24SalesHero{height:488px!important}
+.km24SalesSheet.km24JobSheet .km24SalesHero img{object-fit:cover!important;object-position:center center!important}
+</style>
+<script id="km24-job-sales-sheet-v1">
+(function(){
+ if(window.__km24JobSalesSheetV1)return;window.__km24JobSalesSheetV1=true;
+ function clean(s){return String(s==null?'':s).replace(/\s+/g,' ').trim()}
+ function getListingId(root){
+  var t=clean(root.querySelector('.km24SalesUrl')?.textContent||'');
+  var m=t.match(/\/listing\/([0-9a-f-]{36})/i);return m?m[1]:'';
+ }
+ function locationText(root){
+  return clean((root.querySelector('.km24SalesLoc')?.textContent||'').replace(/^[•●\s]+/,''));
+ }
+ function categoryFromSpecs(root){
+  var specs=[].slice.call(root.querySelectorAll('.km24SalesSpec'));
+  for(var i=0;i<specs.length;i++){
+   var label=clean(specs[i].querySelector('span')?.textContent).toLowerCase();
+   var value=clean(specs[i].querySelector('strong')?.textContent).toLowerCase();
+   if(label==='kategorie')return value;
+  }
+  return '';
+ }
+ async function loadListing(root){
+  var id=getListingId(root);if(!id)return null;
+  try{
+   if(typeof db==='undefined'||!db||!db.from)return null;
+   var r=await db.from('listings').select('id,category_slug,title,postal_code,city,description,extra_fields').eq('id',id).maybeSingle();
+   return r&&r.data?r.data:null;
+  }catch(_){return null}
+ }
+ function first(obj,keys){
+  obj=obj||{};for(var i=0;i<keys.length;i++){var v=obj[keys[i]];if(v!==undefined&&v!==null&&clean(v)!=='')return clean(v)}return'';
+ }
+ function addSpec(box,value,label){
+  var d=document.createElement('div');d.className='km24SalesSpec';
+  var s=document.createElement('strong');s.textContent=value||'—';
+  var l=document.createElement('span');l.textContent=label;
+  d.appendChild(s);d.appendChild(l);box.appendChild(d);
+ }
+ function renderJobSpecs(root,listing){
+  var box=root.querySelector('.km24SalesSpecs');if(!box)return;
+  var x=listing&&listing.extra_fields&&typeof listing.extra_fields==='object'?listing.extra_fields:{};
+  var loc=listing?[listing.postal_code,listing.city].filter(Boolean).join(' '):locationText(root);
+  var employment=first(x,['employment_type','job_type','anstellung','contract_type','employment']);
+  var workload=first(x,['workload','workload_percent','pensum','employment_rate']);
+  var start=first(x,['start_date','entry_date','eintritt','start']);
+  var employer=first(x,['company_name','company','employer','arbeitgeber']);
+  box.innerHTML='';
+  addSpec(box,employment||'Stellenangebot','Anstellung');
+  addSpec(box,workload||'—','Pensum');
+  addSpec(box,start||'—','Eintritt');
+  addSpec(box,loc||'—','Standort');
+  addSpec(box,employer||'Im Inserat','Arbeitgeber');
+  addSpec(box,'Jobs','Kategorie');
+ }
+ function transform(root,listing){
+  if(root.classList.contains('km24JobSheet'))return;
+  root.classList.add('km24JobSheet');
+  var status=root.querySelector('.km24SalesStatus');if(status){status.classList.remove('sold');status.textContent='💼 STELLENANGEBOT'}
+  var loc=listing?[listing.postal_code,listing.city].filter(Boolean).join(' '):locationText(root);
+  var sub=root.querySelector('.km24SalesSub');if(sub)sub.textContent=['Jobs',loc].filter(Boolean).join(' · ');
+  var price=root.querySelector('.km24SalesPrice');if(price)price.style.display='none';
+  renderJobSpecs(root,listing);
+  var hi=root.querySelector('.km24SalesHighlights');
+  if(hi){
+   var desc=clean(listing&&listing.description);var current=clean(hi.textContent);
+   if(desc)hi.textContent=desc.length>210?desc.slice(0,207)+'…':desc;
+   else if(!current||/Alle Details, Bilder und Kontaktmöglichkeiten/i.test(current))hi.textContent='Alle Details zur Stelle und Kontaktmöglichkeiten findest du direkt im Inserat auf KaufMich24.ch.';
+  }
+  var cta=root.querySelector('.km24SalesCta span:first-child');if(cta)cta.textContent='Jetzt Stelle auf KaufMich24.ch ansehen';
+  var modal=root.closest('.km24SalesModal');
+  if(modal){
+   var h=modal.querySelector('.km24SalesModalHead h2');if(h)h.textContent='Jobbild erstellen';
+   var p=modal.querySelector('.km24SalesModalHead p');if(p)p.textContent='Automatisch aus deinem KaufMich24-Jobinserat · bereit als PDF & JPG';
+  }
+ }
+ async function inspect(root){
+  if(!root||root.dataset.km24JobChecked==='1')return;
+  root.dataset.km24JobChecked='1';
+  var cat=categoryFromSpecs(root);
+  if(cat==='jobs'||cat==='job'){transform(root,null);return}
+  var listing=await loadListing(root);
+  if(listing&&String(listing.category_slug||'').toLowerCase()==='jobs')transform(root,listing);
+ }
+ function scan(node){
+  if(!node)return;
+  if(node.nodeType===1&&node.matches&&node.matches('.km24SalesSheet'))inspect(node);
+  if(node.querySelectorAll)[].forEach.call(node.querySelectorAll('.km24SalesSheet'),inspect);
+ }
+ new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){for(var j=0;j<ms[i].addedNodes.length;j++)scan(ms[i].addedNodes[j])}}).observe(document.documentElement,{childList:true,subtree:true});
+ scan(document);
+})();
+</script>
+
+<style id="km24-services-growth-v2-css">
+.km24ServicesSpotlightV2{padding:16px 0 26px}
+.km24SrvSpotHead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:14px}
+.km24SrvEyebrow{display:inline-block;color:#2963cb;font-size:11px;font-weight:800;letter-spacing:.09em;margin-bottom:6px}
+.km24SrvSpotHead h2{font-size:clamp(23px,3.5vw,31px);line-height:1.15;margin:2px 0 7px}
+.km24SrvSpotHead p{font-size:14px;opacity:.78;margin:0}
+.km24SrvAll{font-weight:700;font-size:13px;text-decoration:none;white-space:nowrap}
+.km24SrvSpotGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.km24SrvSpotGrid a{display:flex;flex-direction:column;min-width:0;gap:5px;padding:17px;border:1px solid #dce4f1;background:linear-gradient(135deg,#fff,#f5f8ff);border-radius:15px;text-decoration:none;color:#172e4c;transition:transform .12s,border-color .12s}
+.km24SrvSpotGrid a:hover{border-color:#5891e8;transform:translateY(-2px)}
+.km24SrvSpotGrid span{font-size:25px;line-height:1.3}
+.km24SrvSpotGrid b{font-size:14px}
+.km24SrvSpotGrid small{font-size:12px;color:#607087;line-height:1.35}
+.km24SrvSpotFooter{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;font-size:13px}
+.km24SrvSpotFooter>span{opacity:.75}
+.km24SrvSpotFooter>div{display:flex;gap:9px;flex-wrap:wrap}
+.km24SrvSpotFooter a{text-decoration:none}
+.km24SvcQuickCatsV2{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.km24SvcQuickCatsV2 button{border:1px solid #9eb7de;background:rgba(255,255,255,.92);color:#173f79;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:700;cursor:pointer}
+.km24SvcQuickCatsV2 button:hover{border-color:#2563eb;background:#eaf2ff}
+.km24SvcProviderLinkV2{display:inline-flex;align-items:center;text-decoration:none;margin-top:11px}
+.km24ProviderServicesV2{padding:19px 0}
+.km24ProviderServicesV2 h2{margin:0 0 6px}
+.km24ProviderServicesV2>p{margin:0 0 13px;opacity:.76}
+.km24ProviderServiceGridV2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.km24ProviderServiceCardV2{display:flex;flex-direction:column;gap:7px;border:1px solid #dce4ef;border-radius:13px;padding:15px;background:#fff;color:#203c61;text-decoration:none}
+.km24ProviderServiceCardV2 b{font-size:15px}.km24ProviderServiceCardV2 small{font-size:12px;opacity:.72}
+.km24ProviderServiceCardV2 strong{font-size:14px;color:#1755ae;margin-top:auto}
+html[data-km24-theme="dark"] .km24SrvSpotGrid a,html[data-km24-theme="dark"] .km24ProviderServiceCardV2{background:#1c2940;color:#f4f6fc;border-color:#3a4a62}
+html[data-km24-theme="dark"] .km24SrvSpotGrid small{color:#c2cce0}
+html[data-km24-theme="dark"] .km24SvcQuickCatsV2 button{background:#213553;color:#edf4ff;border-color:#58749c}
+html[data-km24-theme="dark"] .km24ProviderServiceCardV2 strong{color:#89b6ff}
+@media(max-width:760px){.km24SrvSpotHead{align-items:start;flex-direction:column;gap:8px}.km24SrvSpotGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.km24SrvSpotGrid a{padding:13px}.km24SrvSpotFooter{align-items:stretch;flex-direction:column}.km24SrvSpotFooter>div>a{flex:1;text-align:center;min-width:145px}.km24ProviderServiceGridV2{grid-template-columns:1fr}}
+</style>
+<script id="km24-services-growth-v2-js">
+(function(){
+  "use strict";
+  if(window.__km24ServicesGrowthV2)return;
+  window.__km24ServicesGrowthV2=true;
+  var root=document.getElementById("app");
+  var categories=[
+    ["reinigung","🧹 Reinigung"],
+    ["handwerk","🔧 Handwerk"],
+    ["transport","🚚 Transport"],
+    ["garten","🌿 Garten"],
+    ["tierbetreuung","🐾 Tiere"],
+    ["kinderbetreuung","🧸 Betreuung"]
+  ];
+  function current(){return location.hash||"#/"}
+  function selectCategory(slug){
+    var sel=document.getElementById("svcCat");
+    if(!sel||!Array.prototype.some.call(sel.options,function(o){return o.value===slug}))return;
+    sel.value=slug;
+    sel.dispatchEvent(new Event("change",{bubbles:true}));
+    sel.scrollIntoView({behavior:"smooth",block:"center"});
+  }
+  function quickCategories(){
+    var bar=document.querySelector("#app .km24SvcHero .km24SvcActions");
+    if(!bar||document.getElementById("km24SvcQuickCatsV2"))return;
+    var row=document.createElement("div");
+    row.id="km24SvcQuickCatsV2";
+    row.className="km24SvcQuickCatsV2";
+    row.setAttribute("aria-label","Dienstleistungskategorien");
+    categories.forEach(function(c){
+      var button=document.createElement("button");
+      button.type="button";
+      button.textContent=c[1];
+      button.addEventListener("click",function(){selectCategory(c[0])});
+      row.appendChild(button);
+    });
+    bar.insertAdjacentElement("afterend",row);
+    var preset=new URLSearchParams((current().split("?")[1]||"")).get("category");
+    if(preset)selectCategory(preset);
+  }
+  async function providerLink(){
+    var m=current().match(/^#\/services\/post\/([0-9a-f-]{36})(?:\?|$)/i);
+    if(!m)return;
+    var panel=document.querySelector("#app .km24SvcDetailGrid aside.side > section.panel");
+    if(!panel||panel.dataset.km24ProviderLinkFor===m[1])return;
+    panel.dataset.km24ProviderLinkFor=m[1];
+    try{
+      var res=await db.from("service_posts").select("user_id,post_type").eq("id",m[1]).maybeSingle();
+      if(!res.data||!panel.isConnected||current().indexOf("#/services/post/"+m[1])!==0)return;
+      var a=document.createElement("a");
+      a.href="#/profile/"+res.data.user_id;
+      a.className="btn km24SvcProviderLinkV2";
+      a.textContent=res.data.post_type==="offer"?"👤 Anbieterprofil ansehen":"👤 Auftraggeberprofil ansehen";
+      panel.appendChild(a);
+    }catch(e){console.warn("Service-Anbieterprofil konnte nicht verlinkt werden",e)}
+  }
+  function servicePrice(p){
+    if(p.price_model==="on_request"||p.price_chf==null)return "Preis auf Anfrage";
+    var n="CHF "+new Intl.NumberFormat("de-CH",{maximumFractionDigits:2}).format(Number(p.price_chf));
+    if(p.price_model==="hourly")return n+" / Std.";
+    if(p.price_model==="from")return "ab "+n;
+    return n;
+  }
+  async function providerServices(){
+    var m=current().match(/^#\/profile\/([0-9a-f-]{36})(?:\?|$)/i);
+    if(!m)return;
+    var host=document.querySelector("#app .wrap.formPage");
+    if(!host||host.dataset.km24ProviderServicesFor===m[1])return;
+    host.dataset.km24ProviderServicesFor=m[1];
+    try{
+      var res=await db.from("service_posts")
+        .select("id,title,category_slug,city,postal_code,price_model,price_chf,availability")
+        .eq("user_id",m[1]).eq("post_type","offer").eq("status","active")
+        .order("created_at",{ascending:false}).limit(12);
+      var rows=res.data||[];
+      if(res.error||!rows.length||!host.isConnected||current().indexOf("#/profile/"+m[1])!==0)return;
+      var sec=document.createElement("section");
+      sec.className="section km24ProviderServicesV2";
+      var h=document.createElement("h2");
+      h.textContent="🛠️ Dienstleistungen dieses Anbieters";
+      var lead=document.createElement("p");
+      lead.textContent="Aktive Angebote, Einsatzorte und Preise auf einen Blick.";
+      var grid=document.createElement("div");
+      grid.className="km24ProviderServiceGridV2";
+      rows.forEach(function(p){
+        var card=document.createElement("a");
+        card.className="km24ProviderServiceCardV2";
+        card.href="#/services/post/"+p.id;
+        var title=document.createElement("b");
+        title.textContent=p.title;
+        var location=document.createElement("small");
+        location.textContent="📍 "+[p.postal_code,p.city].filter(Boolean).join(" ");
+        var amount=document.createElement("strong");
+        amount.textContent=servicePrice(p);
+        card.appendChild(title);
+        card.appendChild(location);
+        if(p.availability){
+          var av=document.createElement("small");
+          av.textContent="🕒 "+p.availability;
+          card.appendChild(av);
+        }
+        card.appendChild(amount);
+        grid.appendChild(card);
+      });
+      sec.appendChild(h);
+      sec.appendChild(lead);
+      sec.appendChild(grid);
+      var first=host.querySelector("section.section");
+      if(first)host.insertBefore(sec,first);else host.appendChild(sec);
+    }catch(e){console.warn("Service-Angebote im Profil konnten nicht geladen werden",e)}
+  }
+  function run(){
+    if(current().indexOf("#/services")===0){
+      quickCategories();
+      providerLink();
+    }else if(current().indexOf("#/profile/")===0){
+      providerServices();
+    }
+  }
+  if(root)new MutationObserver(run).observe(root,{childList:true});
+  addEventListener("hashchange",function(){setTimeout(run,100)});
+  addEventListener("pageshow",function(){setTimeout(run,100)});
+  setTimeout(run,250);
+})();
+</script><style id="km24-category-theme-match-v1">
+/* KaufMich24 category UI: match light/dark theme, blue branding and contrast */
+html[data-km24-theme="dark"] body.km24CategoryLightRoute,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute #app,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute section.section{background:#0b1220!important;color:#edf4ff!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro{background:#131e31!important;color:#edf4ff!important;border:1px solid #34445f!important;box-shadow:0 8px 24px rgba(0,0,0,.24)!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro h1 *,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro h2,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h1,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .head h2,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat b,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .card h3{color:#f2f7ff!important;-webkit-text-fill-color:#f2f7ff!important;background-image:none!important;opacity:1!important;text-shadow:none!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro p,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .mut,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryLegend{color:#b9c8dd!important;-webkit-text-fill-color:#b9c8dd!important;opacity:1!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedHint{background:#15365a!important;color:#cbe4ff!important;-webkit-text-fill-color:#cbe4ff!important;border-color:#315a86!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryServiceNote{background:#182b43!important;color:#dae9ff!important;-webkit-text-fill-color:#dae9ff!important;border-color:#395571!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryServiceNote span,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryServiceNote b{color:#dae9ff!important;-webkit-text-fill-color:#dae9ff!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro .km24CategoryActions .btn.primary,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryTab.on{background:#176ad1!important;color:white!important;-webkit-text-fill-color:white!important;border-color:#3184ea!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary),
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .section>.wrap>a.btn,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24CategoryTab{background:#1b2b41!important;color:#e3efff!important;-webkit-text-fill-color:#e3efff!important;border-color:#39516d!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .card,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .empty,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24SvcCard{background:#142136!important;color:#eaf3ff!important;border-color:#34445f!important;box-shadow:0 5px 16px rgba(0,0,0,.18)!important}
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .cat *,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .card b,
+html[data-km24-theme="dark"] body.km24CategoryLightRoute .km24SvcCard h3{color:#edf5ff!important;-webkit-text-fill-color:#edf5ff!important;opacity:1!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute,
+html[data-km24-theme="light"] body.km24CategoryLightRoute #app{background:#f4f7fc!important;color:#14243e!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro{background:#fff!important;color:#14243e!important;border-color:#dce5f2!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro h1,
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro h1 *,
+html[data-km24-theme="light"] body.km24CategoryLightRoute .head h2,
+html[data-km24-theme="light"] body.km24CategoryLightRoute .cat b{color:#14243e!important;-webkit-text-fill-color:#14243e!important;background-image:none!important;opacity:1!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedHint{background:#e8f2ff!important;color:#1456ac!important;-webkit-text-fill-color:#1456ac!important;border-color:#b8d6fc!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24CategoryServiceNote{background:#edf5ff!important;color:#244a7c!important;-webkit-text-fill-color:#244a7c!important;border-color:#c8daf5!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24CategoryServiceNote span,
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24CategoryServiceNote b{color:#244a7c!important;-webkit-text-fill-color:#244a7c!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro .km24CategoryActions .btn.primary,
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24CategoryTab.on{background:#176bd4!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#176bd4!important}
+html[data-km24-theme="light"] body.km24CategoryLightRoute .km24UnifiedCategoryIntro .km24CategoryActions .btn:not(.primary){background:#eff5ff!important;color:#1b4278!important;-webkit-text-fill-color:#1b4278!important;border-color:#c9daf3!important}
+</style>
+<style id="km24-three-worlds-v1-css">
+/* Drei eigenständige, verständliche Bereiche – ohne die bestehende Navigation zu ersetzen. */
+.km24ServicesSpotlightV2{display:none!important}
+#km24AreaBarSection .km24AreaSwitch,
+#km24ThreeWorldsServices .km24ThreeWorldsNav{
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:7px!important;padding:6px!important;border:1px solid var(--line,#d8e3f3)!important;
+ border-radius:17px!important;background:var(--card,#fff)!important;
+ box-shadow:0 6px 19px rgba(0,0,0,.06)!important
+}
+#km24AreaBarSection .km24AreaSwitch button,
+#km24AreaBarSection .km24AreaSwitch a,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a{
+ min-width:0!important;min-height:70px!important;padding:10px 5px!important;
+ box-sizing:border-box!important;border:1px solid transparent!important;border-radius:12px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ flex-direction:column!important;gap:4px!important;text-align:center!important;
+ background:transparent!important;color:var(--text,#193150)!important;
+ text-decoration:none!important;font:inherit!important;font-size:22px!important;
+ font-weight:800!important;box-shadow:none!important;cursor:pointer!important
+}
+#km24AreaBarSection .km24AreaSwitch button>span,
+#km24AreaBarSection .km24AreaSwitch a .km24WorldLabel,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a .km24WorldLabel{
+ display:block!important;font-size:13.5px!important;font-weight:850!important;
+ line-height:1.22!important;text-align:center!important;letter-spacing:0!important;
+ color:inherit!important;overflow-wrap:break-word!important
+}
+#km24AreaBarSection .km24AreaSwitch button>span::after{display:none!important}
+#km24AreaBarSection .km24AreaSwitch button.active,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a[aria-current="page"]{
+ background:#1264ed!important;color:#fff!important;border-color:#1264ed!important;
+ box-shadow:0 4px 12px rgba(18,100,237,.22)!important
+}
+#km24AreaBarSection .km24AreaSwitch a:focus-visible,
+#km24AreaBarSection .km24AreaSwitch button:focus-visible,
+#km24ThreeWorldsServices .km24ThreeWorldsNav a:focus-visible{
+ outline:3px solid #42b0ff!important;outline-offset:2px!important
+}
+#km24ThreeWorldsServices{padding:12px 0 5px}
+#km24ThreeWorldsServices .km24ThreeWorldsNav{max-width:960px;margin:0 auto}
+#km24ThreeWorldsServices .km24WorldEmoji,
+#km24AreaBarSection .km24WorldEmoji{display:block;font-size:23px;line-height:1.05}
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch,
+html[data-km24-theme="dark"] #km24ThreeWorldsServices .km24ThreeWorldsNav{
+ background:#142136!important;border-color:#34465e!important
+}
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch button:not(.active),
+html[data-km24-theme="dark"] #km24AreaBarSection .km24AreaSwitch a,
+html[data-km24-theme="dark"] #km24ThreeWorldsServices .km24ThreeWorldsNav a:not([aria-current="page"]){
+ color:#e9f1ff!important
+}
+@media(max-width:650px){
+ #km24AreaBarSection .km24AreaSwitch,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav{gap:4px!important;padding:5px!important}
+ #km24AreaBarSection .km24AreaSwitch button,
+ #km24AreaBarSection .km24AreaSwitch a,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav a{
+  min-height:72px!important;padding:8px 2px!important;font-size:20px!important;gap:5px!important
+ }
+ #km24AreaBarSection .km24AreaSwitch button>span,
+ #km24AreaBarSection .km24AreaSwitch a .km24WorldLabel,
+ #km24ThreeWorldsServices .km24ThreeWorldsNav a .km24WorldLabel{
+  font-size:clamp(10.5px,3.1vw,13px)!important;white-space:normal!important
+ }
+ #km24ThreeWorldsServices{padding:9px 10px 0}
+ #km24ThreeWorldsServices>.wrap{padding:0!important}
+}
+</style>
+<script id="km24-three-worlds-v1-js">
+(function(){
+ "use strict";
+ if(window.__km24ThreeWorldsV1)return;
+ window.__km24ThreeWorldsV1=true;
+ var t=0;
+ function base(){return (location.hash||"#/").split("?")[0]||"#/"}
+ function home(){return base()==="#/"||base()==="#"}
+ function services(){return base().indexOf("#/services")===0}
+ function homeTabs(){
+  if(!home())return;
+  var nav=document.querySelector("#km24AreaBarSection .km24AreaSwitch");
+  if(!nav||nav.querySelector('[data-km24-world="services"]'))return;
+  var a=document.createElement("a");
+  a.href="#/services";
+  a.setAttribute("data-km24-world","services");
+  a.setAttribute("aria-label","Dienstleistungen entdecken und Aufträge ausschreiben");
+  a.innerHTML='<span class="km24WorldEmoji" aria-hidden="true">🛠️</span><span class="km24WorldLabel">Dienstleistungen</span>';
+  nav.appendChild(a);
+ }
+ function serviceTabs(){
+  if(!services())return;
+  var app=document.getElementById("app");
+  if(!app||!app.querySelector(".km24SvcHero")||app.querySelector("#km24ThreeWorldsServices"))return;
+  var section=document.createElement("section");
+  section.id="km24ThreeWorldsServices";
+  section.setAttribute("aria-label","Bereiche von KaufMich24");
+  section.innerHTML='<div class="wrap"><nav class="km24ThreeWorldsNav" aria-label="Bereich wählen">'+
+   '<a href="#/?area=market"><span class="km24WorldEmoji" aria-hidden="true">🛍️</span><span class="km24WorldLabel">Marktplatz</span></a>'+
+   '<a href="#/?area=jobs"><span class="km24WorldEmoji" aria-hidden="true">💼</span><span class="km24WorldLabel">Jobs</span></a>'+
+   '<a href="#/services" aria-current="page"><span class="km24WorldEmoji" aria-hidden="true">🛠️</span><span class="km24WorldLabel">Dienstleistungen</span></a>'+
+   '</nav></div>';
+  app.insertBefore(section,app.firstChild);
+ }
+ function sync(){try{homeTabs();serviceTabs()}catch(e){console.warn("KM24 worlds",e)}}
+ function schedule(){clearTimeout(t);t=setTimeout(sync,65)}
+ addEventListener("hashchange",schedule);
+ addEventListener("pageshow",schedule);
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",schedule,{once:true});
+ var app=document.getElementById("app");
+ if(app)new MutationObserver(schedule).observe(app,{childList:true});
+ schedule();
+ setTimeout(sync,220);
+})();
+</script>
+<style id="km24-services-theme-contrast-v1">
+
+/* KaufMich24 Services: gut lesbare, konsistente Light- und Dark-Palette. */
+html[data-km24-theme="light"] .km24SvcHero{
+ background:radial-gradient(circle at 90% 0,rgba(75,147,255,.14),transparent 45%),linear-gradient(150deg,#f1f7ff 0%,#ffffff 70%)!important;
+ border-bottom:1px solid #d9e6f7!important;
+ color:#142d52!important;
+}
+html[data-km24-theme="dark"] .km24SvcHero{
+ background:radial-gradient(circle at 90% 0,rgba(35,108,217,.15),transparent 45%),linear-gradient(150deg,#101b2c 0%,#0c1525 75%)!important;
+ border-bottom:1px solid #30425d!important;
+ color:#f2f7ff!important;
+}
+html[data-km24-theme="light"] .km24SvcHero h1,
+html[data-km24-theme="light"] .km24SvcHero h1 *,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcActions b{
+ color:#142b4b!important;-webkit-text-fill-color:#142b4b!important;
+ background-image:none!important;text-shadow:none!important;opacity:1!important
+}
+html[data-km24-theme="dark"] .km24SvcHero h1,
+html[data-km24-theme="dark"] .km24SvcHero h1 *,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcActions b{
+ color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;
+ background-image:none!important;text-shadow:none!important;opacity:1!important
+}
+html[data-km24-theme="light"] .km24SvcHero p,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction small{
+ color:#4a6080!important;-webkit-text-fill-color:#4a6080!important;opacity:1!important
+}
+html[data-km24-theme="dark"] .km24SvcHero p,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction small{
+ color:#b9cbe4!important;-webkit-text-fill-color:#b9cbe4!important;opacity:1!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SectionKicker{
+ background:#e6f0ff!important;border:1px solid #cadfff!important;
+ color:#1258af!important;-webkit-text-fill-color:#1258af!important
+}
+html[data-km24-theme="dark"] .km24SvcHero .km24SectionKicker{
+ background:#172d4b!important;border:1px solid #305681!important;
+ color:#b5d6ff!important;-webkit-text-fill-color:#b5d6ff!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction{
+ background:#fff!important;border:1px solid #cbdcf4!important;
+ color:#142b4b!important;box-shadow:0 5px 16px rgba(30,74,142,.07)!important
+}
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction{
+ background:#1a2b42!important;border:1px solid #3b5373!important;
+ color:#f4f8ff!important;box-shadow:0 5px 18px rgba(0,0,0,.16)!important
+}
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction:hover,
+html[data-km24-theme="light"] .km24SvcHero .km24SvcAction:focus-visible{background:#eaf3ff!important;border-color:#4286eb!important}
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction:hover,
+html[data-km24-theme="dark"] .km24SvcHero .km24SvcAction:focus-visible{background:#234163!important;border-color:#79b1f6!important}
+
+/* Listen, Suchfelder und Kategorien passend zum jeweils aktiven Farbschema. */
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section{
+ background:#f8fbff!important;color:#152d4e!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section{
+ background:#101a2b!important;color:#eaf2ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .head h2,
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .head h3{
+ color:#172f51!important;-webkit-text-fill-color:#172f51!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .head h2,
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .head h3{
+ color:#edf4ff!important;-webkit-text-fill-color:#edf4ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section .mut,
+html[data-km24-theme="light"] #app .km24SvcHero + .wrap.section #svcStatus{
+ color:#536986!important;-webkit-text-fill-color:#536986!important
+}
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section .mut,
+html[data-km24-theme="dark"] #app .km24SvcHero + .wrap.section #svcStatus{
+ color:#bdcce1!important;-webkit-text-fill-color:#bdcce1!important
+}
+html[data-km24-theme="light"] #app .km24SvcToolbar input,
+html[data-km24-theme="light"] #app .km24SvcToolbar select{
+ background:#fff!important;color:#142b4b!important;-webkit-text-fill-color:#142b4b!important;
+ border:1px solid #c8d8ee!important;color-scheme:light!important
+}
+html[data-km24-theme="dark"] #app .km24SvcToolbar input,
+html[data-km24-theme="dark"] #app .km24SvcToolbar select{
+ background:#1a2b42!important;color:#eef5ff!important;-webkit-text-fill-color:#eef5ff!important;
+ border:1px solid #405a7d!important;color-scheme:dark!important
+}
+html[data-km24-theme="light"] #app .km24SvcToolbar input::placeholder{color:#60728b!important;-webkit-text-fill-color:#60728b!important;opacity:1!important}
+html[data-km24-theme="dark"] #app .km24SvcToolbar input::placeholder{color:#b7c7de!important;-webkit-text-fill-color:#b7c7de!important;opacity:1!important}
+
+html[data-km24-theme="light"] #app .km24SvcCard,
+html[data-km24-theme="light"] #app .km24SvcHomeCard{
+ background:#ffffff!important;color:#152d4f!important;border-color:#d4e1f2!important
+}
+html[data-km24-theme="dark"] #app .km24SvcCard,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard{
+ background:#1a2a40!important;color:#edf4ff!important;border-color:#3b506d!important
+}
+html[data-km24-theme="light"] #app .km24SvcCard h3,
+html[data-km24-theme="light"] #app .km24SvcHomeCard b,
+html[data-km24-theme="light"] #app .km24SvcPrice{
+ color:#122f56!important;-webkit-text-fill-color:#122f56!important
+}
+html[data-km24-theme="dark"] #app .km24SvcCard h3,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard b,
+html[data-km24-theme="dark"] #app .km24SvcPrice{
+ color:#f2f7ff!important;-webkit-text-fill-color:#f2f7ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcMeta,
+html[data-km24-theme="light"] #app .km24SvcHomeCard small,
+html[data-km24-theme="light"] #app .km24SvcBody .mut{
+ color:#526985!important;-webkit-text-fill-color:#526985!important
+}
+html[data-km24-theme="dark"] #app .km24SvcMeta,
+html[data-km24-theme="dark"] #app .km24SvcHomeCard small,
+html[data-km24-theme="dark"] #app .km24SvcBody .mut{
+ color:#b8c9df!important;-webkit-text-fill-color:#b8c9df!important
+}
+html[data-km24-theme="light"] #app .km24SvcPic{background:#e9f1fb!important}
+html[data-km24-theme="dark"] #app .km24SvcPic{background:#223751!important}
+html[data-km24-theme="light"] #app .km24SvcTrust span{
+ background:#eef5ff!important;color:#345577!important;border-color:#d5e3f5!important
+}
+html[data-km24-theme="dark"] #app .km24SvcTrust span{
+ background:#233b57!important;color:#dcecff!important;border-color:#40638b!important
+}
+html[data-km24-theme="light"] #app .km24SvcPill{
+ background:#dfedff!important;color:#174a9a!important;-webkit-text-fill-color:#174a9a!important
+}
+html[data-km24-theme="dark"] #app .km24SvcPill{
+ background:#214b7d!important;color:#eff6ff!important;-webkit-text-fill-color:#eff6ff!important
+}
+html[data-km24-theme="light"] #app .km24SvcPill.request{background:#fff2d7!important;color:#76500b!important;-webkit-text-fill-color:#76500b!important}
+html[data-km24-theme="dark"] #app .km24SvcPill.request{background:#60471e!important;color:#ffebb9!important;-webkit-text-fill-color:#ffebb9!important}
+html[data-km24-theme="light"] #app .km24SvcQuickCatsV2 button{
+ background:#fff!important;border-color:#c3d7ee!important;color:#20518d!important;-webkit-text-fill-color:#20518d!important
+}
+html[data-km24-theme="dark"] #app .km24SvcQuickCatsV2 button{
+ background:#233853!important;border-color:#4c6c95!important;color:#edf4ff!important;-webkit-text-fill-color:#edf4ff!important
+}
+
+/* Ergänzend: Detailseiten, Angebote, Chat – keine dunklen Textfarben auf dunklen Flächen. */
+html[data-km24-theme="light"] #app .km24SvcQuote,
+html[data-km24-theme="light"] #app .km24SvcMsg{
+ background:#f1f6ff!important;color:#183453!important;border-color:#d5e2f4!important
+}
+html[data-km24-theme="dark"] #app .km24SvcQuote,
+html[data-km24-theme="dark"] #app .km24SvcMsg{
+ background:#1d3048!important;color:#eaf3ff!important;border-color:#3b577a!important
+}
+html[data-km24-theme="light"] #app .km24SvcQuote.accepted,
+html[data-km24-theme="light"] #app .km24SvcMsg.mine{background:#e7f6ee!important;color:#145331!important}
+html[data-km24-theme="dark"] #app .km24SvcQuote.accepted,
+html[data-km24-theme="dark"] #app .km24SvcMsg.mine{background:#1b493b!important;color:#e2fff0!important}
+html[data-km24-theme="light"] #app .km24SvcContact{background:#e8f5ed!important;color:#194b34!important;border-color:#b6dcc7!important}
+html[data-km24-theme="dark"] #app .km24SvcContact{background:#1c4638!important;color:#e2f9ec!important;border-color:#397762!important}
+
+@media(max-width:650px){
+ .km24SvcHero h1{font-size:clamp(28px,7.1vw,40px)!important;line-height:1.12!important;overflow-wrap:normal!important}
+ .km24SvcHero .km24SvcAction{padding:16px 17px!important}
+ .km24SvcHero .km24SvcAction b{font-size:18px!important;line-height:1.25!important}
+ .km24SvcHero .km24SvcAction small{font-size:13px!important;line-height:1.42!important}
+}
+
+</style>
+<style id="km24-two-worlds-v3-css">
+/* KaufMich24: two main worlds, Jobs and Services remain separate within the second world. */
+#km24WorldsHubV3{display:block;box-sizing:border-box;width:100%;max-width:1160px;margin:0 auto;padding:12px 18px 4px;position:relative;z-index:15}
+#km24WorldsHubV3[hidden],#km24WorldsHubV3 .km24WorldSubV3[hidden]{display:none!important}
+#km24WorldsHubV3 .km24WorldMainV3{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px;padding:6px;border:1px solid #ccdbee;border-radius:19px;background:#f5f9ff;box-shadow:0 5px 18px rgba(22,61,113,.07)}
+#km24WorldsHubV3 .km24WorldMainLinkV3{display:flex!important;box-sizing:border-box;min-width:0;min-height:75px;padding:11px 8px;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;text-decoration:none!important;border:1px solid transparent;border-radius:14px;background:transparent;color:#183d6c!important;-webkit-text-fill-color:#183d6c!important;font:inherit!important;opacity:1!important}
+#km24WorldsHubV3 .km24WorldMainLinkV3 .km24WorldIconV3{font-size:22px;line-height:1.05}
+#km24WorldsHubV3 .km24WorldMainLinkV3 strong{font-size:15px;line-height:1.2;font-weight:900;letter-spacing:-.015em;color:inherit!important;-webkit-text-fill-color:inherit!important}
+#km24WorldsHubV3 .km24WorldMainLinkV3 small{font-size:11.5px;line-height:1.25;font-weight:650;color:inherit!important;-webkit-text-fill-color:inherit!important;opacity:.85}
+#km24WorldsHubV3 .km24WorldMainLinkV3.is-active{background:#0b63ef!important;border-color:#0b63ef!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 5px 15px rgba(11,99,239,.2)}
+#km24WorldsHubV3 .km24WorldMainLinkV3.is-active strong,#km24WorldsHubV3 .km24WorldMainLinkV3.is-active small{color:#fff!important;-webkit-text-fill-color:#fff!important}
+#km24WorldsHubV3 .km24WorldSubV3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}
+#km24WorldsHubV3 .km24WorldSubLinkV3{box-sizing:border-box;display:flex;justify-content:center;align-items:center;min-height:48px;gap:8px;padding:11px 8px;border:1px solid #c5d8f1;border-radius:12px;background:#edf5ff;text-decoration:none!important;color:#1a4a83!important;-webkit-text-fill-color:#1a4a83!important;font:inherit!important;font-size:13.5px!important;line-height:1.25!important;font-weight:850!important;white-space:normal;text-align:center}
+#km24WorldsHubV3 .km24WorldSubLinkV3.is-active{border-color:#0b63ef!important;background:#dceaff!important;color:#0c49a1!important;-webkit-text-fill-color:#0c49a1!important;box-shadow:inset 0 0 0 1px #0b63ef}
+#km24WorldsHubV3 a:focus-visible{outline:3px solid #11acdd!important;outline-offset:2px}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldMainV3{background:#152338!important;border-color:#344c68!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldMainLinkV3:not(.is-active){color:#e8f1ff!important;-webkit-text-fill-color:#e8f1ff!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldSubLinkV3{background:#20334d!important;border-color:#3b587b!important;color:#e7f1ff!important;-webkit-text-fill-color:#e7f1ff!important}
+html[data-km24-theme="dark"] #km24WorldsHubV3 .km24WorldSubLinkV3.is-active{background:#174a84!important;border-color:#64a0fa!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+#app #km24AreaBarSection .km24AreaSwitch,#app #km24ThreeWorldsServices{display:none!important}
+#app #km24AreaBarSection{padding:0!important;margin:0!important}
+#app #km24AreaBarSection .km24JobsHub{margin-top:9px!important}
+html[data-km24-theme="light"] .hero.km24WowHero .km24HeroEyebrow,
+html[data-km24-theme="light"] .km24HeroEyebrow{background:#e6f0ff!important;border:1px solid #c7daf5!important;color:#164779!important;-webkit-text-fill-color:#164779!important;text-shadow:none!important;opacity:1!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .km24HeroEyebrow,
+html[data-km24-theme="dark"] .km24HeroEyebrow{background:#183455!important;border:1px solid #345d85!important;color:#eef6ff!important;-webkit-text-fill-color:#eef6ff!important;text-shadow:none!important;opacity:1!important}
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button{background:#e8f1ff!important;background-image:none!important;border:1px solid #bdd1ef!important;color:#173f70!important;-webkit-text-fill-color:#173f70!important;text-shadow:none!important;opacity:1!important;box-shadow:none!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button{background:#203a5a!important;background-image:none!important;border:1px solid #426184!important;color:#edf5ff!important;-webkit-text-fill-color:#edf5ff!important;text-shadow:none!important;opacity:1!important;box-shadow:none!important}
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button:hover,
+html[data-km24-theme="light"] .hero.km24WowHero .quickDiscover button:focus-visible{background:#d7e9ff!important;border-color:#6da3ef!important}
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button:hover,
+html[data-km24-theme="dark"] .hero.km24WowHero .quickDiscover button:focus-visible{background:#2b5179!important;border-color:#76b2f4!important}
+@media(max-width:650px){
+ #km24WorldsHubV3{padding:9px 10px 3px!important}
+ #km24WorldsHubV3 .km24WorldMainV3{gap:5px;padding:5px;border-radius:16px}
+ #km24WorldsHubV3 .km24WorldMainLinkV3{min-height:76px;padding:8px 4px;gap:4px}
+ #km24WorldsHubV3 .km24WorldMainLinkV3 strong{font-size:clamp(12.5px,3.55vw,15px)}
+ #km24WorldsHubV3 .km24WorldMainLinkV3 small{font-size:clamp(10px,2.75vw,12px)}
+ #km24WorldsHubV3 .km24WorldSubV3{gap:6px;margin-top:8px}
+ #km24WorldsHubV3 .km24WorldSubLinkV3{min-height:46px;padding:10px 4px;font-size:12.5px!important;gap:5px}
+}
+</style>
+<script id="km24-two-worlds-v3-js">
+(function(){
+ "use strict";
+ if(window.__km24TwoWorldsV3)return;
+ window.__km24TwoWorldsV3=true;
+ var ID="km24WorldsHubV3", timer=0;
+ function route(){return ((location.hash||"#/").split("?")[0]||"#/")}
+ function inScope(){var r=route();return r==="#/"||r==="#"||r.indexOf("#/services")===0}
+ function area(){
+   if(route().indexOf("#/services")===0)return "services";
+   try{
+     var params=new URLSearchParams((location.hash||"").split("?")[1]||"");
+     var direct=params.get("area");
+     if(direct==="jobs"||direct==="market")return direct;
+     return sessionStorage.getItem("km24HomeAreaV1")==="jobs"||localStorage.getItem("km24HomeAreaV1")==="jobs"?"jobs":"market";
+   }catch(_){return "market"}
+ }
+ function ensure(){
+   var app=document.getElementById("app");
+   if(!app||!app.parentNode)return null;
+   var hub=document.getElementById(ID);
+   if(!hub){
+     hub=document.createElement("section");hub.id=ID;hub.setAttribute("aria-label","KaufMich24 Bereiche");
+     hub.innerHTML='<nav class="km24WorldMainV3" aria-label="Hauptbereiche">'+
+       '<a class="km24WorldMainLinkV3" data-km24-main-v3="market" data-km24-go-v3="market" href="#/?area=market"><span class="km24WorldIconV3" aria-hidden="true">🛍️</span><strong>Marktplatz</strong><small>Kaufen · Verkaufen · Auktionen</small></a>'+
+       '<a class="km24WorldMainLinkV3" data-km24-main-v3="work" data-km24-go-v3="jobs" href="#/?area=jobs" aria-expanded="false" aria-controls="km24WorldSubV3"><span class="km24WorldIconV3" aria-hidden="true">🤝</span><strong>Jobs & Services</strong><small>Arbeit · Aufträge · Hilfe</small></a>'+
+       '</nav>'+
+       '<nav class="km24WorldSubV3" id="km24WorldSubV3" aria-label="Jobs und Dienstleistungen" hidden>'+
+       '<a class="km24WorldSubLinkV3" data-km24-sub-v3="jobs" data-km24-go-v3="jobs" href="#/?area=jobs">💼 Jobs</a>'+
+       '<a class="km24WorldSubLinkV3" data-km24-sub-v3="services" data-km24-go-v3="services" href="#/services">🛠️ Dienstleistungen</a></nav>';
+     hub.addEventListener("click",function(event){
+       var link=event.target&&event.target.closest&&event.target.closest("[data-km24-go-v3]");
+       if(!link)return;
+       var selected=link.getAttribute("data-km24-go-v3");
+       if(selected==="market"||selected==="jobs"){
+         try{sessionStorage.setItem("km24HomeAreaV1",selected);localStorage.setItem("km24HomeAreaV1",selected)}catch(_){}
+       }
+       setTimeout(sync,80);
+     });
+   }
+   if(hub.parentNode!==app.parentNode||hub.nextElementSibling!==app)app.parentNode.insertBefore(hub,app);
+   return hub;
+ }
+ function sync(){
+   var hub=ensure();if(!hub)return;
+   var visible=inScope();hub.hidden=!visible;if(!visible)return;
+   var selected=area(),work=selected!=="market";
+   var marketLink=hub.querySelector('[data-km24-main-v3="market"]');
+   var workLink=hub.querySelector('[data-km24-main-v3="work"]');
+   var subs=hub.querySelector("#km24WorldSubV3");
+   if(marketLink){marketLink.classList.toggle("is-active",!work);if(!work)marketLink.setAttribute("aria-current","page");else marketLink.removeAttribute("aria-current")}
+   if(workLink){workLink.classList.toggle("is-active",work);workLink.setAttribute("aria-expanded",work?"true":"false")}
+   if(subs){subs.hidden=!work;subs.querySelectorAll("[data-km24-sub-v3]").forEach(function(link){var active=link.getAttribute("data-km24-sub-v3")===selected;link.classList.toggle("is-active",active);if(active)link.setAttribute("aria-current","page");else link.removeAttribute("aria-current")})}
+ }
+ function schedule(){clearTimeout(timer);timer=setTimeout(sync,70)}
+ function start(){
+   var app=document.getElementById("app");
+   if(app)new MutationObserver(schedule).observe(app,{childList:true});
+   sync();
+ }
+ addEventListener("hashchange",schedule);
+ addEventListener("popstate",schedule);
+ addEventListener("pageshow",schedule);
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});else start();
+ setTimeout(sync,300);setTimeout(sync,900);
+})();
+</script>
+<style id="km24-profile-contrast-fix-20261105">
+/* White/yellow surfaces must keep readable text in light and dark themes. */
+#km24AddressMissingNotice {color:#513b17!important;background:#fff8e7!important}
+#km24AddressMissingNotice b {color:#513b17!important;-webkit-text-fill-color:#513b17!important;opacity:1!important}
+#km24AddressMissingNotice small {color:#5a4b31!important;-webkit-text-fill-color:#5a4b31!important;opacity:1!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) {color:#253343!important;background:#ffffff!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) span {color:#253343!important;-webkit-text-fill-color:#253343!important;opacity:1!important}
+.km24TrustStatusGrid .km24TrustStatusItem:not(.ok) i {color:#56665d!important;-webkit-text-fill-color:#56665d!important;opacity:1!important}
+</style>
+<style id="km24-verification-dark-fix-v1">
+/* Only #/verification: protect legibility in dark mode. No global theme changes. */
+html[data-km24-theme="dark"] body:has(#app .km24VerificationPage),
+html[data-km24-theme="dark"] #app:has(.km24VerificationPage),
+html[data-km24-theme="dark"] #app .km24VerificationPage {
+  background:#0b1220!important;
+  background-image:none!important;
+  color:#eaf0f9!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage > .panel {
+  background:#111c2c!important;
+  background-image:none!important;
+  border-color:#2a3a50!important;
+  color:#eaf0f9!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage > .panel > h1,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard b,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard div,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard label {
+  color:#edf3fc!important;
+  -webkit-text-fill-color:#edf3fc!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard {
+  background:#192638!important;
+  background-image:none!important;
+  border-color:#34465d!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .mut,
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard small {
+  color:#bbc9db!important;
+  -webkit-text-fill-color:#bbc9db!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage input:not([type="checkbox"]),
+html[data-km24-theme="dark"] #app .km24VerificationPage select,
+html[data-km24-theme="dark"] #app .km24VerificationPage textarea {
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  background:#101a29!important;
+  background-image:none!important;
+  border-color:#52647c!important;
+  color-scheme:dark!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage input::placeholder,
+html[data-km24-theme="dark"] #app .km24VerificationPage textarea::placeholder {
+  color:#a8b7c9!important;
+  -webkit-text-fill-color:#a8b7c9!important;
+  opacity:1!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .adminCard .btn:not(.primary) {
+  background:#27374d!important;
+  color:#f8fafc!important;
+  -webkit-text-fill-color:#f8fafc!important;
+  border-color:#52647c!important;
+}
+html[data-km24-theme="dark"] #app .km24VerificationPage .btn.primary {
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+</style>
+<style id="km24-bulk-dark-brand-v1">
+/* KaufMich24: coherent business/dealer creation chooser, dark mode only. */
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch {
+  background:linear-gradient(140deg,#11283d 0%,#0e1b30 58%,#152e44 100%) !important;
+  border:1px solid #2c96c9 !important;
+  color:#ecf5ff !important;
+  box-shadow:0 14px 30px rgba(0,8,26,.27) !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:first-child {
+  color:#6de3df !important;
+  -webkit-text-fill-color:#6de3df !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > h2 {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > p {
+  color:#d2dfed !important;
+  -webkit-text-fill-color:#d2dfed !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child {
+  background:linear-gradient(145deg,#172d42 0%,#1b293e 100%) !important;
+  border:1px solid #369bc9 !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child > strong {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > div:first-child > span {
+  color:#d4e3ed !important;
+  -webkit-text-fill-color:#d4e3ed !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] {
+  background:linear-gradient(135deg,#078c93 0%,#0b687d 54%,#0b4b67 100%) !important;
+  border:1px solid #2cddd5 !important;
+  color:#fff !important;
+  box-shadow:0 6px 18px rgba(0,8,24,.2) !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] > strong,
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"] > span {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+}
+html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"]:focus-visible {
+  outline:3px solid #a3fff1 !important;
+  outline-offset:3px;
+}
+@media (hover:hover) {
+  html[data-km24-theme="dark"] #app .km24BulkSellSwitch > div:last-child > a[href="#/foto-massenimport"]:hover {
+    background:linear-gradient(135deg,#099a9f,#0c5974) !important;
+  }
+}
+</style><style id="km24-price-studio-style-v2">
+.km24SalesModal .km24PriceSignBox{display:none!important}
+.km24PriceStudio{margin:15px 24px 24px;padding:18px 20px;border:1px solid #d5e3ee;background:#f5f9fd;border-radius:16px;color:#092d4d!important;-webkit-text-fill-color:initial!important}
+.km24PriceStudio,.km24PriceStudio *{box-sizing:border-box}
+.km24PSHead h3{font-size:21px!important;line-height:1.25;margin:0 0 5px;font-weight:850;color:#0d3151!important;-webkit-text-fill-color:#0d3151!important}
+.km24PSHead p{margin:0 0 16px;color:#4d6c85!important;font-size:13px}
+.km24PSGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,1fr);gap:19px;align-items:start}
+.km24PSSettings{display:grid;gap:12px;min-width:0}
+.km24PSSettings label{display:grid;gap:5px;font-weight:750;color:#173c60!important;font-size:13px;line-height:1.35}
+.km24PSSettings label small{font-weight:500;color:#647c94!important}
+.km24PSSettings input:not([type=checkbox]):not([type=file]),.km24PSSettings select{width:100%;min-width:0;border:1px solid #c0d4e6;border-radius:10px;padding:10px 11px;background:#ffffff!important;color:#092f56!important;-webkit-text-fill-color:#092f56!important;font:600 13px Arial,sans-serif;min-height:42px;appearance:auto}
+.km24PSSettings input[type=file]{width:100%;min-width:0;color:#123956!important;font-size:12px;max-width:100%}
+.km24PSSettings input:focus-visible,.km24PSSettings select:focus-visible,.km24PSSettings button:focus-visible{outline:3px solid #52c6ec;outline-offset:2px}
+.km24PSPair{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.km24PSSeller{border:1px solid #cddfeb;border-radius:12px;padding:12px;background:#ffffff}
+.km24PSSettings label.km24PSCheck{display:flex;align-items:center;gap:9px;font-weight:750;font-size:13px;cursor:pointer}
+.km24PSCheck input{height:17px;width:17px;accent-color:#0c6f9c}
+.km24PSSellerFields{display:grid;gap:10px;padding-top:12px}
+.km24PSSellerFields[hidden]{display:none!important}
+.km24PSClear{justify-self:start;background:#e9f2fa!important;color:#1a597b!important;border:1px solid #c2d8e5!important;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:700;cursor:pointer}
+.km24PSButtons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:4px}
+.km24PSButtons button{border:0;border-radius:10px;min-height:43px;font-size:12px;font-weight:800;padding:10px 7px;cursor:pointer;background:#0e5288!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+.km24PSButtons button:nth-child(2){background:#087d9c!important}
+.km24PSButtons button:nth-child(3){grid-column:span 2;background:#173c60!important}
+.km24PSButtons button:disabled{opacity:.55;cursor:wait}
+.km24PSState{font-size:12px;font-weight:650;color:#1a5477!important;min-height:15px}
+.km24PSState.km24PSError{color:#a33432!important}
+.km24PSPreviewWrap{min-width:0;position:sticky;top:10px;border:1px solid #d4e3ef;border-radius:12px;background:#fff;padding:12px}
+.km24PSPreviewHead{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px;font-size:13px;color:#0d3a5f!important}
+.km24PSPreviewHead span{font-size:12px;color:#587a91!important}
+.km24PSPreviewArea{min-height:220px;display:flex;justify-content:center;align-items:center;background:#e8f0f6;border-radius:8px;padding:12px;overflow:hidden}
+.km24PSPreviewArea canvas{display:block;width:auto;height:auto;max-width:100%;max-height:390px;aspect-ratio:700 / 990;border-radius:3px;box-shadow:0 8px 24px rgba(8,44,76,.2)}
+.km24PSPreviewArea.isLandscape canvas{aspect-ratio:990 / 700}
+.km24PSPreviewWrap p{font-size:11px;line-height:1.4;color:#59758b!important;margin:10px 0 0}
+html[data-km24-theme="dark"] .km24PriceStudio{background:#eef6fb!important;color:#092d4d!important}
+@media(max-width:760px){.km24PriceStudio{margin:12px;padding:14px}.km24PSGrid{grid-template-columns:1fr;gap:12px}.km24PSPreviewWrap{position:static;order:-1}.km24PSPreviewArea{min-height:160px}.km24PSPreviewArea canvas{max-height:290px}}
+@media(max-width:390px){.km24PSPair{grid-template-columns:1fr}.km24PSButtons{grid-template-columns:1fr}.km24PSButtons button:nth-child(3){grid-column:auto}}
+</style>
+<style id="km24-price-studio-legibility-v1">
+/* Lesbarkeit der hellen Verkaufsbild-/Preisschild-Dialoge bei hellem und dunklem Seitenthema. */
+html body .km24SalesOverlay .km24SalesModal .km24SalesModalHead h2{
+  color:#102b4c!important;-webkit-text-fill-color:#102b4c!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24SalesModalHead p{
+  color:#425a75!important;-webkit-text-fill-color:#425a75!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSHead h3{
+  color:#123a5b!important;-webkit-text-fill-color:#123a5b!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSHead p{
+  color:#46657d!important;-webkit-text-fill-color:#46657d!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewHead strong{
+  color:#153958!important;-webkit-text-fill-color:#153958!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewHead span{
+  color:#486980!important;-webkit-text-fill-color:#486980!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings label{
+  color:#153958!important;-webkit-text-fill-color:#153958!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings label small,
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSPreviewWrap p{
+  color:#526b80!important;-webkit-text-fill-color:#526b80!important;opacity:1!important;
+}
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings input:not([type=checkbox]):not([type=file]),
+html body .km24SalesOverlay .km24SalesModal .km24PriceStudio .km24PSSettings select{
+  color:#123752!important;-webkit-text-fill-color:#123752!important;
+  background:#fff!important;
+}
+</style>
+<script id="km24-price-studio-v2">
+(function(){
+"use strict";
+if(window.km24PriceStudioV2)return;
+window.km24PriceStudioV2=true;
+var PDF_SRC="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js";
+var QR_SRC="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js";
+var id=0;
+function one(root,css){return root.querySelector(css)}
+function all(root,css){return Array.prototype.slice.call(root.querySelectorAll(css))}
+function label(root,css){var e=one(root,css);return e?String(e.textContent||"").trim():""}
+function val(root,css){var e=one(root,css);return e?e.value:""}
+function checked(root,css){var e=one(root,css);return !!(e&&e.checked)}
+function clamp(v,a,b){return Math.min(b,Math.max(a,v))}
+function round(ctx,x,y,w,h,r,fill,stroke){
+ r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();
+ if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=1.5;ctx.stroke()}
+}
+function textFit(ctx,str,x,y,maxW,sz,min,color,weight){
+ str=String(str||"");sz=Math.max(min,sz);ctx.fillStyle=color;weight=weight||"700";
+ while(sz>min){ctx.font=weight+" "+sz+"px Arial, Helvetica, sans-serif";if(ctx.measureText(str).width<=maxW)break;sz-=1}
+ ctx.font=weight+" "+sz+"px Arial, Helvetica, sans-serif";
+ if(ctx.measureText(str).width>maxW){while(str.length>2&&ctx.measureText(str+"…").width>maxW)str=str.slice(0,-1);str+="…"}
+ ctx.fillText(str,x,y);return sz
+}
+function multiline(ctx,str,x,y,w,sz,lineHeight,num,color){
+ ctx.fillStyle=color;ctx.font="800 "+sz+"px Arial, Helvetica, sans-serif";
+ var words=String(str||"").replace(/\s+/g," ").trim().split(" "),lines=[],run="";
+ words.forEach(function(word){
+  var next=run?run+" "+word:word;
+  if(ctx.measureText(next).width>w&&run){lines.push(run);run=word}else{run=next}
+ });
+ if(run)lines.push(run);
+ if(lines.length>num){lines=lines.slice(0,num);var j=num-1;while(lines[j].length>2&&ctx.measureText(lines[j]+"…").width>w)lines[j]=lines[j].slice(0,-1);lines[j]+="…"}
+ lines.forEach(function(t,i){textFit(ctx,t,x,y+i*lineHeight,w,sz,sz-3,color,"800")})
+}
+function imageFrom(src){
+ return new Promise(function(resolve){
+  if(!src){resolve(null);return}
+  var im=new Image(),done=false,t=setTimeout(function(){if(done)return;done=true;resolve(null)},8500);
+  im.crossOrigin="anonymous";
+  im.onload=function(){if(done)return;done=true;clearTimeout(t);resolve(im)};
+  im.onerror=function(){if(done)return;done=true;clearTimeout(t);resolve(null)};
+  im.src=src;
+ })
+}
+function photo(ctx,im,x,y,w,h,r){
+ round(ctx,x,y,w,h,r,"#dce9f3");
+ if(!im||!im.naturalWidth){ctx.fillStyle="#63819a";ctx.textAlign="center";ctx.font="700 20px Arial";ctx.fillText("KaufMich24 Inserat",x+w/2,y+h/2);ctx.textAlign="left";return}
+ var sw=im.naturalWidth,sh=im.naturalHeight,scale=Math.max(w/sw,h/sh),cutW=w/scale,cutH=h/scale;
+ ctx.save();ctx.beginPath();round(ctx,x,y,w,h,r);ctx.clip();ctx.drawImage(im,(sw-cutW)/2,(sh-cutH)/2,cutW,cutH,x,y,w,h);ctx.restore();
+}
+function source(modal){
+ var s=one(modal,"#km24SalesSheetNode"),img=one(s||modal,".km24SalesHero img"),logo=one(s||modal,".km24SalesBrand img");
+ return {title:label(s||modal,".km24SalesTitle")||"Inserat",price:label(s||modal,".km24SalesPrice")||"Preis auf Anfrage",
+  photo:img?img.getAttribute("src")||"":"",logo:logo?logo.getAttribute("src")||"":"/icon.svg?v=blue-20261027",
+  loc:label(s||modal,".km24SalesLoc").replace(/^\s*[●•]\s*/,""),url:label(s||modal,".km24SalesUrl")||"https://www.kaufmich24.ch",
+  sold:label(s||modal,".km24SalesStatus").indexOf("VERKAUFT")>=0,
+  specs:all(s||modal,".km24SalesSpec").map(function(n){return {name:label(n,"span"),value:label(n,"strong")}}).filter(function(n){return n.value&&n.name}).slice(0,3)};
+}
+function opt(panel,base){
+ return {format:val(panel,"[data-ps-size]")||"A5",orient:val(panel,"[data-ps-orientation]")||"portrait",
+  theme:val(panel,"[data-ps-theme]")||"classic",price:val(panel,"[data-ps-price]").trim()||base.price,
+  badge:val(panel,"[data-ps-sticker]"),seller:checked(panel,"[data-ps-seller]"),
+  company:val(panel,"[data-ps-company]").trim(),phone:val(panel,"[data-ps-phone]").trim()};
+}
+function sizeOf(o){
+ if(o.format==="A4")return o.orient==="portrait"?{w:2480,h:3508,mw:210,mh:297}:{w:3508,h:2480,mw:297,mh:210};
+ return o.orient==="portrait"?{w:1748,h:2480,mw:148,mh:210}:{w:2480,h:1748,mw:210,mh:148};
+}
+function header(ctx,w,base,o,brand,h){
+ var classic=o.theme==="classic";
+ if(classic){ctx.fillStyle="#ffffff";ctx.fillRect(0,0,w,h);ctx.fillStyle="#0b4779";ctx.fillRect(0,h-5,w,5)}
+ else{var g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,"#071c36");g.addColorStop(.7,"#123d6c");g.addColorStop(1,"#0a8ca9");ctx.fillStyle=g;ctx.fillRect(0,0,w,h)}
+ round(ctx,30,19,72,72,14,"#ffffff","#cbdceb");
+ if(brand&&brand.naturalWidth){try{ctx.drawImage(brand,35,24,62,62)}catch(e){}}
+ textFit(ctx,"KaufMich",119,64,266,37,22,classic?"#123b64":"#ffffff","900");
+ textFit(ctx,"24",313,64,75,37,23,classic?"#078bab":"#55e0f6","900");
+ textFit(ctx,"DER SCHWEIZER MARKTPLATZ",120,90,360,15,10,classic?"#496b85":"#c7e8f9","700");
+ round(ctx,w-210,34,178,46,22,classic?"#0e497a":"#16a8ca");
+ textFit(ctx,"PREISSCHILD",w-192,65,150,19,14,"#ffffff","800");
+}
+function sticker(ctx,o,x,y){
+ if(!o.badge)return;
+ var w=226;round(ctx,x,y,w,45,22,o.theme==="classic"?"#eaf6ff":"#ffe29b");
+ textFit(ctx,o.badge.toUpperCase(),x+17,y+30,w-34,19,12,o.theme==="classic"?"#0d527c":"#402f06","900");
+}
+function specs(ctx,base,x,y,w,h){
+ var items=base.specs;if(!items.length)return;
+ var gap=10,each=(w-gap*(items.length-1))/items.length;
+ items.forEach(function(f,i){
+  var sx=x+i*(each+gap);round(ctx,sx,y,each,h,12,"#ffffff","#d4e4f0");
+  textFit(ctx,f.value,sx+12,y+33,each-24,23,12,"#0c2e51","900");
+  textFit(ctx,f.name,sx+12,y+h-14,each-24,15,10,"#557089","700");
+ });
+}
+function drawQR(ctx,qr,x,y,w){
+ round(ctx,x-8,y-8,w+16,w+16,11,"#ffffff","#d7e6ef");
+ if(qr&&((qr.width||qr.naturalWidth)>0)){
+  try{ctx.drawImage(qr,x,y,w,w)}catch(e){}
+ }else{
+  ctx.fillStyle="#63839c";ctx.textAlign="center";ctx.font="700 12px Arial";ctx.fillText("QR-Code",x+w/2,y+w/2);ctx.textAlign="left";
+ }
+}
+function branding(ctx,logo,x,y){
+ if(logo&&logo.naturalWidth){round(ctx,x,y,69,69,9,"#ffffff");try{ctx.drawImage(logo,x+4,y+4,61,61)}catch(e){}}
+}
+function seller(ctx,o,companyLogo,x,y,w){
+ if(!o.seller||(!o.company&&!o.phone&&!companyLogo))return;
+ var start=x;
+ if(companyLogo&&companyLogo.naturalWidth){branding(ctx,companyLogo,x,y-45);start+=78}
+ if(o.company)textFit(ctx,o.company,start,y-19,w-(start-x),20,12,"#0b3256","800");
+ if(o.phone)textFit(ctx,o.phone,start,y+9,w-(start-x),17,11,"#44647c","700");
+}
+function portrait(ctx,base,o,im,brand,qr,companyLogo){
+ var w=700,h=990,classic=o.theme==="classic";ctx.fillStyle=classic?"#f8fbfd":"#edf5fc";ctx.fillRect(0,0,w,h);header(ctx,w,base,o,brand,130);
+ photo(ctx,im,28,148,644,343,14);
+ sticker(ctx,o,43,166);
+ multiline(ctx,base.title,36,545,626,38,49,2,"#0a2c4e");
+ round(ctx,30,637,640,119,16,classic?"#0a4b7d":"#082c50");
+ textFit(ctx,base.sold?"VERKAUFT":"ANGEBOTSPREIS",50,670,600,18,13,"#bee9fb","800");
+ textFit(ctx,o.price,49,731,601,53,24,"#ffffff","900");
+ specs(ctx,base,30,774,640,78);
+ ctx.fillStyle=classic?"#e9f3fb":"#dcecf8";ctx.fillRect(0,869,700,121);
+ if(o.seller&&(o.company||o.phone||companyLogo)){
+  seller(ctx,o,companyLogo,31,931,470);
+  textFit(ctx,"kaufmich24.ch",31,979,435,16,11,"#087899","800");
+ }else{
+  textFit(ctx,"JETZT ONLINE ANSEHEN",31,921,482,20,13,"#0a385c","900");
+  textFit(ctx,base.loc||"Schweiz",31,947,484,18,12,"#486c89","700");
+  textFit(ctx,"kaufmich24.ch",31,973,480,16,11,"#087899","800");
+ }
+ drawQR(ctx,qr,557,873,102);
+}
+function landscape(ctx,base,o,im,brand,qr,companyLogo){
+ var w=990,h=700,classic=o.theme==="classic";ctx.fillStyle=classic?"#f8fbfd":"#edf5fc";ctx.fillRect(0,0,w,h);header(ctx,w,base,o,brand,112);
+ photo(ctx,im,26,129,535,369,15);
+ sticker(ctx,o,43,147);
+ multiline(ctx,base.title,588,174,374,34,44,3,"#0b2e51");
+ round(ctx,585,342,376,116,17,classic?"#0a4b7d":"#082c50");
+ textFit(ctx,base.sold?"VERKAUFT":"ANGEBOTSPREIS",607,375,333,17,12,"#bfeaf9","800");
+ textFit(ctx,o.price,606,432,335,39,19,"#ffffff","900");
+ textFit(ctx,base.loc||"Schweiz",588,490,374,17,11,"#496b83","700");
+ specs(ctx,base,27,515,736,91);
+ ctx.fillStyle=classic?"#e9f3fb":"#dcecf8";ctx.fillRect(0,623,990,77);
+ if(o.seller&&(o.company||o.phone||companyLogo))seller(ctx,o,companyLogo,27,673,750);
+ else{
+  textFit(ctx,"JETZT AUF KAUFMICH24.CH ANSEHEN",28,654,730,19,12,"#0b4268","800");
+  textFit(ctx,"Scannen, ansehen & direkt kontaktieren",28,684,730,16,11,"#476981","700");
+ }
+ drawQR(ctx,qr,846,526,113);
+}
+function loadScript(src,check){
+ if(check())return Promise.resolve();
+ return new Promise(function(resolve,reject){
+  var scripts=all(document,"script"),found=scripts.find(function(s){return s.src===src}),s=found||document.createElement("script"),complete=false;
+  function finish(error){if(complete)return;complete=true;clearTimeout(timer);if(error)reject(error);else if(check())resolve();else reject(new Error("Bibliothek nicht verfügbar"))}
+  var timer=setTimeout(function(){finish(new Error("Ladezeit überschritten"))},12000);
+  s.addEventListener("load",function(){finish()},{once:true});s.addEventListener("error",function(){finish(new Error("Download-Bibliothek konnte nicht geladen werden"))},{once:true});
+  if(!found){s.src=src;s.async=true;document.head.appendChild(s)}
+ });
+}
+function qrCanvas(modal,base){
+ var old=one(modal,"#km24SalesQr canvas")||one(modal,"#km24SalesQr img");
+ if(typeof window.QRCode==="function"){
+  try{
+   var holder=document.createElement("div");new window.QRCode(holder,{text:base.url,width:288,height:288,colorDark:"#103b5b",colorLight:"#ffffff"});
+   return one(holder,"canvas")||one(holder,"img");
+  }catch(e){console.warn("KaufMich24 Preisstudio QR",e)}
+ }
+ return old&&(old.width||old.naturalWidth)?old:null;
+}
+function waitQR(modal,base){
+ return new Promise(function(resolve){
+  var attempts=0;function tick(){
+   var qr=qrCanvas(modal,base);if(qr&&(qr.width||qr.naturalWidth)){resolve(qr);return}
+   if(++attempts>=15){resolve(null);return}setTimeout(tick,250)
+  }tick()
+ });
+}
+function buildCanvas(base,o,assets,qr,quality){
+ var dims=sizeOf(o),w=o.orient==="portrait"?700:990,h=o.orient==="portrait"?990:700;
+ var c=document.createElement("canvas");c.width=quality?dims.w:w;c.height=quality?dims.h:h;
+ var ctx=c.getContext("2d",{alpha:false});if(!ctx)throw new Error("Canvas auf diesem Gerät nicht verfügbar");
+ ctx.scale(c.width/w,c.height/h);ctx.textBaseline="alphabetic";
+ if(o.orient==="portrait")portrait(ctx,base,o,assets.photo,assets.brand,qr,assets.seller);
+ else landscape(ctx,base,o,assets.photo,assets.brand,qr,assets.seller);
+ return c;
+}
+function downloadBlob(blob,name){
+ if(!blob)throw new Error("Datei wurde nicht erstellt");
+ var a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},30000);
+}
+function jpegBlob(canvas){
+ return new Promise(function(resolve,reject){
+  try{canvas.toBlob(function(b){b?resolve(b):reject(new Error("JPG konnte nicht erstellt werden"))},"image/jpeg",.95)}
+  catch(e){reject(e)}
+ });
+}
+function safeName(str){return String(str||"Inserat").replace(/[^a-z0-9äöüéèàçß_-]+/gi,"_").slice(0,35)||"Inserat"}
+function printCanvas(canvas,dims){
+ var image=canvas.toDataURL("image/jpeg",.96);
+ var frame=document.createElement("iframe");frame.setAttribute("title","KaufMich24 Preisschild drucken");
+ frame.style.cssText="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;bottom:0;right:0;border:0";
+ var page=dims.mw+"mm "+dims.mh+"mm";
+ frame.srcdoc='<!doctype html><html><head><meta charset="utf-8"><title>KaufMich24 Preisschild</title><style>@page{size:'+page+';margin:0}html,body{margin:0;padding:0;width:'+dims.mw+'mm;height:'+dims.mh+'mm;overflow:hidden}img{display:block;width:100%;height:100%;object-fit:fill;print-color-adjust:exact;-webkit-print-color-adjust:exact}</style><style id="km24-cross-browser-prepaint-v2">
+/* KaufMich24 canonical theme palette: same colours in Chrome, Samsung Internet, Safari and installed web app. */
+html[data-km24-theme="light"],html[data-km24-theme="light"] body,html[data-km24-theme="light"] #app,
+html.km24SamsungSafe[data-km24-theme="light"],html.km24SamsungSafe[data-km24-theme="light"] body,html.km24SamsungSafe[data-km24-theme="light"] #app{
+ --bg:#fff!important;--card:#fff!important;--text:#142033!important;--muted:#53657a!important;
+ --km-bg:#fff!important;--km-surface:#fff!important;--km-surface2:#f7f9fd!important;
+ --km-text:#142033!important;--km-muted:#53657a!important;--km-line:#dce4f0!important;
+ --km-accent:#0b63f6!important;--g:#0b63f6!important;color-scheme:only light!important}
+html[data-km24-theme="dark"],html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] #app{
+ --bg:#080e18!important;--card:#101925!important;--text:#f3f7ff!important;--muted:#aabbd0!important;
+ --km-bg:#080e18!important;--km-surface:#101925!important;--km-surface2:#152131!important;
+ --km-text:#f3f7ff!important;--km-muted:#aabbd0!important;--km-line:#30445c!important;
+ --km-accent:#1877ff!important;--g:#1877ff!important;color-scheme:dark!important}
+html[data-km24-theme="light"] body,html[data-km24-theme="light"] body #app,html[data-km24-theme="light"] body main{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] body #app,html[data-km24-theme="dark"] body main{background-color:#080e18!important;color:#f3f7ff!important}
+html[data-km24-theme="light"] body header{background:#fff!important;color:#142033!important;border-bottom-color:#dce4f0!important}
+html[data-km24-theme="dark"] body header{background:#101925!important;color:#f3f7ff!important;border-bottom-color:#30445c!important}
+/* A navy promotional hero with explicitly visible text on both themes, including Android Chrome. */
+html[data-km24-theme] body #app .hero.km24WowHero{background:linear-gradient(128deg,#081b43,#081733 53%,#082c4c)!important;border-bottom-color:#244872!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1{color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>span{color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>.km24HeroFirstLine{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .hero.km24WowHero .km24HeroText,html[data-km24-theme] body #app .hero.km24WowHero p.season-note{color:#e2edff!important;-webkit-text-fill-color:#e2edff!important;opacity:1!important;visibility:visible!important}
+html[data-km24-theme="light"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#e6f0ff!important;border-color:#c7daf5!important;color:#164779!important;-webkit-text-fill-color:#164779!important}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#183455!important;border-color:#345d85!important;color:#eef6ff!important;-webkit-text-fill-color:#eef6ff!important}
+/* Search field and placeholder use one contrast-safe palette across browsers. */
+html[data-km24-theme] body #app .hero.km24WowHero .search{background:#fff!important;border-color:#dce4f0!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input{background:#fff!important;background-image:none!important;color:#182b43!important;-webkit-text-fill-color:#182b43!important;color-scheme:only light!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input::placeholder{color:#53657a!important;-webkit-text-fill-color:#53657a!important;opacity:1!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search button,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary,html[data-km24-theme] body #app .km24AreaSwitch button.active{background:#0b63f6!important;background-image:none!important;border-color:#0b63f6!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .km24AreaSwitch button.active *,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary *{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body .km24BottomNav{background:#fff!important;background-image:none!important;border-color:#e2e8f0!important}
+html[data-km24-theme="dark"] body .km24BottomNav{background:#101925!important;background-image:none!important;border-color:#30445c!important}
+html[data-km24-theme="light"] body .km24BottomNav>a:not(.active),html[data-km24-theme="light"] body .km24BottomNav>button:not(.active){color:#48566a!important;-webkit-text-fill-color:#48566a!important}
+html[data-km24-theme="dark"] body .km24BottomNav>a:not(.active),html[data-km24-theme="dark"] body .km24BottomNav>button:not(.active){color:#c8d9ef!important;-webkit-text-fill-color:#c8d9ef!important}
+html[data-km24-theme] body .km24BottomNav .active{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html[data-km24-theme] body .km24BottomSell{background:linear-gradient(145deg,#0b55e8,#0b77f7)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body #app .card,html[data-km24-theme="light"] body #app .cat,html[data-km24-theme="light"] body #app .panel{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body #app .card,html[data-km24-theme="dark"] body #app .cat,html[data-km24-theme="dark"] body #app .panel{background-color:#101925!important;color:#f3f7ff!important}
+</style>
+<style id="km24-video-mobile-contrast-fix-20261107">
+
+/* Exact mobile hero specificity fix for Chrome / Samsung Internet / Safari. */
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme] body.km24AutumnActualV3 #app .hero.km24WowHero h1>span:last-child{
+ color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;
+ background:none!important;background-image:none!important;
+ background-clip:border-box!important;-webkit-background-clip:border-box!important;
+ opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>.km24HeroFirstLine,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+</style>
+</head><body><img src="'+image+'" alt="Preisschild"></body></html>';
+ var timer=setTimeout(function(){frame.remove()},120000);
+ frame.onload=function(){
+  setTimeout(function(){try{frame.contentWindow.focus();frame.contentWindow.print()}catch(e){console.error("Drucken",e)}},250)
+ };
+ document.body.appendChild(frame);
+ if(!window.matchMedia||!window.matchMedia("print").matches){setTimeout(function(){clearTimeout(timer);frame.remove()},120000)}
+}
+function attach(modal){
+ if(one(modal,".km24PriceStudio"))return;
+ var actions=one(modal,".km24SalesActions");if(!actions)return;
+ var base=source(modal),uid="km24ps"+(++id);
+ var sec=document.createElement("section");sec.className="km24PriceStudio";
+ sec.innerHTML='<div class="km24PSHead"><div><h3>🏷 Preisschild-Studio</h3><p>Persönlich gestalten, Vorschau ansehen und in Druckqualität exportieren.</p></div></div>'
+ +'<div class="km24PSGrid"><div class="km24PSSettings">'
+ +'<div class="km24PSPair"><label>Papiergrösse<select data-ps-size><option value="A5">A5 – kompaktes Preisschild</option><option value="A4">A4 – grosses Preisschild</option></select></label><label>Ausrichtung<select data-ps-orientation><option value="portrait">Hochformat</option><option value="landscape">Querformat</option></select></label></div>'
+ +'<label>Design<select data-ps-theme><option value="classic">Klassisch – hell und schlicht</option><option value="autohaus">Autohaus – kräftige Preisgestaltung</option></select></label>'
+ +'<label>Preis auf dem Schild <small>(ändert nicht den Inseratpreis)</small><input type="text" data-ps-price maxlength="55" placeholder="CHF 12’900.–"></label>'
+ +'<label>Hinweis / Aufkleber<select data-ps-sticker><option value="">Kein Hinweis</option><option value="TOP ANGEBOT">TOP ANGEBOT</option><option value="NEU">NEU</option><option value="PREIS REDUZIERT">PREIS REDUZIERT</option><option value="FRISCH AB MFK">FRISCH AB MFK</option></select></label>'
+ +'<div class="km24PSSeller"><label class="km24PSCheck"><input type="checkbox" data-ps-seller> Verkäuferdaten auf dem Schild anzeigen</label>'
+ +'<div class="km24PSSellerFields"><label>Firma / Verkäufername<input data-ps-company maxlength="90" placeholder="z. B. Muster Autopark"></label><label>Telefonnummer<input data-ps-phone type="tel" maxlength="35" placeholder="z. B. 079 123 45 67"></label><label>Eigenes Firmenlogo <small>(JPG, PNG, WebP, max. 5 MB)</small><input type="file" data-ps-logo accept="image/png,image/jpeg,image/webp"></label><button type="button" data-ps-logo-clear class="km24PSClear">Logo entfernen</button></div></div>'
+ +'<div class="km24PSButtons"><button type="button" data-ps-action="jpg">🖼 JPG herunterladen</button><button type="button" data-ps-action="pdf">⬇ PDF herunterladen</button><button type="button" data-ps-action="print">🖨 Direkt drucken</button></div>'
+ +'<div class="km24PSState" role="status" aria-live="polite"></div></div>'
+ +'<div class="km24PSPreviewWrap"><div class="km24PSPreviewHead"><strong>Live-Vorschau</strong><span data-ps-dim>A5 · Hochformat</span></div><div class="km24PSPreviewArea"><canvas data-ps-preview role="img" aria-label="Vorschau deines Preisschilds"></canvas></div><p>Alle Downloads werden im gewählten Papierformat erstellt. PDF ist zum Drucken geeignet.</p></div></div>';
+ actions.insertAdjacentElement("afterend",sec);
+ var state={sellerLogo:null,assets:null,qr:null,timer:null,revision:0,loading:false};
+ var status=one(sec,".km24PSState"),preview=one(sec,"[data-ps-preview]"),area=one(sec,".km24PSPreviewArea");
+ one(sec,"[data-ps-price]").value=base.price;
+ function say(s,isError){status.textContent=s||"";status.classList.toggle("km24PSError",!!isError)}
+ function sellerState(){one(sec,".km24PSSellerFields").hidden=!checked(sec,"[data-ps-seller]")}
+ function updateSize(){var o=opt(sec,base);one(sec,"[data-ps-dim]").textContent=o.format+" · "+(o.orient==="portrait"?"Hochformat":"Querformat");area.classList.toggle("isLandscape",o.orient==="landscape")}
+ async function ensureAssets(){
+  if(state.assets)return state.assets;
+  state.assets=await Promise.all([imageFrom(base.photo),imageFrom(base.logo)]).then(function(x){return {photo:x[0],brand:x[1],seller:null}});
+  return state.assets;
+ }
+ function schedule(){
+  state.revision+=1;var current=state.revision;clearTimeout(state.timer);updateSize();
+  state.timer=setTimeout(async function(){
+   try{
+    var assets=await ensureAssets();if(current!==state.revision||!document.body.contains(sec))return;
+    if(!state.qr)state.qr=qrCanvas(modal,base);
+    var copy={photo:assets.photo,brand:assets.brand,seller:state.sellerLogo};
+    var c=buildCanvas(base,opt(sec,base),copy,state.qr,false),ctx=preview.getContext("2d");
+    preview.width=c.width;preview.height=c.height;ctx.drawImage(c,0,0);
+   }catch(e){say("Vorschau konnte nicht geladen werden.",true);console.error("KaufMich24 Vorschau",e)}
+  },170);
+ }
+ sec.addEventListener("input",function(e){
+  if(e.target.matches("[data-ps-logo]"))return;schedule()
+ });
+ sec.addEventListener("change",async function(e){
+  if(e.target.matches("[data-ps-seller]"))sellerState();
+  if(e.target.matches("[data-ps-logo]")){
+   var f=e.target.files&&e.target.files[0];
+   if(!f){state.sellerLogo=null;schedule();return}
+   if(!["image/png","image/jpeg","image/webp"].includes(f.type)||f.size>5*1024*1024){say("Bitte JPG, PNG oder WebP bis 5 MB auswählen.",true);e.target.value="";return}
+   var r=new FileReader();r.onload=async function(){state.sellerLogo=await imageFrom(r.result);say(state.sellerLogo?"Firmenlogo hinzugefügt.":"Logo konnte nicht geöffnet werden.",!state.sellerLogo);schedule()};
+   r.onerror=function(){say("Logo konnte nicht geladen werden.",true)};r.readAsDataURL(f);return;
+  }schedule()
+ });
+ sec.addEventListener("click",async function(e){
+  if(e.target.closest("[data-ps-logo-clear]")){state.sellerLogo=null;one(sec,"[data-ps-logo]").value="";say("Firmenlogo entfernt.");schedule();return}
+  var button=e.target.closest("[data-ps-action]");if(!button||state.loading)return;
+  var what=button.getAttribute("data-ps-action"),o=opt(sec,base),dims=sizeOf(o);
+  state.loading=true;all(sec,"[data-ps-action]").forEach(function(b){b.disabled=true});
+  say(what==="print"?"Druckansicht wird vorbereitet…":"Preisschild wird erstellt…");
+  try{
+   var assets=await ensureAssets();if(!state.qr)state.qr=await waitQR(modal,base);
+   if(!state.qr)throw new Error("QR-Code nicht bereit. Bitte den Dialog neu öffnen.");
+   var copy={photo:assets.photo,brand:assets.brand,seller:state.sellerLogo};
+   if(!assets.photo&&base.photo)throw new Error("Inseratfoto konnte nicht geladen werden. Bitte erneut versuchen.");
+   if(what==="pdf")await loadScript(PDF_SRC,function(){return !!(window.jspdf&&window.jspdf.jsPDF)});
+   var canvas=buildCanvas(base,o,copy,state.qr,true),file="KaufMich24_Preisschild_"+safeName(base.title)+"_"+o.format+"_"+(o.orient==="portrait"?"Hoch":"Quer");
+   if(what==="jpg"){downloadBlob(await jpegBlob(canvas),file+".jpg");say("JPG-Download gestartet.")}
+   else if(what==="pdf"){
+    var pdf=new window.jspdf.jsPDF({orientation:o.orient,unit:"mm",format:[dims.mw,dims.mh],compress:true});
+    pdf.addImage(canvas.toDataURL("image/jpeg",.94),"JPEG",0,0,dims.mw,dims.mh,undefined,"FAST");pdf.save(file+".pdf");say("PDF-Download gestartet.");
+   }else{printCanvas(canvas,dims);say("Druckansicht geöffnet. Bitte Papiergrösse und Ausrichtung im Druckdialog prüfen.")}
+  }catch(err){console.error("KaufMich24 Preisschild",err);say(err.message||"Datei konnte nicht erstellt werden.",true)}
+  finally{state.loading=false;all(sec,"[data-ps-action]").forEach(function(b){b.disabled=false})}
+ });
+ sellerState();schedule();
+ setTimeout(function(){if(document.body.contains(sec)){state.qr=qrCanvas(modal,base);schedule()}},1400);
+}
+function scan(){all(document,".km24SalesOverlay").forEach(attach)}
+function start(){scan();new MutationObserver(scan).observe(document.body,{childList:true})}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start,{once:true});else start();
+})();
+</script><style id="km24-mobile-home-readable-20261107">
+/* Homepage contrast patch: ensure headline stays legible on both themes. */
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1,
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>.km24HeroFirstLine {
+  color:#193451!important;-webkit-text-fill-color:#193451!important;
+  background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>span:last-child {
+  color:#095acb!important;-webkit-text-fill-color:#095acb!important;
+  background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .km24HeroText {
+  color:#35465d!important;-webkit-text-fill-color:#35465d!important;
+  opacity:1!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .search input,
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero .search input::placeholder {
+  color:#35465d!important;-webkit-text-fill-color:#35465d!important;opacity:1!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero {
+  background:#12253c!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>.km24HeroFirstLine {
+  color:#f4f8ff!important;-webkit-text-fill-color:#f4f8ff!important;
+  background:none!important;background-image:none!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>span:last-child {
+  color:#80cfff!important;-webkit-text-fill-color:#80cfff!important;
+  background:none!important;background-image:none!important;
+  opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .km24HeroText {
+  color:#e0eaf6!important;-webkit-text-fill-color:#e0eaf6!important;opacity:1!important;
+}
+@media(max-width:700px){
+  html body #app .hero.km24WowHero h1{
+    line-height:1.13!important;letter-spacing:-.025em!important;
+    margin-top:9px!important;margin-bottom:14px!important;
+  }
+  html body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+    display:inline!important;opacity:1!important;visibility:visible!important;
+  }
+  html body #app .hero.km24WowHero .km24HeroText{
+    font-size:16px!important;line-height:1.48!important;
+  }
+  html body #app{padding-bottom:max(115px,calc(105px + env(safe-area-inset-bottom)))!important;}
+}
+</style>
+<style id="km24-growth-ux-20261107">
+/* Growth UX pass: brand consistency, readable hero and mobile tap targets. */
+#km24HalloweenBoostV2, .km24JoeHalloween {display:none!important;}
+body #app a[href="#/giveaway"],body #app a[href*="#/giveaway"] {display:none!important;}
+body #app .km24StartPrimary.btn.primary {background:linear-gradient(135deg,#1769ef,#084bbd)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;box-shadow:0 12px 28px rgba(15,93,219,.28)!important;border-color:transparent!important;}
+body #app .km24StartPrimary.btn.primary:hover {background:linear-gradient(135deg,#227cf8,#1259d2)!important;}
+body #app .km24StartHeroCopy h1 {color:#fff!important;-webkit-text-fill-color:#fff!important;line-height:1.12!important;overflow-wrap:break-word;}
+body #app .km24StartHeroCopy h1 span {color:#a5d6ff!important;-webkit-text-fill-color:#a5d6ff!important;background:none!important;background-image:none!important;}
+body #app .km24StartHeroCopy>p,body #app .km24StartTrustRow,body #app .km24StartAdBenefits small {color:#e4ecf7!important;-webkit-text-fill-color:#e4ecf7!important;opacity:1!important;}
+body #app .km24StartEyebrow {color:#c6e7ff!important;-webkit-text-fill-color:#c6e7ff!important;}
+body #app .km24StartSecondary {color:#f3f8ff!important;-webkit-text-fill-color:#f3f8ff!important;border-color:rgba(255,255,255,.34)!important;}
+body #app .km24WowHero .search input {color:#f9fbff!important;-webkit-text-fill-color:#f9fbff!important;}
+body #app .km24WowHero .search input::placeholder {color:#d9e6f2!important;-webkit-text-fill-color:#d9e6f2!important;opacity:1!important;}
+body #app :is(a,button,input,select,textarea):focus-visible {outline:3px solid #74bdff!important;outline-offset:2px!important;}
+@media(max-width:700px){
+ body #app .km24StartHero h1 {font-size:clamp(30px,8.3vw,42px)!important;line-height:1.13!important;letter-spacing:-.035em!important;}
+ body #app .km24StartHeroGrid {grid-template-columns:minmax(0,1fr)!important;}
+ body #app .km24StartHeroCopy,body #app .km24StartBonus {min-width:0!important;max-width:100%!important;}
+ body #app .km24StartHeroCopy>p {font-size:16px!important;line-height:1.5!important;}
+ body #app .km24StartActions {display:grid!important;grid-template-columns:minmax(0,1fr)!important;}
+ body #app .km24StartActions .btn {width:100%!important;min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;white-space:normal!important;text-align:center!important;}
+ body #app .km24StartTrustRow {line-height:1.55!important;}
+ body #app .km24StartCategoryGrid {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+</style>
+<script id="km24-growth-legacy-route-20261107">
+(function(){
+  function redirectEndedCampaign(){
+    try {if(/^#\/giveaway(?:[/?]|$)/i.test(location.hash||'')){location.replace(location.pathname+location.search+'#/');}}catch(_){}
+  }
+  redirectEndedCampaign();
+  addEventListener('hashchange',redirectEndedCampaign);
+})();
+</script>
+
+<style id="km24-register-cleanup-20261107">
+/* Keep the existing two-step age/terms confirmation, not the duplicate legacy block. */
+#app #af .km24RegisterOriginalLegalHidden{display:none!important}
+#app #af:has(#km24SignupLegal) #legalr{display:none!important}
+#app #af #km24SignupLegal:not(.km24WizardHidden){display:block;margin:8px 0 12px;padding:14px;border:1px solid #c9ded2;border-radius:12px;background:#f4fbf6;color:#19392a}
+#app #af #km24SignupLegal label{display:flex;align-items:flex-start;gap:10px;line-height:1.5;font-weight:600}
+#app #af #km24SignupLegal input[type="checkbox"]{width:20px;height:20px;min-width:20px;margin:2px 0 0;accent-color:#117a4c}
+#app #af label:has(> #pw){position:relative}
+#app #af #pw{padding-right:92px!important}
+#app #af .km24PassReveal{position:absolute;right:7px;bottom:6px;min-width:76px;min-height:34px;padding:5px 9px;border-radius:9px;border:1px solid #b9cbc2;background:#f5f9f7;color:#144c32;font:700 12px/1.1 inherit;cursor:pointer;z-index:2}
+#app #af .km24PassReveal:focus-visible{outline:2px solid #137b50;outline-offset:2px}
+@media(max-width:700px){#app #af .km24SignupWizardActions button{min-height:48px}#app #af #km24SignupLegal:not(.km24WizardHidden){padding:13px 11px}#app #af input,#app #af select{font-size:16px}}
+</style>
+<script id="km24-register-cleanup-20261107-js">
+(function(){
+  if(window.__km24RegisterCleanup20261107)return;
+  window.__km24RegisterCleanup20261107=true;
+  function sync(){
+    var f=document.getElementById('af');if(!f)return;
+    var t=document.getElementById('at');var signup=!!t&&t.textContent.trim()==='Konto erstellen';
+    var email=document.getElementById('email');
+    if(email){if(email.autocomplete!=='email')email.autocomplete='email';if(email.getAttribute('autocapitalize')!=='none')email.setAttribute('autocapitalize','none')}
+    var pw=document.getElementById('pw');
+    if(pw){
+      var mode=signup?'signup':'login';
+      if(pw.dataset.km24AuthMode!==mode){pw.type='password';pw.dataset.km24AuthMode=mode;var prev=pw.parentElement.querySelector('.km24PassReveal');if(prev){prev.textContent='Anzeigen';prev.setAttribute('aria-pressed','false')}}
+      var ac=signup?'new-password':'current-password';if(pw.autocomplete!==ac)pw.autocomplete=ac;
+      if(!pw.parentElement.querySelector('.km24PassReveal')){
+        var button=document.createElement('button');button.type='button';button.className='km24PassReveal';button.textContent='Anzeigen';button.setAttribute('aria-label','Passwort anzeigen');button.setAttribute('aria-pressed','false');
+        button.onclick=function(){var visible=pw.type==='text';pw.type=visible?'password':'text';button.textContent=visible?'Anzeigen':'Verbergen';button.setAttribute('aria-label',visible?'Passwort anzeigen':'Passwort verbergen');button.setAttribute('aria-pressed',String(!visible))};
+        pw.insertAdjacentElement('afterend',button)
+      }
+    }
+    var original=document.getElementById('legalr'),newConsent=document.getElementById('km24SignupLegal');
+    if(original)original.classList.toggle('km24RegisterOriginalLegalHidden',!!signup&&!!newConsent&&f.contains(newConsent));
+  }
+  var pending=false;function queue(){if(pending)return;pending=true;setTimeout(function(){pending=false;sync()},0)}
+  var root=document.getElementById('app');if(root)new MutationObserver(queue).observe(root,{childList:true,subtree:true});
+  document.addEventListener('click',function(e){if(e.target&&e.target.closest&&e.target.closest('#sw,[data-a]'))setTimeout(sync,70)},true);
+  addEventListener('hashchange',queue);addEventListener('pageshow',queue);sync();
+})();
+</script>
+
+<style id="km24-contact-purpose-mobile-safe-v1">
+@media(max-width:640px){
+  body .km24PurposeOverlay,body .km24ContactOverlay{
+    box-sizing:border-box!important;padding:12px!important;
+    padding-top:max(12px,env(safe-area-inset-top))!important;
+    padding-bottom:max(12px,env(safe-area-inset-bottom))!important;
+    overflow-y:auto!important;overscroll-behavior:contain!important;
+  }
+  body .km24PurposeOverlay .km24PurposeModal{
+    box-sizing:border-box!important;width:100%!important;max-width:520px!important;
+    max-height:calc(100dvh - 24px)!important;overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding:18px 14px 16px!important;
+  }
+  body .km24PurposeOverlay .km24PurposeModal h2{font-size:23px!important;line-height:1.2!important;padding-right:38px!important}
+  body .km24PurposeOverlay .km24PurposeChoices{grid-template-columns:minmax(0,1fr)!important;gap:10px!important;margin-top:12px!important}
+  body .km24PurposeOverlay .km24PurposeChoice{box-sizing:border-box!important;min-height:94px!important;width:100%!important;padding:13px 14px!important}
+  body .km24PurposeOverlay .km24PurposeChoice>span{font-size:26px!important;margin-bottom:3px!important}
+  body .km24PurposeOverlay .km24PurposeChoice b{font-size:16px!important;margin-bottom:4px!important}
+  body .km24PurposeOverlay .km24PurposeChoice small{display:block!important;line-height:1.4!important}
+}
+@supports not (height:100dvh){@media(max-width:640px){body .km24PurposeOverlay .km24PurposeModal{max-height:calc(100vh - 24px)!important}}}
+</style>
+
+
+
+<style id="km24-cross-browser-canonical-v2">
+/* KaufMich24 canonical theme palette: same colours in Chrome, Samsung Internet, Safari and installed web app. */
+html[data-km24-theme="light"],html[data-km24-theme="light"] body,html[data-km24-theme="light"] #app,
+html.km24SamsungSafe[data-km24-theme="light"],html.km24SamsungSafe[data-km24-theme="light"] body,html.km24SamsungSafe[data-km24-theme="light"] #app{
+ --bg:#fff!important;--card:#fff!important;--text:#142033!important;--muted:#53657a!important;
+ --km-bg:#fff!important;--km-surface:#fff!important;--km-surface2:#f7f9fd!important;
+ --km-text:#142033!important;--km-muted:#53657a!important;--km-line:#dce4f0!important;
+ --km-accent:#0b63f6!important;--g:#0b63f6!important;color-scheme:only light!important}
+html[data-km24-theme="dark"],html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] #app{
+ --bg:#080e18!important;--card:#101925!important;--text:#f3f7ff!important;--muted:#aabbd0!important;
+ --km-bg:#080e18!important;--km-surface:#101925!important;--km-surface2:#152131!important;
+ --km-text:#f3f7ff!important;--km-muted:#aabbd0!important;--km-line:#30445c!important;
+ --km-accent:#1877ff!important;--g:#1877ff!important;color-scheme:dark!important}
+html[data-km24-theme="light"] body,html[data-km24-theme="light"] body #app,html[data-km24-theme="light"] body main{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body,html[data-km24-theme="dark"] body #app,html[data-km24-theme="dark"] body main{background-color:#080e18!important;color:#f3f7ff!important}
+html[data-km24-theme="light"] body header{background:#fff!important;color:#142033!important;border-bottom-color:#dce4f0!important}
+html[data-km24-theme="dark"] body header{background:#101925!important;color:#f3f7ff!important;border-bottom-color:#30445c!important}
+/* A navy promotional hero with explicitly visible text on both themes, including Android Chrome. */
+html[data-km24-theme] body #app .hero.km24WowHero{background:linear-gradient(128deg,#081b43,#081733 53%,#082c4c)!important;border-bottom-color:#244872!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1{color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>span{color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;background:none!important;background-image:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;opacity:1!important;visibility:visible!important;text-shadow:none!important}
+html[data-km24-theme] body #app .hero.km24WowHero h1>.km24HeroFirstLine{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .hero.km24WowHero .km24HeroText,html[data-km24-theme] body #app .hero.km24WowHero p.season-note{color:#e2edff!important;-webkit-text-fill-color:#e2edff!important;opacity:1!important;visibility:visible!important}
+html[data-km24-theme="light"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#e6f0ff!important;border-color:#c7daf5!important;color:#164779!important;-webkit-text-fill-color:#164779!important}
+html[data-km24-theme="dark"] body #app .hero.km24WowHero .km24HeroEyebrow{background:#183455!important;border-color:#345d85!important;color:#eef6ff!important;-webkit-text-fill-color:#eef6ff!important}
+/* Search field and placeholder use one contrast-safe palette across browsers. */
+html[data-km24-theme] body #app .hero.km24WowHero .search{background:#fff!important;border-color:#dce4f0!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input{background:#fff!important;background-image:none!important;color:#182b43!important;-webkit-text-fill-color:#182b43!important;color-scheme:only light!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search input::placeholder{color:#53657a!important;-webkit-text-fill-color:#53657a!important;opacity:1!important}
+html[data-km24-theme] body #app .hero.km24WowHero .search button,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary,html[data-km24-theme] body #app .km24AreaSwitch button.active{background:#0b63f6!important;background-image:none!important;border-color:#0b63f6!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme] body #app .km24AreaSwitch button.active *,html[data-km24-theme] body #app .hero.km24WowHero .btn.primary *{color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body .km24BottomNav{background:#fff!important;background-image:none!important;border-color:#e2e8f0!important}
+html[data-km24-theme="dark"] body .km24BottomNav{background:#101925!important;background-image:none!important;border-color:#30445c!important}
+html[data-km24-theme="light"] body .km24BottomNav>a:not(.active),html[data-km24-theme="light"] body .km24BottomNav>button:not(.active){color:#48566a!important;-webkit-text-fill-color:#48566a!important}
+html[data-km24-theme="dark"] body .km24BottomNav>a:not(.active),html[data-km24-theme="dark"] body .km24BottomNav>button:not(.active){color:#c8d9ef!important;-webkit-text-fill-color:#c8d9ef!important}
+html[data-km24-theme] body .km24BottomNav .active{color:#0b63f6!important;-webkit-text-fill-color:#0b63f6!important}
+html[data-km24-theme] body .km24BottomSell{background:linear-gradient(145deg,#0b55e8,#0b77f7)!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+html[data-km24-theme="light"] body #app .card,html[data-km24-theme="light"] body #app .cat,html[data-km24-theme="light"] body #app .panel{background-color:#fff!important;color:#142033!important}
+html[data-km24-theme="dark"] body #app .card,html[data-km24-theme="dark"] body #app .cat,html[data-km24-theme="dark"] body #app .panel{background-color:#101925!important;color:#f3f7ff!important}
+</style>
+
+<style id="km24-video-mobile-contrast-fix-20261107">
+
+/* Exact mobile hero specificity fix for Chrome / Samsung Internet / Safari. */
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>span:last-child,
+html[data-km24-theme] body.km24AutumnActualV3 #app .hero.km24WowHero h1>span:last-child{
+ color:#75c9ff!important;-webkit-text-fill-color:#75c9ff!important;
+ background:none!important;background-image:none!important;
+ background-clip:border-box!important;-webkit-background-clip:border-box!important;
+ opacity:1!important;visibility:visible!important;text-shadow:none!important;
+}
+html:not([data-km24-theme="dark"]) body #app .hero.km24WowHero h1>.km24HeroFirstLine,
+html[data-km24-theme="dark"] body #app .hero.km24WowHero h1>.km24HeroFirstLine{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
+</style>
+
+<style id="km24-auction-contrast-v3">
+/* Keep auction content readable on mobile in both light and dark site themes. */
+html body #app .detail .auctionbox{
+  background:#fff9ed!important;
+  background-image:none!important;
+  border-color:#dec9a6!important;
+  color:#243140!important;
+  color-scheme:light!important;
+  opacity:1!important;
+}
+html body #app .detail .auctionbox .big,
+html body #app .detail .auctionbox .big *{
+  color:#172b3f!important;
+  -webkit-text-fill-color:#172b3f!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox small,
+html body #app .detail .auctionbox small *,
+html body #app .detail .auctionbox .mut,
+html body #app .detail .auctionbox .mut *{
+  color:#4b5563!important;
+  -webkit-text-fill-color:#4b5563!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox .countdown,
+html body #app .detail .auctionbox .countdown *{
+  color:#895100!important;
+  -webkit-text-fill-color:#895100!important;
+  font-weight:800!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox .badge.auction,
+html body #app .detail .auctionbox .badge.auction *{
+  color:#824400!important;
+  -webkit-text-fill-color:#824400!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+html body #app .detail .auctionbox input,
+html body #app .detail .auctionbox textarea{
+  background:#ffffff!important;
+  border-color:#aeb8bc!important;
+  color:#172b3f!important;
+  -webkit-text-fill-color:#172b3f!important;
+  opacity:1!important;
+}
+html body #app .detail .auctionbox .btn.primary,
+html body #app .detail .auctionbox .btn.primary *{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+}
+</style>
+<style id="km24-auction-header-contrast-v4">
+/* Auction header: strong contrast for "Auktion" and the number of bids. */
+html body #app .detail .auctionbox .badge.auction,
+html body #app .detail .auctionbox [class*="auctionBadge"],
+html body #app .detail .auctionbox [class*="AuctionBadge"],
+html body #app .detail .auctionbox [class*="auctionTag"],
+html body #app .detail .auctionbox [class*="AuctionTag"] {
+  color:#783600!important;
+  -webkit-text-fill-color:#783600!important;
+  opacity:1!important;
+  filter:none!important;
+  text-shadow:none!important;
+  font-weight:850!important;
+}
+html body #app .detail .auctionbox > :first-child:is(div,header) > :is(span,small,b,strong,em):first-child,
+html body #app .detail .auctionbox > :first-child:is(div,header) > :is(span,small,b,strong,em):last-child {
+  color:#344054!important;
+  -webkit-text-fill-color:#344054!important;
+  opacity:1!important;
+  filter:none!important;
+  text-shadow:none!important;
+  font-weight:800!important;
+}
+</style>
+<script id="km24-auction-header-contrast-v4-script">
+(function(){
+  if(window.__km24AuctionHeaderContrastV4)return;
+  window.__km24AuctionHeaderContrastV4=true;
+  function fix(){
+    document.querySelectorAll('.detail .auctionbox,.detail .km24DetailActionBox.auctionbox').forEach(function(box){
+      box.querySelectorAll('span,small,div,b,strong,em,label').forEach(function(el){
+        if(el.closest('button,a,form'))return;
+        var t=(el.textContent||'').replace(/\s+/g,' ').trim();
+        if(!t||t.length>32)return;
+        var noEmoji=t.replace(/^[^A-Za-zÄÖÜäöü]+/,'').trim();
+        var auction=/^Auktion$/i.test(noEmoji);
+        var count=/^\d+\s+Gebote$/i.test(t);
+        if(!auction&&!count)return;
+        var color=auction?'#783600':'#344054';
+        el.style.setProperty('color',color,'important');
+        el.style.setProperty('-webkit-text-fill-color',color,'important');
+        el.style.setProperty('font-weight','850','important');
+        el.style.setProperty('opacity','1','important');
+        el.style.setProperty('filter','none','important');
+        el.style.setProperty('text-shadow','none','important');
+      });
+    });
+  }
+  var queued=false;
+  function queue(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;fix()})}
+  document.addEventListener('DOMContentLoaded',queue,{once:true});
+  window.addEventListener('hashchange',queue);
+  window.addEventListener('pageshow',queue);
+  var target=document.getElementById('app')||document.body;
+  if(target)new MutationObserver(queue).observe(target,{childList:true,subtree:true});
+  queue();
+})();
+</script>
+<style id="km24-bid-input-ux-v1">
+/* Auction bid input: visible CHF prefix and deliberate quick adjustments. */
+html body #app .detail .auctionbox form#bidf {
+  display:flex!important;
+  flex-direction:column!important;
+  flex-wrap:nowrap!important;
+  align-items:stretch!important;
+  width:100%!important;
+  gap:10px!important;
+}
+html body #app .detail .auctionbox form#bidf .km24BidAmountWrap {
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  flex:1 1 auto!important;
+}
+html body #app .detail .auctionbox form#bidf .km24BidCurrency {
+  position:absolute!important;
+  left:14px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:15px!important;
+  font-weight:900!important;
+  letter-spacing:0!important;
+  color:#344054!important;
+  -webkit-text-fill-color:#344054!important;
+  opacity:1!important;
+  pointer-events:none!important;
+  z-index:2!important;
+}
+html body #app .detail .auctionbox form#bidf .km24BidAmountWrap input#bid {
+  box-sizing:border-box!important;
+  width:100%!important;
+  min-width:0!important;
+  padding-left:65px!important;
+  font-weight:800!important;
+  background:#fff!important;
+  color:#172b3f!important;
+  -webkit-text-fill-color:#172b3f!important;
+}
+html body #app .detail .auctionbox form#bidf .km24QuickBidRow {
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:8px!important;
+  width:100%!important;
+}
+html body #app .detail .auctionbox form#bidf .km24QuickBid {
+  min-height:42px!important;
+  padding:8px 4px!important;
+  border:1px solid #aab8c5!important;
+  border-radius:10px!important;
+  background:#fff!important;
+  background-image:none!important;
+  color:#1f3d5f!important;
+  -webkit-text-fill-color:#1f3d5f!important;
+  font-size:14px!important;
+  font-weight:850!important;
+  text-align:center!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+}
+html body #app .detail .auctionbox form#bidf .km24QuickBid:focus-visible {
+  outline:3px solid #1769f5!important;
+  outline-offset:2px!important;
+}
+html body #app .detail .auctionbox form#bidf .km24QuickBid:active {
+  background:#eaf2ff!important;
+}
+html body #app .detail .auctionbox form#bidf > .btn.primary {
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+}
+</style>
+<script id="km24-bid-input-ux-v1-script">
+(function(){
+  if(window.__km24BidInputUxV1)return;
+  window.__km24BidInputUxV1=true;
+
+  function fixBidCount(box){
+    box.querySelectorAll('small').forEach(function(s){
+      var original=s.textContent||'';
+      if(!/Gebot\(e\)/.test(original))return;
+      var corrected=original.replace(/(\d+)\s+Gebot\(e\)/g,function(_,n){
+        var count=Number(n);
+        return count===0?'Noch keine Gebote':count===1?'1 Gebot':count+' Gebote';
+      });
+      if(corrected!==original)s.textContent=corrected;
+    });
+    var summary=Array.from(box.querySelectorAll('small')).find(function(s){
+      return /Startpreis/i.test(s.textContent||'') && /Gebot(e|e\b)/i.test(s.textContent||'');
+    });
+    var countMatch=summary && (summary.textContent||'').match(/(\d+)\s+Gebote?\b/);
+    var badge=box.querySelector('.km24AuctionDetailBidCount');
+    if(badge&&countMatch){
+      var count=Number(countMatch[1]);
+      var label=count===1?'1 Gebot':count+' Gebote';
+      if(badge.textContent!==label)badge.textContent=label;
+    }
+  }
+
+  function enhanceForm(form){
+    var input=form.querySelector('input#bid[type="number"]');
+    if(!input)return;
+    if(!input.closest('.km24BidAmountWrap')){
+      var wrap=document.createElement('div');
+      wrap.className='km24BidAmountWrap';
+      input.parentNode.insertBefore(wrap,input);
+      wrap.appendChild(input);
+      var currency=document.createElement('span');
+      currency.className='km24BidCurrency';
+      currency.setAttribute('aria-hidden','true');
+      currency.textContent='CHF';
+      wrap.insertBefore(currency,input);
+    }
+    if(!input.getAttribute('aria-label'))input.setAttribute('aria-label','Gebotsbetrag in CHF');
+    input.setAttribute('inputmode','decimal');
+    if(form.querySelector('.km24QuickBidRow'))return;
+    var row=document.createElement('div');
+    row.className='km24QuickBidRow';
+    row.setAttribute('role','group');
+    row.setAttribute('aria-label','Schnellgebote: Betrag erhöhen');
+    [1,5,10].forEach(function(amount){
+      var button=document.createElement('button');
+      button.type='button';
+      button.className='km24QuickBid';
+      button.textContent='+'+amount+' CHF';
+      button.setAttribute('aria-label','Gebot um '+amount+' Schweizer Franken erhöhen');
+      button.addEventListener('click',function(){
+        var minimum=Number(input.min);
+        var current=Number(input.value);
+        var base=Number.isFinite(current)&&input.value!==''?current:0;
+        if(Number.isFinite(minimum))base=Math.max(minimum,base);
+        var updated=Math.round((base+amount)*100)/100;
+        input.value=String(updated);
+        input.dispatchEvent(new Event('input',{bubbles:true}));
+        input.dispatchEvent(new Event('change',{bubbles:true}));
+        /* Only prepare the amount; submitting remains the user's choice. */
+      });
+      row.appendChild(button);
+    });
+    var submit=form.querySelector('button[type="submit"],button.btn.primary,input[type="submit"]');
+    if(submit)form.insertBefore(row,submit);
+    else form.appendChild(row);
+  }
+
+  function update(){
+    document.querySelectorAll('#app .detail .auctionbox').forEach(function(box){
+      fixBidCount(box);
+      box.querySelectorAll('form#bidf').forEach(enhanceForm);
+    });
+  }
+  var queued=false;
+  function schedule(){
+    if(queued)return;
+    queued=true;
+    requestAnimationFrame(function(){queued=false;update()});
+  }
+  function initialize(){
+    var app=document.getElementById('app');
+    if(app)new MutationObserver(schedule).observe(app,{childList:true,subtree:true});
+    schedule();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initialize,{once:true});
+  else initialize();
+  window.addEventListener('hashchange',schedule);
+  window.addEventListener('pageshow',schedule);
+})();
+</script>
