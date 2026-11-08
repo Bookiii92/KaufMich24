@@ -35,10 +35,9 @@ export const options = {
 
 function guardedBase() {
   if (VERIFIED_TOKEN !== "YES_ISOLATED_FROM_PRODUCTION") fail("Explicit isolation approval missing");
-  let parsed;
-  try { parsed = new URL(BASE); } catch (_) { fail("Invalid BASE_URL"); }
-  const hostname = parsed.hostname.toLowerCase();
-  if (!["https:", "http:"].includes(parsed.protocol)) fail("Invalid scheme");
+  const parsed = /^(https?):\\/\\/([a-z0-9.-]+)(?::[0-9]{2,5})?$/i.exec(BASE);
+  if (!parsed) fail("BASE_URL must be a plain staging origin with no path or query");
+  const hostname = parsed[2].toLowerCase();
   if (/^(www\.)?kaufmich24\.ch$/.test(hostname) || hostname.endsWith(".supabase.co")) fail("PRODUCTION NOT ALLOWED");
   const local = ["localhost", "127.0.0.1"].includes(hostname);
   const staging = hostname.includes("staging") && (hostname.endsWith(".up.railway.app") || hostname.endsWith(".vercel.app"));
