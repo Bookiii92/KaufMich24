@@ -1,0 +1,26 @@
+name: KaufMich24 Frontend Split - static validation
+on:
+  push:
+    branches:
+      - optimierung/skalierung-20k-20261108
+    paths:
+      - 'tools/scaling/**'
+      - '.github/workflows/km24-frontend-split.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout staging branch
+        uses: actions/checkout@v4
+      - name: Node version
+        run: node --version
+      - name: Build split assets
+        run: node tools/scaling/extract-assets.mjs
+      - name: Verify source checksum, generated assets and JS syntax
+        run: node tools/scaling/verify-build.mjs
+      - name: Report output files only
+        run: find dist -maxdepth 2 -type f -printf '%P %s bytes\n' | sort
