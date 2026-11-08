@@ -1,40 +1,43 @@
-# KaufMich24 skalierbar machen – Phase 1 + 2
+# KaufMich24 – Frontend aufteilen (Phase 1)
 
-**Stand:** 8. November 2026. Keine Umstellung von kaufmich24.ch auf diese Branch-Version.
+Stand: 8. November 2026. **Nur GitHub-Testzweig, kein Live-Deployment.**
 
-## Bereits umgesetzt auf Supabase Pro (Produktion)
-Vier gezielte, reversible Indizes in Migration `km24_scaling_read_indexes_20261108`:
+## Quellstand gesichert
+- 10 vollständig gespeicherte Teile unter `tools/scaling/snapshot/`.
+- Original-Snapshot aus der Supabase-Tabelle `public.kaufmich_frontend_snapshots`, `name='live'`.
+- Erwartete MD5 der ursprünglichen HTML-Datei: `4b53308e2ab73e16269b89c692ae7679`.
+- Originalgrösse: 2'359'558 Bytes.
+- 168 `script`-Tags und 284 `style`-Tags.
+- Diese Source-Dateien bitte **nicht** verändern, bis ein neuer Backup-Stand exportiert ist.
 
-```sql
-CREATE INDEX IF NOT EXISTS km24_listings_status_updated_20261108_idx
-  ON public.listings(status, updated_at DESC);
-CREATE INDEX IF NOT EXISTS km24_bulk_items_category_20261108_idx
-  ON public.km24_bulk_draft_items(category_slug);
-CREATE INDEX IF NOT EXISTS km24_bulk_items_batch_owner_20261108_idx
-  ON public.km24_bulk_draft_items(batch_id, owner_id);
-CREATE INDEX IF NOT EXISTS km24_bulk_photos_item_batch_owner_20261108_idx
-  ON public.km24_bulk_draft_photos(item_id, batch_id, owner_id);
+## Build durchführen (auf lokaler Kopie des Testzweigs)
+```bash
+node tools/scaling/extract-assets.mjs
+node tools/scaling/verify-build.mjs
 ```
 
-Keine Daten geändert. Nach Migration: alle vier Indizes nachgewiesen, Inseratanzahl unverändert (179). Der Planner nutzt auf dem noch kleinen Bestand einen anderen Index; neue Indexnutzung wird erst beim Wachstum messbar.
+Es werden `dist/index.html`, `dist/assets/km24-<hash>.js`, `dist/assets/km24-<hash>.css` und `dist/assets-manifest.json` erzeugt. Der Builder bricht ab, falls die Quell-Dateien nicht exakt die erwartete MD5-Prüfsumme ergeben. Ausgelagerte Tags lassen sich bytegetreu wiederherstellen; auch diese Kontrolle ist eingebaut.
 
-## Frontend-Aufteilung: nur vorbereitet
-`node tools/scaling/extract-assets.mjs snapshot.html dist` extrahiert grössere klassische Inline-Skripte in nach Inhalt benannte JS-Dateien, lässt Bootstrap- und Spezialskripte inline und bündelt direkt benachbarte unbenannte CSS-Blöcke. Es gibt ein `dist/index.html` und ein `assets-manifest.json`. Die Anwendung muss auf einer **isolierten Staging-Instanz** getestet werden, bevor sie live geht.
+## Erste rein statische Prüfung
+Aus dem vollständigen Quellstand wurde das aktuelle Extraktionsverfahren bereits unabhängig simuliert:
+- 1 grosser JavaScript-Block und 1 grosser CSS-Block werden ausgelagert.
+- Der resultierende HTML-String ist rund 417'000 UTF-16-Codeeinheiten kürzer, also ca. 18 %.
+- Die Wiederherstellung der ursprünglichen HTML-Tags ist exakt gelungen.
+- Cookie Joe, Authentifizierung, Chat, Jobs und Navigation wurden hierbei **nicht im Browser getestet**.
 
-**Caching-Ziel:** Assets mit unveränderlichem Hash im Dateinamen via CDN: `public,max-age=31536000,immutable`; HTML dagegen mit kurzer Cache-Dauer bzw. revalidation, damit Inserate und neue Releases aktuell bleiben.
+Attribute wie `id`, `type=module`, `nonce`, `async` und `defer` sowie dynamische Style-Elemente bleiben bewusst inline. Dadurch wird im ersten Schritt nur ein Teil des insgesamt 2.36 MB grossen Monolithen ausgelagert.
 
-**Wichtige Einschränkung:** Ein automatisches Verschieben von Inline-JavaScript kann Verhalten verändern, z. B. bei `document.currentScript`, CSP oder einer Browser-Ausführung bevor Dateien ausgeliefert sind. Keine produktive Aktivierung ohne Regressionstests (Startseite, Suche, Inseratdetail, Zurück/Scrollposition, Login, Registrierung, Jobs, Auktionen, Chat, Fotos, Zahlungen, Cookie Joe, Mobilbrowser).
+## Vor einer Veröffentlichung erforderlich
+1. Build auf dem GitHub-Testzweig lokal ausführen, `verify-build.mjs` muss bestehen.
+2. Getrennte Staging-Vorschau einrichten, ohne Schreibzugriff auf Produktionsdaten und ohne den echten Zahlungs-, E-Mail- und Push-Versand.
+3. Staging muss statische `/assets/*`-Dateien ausliefern, bevor ein HTML-Router-Fallback greift.
+4. Mobile und Desktop prüfen: Hell/Dunkel, Cookie Joe, Startseite, Suche, Inserat, Zurück und Scroll-Wiederherstellung, Login, Jobs, Auktionen, Chat, Fotos, Bezahlung.
+5. Erst danach darf eine kontrollierte Live-Umstellung stattfinden; Rollback ist das bisherige Supabase-HTML.
 
-## Weitere Schritte
-1. Unveränderten Live-Snapshot exportieren, Build in isolierter Preview ausführen.
-2. Browser-Regressionsprüfung und Netzwerkvergleich (erste und zweite Seitenansicht).
-3. Suche und Listen seitenweise laden – erst mit echten Pagination-Controls, damit keine Angebote verschwinden. Der aktuelle Aufruf `search_marketplace_v3` verwendet `p_limit:100`. Nicht blind auf 20 reduzieren.
-4. Test mit getrenntem Supabase-System und schrittweisen 25/50/100/250 Besuchern – erst nach ausdrücklicher Kostenfreigabe.
+## CDN-Konfiguration nach erfolgreichen Tests
+- `/assets/km24-*`: `Cache-Control: public,max-age=31536000,immutable`
+- HTML: `Cache-Control: no-cache` oder kurze TTL plus Revalidierung
+- Keine Cache-Freigabe für nutzerspezifische oder authentifizierte APIs.
 
-## Rollback
-```sql
-DROP INDEX IF EXISTS public.km24_listings_status_updated_20261108_idx;
-DROP INDEX IF EXISTS public.km24_bulk_items_category_20261108_idx;
-DROP INDEX IF EXISTS public.km24_bulk_items_batch_owner_20261108_idx;
-DROP INDEX IF EXISTS public.km24_bulk_photos_item_batch_owner_20261108_idx;
-```
+## Datenbank-Teil abgeschlossen
+Migration `km24_scaling_read_indexes_20261108` hat vier gezielte Indizes erstellt. Sie sind verifiziert. Es wurden keine Inseratdatensätze geändert. Der derzeit kleine Datenbestand verwendet nicht zwingend jeden neuen Index; eine tatsächliche Beschleunigung ist noch nicht im Lasttest gemessen.
